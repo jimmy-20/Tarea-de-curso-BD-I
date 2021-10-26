@@ -1,3 +1,4 @@
+select @@SERVERNAME
 --Login que me sirve como conexion al servidor
 Use SERVIPLUS
 go

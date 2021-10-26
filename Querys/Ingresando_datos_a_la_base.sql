@@ -1,94 +1,100 @@
-use Servicios_de_mantenimiento
+use SERVIPLUS
 go
 
 
 ---Insertando datos en la tabla cliente
-Insert into Cliente values ('Juan','José','Barrios','Canales')
+Insert into Clientes values ('Juan','Barrios','875463520','Praderas de Sandino V etapa','juanbarrios@gmail.com')
+Insert into Clientes values ('Joel','Barrios','45653258','El Doral','joelbarrios@gmail.com')
+Insert into Clientes values ('Alejandor','Alvarado','54786325','Barrio Cuba','a.alvarado@hotmail.com')
+Insert into Clientes values ('Jeison','Suarez','53658596','Barrio tierra prometida','jSuarez@gmail.com')
+Insert into Clientes values ('Penélope','Aragón','76342589','Urbanizacion Santa Rosa','a.penelope_@hotmail.com')
+Insert into Clientes values ('Axel','Saenz','54687566','San Judas','axel_sz@gmail.com')
+Insert into Clientes values ('Kevin','Ortiz','58965874','El Recreo','k_ortiz@gmail.com')
 
-Insert into Cliente values ('Joel','Antonio','Barrios','Mendóza')
-Insert into Cliente values ('Alejandor','','Alvarado','Pérez')
-Insert into Cliente values ('Jeison','José','Suarez','Jiménez')
-Insert into Cliente values ('Penélope','Daniela','Aragón','Portocarrero')
-Insert into Cliente values ('Axel','Karim','Saenz','Juarez')
-Insert into Cliente values ('Kevin','Antonio','Ortiz','')
-
-select * from Cliente
+select * from Clientes
 
 --- insertando datos en la tabla mecánico
-Insert into Mecánico values ('Juan','Carlos','Villanueva','Ortiz')
-Insert into Mecánico values ('Danilo','José','Corrales','López')
-Insert into Mecánico values ('Allan','','Zambrana','')
-Insert into Mecánico values ('Cristopher','','Corrales','Martinez')
-Insert into Mecánico values ('Ebner','Camilo','Ponce','Ramierez')
+Insert into Mecanicos values ('Juan','Ortiz','Automatizacion','45468156',5000,'Activo')
+Insert into Mecanicos values ('Danilo','Corrales','Sistemas y equipos electricos','65987425',5500,'Activo')
+Insert into Mecanicos values ('Allan','Zambrana','Sistemas termicos','45123568',7500,'Activo')
+Insert into Mecanicos values ('Cristopher','Corrales','Sistemas electricos','95868745',8600,'Activo')
+Insert into Mecanicos values ('Ebner','Ponce','Mantenimiento','65369885',56325,'Activo')
 
-select * from Mecánico
+select * from Mecanicos
 
 --- insertando datos en la tabla repuesto 
-Insert into Repuesto values ('Honda','SS101',150)
-Insert into Repuesto values ('Yamaha','QWA22',134)
-Insert into Repuesto values ('BOSCH','SLA1',300)
-Insert into Repuesto values ('ACDelco','QWS2',134)
-Insert into Repuesto values ('VALEO','SOCA1',300)
+Insert into Repuestos values ('Bandas del motor','Original','Honda','SS101',150)
+Insert into Repuestos values ('Cigüeñales','Remplazo','KIA','QWA22',134)
+Insert into Repuestos values ('Pistones','Remplazo','Yamaha','AQW2',150)
+Insert into Repuestos values ('Sistema de aire acondicionado','Original','BOSCH','SLA1',300)
+Insert into Repuestos values ('Bateria','Remplazo','ACDelco','QWS2',134)
+Insert into Repuestos values ('Caja de cambio','Original','VALEO','SOCA1',300)
 
+select * from Repuestos
 ---insertando datos en la tabla vehículo
-Insert into Vehículo values (1,'BMW','X4','2018')
-Insert into Vehículo values (1,'BMW','SERIE 3','2010')
+Insert into Vehiculos values (1,'BMW','X4','2018')
+Insert into Vehiculos values (1,'BMW','SERIE 3','2010')
 
-Insert into Vehículo values (4,'Audi','X4','2012')
-Insert into Vehículo values (3,'Ford','F150','1999')
-Insert into Vehículo values (2,'Seat','F50','2018')
-Insert into Vehículo values (5,'Lexus','MA10','2014')
-Insert into Vehículo values (6,'Seat','F50','2018')
-Insert into Vehículo values (7,'Opel','R50','2020')
+Insert into Vehiculos values (4,'Audi','X4','2012')
+Insert into Vehiculos values (3,'Ford','F150','1999')
+Insert into Vehiculos values (2,'Seat','F50','2018')
+Insert into Vehiculos values (5,'Lexus','MA10','2014')
+Insert into Vehiculos values (6,'Seat','F50','2018')
+Insert into Vehiculos values (7,'Opel','R50','2020')
 
-select * from Vehículo
+select * from Vehiculos
 
 ---insertando datos en la tabla Mantenimiento
-Insert into Mantenimiento values (1,'2020-03-03','2020-03-03','Reparado')
-Insert into Mantenimiento values (2,'2020-11-12','2020-11-13','Reparado')
-Insert into Mantenimiento values (3,'2020-12-23','2020-12-23','Reparado')
-Insert into Mantenimiento values (4,'2020-06-03','2020-06-03','Reparado')
-Insert into Mantenimiento values (6,'2020-06-12','2020-06-15','Reparado')
-Insert into Mantenimiento values (5,'2020-03-03','2020-03-03','Reparado')
-Insert into Mantenimiento values (1,'2020-12-03','2020-12-03','Reparado')
+Insert into Mantenimientos values (1,'2020-03-03','2020-03-03','Reparado')
+Insert into Mantenimientos values (2,'2020-11-12','2020-11-13','Reparado')
+Insert into Mantenimientos values (3,'2020-12-23','2020-12-23','Reparado')
+Insert into Mantenimientos values (4,'2020-06-03','2020-06-03','Reparado')
+Insert into Mantenimientos values (6,'2020-06-12','2020-06-15','Reparado')
+Insert into Mantenimientos values (5,'2020-03-03','2020-03-03','Reparado')
+Insert into Mantenimientos values (1,'2020-12-03','2020-12-03','Reparado')
 
-select * from Mantenimiento
+select * from Mantenimientos
 
 ---insertando datos en la tabla servicio
-Insert into Servicio values ('Cambio de aceite',140,'ORDINARIO')
+Insert into Servicios values ('Cambio de aceite',140,'ORDINARIO')
 
-Insert into Servicio values ('Cambio de Bandas del Motor',180,'EXTRAORDINARIO')
-Insert into Servicio values ('Mantenimiento 10000 km',1800,'ORDINARIO')
-Insert into Servicio values ('Mantenimiento 5000 km ',1500,'ORDINARIO')
-Insert into Servicio values ('Revisión del Sistema Eléctrico',400,'EXTRAORDINARIO')
-Insert into Servicio values ('Reparación de aire acondicionado',2000,'EXTRAORDINARIO')
+Insert into Servicios values ('Cambio de Bandas del Motor',180,'EXTRAORDINARIO')
+Insert into Servicios values ('Mantenimiento 10000 km',1800,'ORDINARIO')
+Insert into Servicios values ('Mantenimiento 5000 km ',1500,'ORDINARIO')
+Insert into Servicios values ('Revisión del Sistema Eléctrico',400,'EXTRAORDINARIO')
+Insert into Servicios values ('Reparación de aire acondicionado',2000,'EXTRAORDINARIO')
 
+select * from Servicios
 
 ---insertando datos es detallemantenimiento 
- Insert into Detalle_Mantenimiento values (1,1,1,2700)
- Insert into Detalle_Mantenimiento values (1,2,1,2900)
- Insert into Detalle_Mantenimiento values (1,1,2,2000)
- Insert into Detalle_Mantenimiento values (1,3,2,2000)
- Insert into Detalle_Mantenimiento values (3,2,2,1500)
+ Insert into [Detalle de Mantenimiento] values (1,1,1,1)
+ Insert into [Detalle de Mantenimiento] values (2,2,1,2)
+ Insert into [Detalle de Mantenimiento] values (3,1,2,3)
+ Insert into [Detalle de Mantenimiento] values (4,3,2,4)
+ Insert into [Detalle de Mantenimiento] values (3,2,2,2)
 
- select * from Detalle_Mantenimiento
+ select * from [Detalle de Mantenimiento]
 
  ---insertando datos en detallerepuesto
- Insert into Detalle_Repuesto values (1,1,500,1)
- Insert into Detalle_Repuesto values (2,2,900,1)
- Insert into Detalle_Repuesto values (3,3,100,1)
- Insert into Detalle_Repuesto values (1,3,800,2)
- Insert into Detalle_Repuesto values (4,4,100,1)
+ Insert into [Detalle de Repuestos] values (1,1)
+ Insert into [Detalle de Repuestos] values (2,1)
+ Insert into [Detalle de Repuestos] values (3,1)
+ Insert into [Detalle de Repuestos] values (4,2)
+ Insert into [Detalle de Repuestos] values (5,1)
+ Insert into [Detalle de Repuestos] values (6,2)
+
+ select * from Repuestos
+ select * from [Detalle de Repuestos]
 
  ----consultando a todas las tablas
- select * from Detalle_Repuesto
- select * from Cliente
- select * from Detalle_Mantenimiento
- select * from Servicio
- select * from Mantenimiento
- select * from Vehículo
- select * from Mecánico
+ select * from [Detalle de Repuestos]
+ select * from Clientes
+ select * from [Detalle de Mantenimiento]
+ select * from Servicios
+ select * from Mantenimientos
+ select * from Vehiculos
+ select * from Mecanicos
 
 
-
+ BACKUP DATABASE	SERVIPLUS TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\SERVIPLUS.bak'
 
