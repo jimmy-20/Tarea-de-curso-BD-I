@@ -1,0 +1,37 @@
+C:\Users\dell\source\repos\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.csproj.AssemblyReference.cache
+C:\Users\dell\source\repos\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.Properties.Resources.resources
+C:\Users\dell\source\repos\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmLogin.resources
+C:\Users\dell\source\repos\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.csproj.GenerateResource.cache
+C:\Users\dell\source\repos\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.csproj.CoreCompileInputs.cache
+C:\Users\dell\source\repos\ServiPlusApp\ServiPlusApp\bin\Debug\ServiPlusApp.exe.config
+C:\Users\dell\source\repos\ServiPlusApp\ServiPlusApp\bin\Debug\ServiPlusApp.exe
+C:\Users\dell\source\repos\ServiPlusApp\ServiPlusApp\bin\Debug\ServiPlusApp.pdb
+C:\Users\dell\source\repos\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.exe
+C:\Users\dell\source\repos\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.pdb
+C:\Users\dell\source\repos\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmDesk.resources
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\bin\Debug\ServiPlusApp.exe.config
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\bin\Debug\ServiPlusApp.exe
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\bin\Debug\ServiPlusApp.pdb
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.csproj.AssemblyReference.cache
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.Properties.Resources.resources
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmDesk.resources
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmLogin.resources
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.csproj.GenerateResource.cache
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.csproj.CoreCompileInputs.cache
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.exe
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.pdb
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmOperations.resources
+C:\Users\dell\Documents\SERVI PLUS\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmSingUp.resources
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\bin\Debug\ServiPlusApp.exe.config
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\bin\Debug\ServiPlusApp.exe
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\bin\Debug\ServiPlusApp.pdb
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.csproj.AssemblyReference.cache
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.Properties.Resources.resources
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmDesk.resources
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmLogin.resources
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmOperations.resources
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmSingUp.resources
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.csproj.GenerateResource.cache
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.csproj.CoreCompileInputs.cache
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.exe
+C:\Users\Pc\Desktop\Chamo\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.pdb
