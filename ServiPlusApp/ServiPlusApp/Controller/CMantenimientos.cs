@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace ServiPlusApp.Controller
 {
-    public class CClientes
+    public class CMantenimientos
     {
-        public static DataTable Table_Clientes()
+        public static DataTable Mostrar_Mantenimientos()
         {
-            return DClientes.Tabla_Clientes();
+            return DMantenimientos.Mostrar_Mantenimientos();
         }
+
     }
 }

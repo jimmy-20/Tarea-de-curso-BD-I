@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ServiPlusApp.Data
+namespace ServiPlusApp.Model
 {
     public class DServicios
     {

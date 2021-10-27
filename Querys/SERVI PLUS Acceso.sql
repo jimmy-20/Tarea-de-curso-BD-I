@@ -19,6 +19,8 @@ Grant execute on Mostrar_Clientes to AdminServiPlus
 Grant execute on Mostrar_Vehiculos to AdminServiPlus
 Grant execute on Mostrar_Mecanicos to AdminServiPlus
 Grant execute on Mostrar_Servicios to AdminServiPlus
+Grant execute on Mostrar_Repuestos to AdminServiPlus
+Grant execute on Mostrar_Mantenimientos to AdminServiPlus
 
 	--Tablas: 
 Grant select on Usuarios to AdminServiPlus
@@ -113,8 +115,9 @@ select * from Usuarios
 
 --Probando el procedimiento almacenado Crear usuario modificado
 execute Crear_Usuario 'Leonardo','Duarte','57646294','Ejecutivo','leoduartejr','pass.word.2020','Admin'
-execute Crear_Usuario 'Jimmy','Soza','75856936','Anlaista','Jimmy','jimmysoza','Admin'
+execute Crear_Usuario 'Jimmy','Soza','75856936','Analista','Jimmy','jimmysoza','Admin'
 execute Crear_Usuario 'Massiel','Fonseca','58646358','Finanzas','Massiel','massielfonseca','Admin'
+
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Restauracion de la base de datos 
 BACKUP DATABASE	SERVIPLUS TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\SERVIPLUS.bak'

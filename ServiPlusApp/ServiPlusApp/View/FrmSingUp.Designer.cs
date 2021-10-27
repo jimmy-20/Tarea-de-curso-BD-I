@@ -56,23 +56,20 @@ namespace ServiPlusApp.View
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(587, 1002);
+            this.pictureBox1.Size = new System.Drawing.Size(522, 802);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // cmbRol
             // 
             this.cmbRol.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbRol.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Location = new System.Drawing.Point(71, 855);
-            this.cmbRol.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbRol.Location = new System.Drawing.Point(63, 684);
             this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(337, 36);
+            this.cmbRol.Size = new System.Drawing.Size(300, 31);
             this.cmbRol.TabIndex = 65;
             // 
             // cmbEspecialidad
@@ -80,21 +77,20 @@ namespace ServiPlusApp.View
             this.cmbEspecialidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbEspecialidad.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.cmbEspecialidad.FormattingEnabled = true;
-            this.cmbEspecialidad.Location = new System.Drawing.Point(71, 458);
-            this.cmbEspecialidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbEspecialidad.Location = new System.Drawing.Point(63, 366);
             this.cmbEspecialidad.Name = "cmbEspecialidad";
-            this.cmbEspecialidad.Size = new System.Drawing.Size(337, 36);
+            this.cmbEspecialidad.Size = new System.Drawing.Size(300, 31);
             this.cmbEspecialidad.TabIndex = 61;
             // 
             // mtbTelefono
             // 
             this.mtbTelefono.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefono.Location = new System.Drawing.Point(71, 552);
-            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mtbTelefono.Location = new System.Drawing.Point(63, 442);
             this.mtbTelefono.Mask = "(5O5)0000-0000";
             this.mtbTelefono.Name = "mtbTelefono";
-            this.mtbTelefono.Size = new System.Drawing.Size(337, 36);
+            this.mtbTelefono.Size = new System.Drawing.Size(300, 31);
             this.mtbTelefono.TabIndex = 62;
+            this.mtbTelefono.Leave += new System.EventHandler(this.mtbTelefono_Leave);
             // 
             // label7
             // 
@@ -105,9 +101,9 @@ namespace ServiPlusApp.View
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(66, 822);
+            this.label7.Location = new System.Drawing.Point(59, 658);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 27);
+            this.label7.Size = new System.Drawing.Size(42, 23);
             this.label7.TabIndex = 74;
             this.label7.Text = "Rol";
             // 
@@ -118,12 +114,11 @@ namespace ServiPlusApp.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtPassword.Location = new System.Drawing.Point(71, 758);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.Location = new System.Drawing.Point(63, 606);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPassword.Size = new System.Drawing.Size(337, 36);
+            this.txtPassword.Size = new System.Drawing.Size(300, 31);
             this.txtPassword.TabIndex = 64;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_Leave);
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
@@ -138,9 +133,9 @@ namespace ServiPlusApp.View
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(66, 616);
+            this.label5.Location = new System.Drawing.Point(59, 493);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 27);
+            this.label5.Size = new System.Drawing.Size(106, 23);
             this.label5.TabIndex = 72;
             this.label5.Text = "Username";
             // 
@@ -153,9 +148,9 @@ namespace ServiPlusApp.View
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(66, 725);
+            this.label6.Location = new System.Drawing.Point(59, 580);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 27);
+            this.label6.Size = new System.Drawing.Size(101, 23);
             this.label6.TabIndex = 73;
             this.label6.Text = "Password";
             // 
@@ -166,11 +161,10 @@ namespace ServiPlusApp.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsername.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
-            this.txtUsername.Location = new System.Drawing.Point(71, 649);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUsername.Location = new System.Drawing.Point(63, 519);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtUsername.Size = new System.Drawing.Size(337, 36);
+            this.txtUsername.Size = new System.Drawing.Size(300, 31);
             this.txtUsername.TabIndex = 63;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_Leave);
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
@@ -183,10 +177,9 @@ namespace ServiPlusApp.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtApellido.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.ForeColor = System.Drawing.Color.Black;
-            this.txtApellido.Location = new System.Drawing.Point(71, 359);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtApellido.Location = new System.Drawing.Point(63, 287);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(337, 36);
+            this.txtApellido.Size = new System.Drawing.Size(300, 31);
             this.txtApellido.TabIndex = 60;
             this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
@@ -201,9 +194,9 @@ namespace ServiPlusApp.View
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(66, 218);
+            this.label1.Location = new System.Drawing.Point(59, 174);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 27);
+            this.label1.Size = new System.Drawing.Size(87, 23);
             this.label1.TabIndex = 70;
             this.label1.Text = "Nombre";
             // 
@@ -216,9 +209,9 @@ namespace ServiPlusApp.View
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(66, 326);
+            this.label4.Location = new System.Drawing.Point(59, 261);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 27);
+            this.label4.Size = new System.Drawing.Size(90, 23);
             this.label4.TabIndex = 71;
             this.label4.Text = "Apellido";
             // 
@@ -230,11 +223,10 @@ namespace ServiPlusApp.View
             this.txtNombre.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtNombre.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.Location = new System.Drawing.Point(71, 250);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombre.Location = new System.Drawing.Point(63, 200);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtNombre.Size = new System.Drawing.Size(337, 36);
+            this.txtNombre.Size = new System.Drawing.Size(300, 31);
             this.txtNombre.TabIndex = 59;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
@@ -249,9 +241,9 @@ namespace ServiPlusApp.View
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(66, 425);
+            this.label2.Location = new System.Drawing.Point(59, 340);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 27);
+            this.label2.Size = new System.Drawing.Size(134, 23);
             this.label2.TabIndex = 68;
             this.label2.Text = "Especialidad";
             // 
@@ -264,9 +256,9 @@ namespace ServiPlusApp.View
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(66, 520);
+            this.label3.Location = new System.Drawing.Point(59, 416);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 27);
+            this.label3.Size = new System.Drawing.Size(93, 23);
             this.label3.TabIndex = 69;
             this.label3.Text = "Telefono";
             // 
@@ -275,10 +267,9 @@ namespace ServiPlusApp.View
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(242, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(215, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(122, 126);
+            this.pictureBox2.Size = new System.Drawing.Size(109, 102);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 67;
             this.pictureBox2.TabStop = false;
@@ -289,10 +280,9 @@ namespace ServiPlusApp.View
             this.btnFinish.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFinish.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinish.ForeColor = System.Drawing.Color.White;
-            this.btnFinish.Location = new System.Drawing.Point(214, 938);
-            this.btnFinish.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnFinish.Location = new System.Drawing.Point(190, 750);
             this.btnFinish.Name = "btnFinish";
-            this.btnFinish.Size = new System.Drawing.Size(161, 50);
+            this.btnFinish.Size = new System.Drawing.Size(143, 40);
             this.btnFinish.TabIndex = 66;
             this.btnFinish.Text = "Finish";
             this.btnFinish.UseVisualStyleBackColor = false;
@@ -300,13 +290,12 @@ namespace ServiPlusApp.View
             // 
             // FrmSingUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(587, 1002);
+            this.ClientSize = new System.Drawing.Size(522, 802);
             this.Controls.Add(this.cmbRol);
             this.Controls.Add(this.cmbEspecialidad);
             this.Controls.Add(this.mtbTelefono);
@@ -325,7 +314,6 @@ namespace ServiPlusApp.View
             this.Controls.Add(this.btnFinish);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmSingUp";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

@@ -36,14 +36,14 @@ namespace ServiPlusApp.View
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mecanicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.repuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.detalleDeMantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.repuestosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.detalleDeRepuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.repuestosPorVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSecionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.signInAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -67,7 +67,8 @@ namespace ServiPlusApp.View
             this.tstxtSearch = new System.Windows.Forms.ToolStripTextBox();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.pnlTablas = new System.Windows.Forms.Panel();
-            this.detalleDeRepuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.detalleDeMantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tlsEstatus.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -76,19 +77,16 @@ namespace ServiPlusApp.View
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.catalogosToolStripMenuItem,
             this.operacionesToolStripMenuItem,
-            this.controlToolStripMenuItem,
             this.reportesToolStripMenuItem,
             this.seguridadToolStripMenuItem,
             this.cerrarSecionToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1208, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1074, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,18 +96,17 @@ namespace ServiPlusApp.View
             this.clientesToolStripMenuItem,
             this.clientesToolStripMenuItem1,
             this.mecanicosToolStripMenuItem,
-            this.serviciosToolStripMenuItem,
-            this.repuestosToolStripMenuItem});
+            this.serviciosToolStripMenuItem});
             this.catalogosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold);
             this.catalogosToolStripMenuItem.Name = "catalogosToolStripMenuItem";
-            this.catalogosToolStripMenuItem.Size = new System.Drawing.Size(123, 31);
+            this.catalogosToolStripMenuItem.Size = new System.Drawing.Size(105, 27);
             this.catalogosToolStripMenuItem.Text = "Catalogos ";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(226, 38);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.clientesToolStripMenuItem.Text = "Vehiculos";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.VehiculosToolStripMenuItem_Click);
             // 
@@ -117,7 +114,7 @@ namespace ServiPlusApp.View
             // 
             this.clientesToolStripMenuItem1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(226, 38);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.ClientesToolStripMenuItem1_Click);
             // 
@@ -125,7 +122,7 @@ namespace ServiPlusApp.View
             // 
             this.mecanicosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mecanicosToolStripMenuItem.Name = "mecanicosToolStripMenuItem";
-            this.mecanicosToolStripMenuItem.Size = new System.Drawing.Size(226, 38);
+            this.mecanicosToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.mecanicosToolStripMenuItem.Text = "Mecanicos ";
             this.mecanicosToolStripMenuItem.Click += new System.EventHandler(this.mecanicosToolStripMenuItem_Click);
             // 
@@ -133,68 +130,74 @@ namespace ServiPlusApp.View
             // 
             this.serviciosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(226, 38);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
-            // 
-            // repuestosToolStripMenuItem
-            // 
-            this.repuestosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repuestosToolStripMenuItem.Name = "repuestosToolStripMenuItem";
-            this.repuestosToolStripMenuItem.Size = new System.Drawing.Size(270, 38);
-            this.repuestosToolStripMenuItem.Text = "Repuestos";
             // 
             // operacionesToolStripMenuItem
             // 
             this.operacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mantenimientoToolStripMenuItem});
+            this.mantenimientosToolStripMenuItem1,
+            this.repuestosToolStripMenuItem1});
             this.operacionesToolStripMenuItem.Name = "operacionesToolStripMenuItem";
-            this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(143, 31);
+            this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(124, 27);
             this.operacionesToolStripMenuItem.Text = "Operaciones";
             // 
-            // mantenimientoToolStripMenuItem
+            // repuestosToolStripMenuItem1
             // 
-            this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.detalleDeMantenimientoToolStripMenuItem,
+            this.repuestosToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.detalleDeRepuestosToolStripMenuItem});
-            this.mantenimientoToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
-            this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
+            this.repuestosToolStripMenuItem1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repuestosToolStripMenuItem1.Name = "repuestosToolStripMenuItem1";
+            this.repuestosToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
+            this.repuestosToolStripMenuItem1.Text = "Repuestos";
+            this.repuestosToolStripMenuItem1.Click += new System.EventHandler(this.repuestosToolStripMenuItem1_Click);
             // 
-            // detalleDeMantenimientoToolStripMenuItem
+            // detalleDeRepuestosToolStripMenuItem
             // 
-            this.detalleDeMantenimientoToolStripMenuItem.Name = "detalleDeMantenimientoToolStripMenuItem";
-            this.detalleDeMantenimientoToolStripMenuItem.Size = new System.Drawing.Size(353, 36);
-            this.detalleDeMantenimientoToolStripMenuItem.Text = "Detalle de Mantenimiento";
-            // 
-            // controlToolStripMenuItem
-            // 
-            this.controlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem});
-            this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
-            this.controlToolStripMenuItem.Size = new System.Drawing.Size(207, 32);
-            this.controlToolStripMenuItem.Text = "Control del Sistema";
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click);
+            this.detalleDeRepuestosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detalleDeRepuestosToolStripMenuItem.Name = "detalleDeRepuestosToolStripMenuItem";
+            this.detalleDeRepuestosToolStripMenuItem.Size = new System.Drawing.Size(251, 28);
+            this.detalleDeRepuestosToolStripMenuItem.Text = "Detalle de repuestos";
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mantenimientosToolStripMenuItem,
+            this.repuestosPorVehiculosToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(116, 32);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(101, 27);
             this.reportesToolStripMenuItem.Text = "Reportes ";
+            // 
+            // mantenimientosToolStripMenuItem
+            // 
+            this.mantenimientosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
+            this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(319, 28);
+            this.mantenimientosToolStripMenuItem.Text = "Mantenimientos por vehiculo";
+            // 
+            // repuestosPorVehiculosToolStripMenuItem
+            // 
+            this.repuestosPorVehiculosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repuestosPorVehiculosToolStripMenuItem.Name = "repuestosPorVehiculosToolStripMenuItem";
+            this.repuestosPorVehiculosToolStripMenuItem.Size = new System.Drawing.Size(319, 28);
+            this.repuestosPorVehiculosToolStripMenuItem.Text = "Repuestos por vehiculos";
             // 
             // seguridadToolStripMenuItem
             // 
+            this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosToolStripMenuItem1});
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(119, 32);
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(103, 27);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
+            // 
+            // usuariosToolStripMenuItem1
+            // 
+            this.usuariosToolStripMenuItem1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuariosToolStripMenuItem1.Name = "usuariosToolStripMenuItem1";
+            this.usuariosToolStripMenuItem1.Size = new System.Drawing.Size(162, 28);
+            this.usuariosToolStripMenuItem1.Text = "Usuarios";
+            this.usuariosToolStripMenuItem1.Click += new System.EventHandler(this.usuariosToolStripMenuItem1_Click);
             // 
             // cerrarSecionToolStripMenuItem1
             // 
@@ -204,26 +207,26 @@ namespace ServiPlusApp.View
             this.signOutToolStripMenuItem});
             this.cerrarSecionToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("cerrarSecionToolStripMenuItem1.Image")));
             this.cerrarSecionToolStripMenuItem1.Name = "cerrarSecionToolStripMenuItem1";
-            this.cerrarSecionToolStripMenuItem1.Size = new System.Drawing.Size(36, 32);
+            this.cerrarSecionToolStripMenuItem1.Size = new System.Drawing.Size(34, 27);
             // 
             // signInAsToolStripMenuItem
             // 
             this.signInAsToolStripMenuItem.Enabled = false;
             this.signInAsToolStripMenuItem.Name = "signInAsToolStripMenuItem";
-            this.signInAsToolStripMenuItem.Size = new System.Drawing.Size(203, 36);
+            this.signInAsToolStripMenuItem.Size = new System.Drawing.Size(171, 28);
             this.signInAsToolStripMenuItem.Text = "Sign in as ";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(200, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(168, 6);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("signOutToolStripMenuItem.Image")));
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
             this.signOutToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(203, 36);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(171, 28);
             this.signOutToolStripMenuItem.Text = "Sign out";
             this.signOutToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
@@ -241,46 +244,46 @@ namespace ServiPlusApp.View
             this.toolStripLabel3,
             this.lblRol});
             this.tlsEstatus.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.tlsEstatus.Location = new System.Drawing.Point(0, 602);
+            this.tlsEstatus.Location = new System.Drawing.Point(0, 478);
             this.tlsEstatus.Name = "tlsEstatus";
             this.tlsEstatus.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.tlsEstatus.Size = new System.Drawing.Size(1208, 27);
+            this.tlsEstatus.Size = new System.Drawing.Size(1074, 25);
             this.tlsEstatus.TabIndex = 1;
             this.tlsEstatus.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(87, 33);
+            this.toolStripLabel1.Size = new System.Drawing.Size(73, 22);
             this.toolStripLabel1.Text = "Usuario: ";
             this.toolStripLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblUsername
             // 
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(143, 33);
+            this.lblUsername.Size = new System.Drawing.Size(118, 22);
             this.lblUsername.Text = "toolStripLabel2";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(49, 33);
+            this.toolStripLabel3.Size = new System.Drawing.Size(41, 22);
             this.toolStripLabel3.Text = "Rol: ";
             // 
             // lblRol
             // 
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(143, 33);
+            this.lblRol.Size = new System.Drawing.Size(119, 22);
             this.lblRol.Text = "toolStripLabel4";
             // 
             // cerrarSeciónToolStripMenuItem
@@ -299,27 +302,26 @@ namespace ServiPlusApp.View
             this.singToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.singToolStripMenuItem.Enabled = false;
             this.singToolStripMenuItem.Name = "singToolStripMenuItem";
-            this.singToolStripMenuItem.Size = new System.Drawing.Size(195, 34);
+            this.singToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.singToolStripMenuItem.Text = "Sign in as ";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(192, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(156, 6);
             // 
             // cerrarSecionToolStripMenuItem
             // 
             this.cerrarSecionToolStripMenuItem.Name = "cerrarSecionToolStripMenuItem";
-            this.cerrarSecionToolStripMenuItem.Size = new System.Drawing.Size(195, 34);
+            this.cerrarSecionToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.cerrarSecionToolStripMenuItem.Text = "Sign out";
             // 
             // splitter1
             // 
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 35);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.splitter1.Location = new System.Drawing.Point(0, 31);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(1208, 2);
+            this.splitter1.Size = new System.Drawing.Size(1074, 2);
             this.splitter1.TabIndex = 5;
             this.splitter1.TabStop = false;
             // 
@@ -331,28 +333,28 @@ namespace ServiPlusApp.View
             this.toolStripSeparator5,
             this.toolStripLabel2,
             this.tstxtSearch});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 37);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 33);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(1208, 35);
+            this.toolStrip1.Size = new System.Drawing.Size(1074, 27);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(86, 33);
+            this.toolStripLabel2.Size = new System.Drawing.Size(70, 24);
             this.toolStripLabel2.Text = "Search: ";
             // 
             // tstxtSearch
@@ -360,42 +362,50 @@ namespace ServiPlusApp.View
             this.tstxtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tstxtSearch.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tstxtSearch.Name = "tstxtSearch";
-            this.tstxtSearch.Size = new System.Drawing.Size(168, 38);
+            this.tstxtSearch.Size = new System.Drawing.Size(150, 27);
             this.tstxtSearch.TextChanged += new System.EventHandler(this.tstxtSearch_TextChanged);
             // 
             // splitter2
             // 
             this.splitter2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter2.Location = new System.Drawing.Point(0, 72);
-            this.splitter2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.splitter2.Location = new System.Drawing.Point(0, 60);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(1208, 5);
+            this.splitter2.Size = new System.Drawing.Size(1074, 4);
             this.splitter2.TabIndex = 7;
             this.splitter2.TabStop = false;
             // 
             // pnlTablas
             // 
             this.pnlTablas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTablas.Location = new System.Drawing.Point(0, 77);
-            this.pnlTablas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlTablas.Location = new System.Drawing.Point(0, 64);
             this.pnlTablas.Name = "pnlTablas";
-            this.pnlTablas.Size = new System.Drawing.Size(1208, 525);
+            this.pnlTablas.Size = new System.Drawing.Size(1074, 414);
             this.pnlTablas.TabIndex = 8;
             this.pnlTablas.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.pnlTablas_ControlAdded);
             // 
-            // detalleDeRepuestosToolStripMenuItem
+            // mantenimientosToolStripMenuItem1
             // 
-            this.detalleDeRepuestosToolStripMenuItem.Name = "detalleDeRepuestosToolStripMenuItem";
-            this.detalleDeRepuestosToolStripMenuItem.Size = new System.Drawing.Size(353, 36);
-            this.detalleDeRepuestosToolStripMenuItem.Text = "Detalle de Repuestos";
+            this.mantenimientosToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.detalleDeMantenimientosToolStripMenuItem});
+            this.mantenimientosToolStripMenuItem1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mantenimientosToolStripMenuItem1.Name = "mantenimientosToolStripMenuItem1";
+            this.mantenimientosToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
+            this.mantenimientosToolStripMenuItem1.Text = "Mantenimientos";
+            this.mantenimientosToolStripMenuItem1.Click += new System.EventHandler(this.mantenimientosToolStripMenuItem1_Click);
+            // 
+            // detalleDeMantenimientosToolStripMenuItem
+            // 
+            this.detalleDeMantenimientosToolStripMenuItem.Name = "detalleDeMantenimientosToolStripMenuItem";
+            this.detalleDeMantenimientosToolStripMenuItem.Size = new System.Drawing.Size(299, 28);
+            this.detalleDeMantenimientosToolStripMenuItem.Text = "Detalle de mantenimientos";
             // 
             // FrmOperations
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(1208, 629);
+            this.ClientSize = new System.Drawing.Size(1074, 503);
             this.Controls.Add(this.pnlTablas);
             this.Controls.Add(this.splitter2);
             this.Controls.Add(this.toolStrip1);
@@ -403,7 +413,6 @@ namespace ServiPlusApp.View
             this.Controls.Add(this.tlsEstatus);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmOperations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SERVI PLUS Informations";
@@ -428,12 +437,7 @@ namespace ServiPlusApp.View
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mecanicosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem repuestosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem controlToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem detalleDeMantenimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSeciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSecionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem singToolStripMenuItem;
@@ -458,6 +462,12 @@ namespace ServiPlusApp.View
         private System.Windows.Forms.ToolStripTextBox tstxtSearch;
         private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.Panel pnlTablas;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem repuestosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem detalleDeRepuestosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem repuestosPorVehiculosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem detalleDeMantenimientosToolStripMenuItem;
     }
 }

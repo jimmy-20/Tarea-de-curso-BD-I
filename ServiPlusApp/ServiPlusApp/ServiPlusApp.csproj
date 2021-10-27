@@ -46,18 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CMantenimientos.cs" />
     <Compile Include="Controller\CMecanicos.cs" />
+    <Compile Include="Controller\CRepuestos.cs" />
     <Compile Include="Controller\CServicios.cs" />
     <Compile Include="Controller\CUser.cs" />
     <Compile Include="Controller\CClientes.cs" />
     <Compile Include="Controller\CVehiculos.cs" />
-    <Compile Include="Data\DClientes.cs" />
-    <Compile Include="Data\DMecanicos.cs" />
-    <Compile Include="Data\DRepuestos.cs" />
-    <Compile Include="Data\DServicios.cs" />
-    <Compile Include="Data\DUser.cs" />
-    <Compile Include="Data\Connection.cs" />
-    <Compile Include="Data\DVehiculos.cs" />
+    <Compile Include="Model\DClientes.cs" />
+    <Compile Include="Model\DMantenimientos.cs" />
+    <Compile Include="Model\DMecanicos.cs" />
+    <Compile Include="Model\DRepuestos.cs" />
+    <Compile Include="Model\DServicios.cs" />
+    <Compile Include="Model\DUser.cs" />
+    <Compile Include="Model\Connection.cs" />
+    <Compile Include="Model\DVehiculos.cs" />
     <Compile Include="Enums\Especialidades.cs" />
     <Compile Include="Enums\Roles.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

@@ -45,9 +45,8 @@ namespace ServiPlusApp.View
                 {
                     if (dt.Rows[0][0].ToString().Equals("Acceso Denegado"))
                     {
-                        txtPassword.Text = "";
                         txtUsername.Text = "";
-                        txtUsername.Focus();
+
                         throw new ArgumentException($"El username insertado ya existe");
                     }
                 }
@@ -73,6 +72,7 @@ namespace ServiPlusApp.View
             {
                 MessageBox.Show(ex.Message, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+       
         }
 
 
@@ -89,7 +89,7 @@ namespace ServiPlusApp.View
                 throw new ArgumentException($"El apellido es requerido");
             }
 
-            if (string.IsNullOrWhiteSpace(telefono))
+            if (!mtbTelefono.MaskFull)
             {
                 mtbTelefono.Focus();
                 throw new ArgumentException($"El numero de telefono es requerido");
@@ -202,9 +202,12 @@ namespace ServiPlusApp.View
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void mtbTelefono_Leave(object sender, EventArgs e)
         {
-
+            if (!mtbTelefono.MaskFull)
+            {
+                mtbTelefono.Focus();
+            }
         }
     }
 }

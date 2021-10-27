@@ -23,12 +23,12 @@ Insert into Mecanicos values ('Ebner','Ponce','Mantenimiento','65369885',56325,'
 select * from Mecanicos
 
 --- insertando datos en la tabla repuesto 
-Insert into Repuestos values ('Bandas del motor','Original','Honda','SS101',150)
-Insert into Repuestos values ('Cigüeñales','Remplazo','KIA','QWA22',134)
-Insert into Repuestos values ('Pistones','Remplazo','Yamaha','AQW2',150)
-Insert into Repuestos values ('Sistema de aire acondicionado','Original','BOSCH','SLA1',300)
-Insert into Repuestos values ('Bateria','Remplazo','ACDelco','QWS2',134)
-Insert into Repuestos values ('Caja de cambio','Original','VALEO','SOCA1',300)
+Insert into Repuestos values ('Bandas del motor','Original','Honda','SS101')
+Insert into Repuestos values ('Cigüeñales','Remplazo','KIA','QWA22')
+Insert into Repuestos values ('Pistones','Remplazo','Yamaha','AQW2')
+Insert into Repuestos values ('Sistema de aire acondicionado','Original','BOSCH','SLA1')
+Insert into Repuestos values ('Bateria','Remplazo','ACDelco','QWS2')
+Insert into Repuestos values ('Caja de cambio','Original','VALEO','SOCA1')
 
 select * from Repuestos
 ---insertando datos en la tabla vehículo
@@ -76,12 +76,12 @@ select * from Servicios
  select * from [Detalle de Mantenimiento]
 
  ---insertando datos en detallerepuesto
- Insert into [Detalle de Repuestos] values (1,1)
- Insert into [Detalle de Repuestos] values (2,1)
- Insert into [Detalle de Repuestos] values (3,1)
- Insert into [Detalle de Repuestos] values (4,2)
- Insert into [Detalle de Repuestos] values (5,1)
- Insert into [Detalle de Repuestos] values (6,2)
+ Insert into [Detalle de Repuestos] values (1,150,1)
+ Insert into [Detalle de Repuestos] values (2,134,1)
+ Insert into [Detalle de Repuestos] values (3,150,1)
+ Insert into [Detalle de Repuestos] values (4,300,2)
+ Insert into [Detalle de Repuestos] values (5,134,1)
+ Insert into [Detalle de Repuestos] values (6,300,2)
 
  select * from Repuestos
  select * from [Detalle de Repuestos]
@@ -94,6 +94,7 @@ select * from Servicios
  select * from Mantenimientos
  select * from Vehiculos
  select * from Mecanicos
+ select * from Repuestos
 
 
  BACKUP DATABASE	SERVIPLUS TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\SERVIPLUS.bak'

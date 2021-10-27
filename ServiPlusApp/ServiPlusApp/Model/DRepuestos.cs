@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ServiPlusApp.Data
+namespace ServiPlusApp.Model
 {
-    public class DClientes
+    public class DRepuestos
     {
-        public static DataTable Tabla_Clientes()
+        public static DataTable Mostrar_Repuestos()
         {
-            DataTable DtResultado = new DataTable("Clientes");
+            DataTable DtResultado = new DataTable("Mostrar_Repuestos");
             SqlConnection sqlCon = new SqlConnection();
             try
             {
@@ -23,7 +23,7 @@ namespace ServiPlusApp.Data
                 SqlCommand sqlCmd = new SqlCommand
                 {
                     Connection = sqlCon,
-                    CommandText = "Mostrar_Clientes",
+                    CommandText = "Mostrar_Repuestos",
                     CommandType = CommandType.StoredProcedure
                 };
 

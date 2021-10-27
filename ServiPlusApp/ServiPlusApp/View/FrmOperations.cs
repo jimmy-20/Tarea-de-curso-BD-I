@@ -38,12 +38,13 @@ namespace ServiPlusApp.View
             lblRol.Text = rol;
             signInAsToolStripMenuItem.Text += " " + username;
         }
-        private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             DataTable dt = CUser.Table_Usuarios();
 
             DataGridView dgvUsuarios = setDataGridView(dt);
-           
+
             Create_TabControl_Table("Usuarios", dgvUsuarios);
         }
 
@@ -67,28 +68,11 @@ namespace ServiPlusApp.View
             Create_TabControl_Table("Clientes", dgvClientes);
         }
 
-        private DataGridView setDataGridView(DataTable dt)
-        {
-            DataGridView dgv = new DataGridView
-            {
-                Dock = DockStyle.Fill,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                DataSource = dt
-            };
-
-            return dgv;
-        }
-
         private void mecanicosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataTable dt = CMecanicos.Mostrar_Mecanicos();
 
-            DataGridView dgvMecanicos= new DataGridView
-            {
-                Dock = DockStyle.Fill,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                DataSource = dt
-            };
+            DataGridView dgvMecanicos = setDataGridView(dt);
 
             Create_TabControl_Table("Mecanicos", dgvMecanicos);
         }
@@ -100,6 +84,36 @@ namespace ServiPlusApp.View
             DataGridView dgvServicios = setDataGridView(dt);
 
             Create_TabControl_Table("Servicios", dgvServicios);
+        }
+
+        private void repuestosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DataTable dt = CRepuestos.Mostrar_Repuestos();
+
+            DataGridView dgvRepuestos = setDataGridView(dt);
+
+            Create_TabControl_Table("Repuestos", dgvRepuestos);
+        }
+
+        private void mantenimientosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DataTable dt = CMantenimientos.Mostrar_Mantenimientos();
+
+            DataGridView dgvMantenimientos = setDataGridView(dt);
+
+            Create_TabControl_Table("Mantenimientos", dgvMantenimientos);
+        }
+
+        private DataGridView setDataGridView(DataTable dt)
+        {
+            DataGridView dgv = new DataGridView
+            {
+                Dock = DockStyle.Fill,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                DataSource = dt
+            };
+
+            return dgv;
         }
 
         private void Create_TabControl_Table(string tableName, DataGridView dgv)
@@ -196,5 +210,7 @@ namespace ServiPlusApp.View
             bs.Filter = dgv.Columns[0].HeaderText + " like '%" + tstxtSearch.Text + "%'";
             dgv.DataSource = bs;
         }
+
+       
     }
 }
