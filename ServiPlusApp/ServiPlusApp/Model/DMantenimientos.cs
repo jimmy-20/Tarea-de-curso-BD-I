@@ -12,7 +12,7 @@ namespace ServiPlusApp.Model
     {
         public static DataTable Mostrar_Mantenimientos()
         {
-            DataTable DtResultado = new DataTable("Mostrar_Mecanicos");
+            DataTable DtResultado = new DataTable("Mostrar_Mantenimientos");
             SqlConnection sqlCon = new SqlConnection();
             try
             {

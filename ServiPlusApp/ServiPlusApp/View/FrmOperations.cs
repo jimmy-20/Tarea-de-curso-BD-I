@@ -6,6 +6,8 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +19,7 @@ namespace ServiPlusApp.View
         public string username;
         public string fullname;
         public string rol;
+
         private TabControl tbcTablas;
 
 
@@ -54,7 +57,7 @@ namespace ServiPlusApp.View
             DataTable dt = CVehiculos.Table_Vehiculos();
 
             DataGridView dgvVehiculos = setDataGridView(dt);
-        
+
             Create_TabControl_Table("Vehiculos", dgvVehiculos);
         }
 
@@ -64,7 +67,7 @@ namespace ServiPlusApp.View
             DataTable dt = CClientes.Table_Clientes();
 
             DataGridView dgvClientes = setDataGridView(dt);
-       
+
             Create_TabControl_Table("Clientes", dgvClientes);
         }
 
@@ -79,7 +82,7 @@ namespace ServiPlusApp.View
 
         private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataTable  dt = CServicios.Mostrar_Servicios();
+            DataTable dt = CServicios.Mostrar_Servicios();
 
             DataGridView dgvServicios = setDataGridView(dt);
 
@@ -106,14 +109,31 @@ namespace ServiPlusApp.View
 
         private DataGridView setDataGridView(DataTable dt)
         {
-            DataGridView dgv = new DataGridView
-            {
-                Dock = DockStyle.Fill,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                DataSource = dt
-            };
 
-            return dgv;
+            if (dt.TableName.Equals("Mostrar_Mantenimientos") || dt.TableName.Equals("Mostrar_Repuestos"))
+            {
+                DataGridView dgv = new DataGridView
+                {
+                    Dock = DockStyle.Fill,
+                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells,
+                    AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells,
+                    DataSource = dt
+                };
+                return dgv;
+            }
+            else
+            {
+                DataGridView dgv = new DataGridView
+                {
+                    Dock = DockStyle.Fill,
+                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                    DataSource = dt
+                };
+                return dgv;
+            }
+         
+
+           
         }
 
         private void Create_TabControl_Table(string tableName, DataGridView dgv)
@@ -121,7 +141,7 @@ namespace ServiPlusApp.View
             TabPage tbpTablas;
 
             if (tbcTablas.TabCount != 0)
-            { 
+            {
                 foreach (TabPage t in tbcTablas.TabPages)
                 {
                     if (t.Text.Equals(tableName))
@@ -141,15 +161,19 @@ namespace ServiPlusApp.View
             {
                 Dock = DockStyle.Top
             };
+
             ToolStripButton tlsbtnClose = new ToolStripButton
             {
-                Text = "X",
+                Text = "Cerrar tabla",
                 ForeColor = Color.Red,
+                Image = Properties.Resources.cancel,
+                DisplayStyle = ToolStripItemDisplayStyle.Image
             };
 
             tlsbtnClose.Click += TlsbtnClose_Click;
 
             tlsClose.Items.Add(tlsbtnClose);
+
 
             TableLayoutPanel tableLayoutPanel = new TableLayoutPanel
             {
@@ -191,26 +215,26 @@ namespace ServiPlusApp.View
             pnlTablas.BorderStyle = BorderStyle.Fixed3D;
         }
 
-        private void tstxtSearch_TextChanged(object sender, EventArgs e)
-        {
-            if (tbcTablas.TabCount==0)
-            {
-                return;
-            }
-            TabPage tp = tbcTablas.SelectedTab;
+        //private void tstxtSearch_TextChanged(object sender, EventArgs e)
+        //{
+        //    if (tbcTablas.TabCount==0)
+        //    {
+        //        return;
+        //    }
+        //    TabPage tp = tbcTablas.SelectedTab;
 
-            Point p = new Point(0, 0);
+        //    Point p = new Point(0, 0);
 
-            TableLayoutPanel table = (TableLayoutPanel)tp.GetChildAtPoint(p);
+        //    TableLayoutPanel table = (TableLayoutPanel)tp.GetChildAtPoint(p);
 
-            DataGridView dgv = (DataGridView)table.GetControlFromPosition(0, 1);
+        //    DataGridView dgv = (DataGridView)table.GetControlFromPosition(0, 1);
 
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dgv.DataSource;
-            bs.Filter = dgv.Columns[0].HeaderText + " like '%" + tstxtSearch.Text + "%'";
-            dgv.DataSource = bs;
-        }
+        //    BindingSource bs = new BindingSource();
+        //    bs.DataSource = dgv.DataSource;
+        //    bs.Filter = dgv.Columns[0].HeaderText + " like '%" + tstxtSearch.Text + "%'";
+        //    dgv.DataSource = bs;
+        //}
 
-       
+
     }
 }
