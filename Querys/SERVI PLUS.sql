@@ -47,8 +47,9 @@ Costo float not null,
 Create table [Detalle de Repuestos](
 NoDetRepuestos int identity(1,1) not null,
 NoRepuesto int foreign key references Repuestos(NoRepuesto) not null,
-CostosUnitario float not null,
+CostoUnitario float not null,
 Cantidad int not null,
+Descuento float not null
 Primary key(NoDetRepuestos,NoRepuesto)
 )
 

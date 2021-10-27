@@ -75,6 +75,48 @@ from Vehiculos v
 inner join Clientes c 
 on c.NoCliente = v.NoCliente
 
+--Procedimiento mostrar todos los repuestos/Detalle de repuesto
+ALTER procedure [dbo].[Mostrar_Repuestos]
+as
+select 
+r.NoRepuesto as [No Repuesto],
+Titulo,
+Descripcion,
+Marca,
+Modelo,
+d.CostoUnitario as [Costo Unitario],
+d.Descuento,
+d.Cantidad,
+ROUND((d.CostoUnitario*d.Cantidad)-(d.Descuento*d.Cantidad),2) as [Costo Total]
+from Repuestos r 
+inner join [Detalle de Repuestos] d
+on d.NoRepuesto = r.NoRepuesto
+
+alter table [Detalle de Repuestos]
+add Descuento float 
+
+
+--Procedimiento mostrar todos los mantenimientos
+ALTER procedure [dbo].[Mostrar_Mantenimientos]
+as
+select 
+NoMantenimiento as [No Mantenimiento],
+c.p_nombre+' '+c.p_apellido as [Nombre del Cliente],
+v.Marca as [Marca del vehiculo],
+v.Modelo as [Modelo del vehiculo],
+v.Año as [Año del vehiculo],
+FechaIngreso as [Fecha de ingreso],
+FechaSalida as [Fecha de salida],
+Estado
+from Mantenimientos m
+inner join Vehiculos v 
+on v.NoVehiculo = m.NoVehiculo
+inner join Clientes c
+on c.NoCliente = v.NoCliente
+
+select * from Mantenimientos
+select * from [Detalle de Mantenimiento]
+
 --Procedimiento para la validacion de nuevo usuario al sistema 
 
 Alter procedure Validar_Creacion_Usuario

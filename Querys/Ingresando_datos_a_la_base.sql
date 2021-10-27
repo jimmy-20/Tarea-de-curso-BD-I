@@ -76,16 +76,15 @@ select * from Servicios
  select * from [Detalle de Mantenimiento]
 
  ---insertando datos en detallerepuesto
- Insert into [Detalle de Repuestos] values (1,150,1)
- Insert into [Detalle de Repuestos] values (2,134,1)
- Insert into [Detalle de Repuestos] values (3,150,1)
- Insert into [Detalle de Repuestos] values (4,300,2)
- Insert into [Detalle de Repuestos] values (5,134,1)
- Insert into [Detalle de Repuestos] values (6,300,2)
+ Insert into [Detalle de Repuestos] values (1,150,2,0)
+ Insert into [Detalle de Repuestos] values (2,134,2,0)
+ Insert into [Detalle de Repuestos] values (3,150,2,0)
+ Insert into [Detalle de Repuestos] values (4,300,1,0)
+ Insert into [Detalle de Repuestos] values (5,134,1,0)
+ Insert into [Detalle de Repuestos] values (6,300,1,0)
 
  select * from Repuestos
  select * from [Detalle de Repuestos]
-
  ----consultando a todas las tablas
  select * from [Detalle de Repuestos]
  select * from Clientes
