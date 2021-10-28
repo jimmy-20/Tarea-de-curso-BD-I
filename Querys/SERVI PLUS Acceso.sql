@@ -21,6 +21,11 @@ Grant execute on Mostrar_Mecanicos to AdminServiPlus
 Grant execute on Mostrar_Servicios to AdminServiPlus
 Grant execute on Mostrar_Repuestos to AdminServiPlus
 Grant execute on Mostrar_Mantenimientos to AdminServiPlus
+Grant execute on Buscar_Vehiculo to AdminServiPlus
+Grant execute on Buscar_Cliente to AdminServiPlus
+Grant execute on Buscar_Mecanico to AdminServiPlus
+Grant execute on Buscar_Servicio to AdminServiPlus
+Grant execute on Buscar_Mantenimiento to AdminServiPlus
 
 	--Tablas: 
 Grant select on Usuarios to AdminServiPlus

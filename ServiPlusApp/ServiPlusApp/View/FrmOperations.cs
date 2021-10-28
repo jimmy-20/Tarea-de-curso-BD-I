@@ -29,7 +29,7 @@ namespace ServiPlusApp.View
         private DataTable dtMecanicos;
         private DataTable dtRepuestos;
         private DataTable dtServicios;
-     
+
         private DataGridView dgvUsuarios;
         private DataGridView dgvVehiculos;
         private DataGridView dgvClientes;
@@ -67,20 +67,25 @@ namespace ServiPlusApp.View
 
         private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (dtUsuarios != null)
+            if (dtUsuarios == null)
             {
-                return;
+                dtUsuarios = CUser.Table_Usuarios();
+
+                dgvUsuarios = new DataGridView()
+                {
+                    Dock = DockStyle.Fill,
+                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                    DataSource = dtUsuarios
+
+                };
+
             }
 
-            dtUsuarios = CUser.Table_Usuarios();
-
-            dgvUsuarios = new DataGridView()
+            if (tbcTablas.Controls.Contains(tpUsuarios))
             {
-                Dock = DockStyle.Fill,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                DataSource = dtUsuarios
-
-            };
+                tbcTablas.SelectedTab = tpUsuarios;
+                return;
+            }
 
             tpUsuarios = new TabPage("Usuarios");
 
@@ -103,7 +108,7 @@ namespace ServiPlusApp.View
 
             tpUsuarios.Controls.Add(dgvUsuarios);
             tpUsuarios.Controls.Add(tsUsuarios);
-           
+
 
             tbcTablas.TabPages.Add(tpUsuarios);
 
@@ -117,20 +122,25 @@ namespace ServiPlusApp.View
 
         private void VehiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dtVehiculos != null)
+            if (dtVehiculos == null)
             {
-                return;
+                dtVehiculos = CVehiculos.Mostrar_Vehiculos();
+
+                dgvVehiculos = new DataGridView()
+                {
+                    Dock = DockStyle.Fill,
+                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                    DataSource = dtVehiculos
+
+                };
+
             }
 
-            dtVehiculos = CVehiculos.Mostrar_Vehiculos();
-
-            dgvVehiculos = new DataGridView()
+            if (tbcTablas.Controls.Contains(tpVehiculos))
             {
-                Dock = DockStyle.Fill,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                DataSource = dtVehiculos
-
-            };
+                tbcTablas.SelectedTab = tpVehiculos;
+                return;
+            }
 
             tpVehiculos = new TabPage("Vehiculos");
 
@@ -167,20 +177,25 @@ namespace ServiPlusApp.View
 
         private void ClientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (dtClientes != null)
+            if (dtClientes == null)
             {
-                return;
+                dtClientes = CClientes.Table_Clientes();
+
+                dgvClientes = new DataGridView()
+                {
+                    Dock = DockStyle.Fill,
+                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                    DataSource = dtClientes
+
+                };
             }
 
-            dtClientes = CClientes.Table_Clientes();
 
-            dgvClientes = new DataGridView()
+            if (tbcTablas.Controls.Contains(tpClientes))
             {
-                Dock = DockStyle.Fill,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                DataSource = dtClientes
-
-            };
+                tbcTablas.SelectedTab = tpClientes;
+                return;
+            }
 
             tpClientes = new TabPage("Clientes");
 
@@ -217,21 +232,30 @@ namespace ServiPlusApp.View
 
         private void mecanicosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dtMecanicos != null)
+
+            if (dtMecanicos == null)
             {
+                dtMecanicos = CMecanicos.Mostrar_Mecanicos();
+
+                dgvMecanicos = new DataGridView()
+                {
+                    Dock = DockStyle.Fill,
+                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                    DataSource = dtMecanicos
+
+                };
+
+            }
+
+
+            if (tbcTablas.Controls.Contains(tpMecanicos))
+            {
+                tbcTablas.SelectedTab = tpMecanicos;
                 return;
             }
-             dtMecanicos = CMecanicos.Mostrar_Mecanicos();
 
-            dgvMecanicos = new DataGridView()
-            {
-                Dock = DockStyle.Fill,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                DataSource = dtMecanicos
 
-            };
-
-             tpMecanicos = new TabPage("Mecanicos");
+            tpMecanicos = new TabPage("Mecanicos");
 
             ToolStripButton btnClose = new ToolStripButton
             {
@@ -266,22 +290,27 @@ namespace ServiPlusApp.View
 
         private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dtServicios != null)
+            if (dtServicios == null)
             {
+                dtServicios = CServicios.Mostrar_Servicios();
+
+                dgvServicios = new DataGridView()
+                {
+                    Dock = DockStyle.Fill,
+                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                    DataSource = dtServicios
+
+                };
+
+            }
+
+            if (tbcTablas.Controls.Contains(tpServicios))
+            {
+                tbcTablas.SelectedTab = tpServicios;
                 return;
             }
 
-            dtServicios = CServicios.Mostrar_Servicios();
-
-            dgvServicios = new DataGridView()
-            {
-                Dock = DockStyle.Fill,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                DataSource = dtServicios
-
-            };
-
-             tpServicios = new TabPage("Servicios");
+            tpServicios = new TabPage("Servicios");
 
             ToolStripButton btnClose = new ToolStripButton
             {
@@ -316,22 +345,27 @@ namespace ServiPlusApp.View
 
         private void repuestosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (dtRepuestos != null)
+            if (dtRepuestos == null)
             {
+                dtRepuestos = CRepuestos.Mostrar_Repuestos();
+
+                dgvRepuestos = new DataGridView()
+                {
+                    Dock = DockStyle.Fill,
+                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                    DataSource = dtRepuestos
+
+                };
+            }
+
+            if (tbcTablas.Controls.Contains(tpRepuestos))
+            {
+                tbcTablas.SelectedTab = tpRepuestos;
                 return;
             }
 
-            dtRepuestos = CRepuestos.Mostrar_Repuestos();
 
-            dgvRepuestos = new DataGridView()
-            {
-                Dock = DockStyle.Fill,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                DataSource = dtRepuestos
-
-            };
-
-             tpRepuestos= new TabPage("Servicios");
+            tpRepuestos = new TabPage("Repuestos");
 
             ToolStripButton btnClose = new ToolStripButton
             {
@@ -365,21 +399,26 @@ namespace ServiPlusApp.View
 
         private void mantenimientosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (dtMantenimientos!= null)
+            if (dtMantenimientos == null)
             {
+                dtMantenimientos = CMantenimientos.Mostrar_Mantenimientos();
+
+                dgvMantenimientos = new DataGridView()
+                {
+                    Dock = DockStyle.Fill,
+                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells,
+                    DataSource = dtMantenimientos
+
+                };
+            }
+
+            if (tbcTablas.Controls.Contains(tpMantenimientos))
+            {
+                tbcTablas.SelectedTab = tpRepuestos;
                 return;
             }
-            dtMantenimientos = CMantenimientos.Mostrar_Mantenimientos();
 
-            dgvMantenimientos = new DataGridView()
-            {
-                Dock = DockStyle.Fill,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells,
-                DataSource = dtMantenimientos
-
-            };
-
-             tpMantenimientos = new TabPage("Mantenimientos");
+            tpMantenimientos = new TabPage("Mantenimientos");
 
             ToolStripButton btnClose = new ToolStripButton
             {
@@ -417,7 +456,7 @@ namespace ServiPlusApp.View
         {
             tbcTablas.TabPages.Remove(tbcTablas.SelectedTab);
 
-            if (tbcTablas.TabPages.Count ==0)
+            if (tbcTablas.TabPages.Count == 0)
             {
                 pnlTablas.Controls.Remove(tbcTablas);
                 return;
@@ -532,64 +571,56 @@ namespace ServiPlusApp.View
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            if (tbcTablas.TabCount == 0)
-            {
-                return;
-            }
-
-            TabPage tp = tbcTablas.SelectedTab;
-
-            Point p = new Point(0, 0);
-
-            TableLayoutPanel table = (TableLayoutPanel)tp.GetChildAtPoint(p);
-
-            DataGridView dgv = (DataGridView)table.GetControlFromPosition(0, 1);
-
-            DataTable dataTable = (DataTable)dgv.DataSource;
-
-            string nametable = dataTable.TableName;
+          
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            if (tbcTablas.TabCount == 0)
+            if (tbcTablas.TabPages.Count == 0)
             {
                 return;
             }
 
-            TabPage tp = tbcTablas.SelectedTab;
 
-            Point p = new Point(0, 0);
-
-            TableLayoutPanel table = (TableLayoutPanel)tp.GetChildAtPoint(p);
-
-            DataGridView dgv = (DataGridView)table.GetControlFromPosition(0, 1);
-
-            DataTable dataTable = (DataTable)dgv.DataSource;
-
-
-            getTableCommmandSearch(dataTable.TableName,dgv);
- 
-        }
-
-        private void getTableCommmandSearch(string nametable,DataGridView dgv)
-        {
-            switch (nametable)
+            if(tbcTablas.SelectedTab== tpUsuarios)
             {
-                case "Usuarios":
-                    {
-                        dgv.DataSource = CBuscarUsuario.Buscar_Usuario(this.txtSearch.Text);
-                        break;
-                    }
-                default:
-                    break;
+                dgvUsuarios.DataSource = CBuscarUsuario.Buscar_Usuario(this.txtSearch.Text);
             }
+
+            if (tbcTablas.SelectedTab == tpClientes)
+            {
+                dgvClientes.DataSource = CBuscarCliente.Buscar_Cliente(this.txtSearch.Text);
+            }
+
+            if (tbcTablas.SelectedTab == tpMecanicos)
+            {
+                dgvMecanicos.DataSource = CBuscarMecanico.Buscar_Mecanico(this.txtSearch.Text);
+            }
+
+            if (tbcTablas.SelectedTab == tpServicios)
+            {
+                dgvServicios.DataSource = CBuscarServicio.Buscar_Servicio(this.txtSearch.Text);
+            }
+
+            if (tbcTablas.SelectedTab == tpVehiculos)
+            {
+                dgvVehiculos.DataSource = CBuscarVehiculo.Buscar_vehiculo(this.txtSearch.Text);
+            }
+
+            if (tbcTablas.SelectedTab == tpRepuestos)
+            {
+                dgvRepuestos.DataSource = CBuscarRepuesto.Buscar_Repuesto(this.txtSearch.Text);
+            }
+
+            if (tbcTablas.SelectedTab == tpMantenimientos)
+            {
+                dgvMantenimientos.DataSource = CBuscarMantenimiento.Buscar_Mantenimiento(this.txtSearch.Text);
+            }
+
+
         }
 
-        private void txtSearch_Click(object sender, EventArgs e)
-        {
-          
-        }
+      
 
         //private void tstxtSearch_TextChanged(object sender, EventArgs e)
         //{

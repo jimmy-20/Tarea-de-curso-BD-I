@@ -46,7 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CBuscarCliente.cs" />
+    <Compile Include="Controller\CBuscarMantenimiento.cs" />
+    <Compile Include="Controller\CBuscarMecanico.cs" />
+    <Compile Include="Controller\CBuscarRepuesto.cs" />
+    <Compile Include="Controller\CBuscarServicio.cs" />
     <Compile Include="Controller\CBuscarUsuario.cs" />
+    <Compile Include="Controller\CBuscarVehiculo.cs" />
     <Compile Include="Controller\CMantenimientos.cs" />
     <Compile Include="Controller\CMecanicos.cs" />
     <Compile Include="Controller\CRepuestos.cs" />
@@ -54,7 +60,13 @@
     <Compile Include="Controller\CUser.cs" />
     <Compile Include="Controller\CClientes.cs" />
     <Compile Include="Controller\CVehiculos.cs" />
+    <Compile Include="Model\DBuscarCliente.cs" />
+    <Compile Include="Model\DBuscarMantenimiento.cs" />
+    <Compile Include="Model\DBuscarMecanico.cs" />
+    <Compile Include="Model\DBuscarRepuesto.cs" />
+    <Compile Include="Model\DBuscarServicio.cs" />
     <Compile Include="Model\DBuscarUsuario.cs" />
+    <Compile Include="Model\DBuscarVehiculo.cs" />
     <Compile Include="Model\DClientes.cs" />
     <Compile Include="Model\DMantenimientos.cs" />
     <Compile Include="Model\DMecanicos.cs" />
