@@ -5,6 +5,7 @@ select * from Clientes
 
 Update Usuarios set IdColaborador= 2 where IdUsuario=4
 Update Colaboradores set Especialidad = 'Analista' where IdColaborador=2
+
 Alter table Mecanicos 
 add Especialidad nvarchar(50) not null
 Alter table Mecanicos 
@@ -193,7 +194,7 @@ if exists (Select username from Usuarios where username = @usuario)
 --Procedimiento para la busqueda usuarios/Colaboradores
 
 ALTER procedure [dbo].[Buscar_Usuario]
-	 @dato varchar(20)
+	 @dato varchar(100)
 	 as
 	 Select
  c.FirstName as Nombre,

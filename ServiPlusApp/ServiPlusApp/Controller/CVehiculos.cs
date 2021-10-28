@@ -10,9 +10,9 @@ namespace ServiPlusApp.Controller
 {
     public class CVehiculos
     {
-        public static DataTable Table_Vehiculos()
+        public static DataTable Mostrar_Vehiculos()
         {
-            return DMecanicos.Mostrar_Mecanicos();
+            return DVehiculos.Mostrar_Vehiculos();
         }
     }
 }

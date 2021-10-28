@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CBuscarUsuario.cs" />
     <Compile Include="Controller\CMantenimientos.cs" />
     <Compile Include="Controller\CMecanicos.cs" />
     <Compile Include="Controller\CRepuestos.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Controller\CUser.cs" />
     <Compile Include="Controller\CClientes.cs" />
     <Compile Include="Controller\CVehiculos.cs" />
+    <Compile Include="Model\DBuscarUsuario.cs" />
     <Compile Include="Model\DClientes.cs" />
     <Compile Include="Model\DMantenimientos.cs" />
     <Compile Include="Model\DMecanicos.cs" />
@@ -126,6 +128,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nueva-pagina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

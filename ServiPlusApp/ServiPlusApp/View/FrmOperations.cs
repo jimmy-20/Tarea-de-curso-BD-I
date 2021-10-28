@@ -22,6 +22,29 @@ namespace ServiPlusApp.View
 
         private TabControl tbcTablas;
 
+        private DataTable dtUsuarios;
+        private DataTable dtVehiculos;
+        private DataTable dtClientes;
+        private DataTable dtMantenimientos;
+        private DataTable dtMecanicos;
+        private DataTable dtRepuestos;
+        private DataTable dtServicios;
+     
+        private DataGridView dgvUsuarios;
+        private DataGridView dgvVehiculos;
+        private DataGridView dgvClientes;
+        private DataGridView dgvMantenimientos;
+        private DataGridView dgvMecanicos;
+        private DataGridView dgvServicios;
+        private DataGridView dgvRepuestos;
+
+        private TabPage tpUsuarios;
+        private TabPage tpVehiculos;
+        private TabPage tpClientes;
+        private TabPage tpMantenimientos;
+        private TabPage tpMecanicos;
+        private TabPage tpRepuestos;
+        private TabPage tpServicios;
 
         public FrmOperations()
         {
@@ -44,155 +67,447 @@ namespace ServiPlusApp.View
 
         private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            DataTable dt = CUser.Table_Usuarios();
+            if (dtUsuarios != null)
+            {
+                return;
+            }
 
-            DataGridView dgvUsuarios = setDataGridView(dt);
+            dtUsuarios = CUser.Table_Usuarios();
 
-            Create_TabControl_Table("Usuarios", dgvUsuarios);
+            dgvUsuarios = new DataGridView()
+            {
+                Dock = DockStyle.Fill,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                DataSource = dtUsuarios
+
+            };
+
+            tpUsuarios = new TabPage("Usuarios");
+
+            ToolStripButton btnClose = new ToolStripButton
+            {
+                DisplayStyle = ToolStripItemDisplayStyle.Image,
+                Image = Properties.Resources.cancel,
+                Text = "Cerrar tabla"
+            };
+
+            btnClose.Click += BtnClose_Click;
+
+            ToolStrip tsUsuarios = new ToolStrip
+            {
+                Dock = DockStyle.Top,
+            };
+
+            tsUsuarios.Items.Add(btnClose);
+
+
+            tpUsuarios.Controls.Add(dgvUsuarios);
+            tpUsuarios.Controls.Add(tsUsuarios);
+           
+
+            tbcTablas.TabPages.Add(tpUsuarios);
+
+            if (pnlTablas.Controls.Count == 0)
+            {
+                pnlTablas.Controls.Add(tbcTablas);
+            }
+
+            tbcTablas.SelectedTab = tpUsuarios;
         }
 
         private void VehiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (dtVehiculos != null)
+            {
+                return;
+            }
 
-            DataTable dt = CVehiculos.Table_Vehiculos();
+            dtVehiculos = CVehiculos.Mostrar_Vehiculos();
 
-            DataGridView dgvVehiculos = setDataGridView(dt);
+            dgvVehiculos = new DataGridView()
+            {
+                Dock = DockStyle.Fill,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                DataSource = dtVehiculos
 
-            Create_TabControl_Table("Vehiculos", dgvVehiculos);
+            };
+
+            tpVehiculos = new TabPage("Vehiculos");
+
+            ToolStripButton btnClose = new ToolStripButton
+            {
+                DisplayStyle = ToolStripItemDisplayStyle.Image,
+                Image = Properties.Resources.cancel,
+                Text = "Cerrar tabla"
+            };
+
+            btnClose.Click += BtnClose_Click;
+
+            ToolStrip tsVehiculos = new ToolStrip
+            {
+                Dock = DockStyle.Top,
+            };
+
+            tsVehiculos.Items.Add(btnClose);
+
+
+            tpVehiculos.Controls.Add(dgvVehiculos);
+            tpVehiculos.Controls.Add(tsVehiculos);
+
+
+            tbcTablas.TabPages.Add(tpVehiculos);
+
+            if (pnlTablas.Controls.Count == 0)
+            {
+                pnlTablas.Controls.Add(tbcTablas);
+            }
+
+            tbcTablas.SelectedTab = tpVehiculos;
         }
 
         private void ClientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            if (dtClientes != null)
+            {
+                return;
+            }
 
-            DataTable dt = CClientes.Table_Clientes();
+            dtClientes = CClientes.Table_Clientes();
 
-            DataGridView dgvClientes = setDataGridView(dt);
+            dgvClientes = new DataGridView()
+            {
+                Dock = DockStyle.Fill,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                DataSource = dtClientes
 
-            Create_TabControl_Table("Clientes", dgvClientes);
+            };
+
+            tpClientes = new TabPage("Clientes");
+
+            ToolStripButton btnClose = new ToolStripButton
+            {
+                DisplayStyle = ToolStripItemDisplayStyle.Image,
+                Image = Properties.Resources.cancel,
+                Text = "Cerrar tabla"
+            };
+
+            btnClose.Click += BtnClose_Click;
+
+            ToolStrip tsClientes = new ToolStrip
+            {
+                Dock = DockStyle.Top,
+            };
+
+            tsClientes.Items.Add(btnClose);
+
+
+            tpClientes.Controls.Add(dgvClientes);
+            tpClientes.Controls.Add(tsClientes);
+
+
+            tbcTablas.TabPages.Add(tpClientes);
+
+            if (pnlTablas.Controls.Count == 0)
+            {
+                pnlTablas.Controls.Add(tbcTablas);
+            }
+
+            tbcTablas.SelectedTab = tpClientes;
         }
 
         private void mecanicosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataTable dt = CMecanicos.Mostrar_Mecanicos();
+            if (dtMecanicos != null)
+            {
+                return;
+            }
+             dtMecanicos = CMecanicos.Mostrar_Mecanicos();
 
-            DataGridView dgvMecanicos = setDataGridView(dt);
+            dgvMecanicos = new DataGridView()
+            {
+                Dock = DockStyle.Fill,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                DataSource = dtMecanicos
 
-            Create_TabControl_Table("Mecanicos", dgvMecanicos);
+            };
+
+             tpMecanicos = new TabPage("Mecanicos");
+
+            ToolStripButton btnClose = new ToolStripButton
+            {
+                DisplayStyle = ToolStripItemDisplayStyle.Image,
+                Image = Properties.Resources.cancel,
+                Text = "Cerrar tabla"
+            };
+
+            btnClose.Click += BtnClose_Click;
+
+            ToolStrip tsMecanicos = new ToolStrip
+            {
+                Dock = DockStyle.Top,
+            };
+
+            tsMecanicos.Items.Add(btnClose);
+
+
+            tpMecanicos.Controls.Add(dgvMecanicos);
+            tpMecanicos.Controls.Add(tsMecanicos);
+
+
+            tbcTablas.TabPages.Add(tpMecanicos);
+
+            if (pnlTablas.Controls.Count == 0)
+            {
+                pnlTablas.Controls.Add(tbcTablas);
+            }
+
+            tbcTablas.SelectedTab = tpMecanicos;
         }
 
         private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataTable dt = CServicios.Mostrar_Servicios();
+            if (dtServicios != null)
+            {
+                return;
+            }
 
-            DataGridView dgvServicios = setDataGridView(dt);
+            dtServicios = CServicios.Mostrar_Servicios();
 
-            Create_TabControl_Table("Servicios", dgvServicios);
+            dgvServicios = new DataGridView()
+            {
+                Dock = DockStyle.Fill,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                DataSource = dtServicios
+
+            };
+
+             tpServicios = new TabPage("Servicios");
+
+            ToolStripButton btnClose = new ToolStripButton
+            {
+                DisplayStyle = ToolStripItemDisplayStyle.Image,
+                Image = Properties.Resources.cancel,
+                Text = "Cerrar tabla"
+            };
+
+            btnClose.Click += BtnClose_Click;
+
+            ToolStrip tsServicios = new ToolStrip
+            {
+                Dock = DockStyle.Top,
+            };
+
+            tsServicios.Items.Add(btnClose);
+
+
+            tpServicios.Controls.Add(dgvServicios);
+            tpServicios.Controls.Add(tsServicios);
+
+
+            tbcTablas.TabPages.Add(tpServicios);
+
+            if (pnlTablas.Controls.Count == 0)
+            {
+                pnlTablas.Controls.Add(tbcTablas);
+            }
+
+            tbcTablas.SelectedTab = tpServicios;
         }
 
         private void repuestosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            DataTable dt = CRepuestos.Mostrar_Repuestos();
+            if (dtRepuestos != null)
+            {
+                return;
+            }
 
-            DataGridView dgvRepuestos = setDataGridView(dt);
+            dtRepuestos = CRepuestos.Mostrar_Repuestos();
 
-            Create_TabControl_Table("Repuestos", dgvRepuestos);
+            dgvRepuestos = new DataGridView()
+            {
+                Dock = DockStyle.Fill,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                DataSource = dtRepuestos
+
+            };
+
+             tpRepuestos= new TabPage("Servicios");
+
+            ToolStripButton btnClose = new ToolStripButton
+            {
+                DisplayStyle = ToolStripItemDisplayStyle.Image,
+                Image = Properties.Resources.cancel,
+                Text = "Cerrar tabla"
+            };
+
+            btnClose.Click += BtnClose_Click;
+
+            ToolStrip tsRepuestos = new ToolStrip
+            {
+                Dock = DockStyle.Top,
+            };
+
+            tsRepuestos.Items.Add(btnClose);
+
+
+            tpRepuestos.Controls.Add(dgvRepuestos);
+            tpRepuestos.Controls.Add(tsRepuestos);
+
+
+            tbcTablas.TabPages.Add(tpRepuestos);
+
+            if (pnlTablas.Controls.Count == 0)
+            {
+                pnlTablas.Controls.Add(tbcTablas);
+            }
+            tbcTablas.SelectedTab = tpRepuestos;
         }
 
         private void mantenimientosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            DataTable dt = CMantenimientos.Mostrar_Mantenimientos();
-
-            DataGridView dgvMantenimientos = setDataGridView(dt);
-
-            Create_TabControl_Table("Mantenimientos", dgvMantenimientos);
-        }
-
-        private DataGridView setDataGridView(DataTable dt)
-        {
-
-            if (dt.TableName.Equals("Mostrar_Mantenimientos") || dt.TableName.Equals("Mostrar_Repuestos"))
+            if (dtMantenimientos!= null)
             {
-                DataGridView dgv = new DataGridView
-                {
-                    Dock = DockStyle.Fill,
-                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells,
-                    AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells,
-                    DataSource = dt
-                };
-                return dgv;
+                return;
             }
-            else
+            dtMantenimientos = CMantenimientos.Mostrar_Mantenimientos();
+
+            dgvMantenimientos = new DataGridView()
             {
-                DataGridView dgv = new DataGridView
-                {
-                    Dock = DockStyle.Fill,
-                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                    DataSource = dt
-                };
-                return dgv;
-            }
-         
+                Dock = DockStyle.Fill,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells,
+                DataSource = dtMantenimientos
 
-           
-        }
-
-        private void Create_TabControl_Table(string tableName, DataGridView dgv)
-        {
-            TabPage tbpTablas;
-
-            if (tbcTablas.TabCount != 0)
-            {
-                foreach (TabPage t in tbcTablas.TabPages)
-                {
-                    if (t.Text.Equals(tableName))
-                    {
-                        tbcTablas.SelectedTab = t;
-                        return;
-                    }
-                }
-            }
-
-            tbpTablas = new TabPage(tableName)
-            {
-                AutoScroll = true
             };
 
-            ToolStrip tlsClose = new ToolStrip
-            {
-                Dock = DockStyle.Top
-            };
+             tpMantenimientos = new TabPage("Mantenimientos");
 
-            ToolStripButton tlsbtnClose = new ToolStripButton
+            ToolStripButton btnClose = new ToolStripButton
             {
-                Text = "Cerrar tabla",
-                ForeColor = Color.Red,
+                DisplayStyle = ToolStripItemDisplayStyle.Image,
                 Image = Properties.Resources.cancel,
-                DisplayStyle = ToolStripItemDisplayStyle.Image
+                Text = "Cerrar tabla"
             };
 
-            tlsbtnClose.Click += TlsbtnClose_Click;
+            btnClose.Click += BtnClose_Click;
 
-            tlsClose.Items.Add(tlsbtnClose);
-
-
-            TableLayoutPanel tableLayoutPanel = new TableLayoutPanel
+            ToolStrip tsMantenimientos = new ToolStrip
             {
-                Dock = DockStyle.Fill
+                Dock = DockStyle.Top,
             };
 
-            tableLayoutPanel.Controls.Add(tlsClose, 0, 0);
-            tableLayoutPanel.Controls.Add(dgv, 0, 1);
-
-            tbpTablas.Controls.Add(tableLayoutPanel);
+            tsMantenimientos.Items.Add(btnClose);
 
 
-            tbcTablas.TabPages.Add(tbpTablas);
+            tpMantenimientos.Controls.Add(dgvMantenimientos);
 
-            pnlTablas.Controls.Add(tbcTablas);
+            tpMantenimientos.Controls.Add(tsMantenimientos);
 
-            tbcTablas.SelectedTab = tbpTablas;
 
+            tbcTablas.TabPages.Add(tpMantenimientos);
+
+            if (pnlTablas.Controls.Count == 0)
+            {
+                pnlTablas.Controls.Add(tbcTablas);
+            }
+
+            tbcTablas.SelectedTab = tpMantenimientos;
         }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            tbcTablas.TabPages.Remove(tbcTablas.SelectedTab);
+
+            if (tbcTablas.TabPages.Count ==0)
+            {
+                pnlTablas.Controls.Remove(tbcTablas);
+                return;
+            }
+            tbcTablas.SelectedIndex = tbcTablas.TabPages.Count - 1;
+        }
+
+        //private DataGridView setDataGridView(DataTable dt)
+        //{
+
+        //    if (dt.TableName.Equals("Mostrar_Mantenimientos") || dt.TableName.Equals("Mostrar_Repuestos"))
+        //    {
+        //        DataGridView dgv = new DataGridView
+        //        {
+        //            Dock = DockStyle.Fill,
+        //            AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells,
+        //            AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells,
+        //            DataSource = dt
+        //        };
+        //        return dgv;
+        //    }
+        //    else
+        //    {
+        //        DataGridView dgv = new DataGridView
+        //        {
+        //            Dock = DockStyle.Fill,
+        //            AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+        //            DataSource = dt
+        //        };
+        //        return dgv;
+        //    }
+        //}
+
+        //private void Create_TabControl_Table(string tableName, DataGridView dgv)
+        //{
+        //    TabPage tbpTablas;
+
+        //    if (tbcTablas.TabCount != 0)
+        //    {
+        //        foreach (TabPage t in tbcTablas.TabPages)
+        //        {
+        //            if (t.Text.Equals(tableName))
+        //            {
+        //                tbcTablas.SelectedTab = t;
+        //                return;
+        //            }
+        //        }
+        //    }
+
+        //    tbpTablas = new TabPage(tableName)
+        //    {
+        //        AutoScroll = true
+        //    };
+
+        //    ToolStrip tlsClose = new ToolStrip
+        //    {
+        //        Dock = DockStyle.Top
+        //    };
+
+        //    ToolStripButton tlsbtnClose = new ToolStripButton
+        //    {
+        //        Text = "Cerrar tabla",
+        //        ForeColor = Color.Red,
+        //        Image = Properties.Resources.cancel,
+        //        DisplayStyle = ToolStripItemDisplayStyle.Image
+        //    };
+
+        //    tlsbtnClose.Click += TlsbtnClose_Click;
+
+        //    tlsClose.Items.Add(tlsbtnClose);
+
+
+        //    TableLayoutPanel tableLayoutPanel = new TableLayoutPanel
+        //    {
+        //        Dock = DockStyle.Fill
+        //    };
+
+        //    tableLayoutPanel.Controls.Add(tlsClose, 0, 0);
+        //    tableLayoutPanel.Controls.Add(dgv, 0, 1);
+
+        //    tbpTablas.Controls.Add(tableLayoutPanel);
+
+
+        //    tbcTablas.TabPages.Add(tbpTablas);
+
+        //    pnlTablas.Controls.Add(tbcTablas);
+
+        //    tbcTablas.SelectedTab = tbpTablas;
+
+        //}
 
         private void TlsbtnClose_Click(object sender, EventArgs e)
         {
@@ -215,19 +530,69 @@ namespace ServiPlusApp.View
             pnlTablas.BorderStyle = BorderStyle.Fixed3D;
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            if (tbcTablas.TabCount == 0)
+            {
+                return;
+            }
+
+            TabPage tp = tbcTablas.SelectedTab;
+
+            Point p = new Point(0, 0);
+
+            TableLayoutPanel table = (TableLayoutPanel)tp.GetChildAtPoint(p);
+
+            DataGridView dgv = (DataGridView)table.GetControlFromPosition(0, 1);
+
+            DataTable dataTable = (DataTable)dgv.DataSource;
+
+            string nametable = dataTable.TableName;
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (tbcTablas.TabCount == 0)
+            {
+                return;
+            }
+
+            TabPage tp = tbcTablas.SelectedTab;
+
+            Point p = new Point(0, 0);
+
+            TableLayoutPanel table = (TableLayoutPanel)tp.GetChildAtPoint(p);
+
+            DataGridView dgv = (DataGridView)table.GetControlFromPosition(0, 1);
+
+            DataTable dataTable = (DataTable)dgv.DataSource;
+
+
+            getTableCommmandSearch(dataTable.TableName,dgv);
+ 
+        }
+
+        private void getTableCommmandSearch(string nametable,DataGridView dgv)
+        {
+            switch (nametable)
+            {
+                case "Usuarios":
+                    {
+                        dgv.DataSource = CBuscarUsuario.Buscar_Usuario(this.txtSearch.Text);
+                        break;
+                    }
+                default:
+                    break;
+            }
+        }
+
+        private void txtSearch_Click(object sender, EventArgs e)
+        {
+          
+        }
+
         //private void tstxtSearch_TextChanged(object sender, EventArgs e)
         //{
-        //    if (tbcTablas.TabCount==0)
-        //    {
-        //        return;
-        //    }
-        //    TabPage tp = tbcTablas.SelectedTab;
-
-        //    Point p = new Point(0, 0);
-
-        //    TableLayoutPanel table = (TableLayoutPanel)tp.GetChildAtPoint(p);
-
-        //    DataGridView dgv = (DataGridView)table.GetControlFromPosition(0, 1);
 
         //    BindingSource bs = new BindingSource();
         //    bs.DataSource = dgv.DataSource;

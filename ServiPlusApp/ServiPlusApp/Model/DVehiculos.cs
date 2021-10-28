@@ -10,7 +10,7 @@ namespace ServiPlusApp.Model
 {
     public class DVehiculos
     {
-        public DataTable Tabla_Vehiculos()
+        public static DataTable Mostrar_Vehiculos()
         {
             DataTable DtResultado = new DataTable("Vehiculos");
             SqlConnection sqlCon = new SqlConnection();
