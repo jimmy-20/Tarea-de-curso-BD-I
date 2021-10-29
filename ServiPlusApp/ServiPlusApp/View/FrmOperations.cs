@@ -414,7 +414,7 @@ namespace ServiPlusApp.View
 
             if (tbcTablas.Controls.Contains(tpMantenimientos))
             {
-                tbcTablas.SelectedTab = tpRepuestos;
+                tbcTablas.SelectedTab = tpMantenimientos;
                 return;
             }
 
@@ -571,7 +571,12 @@ namespace ServiPlusApp.View
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-          
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -582,7 +587,7 @@ namespace ServiPlusApp.View
             }
 
 
-            if(tbcTablas.SelectedTab== tpUsuarios)
+            if (tbcTablas.SelectedTab == tpUsuarios)
             {
                 dgvUsuarios.DataSource = CBuscarUsuario.Buscar_Usuario(this.txtSearch.Text);
             }
@@ -620,17 +625,6 @@ namespace ServiPlusApp.View
 
         }
 
-      
-
-        //private void tstxtSearch_TextChanged(object sender, EventArgs e)
-        //{
-
-        //    BindingSource bs = new BindingSource();
-        //    bs.DataSource = dgv.DataSource;
-        //    bs.Filter = dgv.Columns[0].HeaderText + " like '%" + tstxtSearch.Text + "%'";
-        //    dgv.DataSource = bs;
-        //}
-
-
+       
     }
 }

@@ -323,7 +323,7 @@ inner join Mecanicos me
 on me.NoMecanico = dm.NoMecanico
 inner join [Detalle de Repuestos] dr
 on dr.NoRepuesto = r.NoRepuesto
-	where (c.p_nombre+' '+c.p_apellido) like @dato + '%' 
+	where (c.p_nombre+' '+c.p_apellido) like '%'+@dato + '%' 
 	or (v.Marca+', '+ v.Modelo +', '+ CONVERT(nvarchar(50),YEAR(v.Año),0)) like @dato + '%' 
 	or s.Descripcion like @dato + '%'
 	or s.Precio like @dato + '%' 

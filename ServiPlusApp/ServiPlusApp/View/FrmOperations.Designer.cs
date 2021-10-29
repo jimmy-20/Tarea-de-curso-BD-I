@@ -108,7 +108,7 @@ namespace ServiPlusApp.View
             // 
             this.clientesToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(187, 28);
             this.clientesToolStripMenuItem.Text = "Vehiculos";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.VehiculosToolStripMenuItem_Click);
             // 
@@ -116,7 +116,7 @@ namespace ServiPlusApp.View
             // 
             this.clientesToolStripMenuItem1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(187, 28);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.ClientesToolStripMenuItem1_Click);
             // 
@@ -124,7 +124,7 @@ namespace ServiPlusApp.View
             // 
             this.mecanicosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mecanicosToolStripMenuItem.Name = "mecanicosToolStripMenuItem";
-            this.mecanicosToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.mecanicosToolStripMenuItem.Size = new System.Drawing.Size(187, 28);
             this.mecanicosToolStripMenuItem.Text = "Mecanicos ";
             this.mecanicosToolStripMenuItem.Click += new System.EventHandler(this.mecanicosToolStripMenuItem_Click);
             // 
@@ -132,7 +132,7 @@ namespace ServiPlusApp.View
             // 
             this.serviciosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(187, 28);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
@@ -345,6 +345,7 @@ namespace ServiPlusApp.View
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(29, 25);
             this.btnModificar.Text = "Modificar";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // toolStripSeparator5
             // 
