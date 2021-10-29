@@ -589,36 +589,64 @@ namespace ServiPlusApp.View
 
             if (tbcTablas.SelectedTab == tpUsuarios)
             {
+                if (dgvUsuarios == null)
+                {
+                    return;
+                }
                 dgvUsuarios.DataSource = CBuscarUsuario.Buscar_Usuario(this.txtSearch.Text);
             }
 
             if (tbcTablas.SelectedTab == tpClientes)
             {
+                if (dgvClientes == null)
+                {
+                    return;
+                }
                 dgvClientes.DataSource = CBuscarCliente.Buscar_Cliente(this.txtSearch.Text);
             }
 
             if (tbcTablas.SelectedTab == tpMecanicos)
             {
+                if (dgvMecanicos == null)
+                {
+                    return;
+                }
                 dgvMecanicos.DataSource = CBuscarMecanico.Buscar_Mecanico(this.txtSearch.Text);
             }
 
             if (tbcTablas.SelectedTab == tpServicios)
             {
+                if (dgvServicios == null)
+                {
+                    return;
+                }
                 dgvServicios.DataSource = CBuscarServicio.Buscar_Servicio(this.txtSearch.Text);
             }
 
             if (tbcTablas.SelectedTab == tpVehiculos)
             {
+                if (dgvVehiculos == null)
+                {
+                    return;
+                }
                 dgvVehiculos.DataSource = CBuscarVehiculo.Buscar_vehiculo(this.txtSearch.Text);
             }
 
             if (tbcTablas.SelectedTab == tpRepuestos)
             {
+                if (dgvRepuestos == null)
+                {
+                    return;
+                }
                 dgvRepuestos.DataSource = CBuscarRepuesto.Buscar_Repuesto(this.txtSearch.Text);
             }
 
             if (tbcTablas.SelectedTab == tpMantenimientos)
             {
+                if (dgvMantenimientos == null)
+                {
+                    return;
+                }
                 dgvMantenimientos.DataSource = CBuscarMantenimiento.Buscar_Mantenimiento(this.txtSearch.Text);
             }
 
