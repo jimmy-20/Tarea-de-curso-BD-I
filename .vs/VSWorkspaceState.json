@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ServiPlusApp",
+    "\\ServiPlusApp\\ServiPlusApp",
+    "\\ServiPlusApp\\ServiPlusApp\\View"
   ],
-  "SelectedNode": "\\ServiPlusApp.sln (ServiPlusApp\\ServiPlusApp.sln)",
+  "SelectedNode": "\\ServiPlusApp\\ServiPlusApp\\View\\FrmOperations.cs",
   "PreviewInSolutionExplorer": false
 }

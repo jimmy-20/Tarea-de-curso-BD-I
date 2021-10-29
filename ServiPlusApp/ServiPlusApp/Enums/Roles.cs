@@ -9,6 +9,7 @@ namespace ServiPlusApp.Enums
     public enum Roles
     {
         Admin,
-        User
+        seller,
+        Mech, 
     }
 }

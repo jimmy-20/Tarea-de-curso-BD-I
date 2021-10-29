@@ -213,5 +213,130 @@ ALTER procedure [dbo].[Buscar_Usuario]
 	or Rol like @dato + '%' 
 	or Estado  like @dato + '%' 
 
+	--Procedimiento para la busqueda Clientes
+
+ALTER procedure [dbo].[Buscar_Cliente]
+	 @dato varchar(100)
+	 as
+	 Select
+ c.p_nombre as Nombre,
+ c.p_apellido as Apellido,
+ c.Telefono,
+ c.Correo,
+ c.Direccion
+ from Clientes c
+ where c.p_nombre like @dato + '%' 
+	or c.p_apellido like @dato + '%' 
+	or c.Telefono like @dato + '%' 
+	or Telefono like @dato + '%' 
+	or c.Correo like @dato + '%' 
+	or  c.Direccion  like @dato + '%' 
+
+
+--Procedimiento para la busqueda Vehiculos
+
+ALTER procedure [dbo].[Buscar_Vehiculo]
+	 @dato varchar(100)
+as
+	 select 
+	Marca,
+	Modelo,
+	Año, 
+	c.p_nombre+' '+c.p_apellido as [Cliente/Dueño] 
+	from Vehiculos v 
+	inner join Clientes c 
+	on c.NoCliente = v.NoCliente
+	where v.Marca like @dato + '%' 
+	or v.Modelo like @dato + '%' 
+	or v.Año like @dato + '%' 
+	or  (c.p_nombre+' '+c.p_apellido)  like @dato + '%' 
+
+--Procedimiento para la busqueda Mecanicos
+
+ALTER procedure [dbo].[Buscar_Mecanico]
+	 @dato varchar(100)
+as
+	 Select 
+	p_nombre as Nombre,
+	p_apellido as Apellido,
+	Especialidad,
+	telefono,
+	Salario,
+	Estado
+	from Mecanicos
+	where p_nombre like @dato + '%' 
+	or p_apellido like @dato + '%' 
+	or Especialidad like @dato + '%' 
+	or  telefono like @dato + '%' 
+	or  Salario like @dato + '%' 
+	or  Estado like @dato + '%' 
+
+--Procedimiento para la busqueda Mecanicos
+
+ALTER procedure [dbo].[Buscar_Servicio]
+	 @dato varchar(100)
+as
+	Select 
+	Descripcion,
+	Precio,
+	[Tipo de Mantenimiento]
+	from Servicios
+	where Descripcion like @dato + '%' 
+	or Precio like @dato + '%' 
+	or [Tipo de Mantenimiento] like @dato + '%'
+
+
+--Procedimiento para la busqueda Mecanicos
+	ALTER procedure [dbo].[Buscar_Mantenimiento]
+	 @dato varchar(100)
+as
+
+select 
+m.NoMantenimiento as [No Mantenimiento],
+c.p_nombre+' '+c.p_apellido as [Cliente],
+v.Marca+', '+ v.Modelo +', '+ CONVERT(nvarchar(50),YEAR(v.Año),0) as [Vehiculo],
+s.Descripcion as Servicio,
+s.Precio as [Costo del servicio],
+s.[Tipo de Mantenimiento],
+r.Titulo+', '+r.Marca+', '+r.Modelo  as Repuesto,
+r.Descripcion [Descripcion de repuesto],
+dr.CostoUnitario as [Costo por repuesto],
+dr.Descuento as [Descuento por repuesto],
+dr.Cantidad as [Cantidad de repuestos],
+m.Estado as [Estado del vehiculo],
+FechaIngreso as [Fecha de ingreso],
+FechaSalida as [Fecha de salida],
+me.p_nombre+' '+me.p_apellido as [Mecanico a cargo],
+ROUND(((dr.CostoUnitario*dr.Cantidad)-(dr.Cantidad*dr.Descuento))+(s.Precio),2) as [Costo Total]
+from Mantenimientos m
+inner join Vehiculos v 
+on v.NoVehiculo = m.NoVehiculo
+inner join Clientes c
+on c.NoCliente = v.NoCliente 
+inner join [Detalle de Mantenimiento] dm
+on dm.NoMantenimiento = m.NoMantenimiento
+inner join Servicios s 
+on s.NoServicio = dm.NoServicio
+inner join Repuestos r 
+on r.NoRepuesto = dm.NoRepuesto
+inner join Mecanicos me
+on me.NoMecanico = dm.NoMecanico
+inner join [Detalle de Repuestos] dr
+on dr.NoRepuesto = r.NoRepuesto
+	where (c.p_nombre+' '+c.p_apellido) like '%'+@dato + '%' 
+	or (v.Marca+', '+ v.Modelo +', '+ CONVERT(nvarchar(50),YEAR(v.Año),0)) like @dato + '%' 
+	or s.Descripcion like @dato + '%'
+	or s.Precio like @dato + '%' 
+	or s.[Tipo de Mantenimiento] like @dato + '%' 
+	or (r.Titulo+', '+r.Marca+', '+r.Modelo ) like @dato + '%' 
+	or r.Descripcion like @dato + '%' 
+	or dr.CostoUnitario like @dato + '%' 
+	or dr.Descuento  like @dato + '%' 
+	or dr.Cantidad like @dato + '%' 
+	or m.Estado like @dato + '%' 
+	or FechaIngreso  like @dato + '%' 
+	or FechaSalida like @dato + '%' 
+	or (me.p_nombre+' '+me.p_apellido) like @dato + '%' 
+	or ROUND(((dr.CostoUnitario*dr.Cantidad)-(dr.Cantidad*dr.Descuento))+(s.Precio),2) like @dato + '%' 
 
 	BACKUP DATABASE	SERVIPLUS TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\SERVIPLUS.bak'
