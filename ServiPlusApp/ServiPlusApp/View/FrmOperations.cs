@@ -571,7 +571,20 @@ namespace ServiPlusApp.View
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            String tabla = tbcTablas.SelectedTab.Text;
+            if (tabla == "Clientes")
+            {
+                FrmCliente frmCliente = new FrmCliente(true); //True si es nuevo, False si es para editar
+                frmCliente.Show();
+            }else if(tabla == "Servicios")
+            {
+                FrmServicios frmServicios = new FrmServicios(true); //True si es nuevo, False si es para editar
+                frmServicios.Show();
+            }else if (tabla == "Mecanicos")
+            {
+                FrmMecanico frmMecanico = new FrmMecanico(true); //True si es nuevo, False si es para editar
+                frmMecanico.Show();
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -652,7 +665,5 @@ namespace ServiPlusApp.View
 
 
         }
-
-       
     }
 }
