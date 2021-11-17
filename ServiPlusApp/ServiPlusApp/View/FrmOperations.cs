@@ -92,7 +92,7 @@ namespace ServiPlusApp.View
             ToolStripButton btnClose = new ToolStripButton
             {
                 DisplayStyle = ToolStripItemDisplayStyle.Image,
-                Image = Properties.Resources.cancel,
+               // Image = Properties.Resources.cancel,
                 Text = "Cerrar tabla"
             };
 
@@ -147,7 +147,7 @@ namespace ServiPlusApp.View
             ToolStripButton btnClose = new ToolStripButton
             {
                 DisplayStyle = ToolStripItemDisplayStyle.Image,
-                Image = Properties.Resources.cancel,
+               // Image = Properties.Resources.cancel,
                 Text = "Cerrar tabla"
             };
 
@@ -202,7 +202,7 @@ namespace ServiPlusApp.View
             ToolStripButton btnClose = new ToolStripButton
             {
                 DisplayStyle = ToolStripItemDisplayStyle.Image,
-                Image = Properties.Resources.cancel,
+            //    Image = Properties.Resources.cancel,
                 Text = "Cerrar tabla"
             };
 
@@ -260,7 +260,7 @@ namespace ServiPlusApp.View
             ToolStripButton btnClose = new ToolStripButton
             {
                 DisplayStyle = ToolStripItemDisplayStyle.Image,
-                Image = Properties.Resources.cancel,
+               // Image = Properties.Resources.cancel,
                 Text = "Cerrar tabla"
             };
 
@@ -315,7 +315,7 @@ namespace ServiPlusApp.View
             ToolStripButton btnClose = new ToolStripButton
             {
                 DisplayStyle = ToolStripItemDisplayStyle.Image,
-                Image = Properties.Resources.cancel,
+             //   Image = Properties.Resources.cancel,
                 Text = "Cerrar tabla"
             };
 
@@ -370,7 +370,7 @@ namespace ServiPlusApp.View
             ToolStripButton btnClose = new ToolStripButton
             {
                 DisplayStyle = ToolStripItemDisplayStyle.Image,
-                Image = Properties.Resources.cancel,
+               // Image = Properties.Resources.cancel,
                 Text = "Cerrar tabla"
             };
 
@@ -423,7 +423,7 @@ namespace ServiPlusApp.View
             ToolStripButton btnClose = new ToolStripButton
             {
                 DisplayStyle = ToolStripItemDisplayStyle.Image,
-                Image = Properties.Resources.cancel,
+               // Image = Properties.Resources.cancel,
                 Text = "Cerrar tabla"
             };
 

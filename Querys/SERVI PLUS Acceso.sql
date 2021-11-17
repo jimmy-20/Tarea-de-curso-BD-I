@@ -8,6 +8,7 @@ Use SERVIPLUS
 go 
 sp_adduser AdminServiPlus, AdminServiPlus
 
+
 --Dando permisos a AdminServiPlus
 	--Procedimientos Almacenados: 
 Grant execute on Validar_Acceso to AdminServiPlus

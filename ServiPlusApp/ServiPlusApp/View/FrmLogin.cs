@@ -17,7 +17,7 @@ namespace ServiPlusApp.View
         private string username;
         private string password;
         FrmOperations frmOperations;
-        public FrmDesk FrmDesk { get; set; }
+      //  public FrmDesk FrmDesk { get; set; }
         public FrmLogin()
         {
             InitializeComponent();
