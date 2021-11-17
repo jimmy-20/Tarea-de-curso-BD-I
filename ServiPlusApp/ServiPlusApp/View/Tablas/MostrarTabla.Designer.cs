@@ -297,6 +297,7 @@ namespace ServiPlusApp.View.Tablas
             this.txtSearch.TextPlaceholder = "Search";
             this.txtSearch.UseSystemPasswordChar = false;
             this.txtSearch.WordWrap = true;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // bunifuButton23
             // 
