@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiPlusApp.View.Tablas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,10 @@ namespace ServiPlusApp.View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDesk());
+            //Application.Run(new Operaciones("Massiel Fonseca","Massiel","Admin"));
+            //Application.Run(new TablaUsuarios());
+            //Application.Run(new SplashScreen());
+            Application.Run(new Welcome("Massiel Fonseca","Massiel","ADMIN"));
         }
     }
 }
