@@ -29,6 +29,11 @@ namespace ServiPlusApp.Controller
             return DUser.Tabla_Usuarios();
         }
 
-        
+        public static DataTable Buscar_Usuario(string dato)
+        {
+            return DUser.Buscar_Usuario(dato);
+        }
+
+
     }
 }

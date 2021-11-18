@@ -14,5 +14,10 @@ namespace ServiPlusApp.Controller
         {
             return DClientes.Tabla_Clientes();
         }
+
+        public static DataTable Buscar_Cliente(string dato)
+        {
+            return DClientes.Buscar_Cliente(dato);
+        }
     }
 }

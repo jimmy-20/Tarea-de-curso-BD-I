@@ -15,5 +15,10 @@ namespace ServiPlusApp.Controller
             return DMantenimientos.Mostrar_Mantenimientos();
         }
 
+        public static DataTable Buscar_Mantenimiento(string dato)
+        {
+            return DMantenimientos.Buscar_Mantenimiento(dato);
+        }
+
     }
 }
