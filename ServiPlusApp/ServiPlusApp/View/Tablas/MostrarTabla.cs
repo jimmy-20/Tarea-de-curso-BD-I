@@ -25,6 +25,7 @@ namespace ServiPlusApp.View.Tablas
             this.Close();
         }
 
+        #region Mostrar Tablas
         private void TablaUsuarios_Load(object sender, EventArgs e)
         {
 
@@ -38,7 +39,7 @@ namespace ServiPlusApp.View.Tablas
 
 
                         dgvTablas.Columns[0].Visible = false;
-                      //  dgvUsuarios.Columns[1].Visible = false;
+                        //  dgvUsuarios.Columns[1].Visible = false;
                         break;
                     }
                 case "Clientes":
@@ -47,7 +48,7 @@ namespace ServiPlusApp.View.Tablas
 
 
                         dgvTablas.Columns[0].Visible = false;
-                       // dgvUsuarios.Columns[1].Visible = false;
+                        // dgvUsuarios.Columns[1].Visible = false;
                         break;
 
                     }
@@ -57,7 +58,7 @@ namespace ServiPlusApp.View.Tablas
 
 
                         dgvTablas.Columns[0].Visible = false;
-                      //  dgvUsuarios.Columns[1].Visible = false;
+                        //  dgvUsuarios.Columns[1].Visible = false;
                         break;
 
                     }
@@ -67,7 +68,7 @@ namespace ServiPlusApp.View.Tablas
 
 
                         dgvTablas.Columns[0].Visible = false;
-                      //  dgvUsuarios.Columns[1].Visible = false;
+                        //  dgvUsuarios.Columns[1].Visible = false;
                         break;
 
                     }
@@ -124,80 +125,82 @@ namespace ServiPlusApp.View.Tablas
                 default:
                     break;
             }
-           
+
         }
 
+        #endregion
+
+        #region Buscar en Tablas
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            //if (tbcTablas.TabPages.Count == 0)
-            //{
-            //    return;
-            //}
 
+            if (dgvTablas == null)
+            {
+                return;
+            }
 
-            //if (tbcTablas.SelectedTab == tpUsuarios)
-            //{
-            //    if (dgvUsuarios == null)
-            //    {
-            //        return;
-            //    }
-            //    dgvUsuarios.DataSource = CBuscarUsuario.Buscar_Usuario(this.txtSearch.Text);
-            //}
+            switch (tableName)
+            {
+                case "Vehiculos":
+                    {
+                        dgvTablas.DataSource = CVehiculos.Buscar_vehiculo(this.txtSearch.Text);
 
-            //if (tbcTablas.SelectedTab == tpClientes)
-            //{
-            //    if (dgvClientes == null)
-            //    {
-            //        return;
-            //    }
-            //    dgvClientes.DataSource = CBuscarCliente.Buscar_Cliente(this.txtSearch.Text);
-            //}
+                        break;
+                    }
+                case "Clientes":
+                    {
+                        dgvTablas.DataSource = CClientes.Buscar_Cliente(this.txtSearch.Text);
 
-            //if (tbcTablas.SelectedTab == tpMecanicos)
-            //{
-            //    if (dgvMecanicos == null)
-            //    {
-            //        return;
-            //    }
-            //    dgvMecanicos.DataSource = CBuscarMecanico.Buscar_Mecanico(this.txtSearch.Text);
-            //}
+                        break;
+                    }
+                case "Servicios":
+                    {
+                        dgvTablas.DataSource = CServicios.Buscar_Servicio(this.txtSearch.Text);
 
-            //if (tbcTablas.SelectedTab == tpServicios)
-            //{
-            //    if (dgvServicios == null)
-            //    {
-            //        return;
-            //    }
-            //    dgvServicios.DataSource = CBuscarServicio.Buscar_Servicio(this.txtSearch.Text);
-            //}
+                        break;
+                    }
+                case "Mecanicos":
+                    {
+                        dgvTablas.DataSource = CMecanicos.Buscar_Mecanico(this.txtSearch.Text);
 
-            //if (tbcTablas.SelectedTab == tpVehiculos)
-            //{
-            //    if (dgvVehiculos == null)
-            //    {
-            //        return;
-            //    }
-            //    dgvVehiculos.DataSource = CBuscarVehiculo.Buscar_vehiculo(this.txtSearch.Text);
-            //}
+                        break;
+                    }
+                case "Usuarios":
+                    {
+                        dgvTablas.DataSource = CUser.Buscar_Usuario(this.txtSearch.Text);
 
-            //if (tbcTablas.SelectedTab == tpRepuestos)
-            //{
-            //    if (dgvRepuestos == null)
-            //    {
-            //        return;
-            //    }
-            //    dgvRepuestos.DataSource = CBuscarRepuesto.Buscar_Repuesto(this.txtSearch.Text);
-            //}
+                        break;
+                    }
+                case "ReMantenimientos":
+                    {
+                        //No se como se va hacer aqui
+                        break;
 
-            //if (tbcTablas.SelectedTab == tpMantenimientos)
-            //{
-            //    if (dgvMantenimientos == null)
-            //    {
-            //        return;
-            //    }
-            //    dgvMantenimientos.DataSource = CBuscarMantenimiento.Buscar_Mantenimiento(this.txtSearch.Text);
-            //}
+                    }
+                case "ReRepuestos":
+                    {
+                        //No se como se va hacer aqui
 
+                        break;
+
+                    }
+                case "OpRepuestos":
+                    {
+                        dgvTablas.DataSource = CRepuestos.Buscar_Repuesto(this.txtSearch.Text);
+
+                        break;
+                    }
+                case "OpMantenimientos":
+                    {
+                        dgvTablas.DataSource = CMantenimientos.Buscar_Mantenimiento(this.txtSearch.Text);
+
+                        break;
+                    }
+                default:
+                    break;
+            }
         }
+
+        #endregion
     }
 }
