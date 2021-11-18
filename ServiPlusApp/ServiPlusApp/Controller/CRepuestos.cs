@@ -15,5 +15,9 @@ namespace ServiPlusApp.Controller
             return DRepuestos.Mostrar_Repuestos();
         }
 
+        public static DataTable Buscar_Repuesto(string dato)
+        {
+            return DRepuestos.Buscar_Repuesto(dato);
+        }
     }
 }

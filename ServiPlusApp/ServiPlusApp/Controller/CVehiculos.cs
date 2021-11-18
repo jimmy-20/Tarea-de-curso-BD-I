@@ -14,5 +14,10 @@ namespace ServiPlusApp.Controller
         {
             return DVehiculos.Mostrar_Vehiculos();
         }
+
+        public static DataTable Buscar_vehiculo(string dato)
+        {
+            return DVehiculos.Buscar_Vehiculo(dato);
+        }
     }
 }

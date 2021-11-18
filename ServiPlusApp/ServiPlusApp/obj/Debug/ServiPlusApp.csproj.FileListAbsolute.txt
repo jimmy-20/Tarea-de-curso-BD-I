@@ -40,8 +40,6 @@ C:\Users\dell\Documents\Tarea-de-curso-BD-I\ServiPlusApp\ServiPlusApp\bin\Debug\
 C:\Users\dell\Documents\Tarea-de-curso-BD-I\ServiPlusApp\ServiPlusApp\bin\Debug\ServiPlusApp.pdb
 C:\Users\dell\Documents\Tarea-de-curso-BD-I\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.csproj.AssemblyReference.cache
 C:\Users\dell\Documents\Tarea-de-curso-BD-I\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.Properties.Resources.resources
-C:\Users\dell\Documents\Tarea-de-curso-BD-I\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmLogin.resources
-C:\Users\dell\Documents\Tarea-de-curso-BD-I\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmOperations.resources
 C:\Users\dell\Documents\Tarea-de-curso-BD-I\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.FrmSingUp.resources
 C:\Users\dell\Documents\Tarea-de-curso-BD-I\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.csproj.GenerateResource.cache
 C:\Users\dell\Documents\Tarea-de-curso-BD-I\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.csproj.CoreCompileInputs.cache

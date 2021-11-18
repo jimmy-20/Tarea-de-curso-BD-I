@@ -478,6 +478,14 @@ namespace ServiPlusApp.View
 
         }
 
+        private void pnlContenedor_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            if (pnlContenedor.Controls.Count == 0)
+            {
+                openChildFormInPanel(new MainDesk());
+            }
+        }
+
         private void Operaciones_Resize(object sender, EventArgs e)
         {
             AjustarForm();
@@ -505,18 +513,7 @@ namespace ServiPlusApp.View
             }
         }
 
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-            openChildFormInPanel(new MostrarTabla(btnUsuarios.Tag.ToString()));
-        }
-
-        private void pnlContenedor_ControlRemoved(object sender, ControlEventArgs e)
-        {
-            if (pnlContenedor.Controls.Count == 0)
-            {
-                openChildFormInPanel(new MainDesk());
-            }
-        }
+        #region Eventos de MnBotones
 
         private void btnVehiculos_Click(object sender, EventArgs e)
         {
@@ -547,9 +544,13 @@ namespace ServiPlusApp.View
         {
             openChildFormInPanel(new MostrarTabla(btnOpRepuestos.Tag.ToString()));
         }
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new MostrarTabla(btnUsuarios.Tag.ToString()));
+        }
+        #endregion
 
-
-        //Overridden methods  
+        #region Overridden methods  
         protected override void WndProc(ref Message m)
         {
             const int WM_NCCALCSIZE = 0x0083;//Standar Title Bar - Snap Window
@@ -631,6 +632,7 @@ namespace ServiPlusApp.View
             }
             base.WndProc(ref m);
         }
+        #endregion
 
     }
 }
