@@ -18,16 +18,6 @@ namespace ServiPlusApp.Controller
         {
             this.FrmMecanico = FrmMecanico;
         }
-        public static DataTable Mostrar_Mecanicos()
-        {
-            return DMecanicos.Mostrar_Mecanicos();
-        }
-
-        public static DataTable Buscar_Mecanico(string dato)
-        {
-            return DMecanicos.Buscar_Mecanico(dato);
-        }
-
         public void Ver()
         {
             FrmMecanico.DgvTablas.DataSource = DMecanicos.Mostrar_Mecanicos();
@@ -69,7 +59,7 @@ namespace ServiPlusApp.Controller
 
         public void Buscar(string text)
         {
-            throw new NotImplementedException();
+            FrmMecanico.DgvTablas.DataSource = DMecanicos.Buscar_Mecanico(text);
         }
     }
 }

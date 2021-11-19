@@ -213,6 +213,17 @@ where (PrimerNombre + ' ' + SegundoNombre) like @dato + '%'
 	or Correo like @dato + '%'
 	or Estado like @dato + '%' 
 
+--   Procedimiento almacenado de Buscar Repuesto
+CREATE PROCEDURE Buscar_Repuesto @dato varchar(100)
+AS
+SELECT
+*
+FROM
+Repuesto
+WHERE Descripcion like @dato + '%'
+      or Marca like @dato + '%'
+	  or Modelo like @dato + '%'
+
 --Procedimiento para la busqueda Servicios
 
 CREATE PROCEDURE Buscar_Servicio

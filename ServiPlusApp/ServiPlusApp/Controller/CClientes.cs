@@ -20,7 +20,6 @@ namespace ServiPlusApp.Controller
         public CClientes(MostrarTabla FrmCliente)
         {
             this.FrmCliente = FrmCliente;
-            
         }
 
         public void Agregar()
