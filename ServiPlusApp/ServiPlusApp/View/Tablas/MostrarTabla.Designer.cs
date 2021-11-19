@@ -99,7 +99,7 @@ namespace ServiPlusApp.View.Tablas
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(1043, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 28);
+            this.label2.Size = new System.Drawing.Size(30, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "X";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -115,7 +115,7 @@ namespace ServiPlusApp.View.Tablas
             this.lblTableName.ForeColor = System.Drawing.Color.White;
             this.lblTableName.Location = new System.Drawing.Point(28, 5);
             this.lblTableName.Name = "lblTableName";
-            this.lblTableName.Size = new System.Drawing.Size(90, 28);
+            this.lblTableName.Size = new System.Drawing.Size(108, 32);
             this.lblTableName.TabIndex = 0;
             this.lblTableName.Text = "Usuarios";
             this.lblTableName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -387,6 +387,7 @@ namespace ServiPlusApp.View.Tablas
             this.bunifuButton23.TextMarginLeft = 0;
             this.bunifuButton23.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton23.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton23.Click += new System.EventHandler(this.bunifuButton23_Click);
             // 
             // bunifuButton22
             // 
@@ -565,6 +566,7 @@ namespace ServiPlusApp.View.Tablas
             this.bunifuButton21.TextMarginLeft = 0;
             this.bunifuButton21.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click);
             // 
             // panel1
             // 
