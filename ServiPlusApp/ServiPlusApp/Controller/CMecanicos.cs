@@ -30,7 +30,8 @@ namespace ServiPlusApp.Controller
 
         public void Ver()
         {
-            throw new NotImplementedException();
+            FrmMecanico.DgvTablas.DataSource = DMecanicos.Mostrar_Mecanicos();
+            FrmMecanico.DgvTablas.Columns[0].Visible = false;
         }
 
         public void Agregar()
