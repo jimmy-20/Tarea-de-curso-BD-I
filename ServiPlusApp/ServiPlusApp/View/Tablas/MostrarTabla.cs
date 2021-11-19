@@ -1,4 +1,5 @@
 ﻿using ServiPlusApp.Controller;
+using ServiPlusApp.Controller.Factory;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,14 @@ namespace ServiPlusApp.View.Tablas
     public partial class MostrarTabla : Form
     {
         String tableName;
+        public DataGridView DgvTablas { get; set; }
+        private IAcciones formulario;
+
         public MostrarTabla(string TableName)
         {
             InitializeComponent();
             this.tableName = TableName;
+            DgvTablas = dgvTablas;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -29,103 +34,104 @@ namespace ServiPlusApp.View.Tablas
         private void TablaUsuarios_Load(object sender, EventArgs e)
         {
 
-            lblTableName.Text = tableName;
+            //lblTableName.Text = tableName;
 
-            switch (tableName)
-            {
-                case "Vehiculos":
-                    {
-                        dgvTablas.DataSource = CVehiculos.Mostrar_Vehiculos();
-
-
-                        dgvTablas.Columns[0].Visible = false;
-                        //  dgvUsuarios.Columns[1].Visible = false;
-                        break;
-                    }
-                case "Clientes":
-                    {
-                        dgvTablas.DataSource = CClientes.Table_Clientes();
+            //switch (tableName)
+            //{
+            //    case "Vehiculos":
+            //        {
+            //            dgvTablas.DataSource = CVehiculos.Mostrar_Vehiculos();
 
 
-                        dgvTablas.Columns[0].Visible = false;
-                        // dgvUsuarios.Columns[1].Visible = false;
-                        break;
-
-                    }
-                case "Servicios":
-                    {
-                        dgvTablas.DataSource = CServicios.Mostrar_Servicios();
-
-
-                        dgvTablas.Columns[0].Visible = false;
-                        //  dgvUsuarios.Columns[1].Visible = false;
-                        break;
-
-                    }
-                case "Mecanicos":
-                    {
-                        dgvTablas.DataSource = CMecanicos.Mostrar_Mecanicos();
+            //            dgvTablas.Columns[0].Visible = false;
+            //            //  dgvUsuarios.Columns[1].Visible = false;
+            //            break;
+            //        }
+            //    case "Clientes":
+            //        {
+            //            dgvTablas.DataSource = CClientes.Table_Clientes();
 
 
-                        dgvTablas.Columns[0].Visible = false;
-                        //  dgvUsuarios.Columns[1].Visible = false;
-                        break;
+            //            dgvTablas.Columns[0].Visible = false;
+            //            // dgvUsuarios.Columns[1].Visible = false;
+            //            break;
 
-                    }
-                case "Usuarios":
-                    {
-                        dgvTablas.DataSource = CUser.Table_Usuarios();
-
-
-                        dgvTablas.Columns[0].Visible = false;
-                        dgvTablas.Columns[1].Visible = false;
-                        break;
-
-                    }
-                case "ReMantenimientos":
-                    {
-                        //dgvUsuarios.DataSource = CUser.Table_Usuarios();
+            //        }
+            //    case "Servicios":
+            //        {
+            //            dgvTablas.DataSource = CServicios.Mostrar_Servicios();
 
 
-                        //dgvUsuarios.Columns[0].Visible = false;
-                        //dgvUsuarios.Columns[1].Visible = false;
-                        break;
+            //            dgvTablas.Columns[0].Visible = false;
+            //            //  dgvUsuarios.Columns[1].Visible = false;
+            //            break;
 
-                    }
-                case "ReRepuestos":
-                    {
-                        //dgvUsuarios.DataSource = CUser.Table_Usuarios();
-
-
-                        //dgvUsuarios.Columns[0].Visible = false;
-                        //dgvUsuarios.Columns[1].Visible = false;
-                        break;
-
-                    }
-                case "OpRepuestos":
-                    {
-                        dgvTablas.DataSource = CRepuestos.Mostrar_Repuestos();
+            //        }
+            //    case "Mecanicos":
+            //        {
+            //            dgvTablas.DataSource = CMecanicos.Mostrar_Mecanicos();
 
 
-                        dgvTablas.Columns[0].Visible = false;
-                        dgvTablas.Columns[1].Visible = false;
-                        break;
+            //            dgvTablas.Columns[0].Visible = false;
+            //            //  dgvUsuarios.Columns[1].Visible = false;
+            //            break;
 
-                    }
-                case "OpMantenimientos":
-                    {
-                        dgvTablas.DataSource = CMantenimientos.Mostrar_Mantenimientos();
+            //        }
+            //    case "Usuarios":
+            //        {
+            //            dgvTablas.DataSource = CUser.Table_Usuarios();
 
 
-                        dgvTablas.Columns[0].Visible = false;
-                        dgvTablas.Columns[1].Visible = false;
-                        break;
+            //            dgvTablas.Columns[0].Visible = false;
+            //            dgvTablas.Columns[1].Visible = false;
+            //            break;
 
-                    }
-                default:
-                    break;
-            }
+            //        }
+            //    case "ReMantenimientos":
+            //        {
+            //            //dgvUsuarios.DataSource = CUser.Table_Usuarios();
 
+
+            //            //dgvUsuarios.Columns[0].Visible = false;
+            //            //dgvUsuarios.Columns[1].Visible = false;
+            //            break;
+
+            //        }
+            //    case "ReRepuestos":
+            //        {
+            //            //dgvUsuarios.DataSource = CUser.Table_Usuarios();
+
+
+            //            //dgvUsuarios.Columns[0].Visible = false;
+            //            //dgvUsuarios.Columns[1].Visible = false;
+            //            break;
+
+            //        }
+            //    case "OpRepuestos":
+            //        {
+            //            dgvTablas.DataSource = CRepuestos.Mostrar_Repuestos();
+
+
+            //            dgvTablas.Columns[0].Visible = false;
+            //            dgvTablas.Columns[1].Visible = false;
+            //            break;
+
+            //        }
+            //    case "OpMantenimientos":
+            //        {
+            //            dgvTablas.DataSource = CMantenimientos.Mostrar_Mantenimientos();
+
+
+            //            dgvTablas.Columns[0].Visible = false;
+            //            dgvTablas.Columns[1].Visible = false;
+            //            break;
+
+            //        }
+            //    default:
+            //        break;
+            //}
+            formulario = Fabrica.FormController(this,tableName);
+            formulario.Ver();
         }
 
         #endregion
@@ -139,68 +145,79 @@ namespace ServiPlusApp.View.Tablas
                 return;
             }
 
-            switch (tableName)
-            {
-                case "Vehiculos":
-                    {
-                        dgvTablas.DataSource = CVehiculos.Buscar_vehiculo(this.txtSearch.Text);
+            //switch (tableName)
+            //{
+            //    case "Vehiculos":
+            //        {
+            //            dgvTablas.DataSource = CVehiculos.Buscar_vehiculo(this.txtSearch.Text);
 
-                        break;
-                    }
-                case "Clientes":
-                    {
-                        dgvTablas.DataSource = CClientes.Buscar_Cliente(this.txtSearch.Text);
+            //            break;
+            //        }
+            //    case "Clientes":
+            //        {
+            //            dgvTablas.DataSource = CClientes.Buscar_Cliente(this.txtSearch.Text);
 
-                        break;
-                    }
-                case "Servicios":
-                    {
-                        dgvTablas.DataSource = CServicios.Buscar_Servicio(this.txtSearch.Text);
+            //            break;
+            //        }
+            //    case "Servicios":
+            //        {
+            //            dgvTablas.DataSource = CServicios.Buscar_Servicio(this.txtSearch.Text);
 
-                        break;
-                    }
-                case "Mecanicos":
-                    {
-                        dgvTablas.DataSource = CMecanicos.Buscar_Mecanico(this.txtSearch.Text);
+            //            break;
+            //        }
+            //    case "Mecanicos":
+            //        {
+            //            dgvTablas.DataSource = CMecanicos.Buscar_Mecanico(this.txtSearch.Text);
 
-                        break;
-                    }
-                case "Usuarios":
-                    {
-                        dgvTablas.DataSource = CUser.Buscar_Usuario(this.txtSearch.Text);
+            //            break;
+            //        }
+            //    case "Usuarios":
+            //        {
+            //            dgvTablas.DataSource = CUser.Buscar_Usuario(this.txtSearch.Text);
 
-                        break;
-                    }
-                case "ReMantenimientos":
-                    {
-                        //No se como se va hacer aqui
-                        break;
+            //            break;
+            //        }
+            //    case "ReMantenimientos":
+            //        {
+            //            //No se como se va hacer aqui
+            //            break;
 
-                    }
-                case "ReRepuestos":
-                    {
-                        //No se como se va hacer aqui
+            //        }
+            //    case "ReRepuestos":
+            //        {
+            //            //No se como se va hacer aqui
 
-                        break;
+            //            break;
 
-                    }
-                case "OpRepuestos":
-                    {
-                        dgvTablas.DataSource = CRepuestos.Buscar_Repuesto(this.txtSearch.Text);
+            //        }
+            //    case "OpRepuestos":
+            //        {
+            //            dgvTablas.DataSource = CRepuestos.Buscar_Repuesto(this.txtSearch.Text);
 
-                        break;
-                    }
-                case "OpMantenimientos":
-                    {
-                        dgvTablas.DataSource = CMantenimientos.Buscar_Mantenimiento(this.txtSearch.Text);
+            //            break;
+            //        }
+            //    case "OpMantenimientos":
+            //        {
+            //            dgvTablas.DataSource = CMantenimientos.Buscar_Mantenimiento(this.txtSearch.Text);
 
-                        break;
-                    }
-                default:
-                    break;
-            }
+            //            break;
+            //        }
+            //    default:
+            //        break;
+            //}
+            formulario.Buscar(txtSearch.Text);
         }
 
         #endregion
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+            formulario.Agregar();
+        }
+
+        private void bunifuButton23_Click(object sender, EventArgs e)
+        {
+            formulario.Estado();
+        }
     }
 }

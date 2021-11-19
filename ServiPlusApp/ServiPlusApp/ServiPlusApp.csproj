@@ -187,6 +187,8 @@
     <Compile Include="Controller\CUser.cs" />
     <Compile Include="Controller\CClientes.cs" />
     <Compile Include="Controller\CVehiculos.cs" />
+    <Compile Include="Controller\Factory\Fabrica.cs" />
+    <Compile Include="Controller\Factory\IAcciones.cs" />
     <Compile Include="Model\DClientes.cs" />
     <Compile Include="Model\DMantenimientos.cs" />
     <Compile Include="Model\DMecanicos.cs" />
