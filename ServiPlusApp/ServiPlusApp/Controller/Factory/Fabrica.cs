@@ -24,7 +24,8 @@ namespace ServiPlusApp.Controller.Factory
                     return new CRepuestos(Formulario);
                 case "Vehiculos":
                     return new CVehiculos(Formulario);
-
+                case "Usuarios":
+                    return new CUsuarios(Formulario);
                 default:
                     break;
             }

@@ -219,5 +219,10 @@ namespace ServiPlusApp.View.Tablas
         {
             formulario.Estado();
         }
+
+        private void bunifuGradientPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

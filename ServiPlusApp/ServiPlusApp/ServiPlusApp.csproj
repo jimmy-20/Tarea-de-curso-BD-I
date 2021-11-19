@@ -186,6 +186,7 @@
     <Compile Include="Controller\CServicios.cs" />
     <Compile Include="Controller\CUser.cs" />
     <Compile Include="Controller\CClientes.cs" />
+    <Compile Include="Controller\CUsuarios.cs" />
     <Compile Include="Controller\CVehiculos.cs" />
     <Compile Include="Controller\Factory\Fabrica.cs" />
     <Compile Include="Controller\Factory\IAcciones.cs" />

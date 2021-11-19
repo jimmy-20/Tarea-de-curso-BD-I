@@ -18,15 +18,6 @@ namespace ServiPlusApp.Controller
         {
             this.FrmRepuesto = FrmRepuesto;
         }
-        public static DataTable Mostrar_Repuestos()
-        {
-            return DRepuestos.Mostrar_Repuestos();
-        }
-
-        public static DataTable Buscar_Repuesto(string dato)
-        {
-            return DRepuestos.Buscar_Repuesto(dato);
-        }
 
         public void Ver()
         {
@@ -61,7 +52,7 @@ namespace ServiPlusApp.Controller
 
         public void Buscar(string text)
         {
-            throw new NotImplementedException();
+            FrmRepuesto.DgvTablas.DataSource = DRepuestos.Buscar_Repuesto(text);
         }
     }
 }

@@ -257,5 +257,36 @@ namespace ServiPlusApp.Model
 
             return DtResultado;
         }
+
+        public static void Cambiar_Estado_Usuario(int IdUsuario)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
+
+                SqlCommand comando = new SqlCommand()
+                {
+                    CommandText = "Cambiar_Estado_Usuario",
+                    CommandType = CommandType.StoredProcedure,
+                    Connection = conexion
+                };
+
+                SqlParameter parIdUsuario = new SqlParameter()
+                {
+                    ParameterName = "IdUsuario",
+                    SqlDbType = SqlDbType.Int,
+                    Value = IdUsuario
+                };
+
+                comando.Parameters.Add(parIdUsuario);
+
+                comando.ExecuteNonQuery();
+            }catch(Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message, "Error en BD",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
