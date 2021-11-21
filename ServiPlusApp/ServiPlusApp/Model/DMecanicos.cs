@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ServiPlusApp.Model
 {
@@ -78,6 +79,37 @@ namespace ServiPlusApp.Model
             }
 
             return DtResultado;
+        }
+
+        public static void Cambiar_Estado_Mecanico(int IdMecanico)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
+
+                SqlCommand comando = new SqlCommand()
+                {
+                    Connection = conexion,
+                    CommandType = CommandType.StoredProcedure,
+                    CommandText = "Cambiar_Estado_Mecanico"
+                };
+
+                SqlParameter parIdMecanico = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.Int,
+                    Value = IdMecanico,
+                    ParameterName = "IdMecanico"
+                };
+
+                comando.Parameters.Add(parIdMecanico);
+
+                comando.ExecuteNonQuery();
+            }catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message, "Error en BD",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
