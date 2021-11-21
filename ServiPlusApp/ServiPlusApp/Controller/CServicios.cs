@@ -54,7 +54,7 @@ namespace ServiPlusApp.Controller
 
             int id = Convert.ToInt32(FrmServicio.DgvTablas.SelectedRows[0].Cells[0].Value);
             DServicios.Cambiar_Estado_Servicio(id);
-            MessageBox.Show("Id del servicio: " + id, "Prueba");
+            Ver();
         }
 
         public void Guardar()
@@ -69,7 +69,7 @@ namespace ServiPlusApp.Controller
 
         public void Buscar(string text)
         {
-            throw new NotImplementedException();
+            FrmServicio.DgvTablas.DataSource = DServicios.Buscar_Servicio(text);
         }
     }
 }

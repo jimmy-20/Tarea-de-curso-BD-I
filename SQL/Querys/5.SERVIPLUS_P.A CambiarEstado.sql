@@ -1,3 +1,6 @@
+USE SERVIPLUS
+GO
+
 CREATE PROCEDURE Cambiar_Estado_Cliente @IdCliente int
 AS
 

@@ -75,32 +75,19 @@ CREATE TABLE Detalle_Mantenimiento(
 IdDetalleMantenimiento int primary key identity(1,1),
 IdMantenimiento int foreign key references Mantenimiento(IdMantenimiento) not null,
 IdMecanico int foreign key references Mecanico(IdMecanico),
-Precio decimal
-)
-GO
-
-CREATE TABLE Detalle_Servicio(
-IdDetalleServicio int primary key identity(1,1),
-IdServicio int foreign key references Servicio(IdServicio),
+IdServicio int foreign key references  Servicio(IdServicio),
 Precio decimal
 )
 GO
 
 CREATE TABLE Detalle_Repuesto(
 IdDetalleRepuesto int primary key identity(1,1),
+IdDetalleMantenimiento int foreign key references Detalle_Mantenimiento(IdDetalleMantenimiento),
 IdRepuesto int foreign key references Repuesto(IdRepuesto),
 Cantidad int,
 Precio decimal
 )
-GO
 
-CREATE TABLE Detalle_Servicio_Repuesto(
-IdDetalleMantenimiento int foreign key references Detalle_Mantenimiento(IdDetalleMantenimiento),
-IdDetalleServicio int foreign key references Detalle_Servicio(IdDetalleServicio),
-IdDetalleRepuesto int foreign key references Detalle_Repuesto(IdDetalleRepuesto)
-
-primary key(IdDetalleMantenimiento,IdDetalleServicio,IdDetalleRepuesto)
-)
 GO
 EXEC sp_adduser AdminServiPlus, AdminServiPlus
 EXEC sp_addrolemember db_owner, AdminServiPlus

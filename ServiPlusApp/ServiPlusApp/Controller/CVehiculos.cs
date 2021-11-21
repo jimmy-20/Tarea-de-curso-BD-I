@@ -62,7 +62,8 @@ namespace ServiPlusApp.Controller
 
         public void Buscar(string text)
         {
-            throw new NotImplementedException();
+            FrmVehiculo.DgvTablas.DataSource = DVehiculos.Buscar_Vehiculo(text);
+            FrmVehiculo.DgvTablas.Columns[0].Visible = false;
         }
     }
 }
