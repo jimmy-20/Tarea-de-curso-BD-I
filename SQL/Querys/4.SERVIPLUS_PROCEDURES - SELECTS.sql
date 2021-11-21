@@ -16,7 +16,7 @@ inner join Colaboradores c
 on c.IdColaborador = u.IdColaborador
 
 --Procedimiento mostrar todos los clientes
-CREATE procedure Mostrar_Clientes
+CREATE PROCEDURE Mostrar_Clientes
 as
 Select 
 IdCliente as [No Cliente],
