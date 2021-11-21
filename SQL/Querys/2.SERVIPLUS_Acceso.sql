@@ -6,7 +6,7 @@ GO
 CREATE LOGIN AdminServiPlus WITH PASSWORD = 'serviplus2021'
 EXEC sp_adduser AdminServiPlus, AdminServiPlus
 EXEC sp_addrolemember db_owner, AdminServiPlus
-
+SELECT @@SERVERNAME
 ---------------------------------------------------------------------
 GO
 --    procedimiento almacenado para insertar usuario
