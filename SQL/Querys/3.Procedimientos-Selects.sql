@@ -1,5 +1,6 @@
 --Procedimiento mostrar usuario/colabo
 USE SERVIPLUS
+GO
 CREATE PROCEDURE Mostrar_Usuarios
 as
 Select

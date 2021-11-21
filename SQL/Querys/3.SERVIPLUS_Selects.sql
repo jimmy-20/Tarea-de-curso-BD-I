@@ -156,6 +156,7 @@ CREATE PROCEDURE Buscar_Cliente
 @dato varchar(100)
 as
 Select
+c.IdCliente as IdCliente,
 c.PrimerNombre + ' ' + c.SegundoNombre as Nombres,
 c.PrimerApellido + ' ' + c.SegundoApellido as Apellidos,
 c.Telefono as Telefono,

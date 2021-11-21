@@ -10,7 +10,7 @@ Insert into Cliente values ('Penélope','Rosa','Aragón','Ortiz','76342589','Urban
 Insert into Cliente values ('Axel','Eduardo','Valle','Saenz','54687566','San Judas','axel_sz@gmail.com','Habilitado')
 Insert into Cliente values ('Kevin','Jose','Urbina','Ortiz','58965874','El Recreo','k_ortiz@gmail.com','Habilitado')
 
-select * from Cliente
+GO
 
 --- insertando datos en la tabla mecánico
 Insert into Mecanico values ('Juan','Pablo','Aguirre','Ortiz','Automatizacion',5000,'San Andres I Etapa Casa H-2','45468156','juan@hotmail.com','Activo')
@@ -19,7 +19,7 @@ Insert into Mecanico values ('Allan','Abner','Zambrana','Torrez','Sistemas termi
 Insert into Mecanico values ('Cristopher','Rodney','Corrales','Lario','Sistemas electricos',8600,'Linda Vista 3 C. al lago','95868745','rodneylario@gmail.com','Activo')
 Insert into Mecanico values ('Ebner','Alexis','Ponce','Ortiz','Mantenimiento',56325,'DGI principal 2 C al lago','65369885','ebalexis@hotmail.com','Activo')
 
-select * from Mecanico
+GO
 
 --- insertando datos en la tabla repuesto 
 Insert into Repuesto values ('Bandas del motor','Honda','SS101',100,3)
@@ -29,11 +29,10 @@ Insert into Repuesto values ('Sistema de aire acondicionado','BOSCH','SLA1',590,
 Insert into Repuesto values ('Bateria','ACDelco','QWS2',850,9)
 Insert into Repuesto values ('Caja de cambio','VALEO','SOCA1',50,5)
 
-select * from Repuesto
+GO
 ---insertando datos en la tabla vehículo
 Insert into Vehiculo values (1,'BMW','X4','2018')
 Insert into Vehiculo values (1,'BMW','SERIE 3','2010')
-
 Insert into Vehiculo values (4,'Audi','X4','2012')
 Insert into Vehiculo values (3,'Ford','F150','1999')
 Insert into Vehiculo values (2,'Seat','F50','2018')
@@ -41,18 +40,17 @@ Insert into Vehiculo values (5,'Lexus','MA10','2014')
 Insert into Vehiculo values (6,'Seat','F50','2018')
 Insert into Vehiculo values (7,'Opel','R50','2020')
 
-select * from Vehiculo
+GO
 
 ---insertando datos en la tabla servicio
 Insert into Servicio values ('Cambio de aceite',140,'ORDINARIO','Habilitado')
-
 Insert into Servicio values ('Cambio de Bandas del Motor',180,'EXTRAORDINARIO','Habilitado')
 Insert into Servicio values ('Mantenimiento 10000 km',1800,'ORDINARIO','Habilitado')
 Insert into Servicio values ('Mantenimiento 5000 km ',1500,'ORDINARIO','Habilitado')
 Insert into Servicio values ('Revisión del Sistema Eléctrico',400,'EXTRAORDINARIO','Habilitado')
 Insert into Servicio values ('Reparación de aire acondicionado',2000,'EXTRAORDINARIO','Habilitado')
 
-select * from Servicio
+GO
 
 ---insertando datos en la tabla Mantenimiento
 Insert into Mantenimiento values (1,'2021-11-18','2021-11-24','En espera')
@@ -63,39 +61,9 @@ Insert into Mantenimiento values (6,'2021-11-18','2021-11-28','En espera')
 Insert into Mantenimiento values (7,'2021-11-18','2021-11-30','En espera')
 Insert into Mantenimiento values (8,'2021-11-16','2021-12-03','En espera')
 
-select * from Mantenimiento
+--Falta la inserccion de datos en los detalles de Mantenimiento
 
 
 
----insertando datos es detallemantenimiento 
- Insert into [Detalle de Mantenimiento] values (1,1,1,1)
- Insert into [Detalle de Mantenimiento] values (2,2,1,2)
- Insert into [Detalle de Mantenimiento] values (3,1,2,3)
- Insert into [Detalle de Mantenimiento] values (4,3,2,4)
- Insert into [Detalle de Mantenimiento] values (3,2,2,2)
-
- select * from [Detalle de Mantenimiento]
-
- ---insertando datos en detallerepuesto
- Insert into [Detalle de Repuestos] values (1,150,2,0)
- Insert into [Detalle de Repuestos] values (2,134,2,0)
- Insert into [Detalle de Repuestos] values (3,150,2,0)
- Insert into [Detalle de Repuestos] values (4,300,1,0)
- Insert into [Detalle de Repuestos] values (5,134,1,0)
- Insert into [Detalle de Repuestos] values (6,300,1,0)
-
- select * from Repuestos
- select * from [Detalle de Repuestos]
- ----consultando a todas las tablas
- select * from [Detalle de Repuestos]
- select * from Cliente
- select * from [Detalle de Mantenimiento]
- select * from Servicio
- select * from Mantenimiento
- select * from Vehiculo
- select * from Mecanico
- select * from Repuestos
-
-
- BACKUP DATABASE	SERVIPLUS TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\SERVIPLUS.bak'
+ --BACKUP DATABASE	SERVIPLUS TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\SERVIPLUS.bak'
 

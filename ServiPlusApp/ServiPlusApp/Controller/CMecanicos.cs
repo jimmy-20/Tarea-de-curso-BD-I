@@ -44,7 +44,8 @@ namespace ServiPlusApp.Controller
             DataGridViewRow row = FrmMecanico.DgvTablas.SelectedRows[0];
 
             int id = Convert.ToInt32(row.Cells[0].Value);
-            
+            DMecanicos.Cambiar_Estado_Mecanico(id);
+            Ver();
         }
 
         public void Guardar()

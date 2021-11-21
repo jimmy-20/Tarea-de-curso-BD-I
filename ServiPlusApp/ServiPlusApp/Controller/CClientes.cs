@@ -40,7 +40,7 @@ namespace ServiPlusApp.Controller
             }
 
             DataGridViewRow row = FrmCliente.DgvTablas.SelectedRows[0];
-            int id = Convert.ToInt32(row.Cells[0].Value);
+            int id = Convert.ToInt32(FrmCliente.DgvTablas.SelectedRows[0].Cells[0].Value);
 
             DClientes.Cambiar_Estado(id);
             Ver();
@@ -72,11 +72,10 @@ namespace ServiPlusApp.Controller
             return DClientes.Buscar_Cliente(dato);
         }
 
-        
-
         public void Buscar(string text)
         {
             FrmCliente.DgvTablas.DataSource = DClientes.Buscar_Cliente(text);
+            FrmCliente.DgvTablas.Columns[0].Visible = false;
         }
     }
 }
