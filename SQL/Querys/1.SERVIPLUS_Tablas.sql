@@ -1,93 +1,112 @@
 --Ejecutar todo el Query y luego trabajar con el Login AdminServiPlus
-CREATE LOGIN AdminServiPlus WITH PASSWORD = 'ServiPlus2021'
 CREATE DATABASE SERVIPLUS
 GO
+
 USE SERVIPLUS
 GO
 --Creacion de catalogos
-CREATE TABLE Cliente(
-IdCliente int primary key identity(1,1),
+CREATE TABLE Clientes(
+IdCliente int primary key identity(1,1) not null,
 PrimerNombre varchar(50) not null,
 SegundoNombre varchar(50),
 PrimerApellido varchar(50) not null,
-SegundoApellido varchar(50),
-Telefono varchar(20),
-Direccion varchar(50),
-Correo varchar(50),
-Estado varchar(20)
+SegundoApellido varchar(50) not null,
+Telefono varchar(20) not null,
+Direccion varchar(50) not null,
+Correo varchar(50) not null,
+Estado varchar(20) not null
 )
 GO
 
-CREATE TABLE Vehiculo(
-IdVehiculo int primary key identity(1,1),
-IdCliente int foreign key references Cliente(IdCliente),
-Marca varchar(50),
-Modelo varchar(50),
-Año int
+CREATE TABLE Vehiculos(
+IdVehiculo int primary key identity(1,1) not null,
+IdCliente int foreign key references Clientes(IdCliente) not null,
+Marca varchar(50) not null,
+Modelo varchar(50) not null,
+Año int not null
 )
 GO
 
-CREATE TABLE Servicio(
-IdServicio int primary key identity(1,1),
-Descripcion varchar(50),
-Precio decimal,
-TipoMantenimiento varchar(50),
-Estado varchar(50)
+CREATE TABLE Servicios(
+IdServicio int primary key identity(1,1) not null,
+Descripcion varchar(50) not null,
+Precio decimal not null,
+TipoMantenimiento varchar(50) not null,
+Estado varchar(50) not null
 )
 GO
 
-CREATE TABLE Repuesto(
-IdRepuesto int primary key identity(1,1),
-Descripcion varchar(50),
-Marca varchar(50),
-Modelo varchar(50),
-Precio decimal,
-Cantidad int
+CREATE TABLE Repuestos(
+IdRepuesto int primary key identity(1,1) not null,
+Descripcion varchar(50) not null,
+Marca varchar(50) not null,
+Modelo varchar(50) not null,
+Precio decimal not null,
+Cantidad int not null
 )
 GO
 
-CREATE TABLE Mecanico(
-IdMecanico int primary key identity(1,1),
+CREATE TABLE Mecanicos(
+IdMecanico int primary key identity(1,1) not null,
 PrimerNombre varchar(50) not null,
-SegundoNombre varchar(50),
+SegundoNombre varchar(50) not null,
 PrimerApellido varchar(50) not null,
-SegundoApellido varchar(50),
-Especialidad varchar(50),
-Salario decimal,
-Direccion varchar(50),
-Telefono varchar (50),
-Correo varchar(50),
-Estado varchar(20)
+SegundoApellido varchar(50) not null,
+Especialidad varchar(50) not null,
+Salario decimal not null,
+Direccion varchar(50) not null,
+Telefono varchar (50) not null,
+Correo varchar(50) not null,
+Estado varchar(20) not null
 )
 GO
 
 --Tablas de operaciones
-CREATE TABLE Mantenimiento(
+CREATE TABLE Mantenimientos(
 IdMantenimiento int primary key identity(1,1) not null,
-IdVehiculo int foreign key references Vehiculo(IdVehiculo),
-FechaIngreso date,
-FechaSalida date,
-Estado varchar(20)
+IdVehiculo int foreign key references Vehiculos(IdVehiculo) not null,
+FechaIngreso date not null,
+FechaSalida date not null,
+Estado varchar(20) not null
 )
 GO
 
-CREATE TABLE Detalle_Mantenimiento(
-IdDetalleMantenimiento int primary key identity(1,1),
-IdMantenimiento int foreign key references Mantenimiento(IdMantenimiento) not null,
-IdMecanico int foreign key references Mecanico(IdMecanico),
-IdServicio int foreign key references  Servicio(IdServicio),
-Precio decimal
+CREATE TABLE Detalle_Mantenimientos(
+IdDetalleMantenimiento int primary key identity(1,1) not null,
+IdMantenimiento int foreign key references Mantenimientos(IdMantenimiento) not null,
+IdMecanico int foreign key references Mecanicos(IdMecanico),
+IdServicio int foreign key references  Servicios(IdServicio) not null,
+Precio decimal not null,
+Descuento decimal not null
 )
 GO
 
-CREATE TABLE Detalle_Repuesto(
-IdDetalleRepuesto int primary key identity(1,1),
-IdDetalleMantenimiento int foreign key references Detalle_Mantenimiento(IdDetalleMantenimiento),
-IdRepuesto int foreign key references Repuesto(IdRepuesto),
-Cantidad int,
-Precio decimal
+CREATE TABLE Detalle_Repuestos(
+IdDetalleRepuesto int primary key identity(1,1) not null,
+IdDetalleMantenimiento int foreign key references Detalle_Mantenimientos(IdDetalleMantenimiento) not null,
+IdRepuesto int foreign key references Repuestos(IdRepuesto),
+Cantidad int not null,
+Precio decimal not null,
+Descuento decimal not null
 )
 
+--Tabla de colaboradores a los cuales les pertenece un usuario
+CREATE TABLE Colaboradores(
+IdColaborador int primary key identity(1,1) not null,
+PrimerNombre varchar(50) not null,
+SegundoNombre varchar(50),
+PrimerApellido varchar(50) not null,
+SegundoApellido varchar(50) not null,
+Telefono varchar (30) not null,
+Especialidad varchar (50) not null
+)
 GO
-EXEC sp_adduser AdminServiPlus, AdminServiPlus
-EXEC sp_addrolemember db_owner, AdminServiPlus
+--Tabla de users que van a entrar al servidor/ DB
+Create table Usuarios(
+IdUsuario int identity(1,1) primary key not null,
+IdColaborador int foreign key references Colaboradores(IdColaborador) not null,
+Username varchar(80) not null,
+Contraseña varchar(80) not null,
+Rol varchar(80) not null,
+Estado varchar(80) not null
+) 
