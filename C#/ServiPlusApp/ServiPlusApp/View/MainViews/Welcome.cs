@@ -13,12 +13,13 @@ namespace ServiPlusApp.View
 {
     public partial class Welcome : Form
     {
-        public Welcome(string fullname,string username, string rol)
+        public Welcome(string fullname,string username, string rol,string especialidad)
         {
             InitializeComponent();
             this.fullname = fullname;
             this.username = username;
             this.rol = rol;
+            this.especialidad = especialidad;
         }
 
         Thread th;
@@ -27,6 +28,7 @@ namespace ServiPlusApp.View
         string fullname;
         string username;
         string rol;
+        string especialidad;
 
         float count = 0;
 
@@ -58,7 +60,7 @@ namespace ServiPlusApp.View
 
         public void OpenNewFrm()
         {
-            Application.Run(new Operaciones(fullname,username,rol));
+            Application.Run(new Operaciones(fullname,username,rol,especialidad));
         }
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -48,35 +48,13 @@ namespace ServiPlusApp.View
 
         public void OpenNewFrm()
         {
-            Application.Run(new Welcome(dt.Rows[0][1].ToString(), dt.Rows[0][3].ToString(), dt.Rows[0][2].ToString()));
+            Application.Run(new Welcome(dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(), dt.Rows[0][3].ToString(), dt.Rows[0][4].ToString()));
         }
 
-
-        private void btnAllowSee_CheckedChanged(object sender, EventArgs e)
-        {
-            if (btnAllowSee.Checked == false)
-            {
-                txtPassword.PasswordChar = true;
-            }
-            else
-            {
-                txtPassword.PasswordChar = false;
-            }
-        }
 
         private void Login_Load(object sender, EventArgs e)
         {
             this.Opacity = 0.9;
-        }
-
-        private void iconPictureBox3_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void iconPictureBox4_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)
@@ -97,18 +75,26 @@ namespace ServiPlusApp.View
             }
         }
 
-
-
         private void txtPassword_Enter(object sender, EventArgs e)
         {
-           
+
             if (txtPassword.Texts == "Password")
             {
-                txtPassword.PasswordChar = true;
-                txtPassword.Texts = "";
-                txtPassword.ForeColor = Color.White;
+                if (btnShow.Visible == true)
+                {
+                    txtPassword.Texts = "";
+                    txtPassword.PasswordChar = false;
+                    txtPassword.ForeColor = Color.White;
+                }
+                else
+                {
+                    txtPassword.Texts = "";
+                    txtPassword.PasswordChar = true;
+                    txtPassword.ForeColor = Color.White;
+                }
+           
             }
-            
+
         }
 
         private void txtPassword_Leave(object sender, EventArgs e)
@@ -122,7 +108,6 @@ namespace ServiPlusApp.View
             }
         }
 
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
@@ -131,7 +116,7 @@ namespace ServiPlusApp.View
                 password = txtPassword.Texts;
 
                 TextBoxs_Validations(username, password);
- 
+
                 dt = CUser.Validar_Acceso(username, password);
 
                 if (dt != null)
@@ -143,12 +128,6 @@ namespace ServiPlusApp.View
                         th.Start();
 
                         this.Close();
-
-                        //this.Dispose();
-                        //frmOperations.fullname = dt.Rows[0][1].ToString();
-                        //frmOperations.rol = dt.Rows[0][2].ToString();
-                        //frmOperations.username = dt.Rows[0][3].ToString();
-                        //frmOperations.ShowDialog();
                     }
                     else
                     {
@@ -185,6 +164,38 @@ namespace ServiPlusApp.View
             }
         }
 
-       
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            if (btnShow.Visible == true)
+            {
+                btnShow.Visible = false;
+                if (txtPassword.Texts == "Password")
+                {
+                    txtPassword.PasswordChar = false;
+                }
+                else
+                {
+                    txtPassword.PasswordChar = true;
+                }
+               
+                btnNoShow.Visible = true;
+            }
+            else
+            {
+                btnShow.Visible = true;
+                txtPassword.PasswordChar = false;
+                btnNoShow.Visible = false;
+            }
+        }
+
+        private void btnMinimixar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

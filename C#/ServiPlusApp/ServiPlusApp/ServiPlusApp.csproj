@@ -205,32 +205,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FrmCliente.Designer.cs">
-      <DependentUpon>FrmCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\FrmMecanico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FrmMecanico.Designer.cs">
-      <DependentUpon>FrmMecanico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\FrmServicios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FrmServicios.Designer.cs">
-      <DependentUpon>FrmServicios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\FrmSingUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FrmSingUp.Designer.cs">
-      <DependentUpon>FrmSingUp.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\MainViews\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,41 +225,35 @@
     <Compile Include="View\MainViews\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\SubViews\MainDesk.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\SubViews\MainDesk.Designer.cs">
-      <DependentUpon>MainDesk.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\MainViews\Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\MainViews\Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Tablas\MostrarTabla.cs">
+    <Compile Include="View\SubViews\MainDesk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\SubViews\MainDesk.Designer.cs">
+      <DependentUpon>MainDesk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SubViews\UserMenuStrip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\SubViews\UserMenuStrip.Designer.cs">
+      <DependentUpon>UserMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tablas\ShowTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Tablas\MostrarTabla.Designer.cs">
-      <DependentUpon>MostrarTabla.cs</DependentUpon>
+    <Compile Include="View\Tablas\ShowTable.Designer.cs">
+      <DependentUpon>ShowTable.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmCliente.resx">
-      <DependentUpon>FrmCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmMecanico.resx">
-      <DependentUpon>FrmMecanico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmServicios.resx">
-      <DependentUpon>FrmServicios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmSingUp.resx">
-      <DependentUpon>FrmSingUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainViews\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -294,14 +264,17 @@
     <EmbeddedResource Include="View\MainViews\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\SubViews\MainDesk.resx">
-      <DependentUpon>MainDesk.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\MainViews\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Tablas\MostrarTabla.resx">
-      <DependentUpon>MostrarTabla.cs</DependentUpon>
+    <EmbeddedResource Include="View\SubViews\MainDesk.resx">
+      <DependentUpon>MainDesk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SubViews\UserMenuStrip.resx">
+      <DependentUpon>UserMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tablas\ShowTable.resx">
+      <DependentUpon>ShowTable.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -392,6 +365,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\archivo-de-busqueda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\private.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show-password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

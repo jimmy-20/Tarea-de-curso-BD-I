@@ -12,9 +12,9 @@ namespace ServiPlusApp.Controller
 {
     public class CRepuestos : IAcciones 
     {
-        private MostrarTabla FrmRepuesto;
+        private ShowTable FrmRepuesto;
 
-        public CRepuestos(MostrarTabla FrmRepuesto)
+        public CRepuestos(ShowTable FrmRepuesto)
         {
             this.FrmRepuesto = FrmRepuesto;
         }

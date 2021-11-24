@@ -10,7 +10,7 @@ namespace ServiPlusApp.Controller.Factory
 {
     class Fabrica
     {
-        public static IAcciones FormController(MostrarTabla Formulario ,string formulario)
+        public static IAcciones FormController(ShowTable Formulario ,string formulario)
         {
             switch (formulario)
             {

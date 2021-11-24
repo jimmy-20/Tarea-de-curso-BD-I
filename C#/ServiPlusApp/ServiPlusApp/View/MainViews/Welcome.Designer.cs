@@ -66,7 +66,7 @@ namespace ServiPlusApp.View
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(650, 0);
+            this.panel1.Location = new System.Drawing.Point(781, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(5, 392);
             this.panel1.TabIndex = 8;
@@ -77,7 +77,7 @@ namespace ServiPlusApp.View
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(5, 387);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(645, 5);
+            this.panel2.Size = new System.Drawing.Size(776, 5);
             this.panel2.TabIndex = 9;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Welcome_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Welcome_MouseMove);
@@ -101,7 +101,7 @@ namespace ServiPlusApp.View
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(5, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(645, 5);
+            this.panel5.Size = new System.Drawing.Size(776, 5);
             this.panel5.TabIndex = 9;
             this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Welcome_MouseDown);
             this.panel5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Welcome_MouseMove);
@@ -110,6 +110,7 @@ namespace ServiPlusApp.View
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
@@ -118,7 +119,7 @@ namespace ServiPlusApp.View
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(5, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(645, 382);
+            this.panel3.Size = new System.Drawing.Size(776, 382);
             this.panel3.TabIndex = 10;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Welcome_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Welcome_MouseMove);
@@ -150,7 +151,7 @@ namespace ServiPlusApp.View
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(2, 80);
+            this.label1.Location = new System.Drawing.Point(6, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 20);
             this.label1.TabIndex = 0;
@@ -158,15 +159,16 @@ namespace ServiPlusApp.View
             // 
             // lblFullname
             // 
+            this.lblFullname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFullname.BackColor = System.Drawing.Color.Transparent;
-            this.lblFullname.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullname.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullname.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lblFullname.Location = new System.Drawing.Point(299, 213);
+            this.lblFullname.Location = new System.Drawing.Point(249, 213);
             this.lblFullname.Name = "lblFullname";
-            this.lblFullname.Size = new System.Drawing.Size(330, 35);
+            this.lblFullname.Size = new System.Drawing.Size(512, 35);
             this.lblFullname.TabIndex = 11;
             this.lblFullname.Text = "Fullname";
-            this.lblFullname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblFullname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // zeroitProgressBarCircular1
             // 
@@ -176,7 +178,7 @@ namespace ServiPlusApp.View
             this.zeroitProgressBarCircular1.FillEllipse1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(87)))), ((int)(((byte)(122)))));
             this.zeroitProgressBarCircular1.FillEllipse2 = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(163)))), ((int)(((byte)(165)))));
             this.zeroitProgressBarCircular1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.zeroitProgressBarCircular1.Location = new System.Drawing.Point(409, 251);
+            this.zeroitProgressBarCircular1.Location = new System.Drawing.Point(436, 251);
             this.zeroitProgressBarCircular1.Maximum = ((long)(100));
             this.zeroitProgressBarCircular1.Name = "zeroitProgressBarCircular1";
             this.zeroitProgressBarCircular1.ProgressColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(124)))), ((int)(((byte)(130)))));
@@ -193,15 +195,15 @@ namespace ServiPlusApp.View
             this.zeroitProgressBarCircular1.TextColor = System.Drawing.Color.White;
             this.zeroitProgressBarCircular1.TextRendering = System.Drawing.Text.TextRenderingHint.AntiAlias;
             this.zeroitProgressBarCircular1.Transparent = false;
-            this.zeroitProgressBarCircular1.Value = ((long)(42));
+            this.zeroitProgressBarCircular1.Value = ((long)(21));
             // 
             // Welcome
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::ServiPlusApp.Properties.Resources.WelcomeFondo;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(655, 392);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(786, 392);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);

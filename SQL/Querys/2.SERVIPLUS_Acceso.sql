@@ -11,8 +11,10 @@ SELECT @@SERVERNAME
 GO
 --    procedimiento almacenado para insertar usuario
 CREATE procedure Crear_Usuario
-@FirstName varchar(80),
-@LastName varchar(80),
+@pNombre varchar(80),
+@sNombre varchar(80),
+@pApellido varchar(80),
+@sApellido varchar(80),
 @Telefono varchar(80),
 @Especialidad varchar(80),
 @username varchar(80),
@@ -20,7 +22,7 @@ CREATE procedure Crear_Usuario
 @rol varchar(80)
 
 as 
-insert into Colaboradores(PrimerNombre,PrimerApellido,Especialidad,Telefono) values (@FirstName,@LastName,@Especialidad,@Telefono)
+insert into Colaboradores(PrimerNombre,SegundoNombre,PrimerApellido,SegundoApellido,Telefono,Especialidad) values (@pNombre,@sNombre,@pApellido,@sApellido,@Telefono,@Especialidad)
 
 Declare @IdColaborador int
 set @IdColaborador = (select MAX(IdColaborador) from Colaboradores)
@@ -40,7 +42,7 @@ if exists (Select username from Usuarios
 			where cast(DECRYPTBYPASSPHRASE(@contraseña,Contraseña) as  varchar(100)) = @contraseña
 			and username = @usuario and Estado = 'Habilitado')
 			
-Select 'Acceso Exitoso' as Resultado,c.PrimerNombre+' '+c.PrimerApellido as Usuario, Rol,u.Username from Usuarios u
+Select 'Acceso Exitoso' as Resultado,c.PrimerNombre+' '+c.SegundoNombre+' '+c.PrimerApellido+' '+c.SegundoApellido as Usuario, u.Username,Rol,c.Especialidad from Usuarios u
 inner join Colaboradores c
 on c.IdColaborador = u.IdColaborador
 where cast(DECRYPTBYPASSPHRASE(@contraseña,Contraseña) as  varchar(100)) = @contraseña
@@ -83,9 +85,9 @@ or Estado  like @dato + '%'
 
 --------------------------------------------------------------------------------------
 --Creando Usuario
-EXECUTE Crear_Usuario 'Leonardo', 'Duarte', '7802-9877', 'Sistemas', 'Leoduartejr', 'elchamoleo','Admin'
-EXECUTE Crear_Usuario 'Jimmy', 'Soza', '7802-9756', 'Sistemas', 'Jaso', 'Jaso', 'Admin'
-EXECUTE Crear_Usuario 'Massiel', 'Fonseca', '78990677', 'Sistemas', 'Massiel', 'MassielFonseca', 'Admin'
+EXECUTE Crear_Usuario 'Leonardo','Antonio', 'Duarte','Rodríguez', '7802-9877', 'Sistemas', 'Leoduartejr', 'elchamoleo','Admin'
+EXECUTE Crear_Usuario 'Jimmy','Alexander', 'Soza','Ortiz', '7802-9756', 'Sistemas', 'Jaso', 'Jaso', 'Admin'
+EXECUTE Crear_Usuario 'Massiel','Alejandra', 'Fonseca','Sandino', '78990677', 'Sistemas', 'Massiel', 'MassielFonseca', 'Admin'
 
 --Usando Procedimiento almacenado Validar usuarios
 Execute Validar_Acceso 'leoduartejr', 'elchamoleo'
@@ -95,4 +97,4 @@ Execute Validar_Acceso 'ElChamoLeo', 'Servi.Plus.202'
 --Restauracion de la base de datos 
 BACKUP DATABASE	SERVIPLUS TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\SERVIPLUS.bak'
 
-Restore DataBase SERVIPLUS from Disk =  'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\SERVIPLUS.bak' with replace
+--Restore DataBase SERVIPLUS from Disk =  'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\SERVIPLUS.bak' with replace

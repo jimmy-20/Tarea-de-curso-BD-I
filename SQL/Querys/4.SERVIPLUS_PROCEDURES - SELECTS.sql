@@ -5,8 +5,8 @@ CREATE PROCEDURE Mostrar_Usuarios
 as
 Select
 u.IdUsuario as IdUsuario,
-c.PrimerNombre as Nombre, 
-c.PrimerApellido as Apellido, 
+c.PrimerNombre + ' '+ c.SegundoNombre as Nombres, 
+c.PrimerApellido + ' '+  c.SegundoApellido as Apellidos, 
 Especialidad as Especialidad,
 c.Telefono as Telefono,
 u.Rol as Rol,
@@ -50,7 +50,7 @@ Select
 IdServicio as IdServicio,
 Descripcion as Descripcion,
 Precio as Precio,
-TipoMantenimiento as TipoMantenimiento,
+TipoMantenimiento as [Tipon de Mantenimiento],
 Estado as Estado
 from Servicios
 
@@ -74,7 +74,7 @@ as
 select 
 *
 from 
-Repuestos 
+Repuestos r
 
 --NOTA: Hay que hablar sobre esto en un momento, no hay que pedir todo...
 --Procedimiento mostrar todos los mantenimientos como reporte 
@@ -85,11 +85,11 @@ m.IdMantenimiento as [No Mantenimiento],
 c.PrimerNombre+' '+c.PrimerApellido as [Cliente],
 v.Marca+', '+ v.Modelo +', '+ CONVERT(nvarchar(50),YEAR(v.Año),0) as [Vehiculo],
 s.Descripcion as Servicio,
-s.Precio as [Costo del servicio],
-s.TipoMantenimiento,
+s.Precio as [Precio del servicio],
+s.TipoMantenimiento as [Tipo de Mantenimiento],
 r.Marca+', '+r.Modelo  as Repuesto,
-r.Descripcion [Descripcion de repuesto],
-dr.Precio as [Costo por repuesto],
+r.Descripcion [Repuesto],
+dr.Precio as [Precio del Repuesto],
 dr.Descuento as [Descuento por repuesto],
 dr.Cantidad as [Cantidad de repuestos],
 m.Estado as [Estado del vehiculo],
@@ -126,8 +126,8 @@ c.Direccion as Direcion,
 c.Correo as Correo,
 Estado as Estado
 from Clientes c
-where c.PrimerNombre + ' ' + c.SegundoNombre like @dato + '%' 
-	or c.PrimerApellido + ' ' + c.SegundoApellido like @dato + '%' 
+where c.PrimerNombre + ' ' + c.SegundoNombre like '%'+@dato + '%' 
+	or c.PrimerApellido + ' ' + c.SegundoApellido like '%'+@dato + '%' 
 	or c.Telefono like @dato + '%'  
 	or  c.Direccion  like @dato + '%' 
 	or c.Correo like @dato + '%'
@@ -151,7 +151,7 @@ on c.IdCliente = v.IdCliente
 where v.Marca like @dato + '%' 
 	or v.Modelo like @dato + '%' 
 	or v.Año like @dato + '%' 
-	or  (c.PrimerNombre + ' ' + c.SegundoApellido)  like @dato + '%' 
+	or  (c.PrimerNombre + ' ' + c.SegundoApellido)  like '%'+@dato + '%' 
 
 --Procedimiento para la busqueda Mecanicos
 CREATE PROCEDURE Buscar_Mecanico
@@ -168,11 +168,11 @@ Direccion as Direccion,
 Correo as Correo,
 Estado as Estado
 from Mecanicos
-where (PrimerNombre + ' ' + SegundoNombre) like @dato + '%' 
-	or (PrimerApellido + ' ' + SegundoApellido) like @dato + '%' 
+where (PrimerNombre + ' ' + SegundoNombre) like '%'+@dato + '%' 
+	or (PrimerApellido + ' ' + SegundoApellido) like '%'+@dato + '%'
 	or Especialidad like @dato + '%' 
 	or Telefono like @dato + '%'
-	or Direccion like @dato + '%'
+	or Direccion like '%'+@dato + '%'
 	or Correo like @dato + '%'
 	or Estado like @dato + '%' 
 

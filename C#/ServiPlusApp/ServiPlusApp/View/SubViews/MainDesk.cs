@@ -10,23 +10,29 @@ using System.Windows.Forms;
 
 namespace ServiPlusApp.View.SubViews
 {
-    public partial class MainDesk : Form
+    public partial class MainDesk : UserControl
     {
         public MainDesk()
         {
             InitializeComponent();
         }
 
-        private void MainDesk_Load(object sender, EventArgs e)
-        {
-            lblHora.Text = DateTime.Now.ToLongTimeString();
-            lblFecha.Text = DateTime.Now.ToLongDateString();
-        }
+        public Panel GetPnlContenedor() => pnlContenedor;
+        public Panel GetPnlDateTime() => pnlDateTime;
+        public Label GetLblHora()=> lblHora;
+        public Label GetLblFecha()=> lblFecha;
+        public PictureBox GetPbServiPlus()=> pbServiplus;
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblHora.Text = DateTime.Now.ToLongTimeString();
             lblFecha.Text = DateTime.Now.ToLongDateString();
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void MainDesk_Load(object sender, EventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+            lblHora.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

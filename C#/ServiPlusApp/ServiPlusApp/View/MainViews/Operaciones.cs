@@ -16,15 +16,16 @@ namespace ServiPlusApp.View
 {
     public partial class Operaciones : Form
     {
-        string username = "Leonardo Duarte";
+        string username;
         string fullname;
         string rol;
+        string especialidad;
 
         //Thread th;
         //Point frmPosition;
         //Boolean mouseAction;
 
-        private int borderSize = 2;
+        private int borderSize = 3;
         private Size formSize;
 
         Boolean MnCaEstado = false;
@@ -32,27 +33,33 @@ namespace ServiPlusApp.View
         Boolean MnReEstado = false;
         Boolean MnSeEstado = false;
 
-        MainDesk mainDesk;
+        MainDesk mainDesk = new MainDesk();
+        UserMenuStrip userControl;
         Form activeForm = null;
+        //UserControl activeController = null;
 
-        public Operaciones(string fullname, string username, string rol)
+        public Operaciones(string fullname, string username, string rol, string especialidad)
         {
             InitializeComponent();
+
+            userControl = new UserMenuStrip(fullname, especialidad);
 
             this.username = username;
             this.fullname = fullname;
             this.rol = rol;
+            this.especialidad = especialidad;
 
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
 
-            lblUsername.Text = username;
-            lblRol.Text = rol;
+            //lblUsername.Text = username;
+            // lblRol.Text = rol;
         }
 
         private void Operaciones_Load(object sender, EventArgs e)
         {
-            lblFullname.Text = fullname;
+            lblUsername.Text = username;
+            lblRol.Text = rol;
 
             MnCatalogos.Height = 0;
             MnOperaciones.Height = 0;
@@ -70,27 +77,16 @@ namespace ServiPlusApp.View
             toolTip1.SetToolTip(btnSeguridad, "SEGURIDAD");
             toolTip1.Active = false;
 
-            openChildFormInPanel(new MainDesk());
+            bunifuToolTip1.SetToolTip(pbUsuario, fullname + Environment.NewLine + "Ha iniciado sesión");
+            bunifuToolTip1.SetToolTip(lblUsername, fullname + Environment.NewLine + "Ha iniciado sesión");
+            bunifuToolTip1.SetToolTip(lblRol, fullname + Environment.NewLine + "Ha iniciado sesión");
+            bunifuToolTip1.SetToolTip(pnlUsuario, fullname + Environment.NewLine + "Ha iniciado sesión");
+
+            openUserControlInPanel(mainDesk);
+            MainDesk_MouseDow();
         }
 
-        private void openChildFormInPanel(Form childForm)
-        {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
-
-            activeForm = childForm;
-         
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            pnlContenedor.Controls.Add(childForm);
-            pnlContenedor.Tag = childForm;
-
-            childForm.BringToFront();
-            childForm.Show();
-        }
+        #region Mover Form
 
         //private void Welcome_MouseMove(object sender, MouseEventArgs e)
         //{
@@ -114,15 +110,48 @@ namespace ServiPlusApp.View
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         private void pnlBarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
+            if (this.Contains(userControl))
+            {
+                this.Controls.Remove(userControl);
+            }
+
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        #endregion
 
+        #region Metodos del MainDesk
 
+        private void MainDesk_MouseDow()
+        {
+            mainDesk.MouseDown += MainDesk_MouseDown;
+            mainDesk.GetPnlContenedor().MouseDown += MainDesk_MouseDown;
+            mainDesk.GetPnlDateTime().MouseDown += MainDesk_MouseDown;
+            mainDesk.GetLblFecha().MouseDown += MainDesk_MouseDown;
+            mainDesk.GetLblHora().MouseDown += MainDesk_MouseDown;
+            mainDesk.GetPbServiPlus().MouseDown += MainDesk_MouseDown;
+        }
+        private void MainDesk_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (this.Contains(userControl))
+            {
+                this.Controls.Remove(userControl);
+            }
+        }
+
+        #endregion
+
+        #region Botones de Ventana
         private void btnSlide_Click(object sender, EventArgs e)
         {
+            if (this.Contains(userControl))
+            {
+                this.Controls.Remove(userControl);
+            }
+
             if (pnlMenuVertical.Width == 270)
             {
                 timer1.Start();
@@ -206,6 +235,10 @@ namespace ServiPlusApp.View
             btnRestaurar.Visible = false;
         }
 
+        #endregion
+
+        #region Menu Principal
+
         private void btnCatalogos_Click(object sender, EventArgs e)
         {
             ColapsarMenu(btnCatalogos);
@@ -230,6 +263,11 @@ namespace ServiPlusApp.View
 
         private void ColapsarMenu(Button btn)
         {
+            if (this.Contains(userControl))
+            {
+                this.Controls.Remove(userControl);
+            }
+
             switch (btn.Tag)
             {
                 case "Catalogos":
@@ -358,6 +396,88 @@ namespace ServiPlusApp.View
             }
         }
 
+        #endregion
+
+        #region Eventos Botones SubMenus
+
+        private void btnVehiculos_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new ShowTable(btnVehiculos.Tag.ToString()));
+        }
+
+        private void btnMecanicos_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new ShowTable(btnMecanicos.Tag.ToString()));
+        }
+
+        private void btnServicios_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new ShowTable(btnServicios.Tag.ToString()));
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new ShowTable(btnClientes.Tag.ToString()));
+        }
+
+        private void btnOpMantenimientos_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new ShowTable(btnOpMantenimientos.Tag.ToString()));
+        }
+
+        private void btnOpRepuestos_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new ShowTable(btnOpRepuestos.Tag.ToString()));
+        }
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new ShowTable(btnUsuarios.Tag.ToString()));
+        }
+
+        private void openChildFormInPanel(Form childForm)
+        {
+            if (this.Contains(userControl))
+            {
+                this.Controls.Remove(userControl);
+            }
+
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = childForm;
+
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlContenedor.Controls.Add(childForm);
+            pnlContenedor.Tag = childForm;
+
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void openUserControlInPanel(UserControl control)
+        {
+            //if (activeController!= null)
+            //{
+            //    activeController.Close();
+            //}
+
+            //activeController = control;
+
+
+            control.Dock = DockStyle.Fill;
+            pnlContenedor.Controls.Add(control);
+            pnlContenedor.Tag = control;
+
+            control.BringToFront();
+            control.Show();
+        }
+
+        #endregion
+
         #region Eventos Timer_Tick
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -373,6 +493,8 @@ namespace ServiPlusApp.View
                 MnOperaciones.Height -= 10;
                 MnReportes.Height -= 10;
                 Mnseguridad.Height -= 10;
+
+                btnSlide.Rotation += 4.5;
             }
 
         }
@@ -385,7 +507,14 @@ namespace ServiPlusApp.View
             }
             else
             {
-                pnlMenuVertical.Width += 5;
+                pnlMenuVertical.Width += 10;
+
+
+                if (btnSlide.Rotation > 0)
+                {
+                    btnSlide.Rotation -= 4.5;
+                }
+
             }
         }
 
@@ -441,6 +570,8 @@ namespace ServiPlusApp.View
 
         #endregion
 
+        #region Eventos De los Paneles
+
         private void pnlMenuVertical_SizeChanged(object sender, EventArgs e)
         {
             if (pnlMenuVertical.Width == 270)
@@ -457,7 +588,6 @@ namespace ServiPlusApp.View
         {
             pnlUsuario.BackColor = Color.FromArgb(67, 85, 96);
 
-
         }
 
         private void pnlUsuario_MouseLeave(object sender, EventArgs e)
@@ -469,11 +599,15 @@ namespace ServiPlusApp.View
         {
             if (pnlMenuVertical.Width == 270)
             {
-                SubMenuUsuario.Show(pnlUsuario, new System.Drawing.Point(272, 55));
+                this.Controls.Add(userControl);
+                userControl.BringToFront();
+                userControl.Location = new Point(272, 55);
             }
             else
             {
-                SubMenuUsuario.Show(pnlUsuario, new System.Drawing.Point(72, 55));
+                this.Controls.Add(userControl);
+                userControl.BringToFront();
+                userControl.Location = new Point(72, 55);
             }
 
         }
@@ -482,7 +616,7 @@ namespace ServiPlusApp.View
         {
             if (pnlContenedor.Controls.Count == 0)
             {
-                openChildFormInPanel(new MainDesk());
+                openUserControlInPanel(mainDesk);
             }
         }
 
@@ -513,44 +647,10 @@ namespace ServiPlusApp.View
             }
         }
 
-        #region Eventos de MnBotones
-
-        private void btnVehiculos_Click(object sender, EventArgs e)
-        {
-            openChildFormInPanel(new MostrarTabla(btnVehiculos.Tag.ToString()));
-        }
-
-        private void btnMecanicos_Click(object sender, EventArgs e)
-        {
-            openChildFormInPanel(new MostrarTabla(btnMecanicos.Tag.ToString()));
-        }
-
-        private void btnServicios_Click(object sender, EventArgs e)
-        {
-            openChildFormInPanel(new MostrarTabla(btnServicios.Tag.ToString()));
-        }
-
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            openChildFormInPanel(new MostrarTabla(btnClientes.Tag.ToString()));
-        }
-
-        private void btnOpMantenimientos_Click(object sender, EventArgs e)
-        {
-            openChildFormInPanel(new MostrarTabla(btnOpMantenimientos.Tag.ToString()));
-        }
-
-        private void btnOpRepuestos_Click(object sender, EventArgs e)
-        {
-            openChildFormInPanel(new MostrarTabla(btnOpRepuestos.Tag.ToString()));
-        }
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-            openChildFormInPanel(new MostrarTabla(btnUsuarios.Tag.ToString()));
-        }
         #endregion
 
-        #region Overridden methods  
+        #region Overridden methods 
+        // Maximize & Restore "Event"
         protected override void WndProc(ref Message m)
         {
             const int WM_NCCALCSIZE = 0x0083;//Standar Title Bar - Snap Window

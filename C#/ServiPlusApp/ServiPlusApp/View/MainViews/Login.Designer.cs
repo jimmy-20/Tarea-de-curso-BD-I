@@ -34,20 +34,23 @@ namespace ServiPlusApp.View
             this.btnLogin = new Netsystek.Controls.NskControls.NskButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAllowSee = new Netsystek.Controls.NskControls.NskToggleButton();
             this.txtUsername = new Netsystek.Controls.NskControls.NskTextBoxPlus();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.txtPassword = new Netsystek.Controls.NskControls.NskTextBoxPlus();
-            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.btnMinimixar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnShow = new System.Windows.Forms.PictureBox();
+            this.btnNoShow = new System.Windows.Forms.PictureBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimixar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNoShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -104,24 +107,6 @@ namespace ServiPlusApp.View
             this.label1.TabIndex = 0;
             this.label1.Text = "LOGIN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAllowSee
-            // 
-            this.btnAllowSee.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAllowSee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAllowSee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAllowSee.Location = new System.Drawing.Point(718, 225);
-            this.btnAllowSee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAllowSee.MinimumSize = new System.Drawing.Size(45, 22);
-            this.btnAllowSee.Name = "btnAllowSee";
-            this.btnAllowSee.OffBackColor = System.Drawing.Color.Gray;
-            this.btnAllowSee.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.btnAllowSee.OnBackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAllowSee.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAllowSee.Size = new System.Drawing.Size(45, 22);
-            this.btnAllowSee.TabIndex = 5;
-            this.btnAllowSee.UseVisualStyleBackColor = true;
-            this.btnAllowSee.CheckedChanged += new System.EventHandler(this.btnAllowSee_CheckedChanged);
             // 
             // txtUsername
             // 
@@ -209,42 +194,54 @@ namespace ServiPlusApp.View
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
-            // iconPictureBox4
+            // btnMinimixar
             // 
-            this.iconPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconPictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.iconPictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.iconPictureBox4.Flip = FontAwesome.Sharp.FlipOrientation.Vertical;
-            this.iconPictureBox4.ForeColor = System.Drawing.Color.DarkGray;
-            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.iconPictureBox4.IconColor = System.Drawing.Color.DarkGray;
-            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox4.IconSize = 49;
-            this.iconPictureBox4.Location = new System.Drawing.Point(840, -70);
-            this.iconPictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconPictureBox4.Name = "iconPictureBox4";
-            this.iconPictureBox4.Size = new System.Drawing.Size(50, 49);
-            this.iconPictureBox4.TabIndex = 26;
-            this.iconPictureBox4.TabStop = false;
-            this.iconPictureBox4.Click += new System.EventHandler(this.iconPictureBox4_Click);
+            this.btnMinimixar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimixar.Image = global::ServiPlusApp.Properties.Resources.minimizar;
+            this.btnMinimixar.Location = new System.Drawing.Point(735, 5);
+            this.btnMinimixar.Name = "btnMinimixar";
+            this.btnMinimixar.Size = new System.Drawing.Size(25, 25);
+            this.btnMinimixar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimixar.TabIndex = 30;
+            this.btnMinimixar.TabStop = false;
+            this.btnMinimixar.Click += new System.EventHandler(this.btnMinimixar_Click);
             // 
-            // iconPictureBox3
+            // btnCerrar
             // 
-            this.iconPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.iconPictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.iconPictureBox3.ForeColor = System.Drawing.Color.Gray;
-            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.iconPictureBox3.IconColor = System.Drawing.Color.Gray;
-            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox3.IconSize = 49;
-            this.iconPictureBox3.Location = new System.Drawing.Point(896, -70);
-            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(49, 49);
-            this.iconPictureBox3.TabIndex = 25;
-            this.iconPictureBox3.TabStop = false;
-            this.iconPictureBox3.Click += new System.EventHandler(this.iconPictureBox3_Click);
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = global::ServiPlusApp.Properties.Resources.cerrar;
+            this.btnCerrar.Location = new System.Drawing.Point(763, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCerrar.TabIndex = 29;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnShow
+            // 
+            this.btnShow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShow.Image = global::ServiPlusApp.Properties.Resources.eye__1_;
+            this.btnShow.Location = new System.Drawing.Point(718, 207);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(40, 40);
+            this.btnShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnShow.TabIndex = 28;
+            this.btnShow.TabStop = false;
+            this.btnShow.Visible = false;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
+            // btnNoShow
+            // 
+            this.btnNoShow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNoShow.Image = global::ServiPlusApp.Properties.Resources.show_password;
+            this.btnNoShow.Location = new System.Drawing.Point(718, 207);
+            this.btnNoShow.Name = "btnNoShow";
+            this.btnNoShow.Size = new System.Drawing.Size(40, 40);
+            this.btnNoShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnNoShow.TabIndex = 27;
+            this.btnNoShow.TabStop = false;
+            this.btnNoShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // iconPictureBox2
             // 
@@ -289,17 +286,18 @@ namespace ServiPlusApp.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(800, 370);
+            this.Controls.Add(this.btnMinimixar);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.iconPictureBox4);
-            this.Controls.Add(this.iconPictureBox3);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAllowSee);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnNoShow);
+            this.Controls.Add(this.btnShow);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
@@ -311,8 +309,10 @@ namespace ServiPlusApp.View
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Login_MouseUp);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimixar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNoShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -325,15 +325,16 @@ namespace ServiPlusApp.View
         private Netsystek.Controls.NskControls.NskButton btnLogin;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
-        private Netsystek.Controls.NskControls.NskToggleButton btnAllowSee;
         private Netsystek.Controls.NskControls.NskTextBoxPlus txtUsername;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox6;
         private Netsystek.Controls.NskControls.NskTextBoxPlus txtPassword;
+        private System.Windows.Forms.PictureBox btnNoShow;
+        private System.Windows.Forms.PictureBox btnShow;
+        private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.PictureBox btnMinimixar;
     }
 }

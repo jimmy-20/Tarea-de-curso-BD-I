@@ -17,10 +17,11 @@ namespace ServiPlusApp.View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Operaciones("Massiel Fonseca","Massiel","Admin"));
+            Application.Run(new Operaciones("Leonardo Antonio Duarte Rodríguez","leoduartejr","Admin","Sistemas"));
             //Application.Run(new TablaUsuarios());
+            //Application.Run(new Login());
             //Application.Run(new SplashScreen());
-            Application.Run(new Welcome("Massiel Fonseca","Massiel","ADMIN"));
+            //Application.Run(new Welcome("Massiel Fonseca","Massiel","ADMIN"));
         }
     }
 }

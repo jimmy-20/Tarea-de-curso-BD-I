@@ -12,9 +12,9 @@ namespace ServiPlusApp.Controller
 {
     public class CVehiculos : IAcciones 
     {
-        private MostrarTabla FrmVehiculo;
+        private ShowTable FrmVehiculo;
 
-        public CVehiculos(MostrarTabla FrmVehiculo)
+        public CVehiculos(ShowTable FrmVehiculo)
         {
             this.FrmVehiculo = FrmVehiculo;
         }

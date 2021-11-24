@@ -13,8 +13,8 @@ namespace ServiPlusApp.Controller
 {
     public class CServicios : IAcciones 
     {
-        private MostrarTabla FrmServicio;
-        public CServicios(MostrarTabla FrmServicio)
+        private ShowTable FrmServicio;
+        public CServicios(ShowTable FrmServicio)
         {
             this.FrmServicio = FrmServicio;
         }

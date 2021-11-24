@@ -11,9 +11,9 @@ namespace ServiPlusApp.Controller
 {
     public class CUsuarios : IAcciones 
     {
-        private MostrarTabla FrmUsuario;
+        private ShowTable FrmUsuario;
 
-        public CUsuarios(MostrarTabla FrmUsuario)
+        public CUsuarios(ShowTable FrmUsuario)
         {
             this.FrmUsuario = FrmUsuario;
         }

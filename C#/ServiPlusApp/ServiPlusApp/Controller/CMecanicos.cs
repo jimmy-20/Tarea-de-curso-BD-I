@@ -13,8 +13,8 @@ namespace ServiPlusApp.Controller
 {
     public class CMecanicos : IAcciones
     {
-        private MostrarTabla FrmMecanico;
-        public CMecanicos(MostrarTabla FrmMecanico)
+        private ShowTable FrmMecanico;
+        public CMecanicos(ShowTable FrmMecanico)
         {
             this.FrmMecanico = FrmMecanico;
         }

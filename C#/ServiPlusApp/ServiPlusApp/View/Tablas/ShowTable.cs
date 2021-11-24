@@ -12,22 +12,17 @@ using System.Windows.Forms;
 
 namespace ServiPlusApp.View.Tablas
 {
-    public partial class MostrarTabla : Form
+    public partial class ShowTable : Form
     {
         String tableName;
         public DataGridView DgvTablas { get; set; }
         private IAcciones formulario;
 
-        public MostrarTabla(string TableName)
+        public ShowTable(string TableName)
         {
             InitializeComponent();
             this.tableName = TableName;
             DgvTablas = dgvTablas;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         #region Mostrar Tablas
@@ -42,7 +37,6 @@ namespace ServiPlusApp.View.Tablas
         #region Buscar en Tablas
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-
             if (dgvTablas == null)
             {
                 return;
@@ -62,9 +56,10 @@ namespace ServiPlusApp.View.Tablas
             formulario.Estado();
         }
 
-        private void bunifuGradientPanel1_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
+       
     }
 }

@@ -15,9 +15,9 @@ namespace ServiPlusApp.Controller
 {
     public class CClientes : IAcciones 
     {
-        public MostrarTabla FrmCliente { get; set; }
+        public ShowTable FrmCliente { get; set; }
 
-        public CClientes(MostrarTabla FrmCliente)
+        public CClientes(ShowTable FrmCliente)
         {
             this.FrmCliente = FrmCliente;
         }
