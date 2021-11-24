@@ -31,18 +31,121 @@ namespace ServiPlusApp.View.SubViews
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserMenuStrip));
+            this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
+            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnSet = new System.Windows.Forms.Button();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pbUsuario = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnEspecialidad = new System.Windows.Forms.Button();
             this.btnUsuario = new System.Windows.Forms.Button();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btnSet = new System.Windows.Forms.Button();
-            this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
             this.bunifuPanel3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // bunifuToolTip1
+            // 
+            this.bunifuToolTip1.Active = true;
+            this.bunifuToolTip1.AlignTextWithTitle = false;
+            this.bunifuToolTip1.AllowAutoClose = false;
+            this.bunifuToolTip1.AllowFading = true;
+            this.bunifuToolTip1.AutoCloseDuration = 5000;
+            this.bunifuToolTip1.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.bunifuToolTip1.ClickToShowDisplayControl = false;
+            this.bunifuToolTip1.ConvertNewlinesToBreakTags = true;
+            this.bunifuToolTip1.DisplayControl = null;
+            this.bunifuToolTip1.EntryAnimationSpeed = 350;
+            this.bunifuToolTip1.ExitAnimationSpeed = 200;
+            this.bunifuToolTip1.GenerateAutoCloseDuration = false;
+            this.bunifuToolTip1.IconMargin = 6;
+            this.bunifuToolTip1.InitialDelay = 0;
+            this.bunifuToolTip1.Name = "bunifuToolTip1";
+            this.bunifuToolTip1.Opacity = 1D;
+            this.bunifuToolTip1.OverrideToolTipTitles = false;
+            this.bunifuToolTip1.Padding = new System.Windows.Forms.Padding(10);
+            this.bunifuToolTip1.ReshowDelay = 100;
+            this.bunifuToolTip1.ShowAlways = true;
+            this.bunifuToolTip1.ShowBorders = false;
+            this.bunifuToolTip1.ShowIcons = true;
+            this.bunifuToolTip1.ShowShadows = true;
+            this.bunifuToolTip1.Tag = null;
+            this.bunifuToolTip1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuToolTip1.TextMargin = 2;
+            this.bunifuToolTip1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
+            this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.bunifuToolTip1.ToolTipTitle = null;
+            // 
+            // bunifuPanel2
+            // 
+            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
+            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel2.BorderRadius = 3;
+            this.bunifuPanel2.BorderThickness = 1;
+            this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bunifuPanel2.Location = new System.Drawing.Point(0, 90);
+            this.bunifuPanel2.Name = "bunifuPanel2";
+            this.bunifuPanel2.ShowBorders = true;
+            this.bunifuPanel2.Size = new System.Drawing.Size(457, 5);
+            this.bunifuPanel2.TabIndex = 26;
+            this.bunifuToolTip1.SetToolTip(this.bunifuPanel2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuPanel2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuPanel2, "");
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSignOut.FlatAppearance.BorderSize = 0;
+            this.btnSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(60)))), ((int)(((byte)(212)))));
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.Image = global::ServiPlusApp.Properties.Resources.log_out;
+            this.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSignOut.Location = new System.Drawing.Point(0, 95);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(457, 45);
+            this.btnSignOut.TabIndex = 25;
+            this.btnSignOut.Tag = "SignOut";
+            this.btnSignOut.Text = "          SignOut";
+            this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuToolTip1.SetToolTip(this.btnSignOut, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnSignOut, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnSignOut, "");
+            this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnSet
+            // 
+            this.btnSet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            this.btnSet.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSet.FlatAppearance.BorderSize = 0;
+            this.btnSet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(60)))), ((int)(((byte)(212)))));
+            this.btnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSet.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSet.ForeColor = System.Drawing.Color.White;
+            this.btnSet.Image = global::ServiPlusApp.Properties.Resources.lista_de_contactos;
+            this.btnSet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSet.Location = new System.Drawing.Point(0, 140);
+            this.btnSet.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnSet.Name = "btnSet";
+            this.btnSet.Size = new System.Drawing.Size(457, 45);
+            this.btnSet.TabIndex = 24;
+            this.btnSet.Tag = "Set";
+            this.btnSet.Text = "          Configuracion de la cuenta...";
+            this.btnSet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuToolTip1.SetToolTip(this.btnSet, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnSet, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnSet, "");
+            this.btnSet.UseVisualStyleBackColor = false;
             // 
             // bunifuPanel1
             // 
@@ -54,13 +157,11 @@ namespace ServiPlusApp.View.SubViews
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Controls.Add(this.pbUsuario);
             this.bunifuPanel1.Controls.Add(this.bunifuPanel3);
-            this.bunifuPanel1.Controls.Add(this.bunifuPanel2);
-            this.bunifuPanel1.Controls.Add(this.btnSet);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(457, 138);
+            this.bunifuPanel1.Size = new System.Drawing.Size(457, 185);
             this.bunifuPanel1.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.bunifuPanel1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuPanel1, null);
@@ -75,7 +176,7 @@ namespace ServiPlusApp.View.SubViews
             this.pbUsuario.BorderRadius = 37;
             this.pbUsuario.Image = global::ServiPlusApp.Properties.Resources.hombre_de_traje_y_corbata__1_;
             this.pbUsuario.IsCircle = true;
-            this.pbUsuario.Location = new System.Drawing.Point(8, 7);
+            this.pbUsuario.Location = new System.Drawing.Point(7, 8);
             this.pbUsuario.Name = "pbUsuario";
             this.pbUsuario.Size = new System.Drawing.Size(74, 74);
             this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,11 +197,10 @@ namespace ServiPlusApp.View.SubViews
             this.bunifuPanel3.BorderThickness = 1;
             this.bunifuPanel3.Controls.Add(this.btnEspecialidad);
             this.bunifuPanel3.Controls.Add(this.btnUsuario);
-            this.bunifuPanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.bunifuPanel3.Location = new System.Drawing.Point(83, 0);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(374, 88);
+            this.bunifuPanel3.Size = new System.Drawing.Size(374, 81);
             this.bunifuPanel3.TabIndex = 19;
             this.bunifuToolTip1.SetToolTip(this.bunifuPanel3, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuPanel3, null);
@@ -152,90 +252,17 @@ namespace ServiPlusApp.View.SubViews
             this.bunifuToolTip1.SetToolTipTitle(this.btnUsuario, "");
             this.btnUsuario.UseVisualStyleBackColor = false;
             // 
-            // bunifuPanel2
-            // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel2.BorderRadius = 3;
-            this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuPanel2.Location = new System.Drawing.Point(0, 88);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(457, 5);
-            this.bunifuPanel2.TabIndex = 17;
-            this.bunifuToolTip1.SetToolTip(this.bunifuPanel2, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuPanel2, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuPanel2, "");
-            // 
-            // btnSet
-            // 
-            this.btnSet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            this.btnSet.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSet.FlatAppearance.BorderSize = 0;
-            this.btnSet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(60)))), ((int)(((byte)(212)))));
-            this.btnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSet.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSet.ForeColor = System.Drawing.Color.White;
-            this.btnSet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSet.Location = new System.Drawing.Point(0, 93);
-            this.btnSet.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnSet.Name = "btnSet";
-            this.btnSet.Size = new System.Drawing.Size(457, 45);
-            this.btnSet.TabIndex = 16;
-            this.btnSet.Tag = "Set";
-            this.btnSet.Text = "Configuracion de la cuenta...";
-            this.btnSet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuToolTip1.SetToolTip(this.btnSet, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnSet, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnSet, "");
-            this.btnSet.UseVisualStyleBackColor = false;
-            // 
-            // bunifuToolTip1
-            // 
-            this.bunifuToolTip1.Active = true;
-            this.bunifuToolTip1.AlignTextWithTitle = false;
-            this.bunifuToolTip1.AllowAutoClose = false;
-            this.bunifuToolTip1.AllowFading = true;
-            this.bunifuToolTip1.AutoCloseDuration = 5000;
-            this.bunifuToolTip1.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.bunifuToolTip1.ClickToShowDisplayControl = false;
-            this.bunifuToolTip1.ConvertNewlinesToBreakTags = true;
-            this.bunifuToolTip1.DisplayControl = null;
-            this.bunifuToolTip1.EntryAnimationSpeed = 350;
-            this.bunifuToolTip1.ExitAnimationSpeed = 200;
-            this.bunifuToolTip1.GenerateAutoCloseDuration = false;
-            this.bunifuToolTip1.IconMargin = 6;
-            this.bunifuToolTip1.InitialDelay = 0;
-            this.bunifuToolTip1.Name = "bunifuToolTip1";
-            this.bunifuToolTip1.Opacity = 1D;
-            this.bunifuToolTip1.OverrideToolTipTitles = false;
-            this.bunifuToolTip1.Padding = new System.Windows.Forms.Padding(10);
-            this.bunifuToolTip1.ReshowDelay = 100;
-            this.bunifuToolTip1.ShowAlways = true;
-            this.bunifuToolTip1.ShowBorders = false;
-            this.bunifuToolTip1.ShowIcons = true;
-            this.bunifuToolTip1.ShowShadows = true;
-            this.bunifuToolTip1.Tag = null;
-            this.bunifuToolTip1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuToolTip1.TextMargin = 2;
-            this.bunifuToolTip1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
-            this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
-            this.bunifuToolTip1.ToolTipTitle = null;
-            // 
             // UserMenuStrip
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.bunifuPanel2);
+            this.Controls.Add(this.btnSignOut);
+            this.Controls.Add(this.btnSet);
             this.Controls.Add(this.bunifuPanel1);
             this.Name = "UserMenuStrip";
-            this.Size = new System.Drawing.Size(457, 138);
+            this.Size = new System.Drawing.Size(457, 185);
             this.bunifuToolTip1.SetToolTip(this, "");
             this.bunifuToolTip1.SetToolTipIcon(this, null);
             this.bunifuToolTip1.SetToolTipTitle(this, "");
@@ -250,12 +277,13 @@ namespace ServiPlusApp.View.SubViews
         #endregion
 
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
+        private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
         private Bunifu.UI.WinForms.BunifuPictureBox pbUsuario;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
         private System.Windows.Forms.Button btnEspecialidad;
         private System.Windows.Forms.Button btnUsuario;
+        private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Button btnSet;
-        private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
     }
 }
