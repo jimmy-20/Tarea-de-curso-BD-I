@@ -44,7 +44,6 @@ namespace ServiPlusApp.View
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.pnlContenedor = new System.Windows.Forms.Panel();
@@ -273,12 +272,6 @@ namespace ServiPlusApp.View
             // 
             this.timer2.Interval = 10;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.toolTip1.ForeColor = System.Drawing.Color.White;
-            this.toolTip1.ShowAlways = true;
             // 
             // timer4
             // 
@@ -863,7 +856,6 @@ namespace ServiPlusApp.View
         private System.Windows.Forms.Panel Mnseguridad;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Timer timer4;
         private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
         private Bunifu.UI.WinForms.BunifuPictureBox pbUsuario;

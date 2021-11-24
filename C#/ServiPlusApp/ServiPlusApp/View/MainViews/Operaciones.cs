@@ -71,11 +71,11 @@ namespace ServiPlusApp.View
             timer1.Stop();
             timer2.Stop();
 
-            toolTip1.SetToolTip(btnCatalogos, "CATALOGOS");
-            toolTip1.SetToolTip(btnOperaciones, "OPERACIONES");
-            toolTip1.SetToolTip(btnReportes, "REPORTES");
-            toolTip1.SetToolTip(btnSeguridad, "SEGURIDAD");
-            toolTip1.Active = false;
+            bunifuToolTip1.SetToolTip(btnCatalogos, "CATALOGOS");
+            bunifuToolTip1.SetToolTip(btnOperaciones, "OPERACIONES");
+            bunifuToolTip1.SetToolTip(btnReportes, "REPORTES");
+            bunifuToolTip1.SetToolTip(btnSeguridad, "SEGURIDAD");
+            bunifuToolTip1.Active = false;
 
             bunifuToolTip1.SetToolTip(pbUsuario, fullname + Environment.NewLine + "Ha iniciado sesión");
             bunifuToolTip1.SetToolTip(lblUsername, fullname + Environment.NewLine + "Ha iniciado sesión");
@@ -576,11 +576,11 @@ namespace ServiPlusApp.View
         {
             if (pnlMenuVertical.Width == 270)
             {
-                toolTip1.Active = false;
+                bunifuToolTip1.Active = false;
             }
             else
             {
-                toolTip1.Active = true;
+                bunifuToolTip1.Active = true;
             }
         }
 
