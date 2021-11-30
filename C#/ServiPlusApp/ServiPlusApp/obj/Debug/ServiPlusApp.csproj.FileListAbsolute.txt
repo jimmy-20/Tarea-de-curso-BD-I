@@ -246,3 +246,5 @@ C:\Users\dell\Documents\Tarea-de-curso-BD-I\C#\ServiPlusApp\ServiPlusApp\obj\Deb
 C:\Users\dell\Documents\Tarea-de-curso-BD-I\C#\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.pdb
 C:\Users\dell\Documents\Tarea-de-curso-BD-I\C#\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.SubViews.UserMenuStrip.resources
 C:\Users\dell\Documents\Tarea-de-curso-BD-I\C#\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.Tablas.ShowTable.resources
+C:\Users\dell\Documents\Tarea-de-curso-BD-I\C#\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.Agregar.Vehiculos.resources
+C:\Users\dell\Documents\Tarea-de-curso-BD-I\C#\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.Agregar.Cliente.Clientes.resources

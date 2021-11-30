@@ -30,42 +30,44 @@ namespace ServiPlusApp.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation1 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Operaciones));
             this.pnlMenuVertical = new System.Windows.Forms.Panel();
             this.pnlMenuContenedor = new System.Windows.Forms.FlowLayoutPanel();
-            this.MnCatalogos = new System.Windows.Forms.Panel();
-            this.MnOperaciones = new System.Windows.Forms.Panel();
-            this.MnReportes = new System.Windows.Forms.Panel();
-            this.Mnseguridad = new System.Windows.Forms.Panel();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.pnlUsuario = new System.Windows.Forms.Panel();
-            this.lblRol = new System.Windows.Forms.Label();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.pnlBarraTitulo = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
-            this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.btnRestaurar = new FontAwesome.Sharp.IconPictureBox();
-            this.btnClose = new FontAwesome.Sharp.IconPictureBox();
-            this.btnMaximizar = new FontAwesome.Sharp.IconPictureBox();
-            this.btnMinimizar = new FontAwesome.Sharp.IconPictureBox();
-            this.btnSlide = new FontAwesome.Sharp.IconPictureBox();
             this.btnCatalogos = new System.Windows.Forms.Button();
+            this.MnCatalogos = new System.Windows.Forms.Panel();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnServicios = new System.Windows.Forms.Button();
             this.btnMecanicos = new System.Windows.Forms.Button();
             this.btnVehiculos = new System.Windows.Forms.Button();
             this.btnOperaciones = new System.Windows.Forms.Button();
+            this.MnOperaciones = new System.Windows.Forms.Panel();
             this.btnOpRepuestos = new System.Windows.Forms.Button();
             this.btnOpMantenimientos = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
+            this.MnReportes = new System.Windows.Forms.Panel();
             this.btnReRepuestos = new System.Windows.Forms.Button();
             this.btnReMantenimientos = new System.Windows.Forms.Button();
             this.btnSeguridad = new System.Windows.Forms.Button();
+            this.Mnseguridad = new System.Windows.Forms.Panel();
             this.btnUsuarios = new System.Windows.Forms.Button();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.pnlUsuario = new System.Windows.Forms.Panel();
+            this.lblRol = new System.Windows.Forms.Label();
             this.pbUsuario = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.pnlBarraTitulo = new System.Windows.Forms.Panel();
+            this.btnRestaurar = new FontAwesome.Sharp.IconPictureBox();
+            this.btnClose = new FontAwesome.Sharp.IconPictureBox();
+            this.btnMaximizar = new FontAwesome.Sharp.IconPictureBox();
+            this.btnMinimizar = new FontAwesome.Sharp.IconPictureBox();
+            this.btnSlide = new FontAwesome.Sharp.IconPictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
+            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.bunifuTransition1 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.pnlMenuVertical.SuspendLayout();
             this.pnlMenuContenedor.SuspendLayout();
             this.MnCatalogos.SuspendLayout();
@@ -73,13 +75,13 @@ namespace ServiPlusApp.View
             this.MnReportes.SuspendLayout();
             this.Mnseguridad.SuspendLayout();
             this.pnlUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
             this.pnlBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenuVertical
@@ -88,6 +90,7 @@ namespace ServiPlusApp.View
             this.pnlMenuVertical.Controls.Add(this.pnlMenuContenedor);
             this.pnlMenuVertical.Controls.Add(this.splitter1);
             this.pnlMenuVertical.Controls.Add(this.pnlUsuario);
+            this.bunifuTransition1.SetDecoration(this.pnlMenuVertical, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pnlMenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuVertical.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlMenuVertical.Location = new System.Drawing.Point(0, 0);
@@ -109,6 +112,7 @@ namespace ServiPlusApp.View
             this.pnlMenuContenedor.Controls.Add(this.MnReportes);
             this.pnlMenuContenedor.Controls.Add(this.btnSeguridad);
             this.pnlMenuContenedor.Controls.Add(this.Mnseguridad);
+            this.bunifuTransition1.SetDecoration(this.pnlMenuContenedor, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pnlMenuContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuContenedor.Location = new System.Drawing.Point(0, 80);
             this.pnlMenuContenedor.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
@@ -120,12 +124,41 @@ namespace ServiPlusApp.View
             this.bunifuToolTip1.SetToolTipTitle(this.pnlMenuContenedor, "");
             this.pnlMenuContenedor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainDesk_MouseDown);
             // 
+            // btnCatalogos
+            // 
+            this.btnCatalogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnCatalogos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnCatalogos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCatalogos.FlatAppearance.BorderSize = 0;
+            this.btnCatalogos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCatalogos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCatalogos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCatalogos.ForeColor = System.Drawing.Color.White;
+            this.btnCatalogos.Image = global::ServiPlusApp.Properties.Resources.catalogo_de_colores;
+            this.btnCatalogos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCatalogos.Location = new System.Drawing.Point(0, 10);
+            this.btnCatalogos.Margin = new System.Windows.Forms.Padding(0, 10, 0, 3);
+            this.btnCatalogos.Name = "btnCatalogos";
+            this.btnCatalogos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCatalogos.Size = new System.Drawing.Size(270, 45);
+            this.btnCatalogos.TabIndex = 6;
+            this.btnCatalogos.Tag = "Catalogos";
+            this.btnCatalogos.Text = "     Catálogos";
+            this.btnCatalogos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCatalogos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnCatalogos, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnCatalogos, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnCatalogos, "");
+            this.btnCatalogos.UseVisualStyleBackColor = false;
+            this.btnCatalogos.Click += new System.EventHandler(this.btnCatalogos_Click);
+            // 
             // MnCatalogos
             // 
             this.MnCatalogos.Controls.Add(this.btnClientes);
             this.MnCatalogos.Controls.Add(this.btnServicios);
             this.MnCatalogos.Controls.Add(this.btnMecanicos);
             this.MnCatalogos.Controls.Add(this.btnVehiculos);
+            this.bunifuTransition1.SetDecoration(this.MnCatalogos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.MnCatalogos.Dock = System.Windows.Forms.DockStyle.Top;
             this.MnCatalogos.Location = new System.Drawing.Point(50, 61);
             this.MnCatalogos.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
@@ -136,10 +169,147 @@ namespace ServiPlusApp.View
             this.bunifuToolTip1.SetToolTipIcon(this.MnCatalogos, null);
             this.bunifuToolTip1.SetToolTipTitle(this.MnCatalogos, "");
             // 
+            // btnClientes
+            // 
+            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnClientes, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.Image = global::ServiPlusApp.Properties.Resources.grupo;
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Location = new System.Drawing.Point(0, 135);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(220, 45);
+            this.btnClientes.TabIndex = 8;
+            this.btnClientes.Tag = "Clientes";
+            this.btnClientes.Text = "    Clientes";
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnClientes, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnClientes, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnClientes, "");
+            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
+            // btnServicios
+            // 
+            this.btnServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnServicios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnServicios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnServicios.FlatAppearance.BorderSize = 0;
+            this.btnServicios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServicios.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServicios.ForeColor = System.Drawing.Color.White;
+            this.btnServicios.Image = global::ServiPlusApp.Properties.Resources.reparar;
+            this.btnServicios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnServicios.Location = new System.Drawing.Point(0, 90);
+            this.btnServicios.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnServicios.Name = "btnServicios";
+            this.btnServicios.Size = new System.Drawing.Size(220, 45);
+            this.btnServicios.TabIndex = 7;
+            this.btnServicios.Tag = "Servicios";
+            this.btnServicios.Text = "    Servicios";
+            this.btnServicios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnServicios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnServicios, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnServicios, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnServicios, "");
+            this.btnServicios.UseVisualStyleBackColor = false;
+            this.btnServicios.Click += new System.EventHandler(this.btnServicios_Click);
+            // 
+            // btnMecanicos
+            // 
+            this.btnMecanicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnMecanicos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnMecanicos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMecanicos.FlatAppearance.BorderSize = 0;
+            this.btnMecanicos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMecanicos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMecanicos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMecanicos.ForeColor = System.Drawing.Color.White;
+            this.btnMecanicos.Image = global::ServiPlusApp.Properties.Resources.mecanico;
+            this.btnMecanicos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMecanicos.Location = new System.Drawing.Point(0, 45);
+            this.btnMecanicos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnMecanicos.Name = "btnMecanicos";
+            this.btnMecanicos.Size = new System.Drawing.Size(220, 45);
+            this.btnMecanicos.TabIndex = 5;
+            this.btnMecanicos.Tag = "Mecanicos";
+            this.btnMecanicos.Text = "    Mecanicos";
+            this.btnMecanicos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMecanicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnMecanicos, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnMecanicos, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnMecanicos, "");
+            this.btnMecanicos.UseVisualStyleBackColor = false;
+            this.btnMecanicos.Click += new System.EventHandler(this.btnMecanicos_Click);
+            // 
+            // btnVehiculos
+            // 
+            this.btnVehiculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnVehiculos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnVehiculos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVehiculos.FlatAppearance.BorderSize = 0;
+            this.btnVehiculos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnVehiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVehiculos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVehiculos.ForeColor = System.Drawing.Color.White;
+            this.btnVehiculos.Image = global::ServiPlusApp.Properties.Resources.coche;
+            this.btnVehiculos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVehiculos.Location = new System.Drawing.Point(0, 0);
+            this.btnVehiculos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnVehiculos.Name = "btnVehiculos";
+            this.btnVehiculos.Size = new System.Drawing.Size(220, 45);
+            this.btnVehiculos.TabIndex = 6;
+            this.btnVehiculos.Tag = "Vehiculos";
+            this.btnVehiculos.Text = "    Vehiculos";
+            this.btnVehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVehiculos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnVehiculos, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnVehiculos, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnVehiculos, "");
+            this.btnVehiculos.UseVisualStyleBackColor = false;
+            this.btnVehiculos.Click += new System.EventHandler(this.btnVehiculos_Click);
+            // 
+            // btnOperaciones
+            // 
+            this.btnOperaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnOperaciones, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOperaciones.FlatAppearance.BorderSize = 0;
+            this.btnOperaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnOperaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOperaciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOperaciones.ForeColor = System.Drawing.Color.White;
+            this.btnOperaciones.Image = global::ServiPlusApp.Properties.Resources.sistema_operativo__1_;
+            this.btnOperaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOperaciones.Location = new System.Drawing.Point(0, 247);
+            this.btnOperaciones.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnOperaciones.Name = "btnOperaciones";
+            this.btnOperaciones.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnOperaciones.Size = new System.Drawing.Size(270, 45);
+            this.btnOperaciones.TabIndex = 7;
+            this.btnOperaciones.Tag = "Operaciones";
+            this.btnOperaciones.Text = "     Operaciones";
+            this.btnOperaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOperaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnOperaciones, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnOperaciones, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnOperaciones, "");
+            this.btnOperaciones.UseVisualStyleBackColor = false;
+            this.btnOperaciones.Click += new System.EventHandler(this.btnOperaciones_Click);
+            // 
             // MnOperaciones
             // 
             this.MnOperaciones.Controls.Add(this.btnOpRepuestos);
             this.MnOperaciones.Controls.Add(this.btnOpMantenimientos);
+            this.bunifuTransition1.SetDecoration(this.MnOperaciones, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.MnOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.MnOperaciones.Location = new System.Drawing.Point(50, 298);
             this.MnOperaciones.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
@@ -150,10 +320,92 @@ namespace ServiPlusApp.View
             this.bunifuToolTip1.SetToolTipIcon(this.MnOperaciones, null);
             this.bunifuToolTip1.SetToolTipTitle(this.MnOperaciones, "");
             // 
+            // btnOpRepuestos
+            // 
+            this.btnOpRepuestos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnOpRepuestos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnOpRepuestos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOpRepuestos.FlatAppearance.BorderSize = 0;
+            this.btnOpRepuestos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOpRepuestos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpRepuestos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpRepuestos.ForeColor = System.Drawing.Color.White;
+            this.btnOpRepuestos.Image = global::ServiPlusApp.Properties.Resources.neumatico;
+            this.btnOpRepuestos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpRepuestos.Location = new System.Drawing.Point(0, 45);
+            this.btnOpRepuestos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnOpRepuestos.Name = "btnOpRepuestos";
+            this.btnOpRepuestos.Size = new System.Drawing.Size(220, 45);
+            this.btnOpRepuestos.TabIndex = 8;
+            this.btnOpRepuestos.Tag = "OpRepuestos";
+            this.btnOpRepuestos.Text = "    Repuestos";
+            this.btnOpRepuestos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnOpRepuestos, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnOpRepuestos, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnOpRepuestos, "");
+            this.btnOpRepuestos.UseVisualStyleBackColor = false;
+            this.btnOpRepuestos.Click += new System.EventHandler(this.btnOpRepuestos_Click);
+            // 
+            // btnOpMantenimientos
+            // 
+            this.btnOpMantenimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnOpMantenimientos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnOpMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOpMantenimientos.FlatAppearance.BorderSize = 0;
+            this.btnOpMantenimientos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOpMantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpMantenimientos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpMantenimientos.ForeColor = System.Drawing.Color.White;
+            this.btnOpMantenimientos.Image = global::ServiPlusApp.Properties.Resources.mantenimientoCoche;
+            this.btnOpMantenimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpMantenimientos.Location = new System.Drawing.Point(0, 0);
+            this.btnOpMantenimientos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnOpMantenimientos.Name = "btnOpMantenimientos";
+            this.btnOpMantenimientos.Size = new System.Drawing.Size(220, 45);
+            this.btnOpMantenimientos.TabIndex = 6;
+            this.btnOpMantenimientos.Tag = "OpMantenimientos";
+            this.btnOpMantenimientos.Text = "    Mantenimientos";
+            this.btnOpMantenimientos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOpMantenimientos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnOpMantenimientos, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnOpMantenimientos, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnOpMantenimientos, "");
+            this.btnOpMantenimientos.UseVisualStyleBackColor = false;
+            this.btnOpMantenimientos.Click += new System.EventHandler(this.btnOpMantenimientos_Click);
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnReportes, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.Image = global::ServiPlusApp.Properties.Resources.report;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(0, 394);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReportes.Size = new System.Drawing.Size(270, 45);
+            this.btnReportes.TabIndex = 9;
+            this.btnReportes.Tag = "Reportes";
+            this.btnReportes.Text = "     Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnReportes, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnReportes, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnReportes, "");
+            this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
             // MnReportes
             // 
             this.MnReportes.Controls.Add(this.btnReRepuestos);
             this.MnReportes.Controls.Add(this.btnReMantenimientos);
+            this.bunifuTransition1.SetDecoration(this.MnReportes, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.MnReportes.Dock = System.Windows.Forms.DockStyle.Top;
             this.MnReportes.Location = new System.Drawing.Point(50, 445);
             this.MnReportes.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
@@ -164,9 +416,89 @@ namespace ServiPlusApp.View
             this.bunifuToolTip1.SetToolTipIcon(this.MnReportes, null);
             this.bunifuToolTip1.SetToolTipTitle(this.MnReportes, "");
             // 
+            // btnReRepuestos
+            // 
+            this.btnReRepuestos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnReRepuestos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnReRepuestos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReRepuestos.FlatAppearance.BorderSize = 0;
+            this.btnReRepuestos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReRepuestos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReRepuestos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReRepuestos.ForeColor = System.Drawing.Color.White;
+            this.btnReRepuestos.Image = global::ServiPlusApp.Properties.Resources.gestion_de_datos;
+            this.btnReRepuestos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReRepuestos.Location = new System.Drawing.Point(0, 45);
+            this.btnReRepuestos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnReRepuestos.Name = "btnReRepuestos";
+            this.btnReRepuestos.Size = new System.Drawing.Size(220, 45);
+            this.btnReRepuestos.TabIndex = 11;
+            this.btnReRepuestos.Tag = "ReRepuestos";
+            this.btnReRepuestos.Text = "    Repuestos";
+            this.btnReRepuestos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnReRepuestos, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnReRepuestos, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnReRepuestos, "");
+            this.btnReRepuestos.UseVisualStyleBackColor = false;
+            // 
+            // btnReMantenimientos
+            // 
+            this.btnReMantenimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnReMantenimientos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnReMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReMantenimientos.FlatAppearance.BorderSize = 0;
+            this.btnReMantenimientos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReMantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReMantenimientos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReMantenimientos.ForeColor = System.Drawing.Color.White;
+            this.btnReMantenimientos.Image = global::ServiPlusApp.Properties.Resources.servicio_de_administracion;
+            this.btnReMantenimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReMantenimientos.Location = new System.Drawing.Point(0, 0);
+            this.btnReMantenimientos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnReMantenimientos.Name = "btnReMantenimientos";
+            this.btnReMantenimientos.Size = new System.Drawing.Size(220, 45);
+            this.btnReMantenimientos.TabIndex = 10;
+            this.btnReMantenimientos.Tag = "ReMantenimientos";
+            this.btnReMantenimientos.Text = "    Mantenimientos";
+            this.btnReMantenimientos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReMantenimientos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnReMantenimientos, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnReMantenimientos, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnReMantenimientos, "");
+            this.btnReMantenimientos.UseVisualStyleBackColor = false;
+            // 
+            // btnSeguridad
+            // 
+            this.btnSeguridad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnSeguridad, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnSeguridad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSeguridad.FlatAppearance.BorderSize = 0;
+            this.btnSeguridad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeguridad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeguridad.ForeColor = System.Drawing.Color.White;
+            this.btnSeguridad.Image = global::ServiPlusApp.Properties.Resources.proteger;
+            this.btnSeguridad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeguridad.Location = new System.Drawing.Point(0, 541);
+            this.btnSeguridad.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnSeguridad.Name = "btnSeguridad";
+            this.btnSeguridad.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSeguridad.Size = new System.Drawing.Size(270, 45);
+            this.btnSeguridad.TabIndex = 10;
+            this.btnSeguridad.Tag = "Seguridad";
+            this.btnSeguridad.Text = "     Seguridad";
+            this.btnSeguridad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeguridad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnSeguridad, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnSeguridad, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnSeguridad, "");
+            this.btnSeguridad.UseVisualStyleBackColor = false;
+            this.btnSeguridad.Click += new System.EventHandler(this.btnSeguridad_Click);
+            // 
             // Mnseguridad
             // 
             this.Mnseguridad.Controls.Add(this.btnUsuarios);
+            this.bunifuTransition1.SetDecoration(this.Mnseguridad, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.Mnseguridad.Dock = System.Windows.Forms.DockStyle.Top;
             this.Mnseguridad.Location = new System.Drawing.Point(50, 592);
             this.Mnseguridad.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
@@ -177,9 +509,36 @@ namespace ServiPlusApp.View
             this.bunifuToolTip1.SetToolTipIcon(this.Mnseguridad, null);
             this.bunifuToolTip1.SetToolTipTitle(this.Mnseguridad, "");
             // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnUsuarios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.Image = global::ServiPlusApp.Properties.Resources.usuarios;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(220, 45);
+            this.btnUsuarios.TabIndex = 6;
+            this.btnUsuarios.Tag = "Usuarios";
+            this.btnUsuarios.Text = "    Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnUsuarios, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnUsuarios, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnUsuarios, "");
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
             // splitter1
             // 
             this.splitter1.BackColor = System.Drawing.Color.White;
+            this.bunifuTransition1.SetDecoration(this.splitter1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter1.Location = new System.Drawing.Point(0, 78);
             this.splitter1.Name = "splitter1";
@@ -197,6 +556,7 @@ namespace ServiPlusApp.View
             this.pnlUsuario.Controls.Add(this.pbUsuario);
             this.pnlUsuario.Controls.Add(this.lblUsername);
             this.pnlUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.pnlUsuario, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pnlUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUsuario.Location = new System.Drawing.Point(0, 0);
             this.pnlUsuario.Name = "pnlUsuario";
@@ -213,6 +573,7 @@ namespace ServiPlusApp.View
             // 
             this.lblRol.AutoSize = true;
             this.lblRol.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.lblRol, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.lblRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblRol.Location = new System.Drawing.Point(72, 38);
             this.lblRol.Name = "lblRol";
@@ -226,10 +587,33 @@ namespace ServiPlusApp.View
             this.lblRol.Click += new System.EventHandler(this.pnlUsuario_Click);
             this.lblRol.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlUsuario_MouseMove);
             // 
+            // pbUsuario
+            // 
+            this.pbUsuario.AllowFocused = false;
+            this.pbUsuario.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pbUsuario.AutoSizeHeight = true;
+            this.pbUsuario.BorderRadius = 32;
+            this.bunifuTransition1.SetDecoration(this.pbUsuario, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pbUsuario.Image = global::ServiPlusApp.Properties.Resources.hombre_de_traje_y_corbata__1_;
+            this.pbUsuario.IsCircle = true;
+            this.pbUsuario.Location = new System.Drawing.Point(2, 6);
+            this.pbUsuario.Name = "pbUsuario";
+            this.pbUsuario.Size = new System.Drawing.Size(64, 64);
+            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUsuario.TabIndex = 0;
+            this.pbUsuario.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.pbUsuario, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pbUsuario, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pbUsuario, "");
+            this.pbUsuario.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.pbUsuario.Click += new System.EventHandler(this.pnlUsuario_Click);
+            this.pbUsuario.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlUsuario_MouseMove);
+            // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.lblUsername, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.lblUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblUsername.Location = new System.Drawing.Point(72, 15);
             this.lblUsername.Name = "lblUsername";
@@ -252,6 +636,7 @@ namespace ServiPlusApp.View
             this.pnlBarraTitulo.Controls.Add(this.btnMaximizar);
             this.pnlBarraTitulo.Controls.Add(this.btnMinimizar);
             this.pnlBarraTitulo.Controls.Add(this.btnSlide);
+            this.bunifuTransition1.SetDecoration(this.pnlBarraTitulo, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBarraTitulo.Location = new System.Drawing.Point(270, 0);
             this.pnlBarraTitulo.Name = "pnlBarraTitulo";
@@ -262,6 +647,118 @@ namespace ServiPlusApp.View
             this.bunifuToolTip1.SetToolTipTitle(this.pnlBarraTitulo, "");
             this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
             this.pnlBarraTitulo.MouseLeave += new System.EventHandler(this.pnlUsuario_MouseLeave);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestaurar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnRestaurar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnRestaurar.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
+            this.btnRestaurar.IconColor = System.Drawing.Color.White;
+            this.btnRestaurar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnRestaurar.IconSize = 25;
+            this.btnRestaurar.Location = new System.Drawing.Point(1011, 3);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(25, 25);
+            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnRestaurar.TabIndex = 5;
+            this.btnRestaurar.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btnRestaurar, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnRestaurar, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnRestaurar, "");
+            this.btnRestaurar.UseGdi = true;
+            this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnClose, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnClose.IconSize = 25;
+            this.btnClose.Location = new System.Drawing.Point(1042, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(25, 25);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClose.TabIndex = 4;
+            this.btnClose.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btnClose, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnClose, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnClose, "");
+            this.btnClose.UseGdi = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnMaximizar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.btnMaximizar.IconColor = System.Drawing.Color.White;
+            this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMaximizar.IconSize = 25;
+            this.btnMaximizar.Location = new System.Drawing.Point(1011, 3);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
+            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMaximizar.TabIndex = 3;
+            this.btnMaximizar.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btnMaximizar, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnMaximizar, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnMaximizar, "");
+            this.btnMaximizar.UseGdi = true;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnMinimizar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnMinimizar.Flip = FontAwesome.Sharp.FlipOrientation.Vertical;
+            this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMinimizar.IconColor = System.Drawing.Color.White;
+            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnMinimizar.IconSize = 25;
+            this.btnMinimizar.Location = new System.Drawing.Point(980, 3);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 35);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizar.TabIndex = 2;
+            this.btnMinimizar.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btnMinimizar, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnMinimizar, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnMinimizar, "");
+            this.btnMinimizar.UseGdi = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnSlide
+            // 
+            this.btnSlide.BackColor = System.Drawing.Color.Transparent;
+            this.btnSlide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnSlide, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnSlide.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.btnSlide.IconColor = System.Drawing.Color.White;
+            this.btnSlide.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSlide.IconSize = 35;
+            this.btnSlide.Location = new System.Drawing.Point(6, 3);
+            this.btnSlide.Name = "btnSlide";
+            this.btnSlide.Size = new System.Drawing.Size(35, 35);
+            this.btnSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSlide.TabIndex = 1;
+            this.btnSlide.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btnSlide, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnSlide, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnSlide, "");
+            this.btnSlide.UseGdi = true;
+            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
             // 
             // timer1
             // 
@@ -316,6 +813,7 @@ namespace ServiPlusApp.View
             // pnlContenedor
             // 
             this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(97)))));
+            this.bunifuTransition1.SetDecoration(this.pnlContenedor, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(270, 50);
             this.pnlContenedor.Name = "pnlContenedor";
@@ -329,466 +827,26 @@ namespace ServiPlusApp.View
             this.pnlContenedor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
             this.pnlContenedor.MouseLeave += new System.EventHandler(this.pnlUsuario_MouseLeave);
             // 
-            // btnRestaurar
+            // bunifuTransition1
             // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.BackColor = System.Drawing.Color.Transparent;
-            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestaurar.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
-            this.btnRestaurar.IconColor = System.Drawing.Color.White;
-            this.btnRestaurar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnRestaurar.IconSize = 25;
-            this.btnRestaurar.Location = new System.Drawing.Point(1011, 3);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(25, 25);
-            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnRestaurar.TabIndex = 5;
-            this.btnRestaurar.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.btnRestaurar, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnRestaurar, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnRestaurar, "");
-            this.btnRestaurar.UseGdi = true;
-            this.btnRestaurar.Visible = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnClose.IconSize = 25;
-            this.btnClose.Location = new System.Drawing.Point(1042, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 25);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnClose.TabIndex = 4;
-            this.btnClose.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.btnClose, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnClose, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnClose, "");
-            this.btnClose.UseGdi = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximizar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.btnMaximizar.IconColor = System.Drawing.Color.White;
-            this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnMaximizar.IconSize = 25;
-            this.btnMaximizar.Location = new System.Drawing.Point(1011, 3);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
-            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMaximizar.TabIndex = 3;
-            this.btnMaximizar.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.btnMaximizar, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnMaximizar, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnMaximizar, "");
-            this.btnMaximizar.UseGdi = true;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Flip = FontAwesome.Sharp.FlipOrientation.Vertical;
-            this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMinimizar.IconColor = System.Drawing.Color.White;
-            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnMinimizar.IconSize = 25;
-            this.btnMinimizar.Location = new System.Drawing.Point(980, 3);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 35);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimizar.TabIndex = 2;
-            this.btnMinimizar.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.btnMinimizar, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnMinimizar, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnMinimizar, "");
-            this.btnMinimizar.UseGdi = true;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnSlide
-            // 
-            this.btnSlide.BackColor = System.Drawing.Color.Transparent;
-            this.btnSlide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSlide.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.btnSlide.IconColor = System.Drawing.Color.White;
-            this.btnSlide.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSlide.IconSize = 35;
-            this.btnSlide.Location = new System.Drawing.Point(6, 3);
-            this.btnSlide.Name = "btnSlide";
-            this.btnSlide.Size = new System.Drawing.Size(35, 35);
-            this.btnSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSlide.TabIndex = 1;
-            this.btnSlide.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.btnSlide, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnSlide, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnSlide, "");
-            this.btnSlide.UseGdi = true;
-            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
-            // 
-            // btnCatalogos
-            // 
-            this.btnCatalogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnCatalogos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCatalogos.FlatAppearance.BorderSize = 0;
-            this.btnCatalogos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnCatalogos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCatalogos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCatalogos.ForeColor = System.Drawing.Color.White;
-            this.btnCatalogos.Image = global::ServiPlusApp.Properties.Resources.catalogo_de_colores;
-            this.btnCatalogos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCatalogos.Location = new System.Drawing.Point(0, 10);
-            this.btnCatalogos.Margin = new System.Windows.Forms.Padding(0, 10, 0, 3);
-            this.btnCatalogos.Name = "btnCatalogos";
-            this.btnCatalogos.Size = new System.Drawing.Size(270, 45);
-            this.btnCatalogos.TabIndex = 6;
-            this.btnCatalogos.Tag = "Catalogos";
-            this.btnCatalogos.Text = "     Catálogos";
-            this.btnCatalogos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCatalogos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnCatalogos, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnCatalogos, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnCatalogos, "");
-            this.btnCatalogos.UseVisualStyleBackColor = false;
-            this.btnCatalogos.Click += new System.EventHandler(this.btnCatalogos_Click);
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnClientes.FlatAppearance.BorderSize = 0;
-            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Image = global::ServiPlusApp.Properties.Resources.grupo;
-            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(0, 135);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(220, 45);
-            this.btnClientes.TabIndex = 8;
-            this.btnClientes.Tag = "Clientes";
-            this.btnClientes.Text = "    Clientes";
-            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnClientes, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnClientes, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnClientes, "");
-            this.btnClientes.UseVisualStyleBackColor = false;
-            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
-            // 
-            // btnServicios
-            // 
-            this.btnServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnServicios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnServicios.FlatAppearance.BorderSize = 0;
-            this.btnServicios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServicios.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServicios.ForeColor = System.Drawing.Color.White;
-            this.btnServicios.Image = global::ServiPlusApp.Properties.Resources.reparar;
-            this.btnServicios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServicios.Location = new System.Drawing.Point(0, 90);
-            this.btnServicios.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnServicios.Name = "btnServicios";
-            this.btnServicios.Size = new System.Drawing.Size(220, 45);
-            this.btnServicios.TabIndex = 7;
-            this.btnServicios.Tag = "Servicios";
-            this.btnServicios.Text = "    Servicios";
-            this.btnServicios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServicios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnServicios, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnServicios, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnServicios, "");
-            this.btnServicios.UseVisualStyleBackColor = false;
-            this.btnServicios.Click += new System.EventHandler(this.btnServicios_Click);
-            // 
-            // btnMecanicos
-            // 
-            this.btnMecanicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnMecanicos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMecanicos.FlatAppearance.BorderSize = 0;
-            this.btnMecanicos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnMecanicos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMecanicos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMecanicos.ForeColor = System.Drawing.Color.White;
-            this.btnMecanicos.Image = global::ServiPlusApp.Properties.Resources.mecanico;
-            this.btnMecanicos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMecanicos.Location = new System.Drawing.Point(0, 45);
-            this.btnMecanicos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnMecanicos.Name = "btnMecanicos";
-            this.btnMecanicos.Size = new System.Drawing.Size(220, 45);
-            this.btnMecanicos.TabIndex = 5;
-            this.btnMecanicos.Tag = "Mecanicos";
-            this.btnMecanicos.Text = "    Mecanicos";
-            this.btnMecanicos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMecanicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnMecanicos, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnMecanicos, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnMecanicos, "");
-            this.btnMecanicos.UseVisualStyleBackColor = false;
-            this.btnMecanicos.Click += new System.EventHandler(this.btnMecanicos_Click);
-            // 
-            // btnVehiculos
-            // 
-            this.btnVehiculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnVehiculos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVehiculos.FlatAppearance.BorderSize = 0;
-            this.btnVehiculos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnVehiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVehiculos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVehiculos.ForeColor = System.Drawing.Color.White;
-            this.btnVehiculos.Image = global::ServiPlusApp.Properties.Resources.coche;
-            this.btnVehiculos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVehiculos.Location = new System.Drawing.Point(0, 0);
-            this.btnVehiculos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnVehiculos.Name = "btnVehiculos";
-            this.btnVehiculos.Size = new System.Drawing.Size(220, 45);
-            this.btnVehiculos.TabIndex = 6;
-            this.btnVehiculos.Tag = "Vehiculos";
-            this.btnVehiculos.Text = "    Vehiculos";
-            this.btnVehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVehiculos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnVehiculos, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnVehiculos, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnVehiculos, "");
-            this.btnVehiculos.UseVisualStyleBackColor = false;
-            this.btnVehiculos.Click += new System.EventHandler(this.btnVehiculos_Click);
-            // 
-            // btnOperaciones
-            // 
-            this.btnOperaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOperaciones.FlatAppearance.BorderSize = 0;
-            this.btnOperaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnOperaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOperaciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOperaciones.ForeColor = System.Drawing.Color.White;
-            this.btnOperaciones.Image = global::ServiPlusApp.Properties.Resources.sistema_operativo__1_;
-            this.btnOperaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOperaciones.Location = new System.Drawing.Point(0, 247);
-            this.btnOperaciones.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnOperaciones.Name = "btnOperaciones";
-            this.btnOperaciones.Size = new System.Drawing.Size(270, 45);
-            this.btnOperaciones.TabIndex = 7;
-            this.btnOperaciones.Tag = "Operaciones";
-            this.btnOperaciones.Text = "     Operaciones";
-            this.btnOperaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOperaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnOperaciones, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnOperaciones, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnOperaciones, "");
-            this.btnOperaciones.UseVisualStyleBackColor = false;
-            this.btnOperaciones.Click += new System.EventHandler(this.btnOperaciones_Click);
-            // 
-            // btnOpRepuestos
-            // 
-            this.btnOpRepuestos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnOpRepuestos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOpRepuestos.FlatAppearance.BorderSize = 0;
-            this.btnOpRepuestos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnOpRepuestos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpRepuestos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpRepuestos.ForeColor = System.Drawing.Color.White;
-            this.btnOpRepuestos.Image = global::ServiPlusApp.Properties.Resources.neumatico;
-            this.btnOpRepuestos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOpRepuestos.Location = new System.Drawing.Point(0, 45);
-            this.btnOpRepuestos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnOpRepuestos.Name = "btnOpRepuestos";
-            this.btnOpRepuestos.Size = new System.Drawing.Size(220, 45);
-            this.btnOpRepuestos.TabIndex = 8;
-            this.btnOpRepuestos.Tag = "OpRepuestos";
-            this.btnOpRepuestos.Text = "    Repuestos";
-            this.btnOpRepuestos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnOpRepuestos, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnOpRepuestos, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnOpRepuestos, "");
-            this.btnOpRepuestos.UseVisualStyleBackColor = false;
-            this.btnOpRepuestos.Click += new System.EventHandler(this.btnOpRepuestos_Click);
-            // 
-            // btnOpMantenimientos
-            // 
-            this.btnOpMantenimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnOpMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOpMantenimientos.FlatAppearance.BorderSize = 0;
-            this.btnOpMantenimientos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnOpMantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpMantenimientos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpMantenimientos.ForeColor = System.Drawing.Color.White;
-            this.btnOpMantenimientos.Image = global::ServiPlusApp.Properties.Resources.mantenimientoCoche;
-            this.btnOpMantenimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOpMantenimientos.Location = new System.Drawing.Point(0, 0);
-            this.btnOpMantenimientos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnOpMantenimientos.Name = "btnOpMantenimientos";
-            this.btnOpMantenimientos.Size = new System.Drawing.Size(220, 45);
-            this.btnOpMantenimientos.TabIndex = 6;
-            this.btnOpMantenimientos.Tag = "OpMantenimientos";
-            this.btnOpMantenimientos.Text = "    Mantenimientos";
-            this.btnOpMantenimientos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOpMantenimientos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnOpMantenimientos, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnOpMantenimientos, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnOpMantenimientos, "");
-            this.btnOpMantenimientos.UseVisualStyleBackColor = false;
-            this.btnOpMantenimientos.Click += new System.EventHandler(this.btnOpMantenimientos_Click);
-            // 
-            // btnReportes
-            // 
-            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.Image = global::ServiPlusApp.Properties.Resources.report;
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 394);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(270, 45);
-            this.btnReportes.TabIndex = 9;
-            this.btnReportes.Tag = "Reportes";
-            this.btnReportes.Text = "     Reportes";
-            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnReportes, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnReportes, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnReportes, "");
-            this.btnReportes.UseVisualStyleBackColor = false;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
-            // 
-            // btnReRepuestos
-            // 
-            this.btnReRepuestos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnReRepuestos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReRepuestos.FlatAppearance.BorderSize = 0;
-            this.btnReRepuestos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReRepuestos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReRepuestos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReRepuestos.ForeColor = System.Drawing.Color.White;
-            this.btnReRepuestos.Image = global::ServiPlusApp.Properties.Resources.gestion_de_datos;
-            this.btnReRepuestos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReRepuestos.Location = new System.Drawing.Point(0, 45);
-            this.btnReRepuestos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnReRepuestos.Name = "btnReRepuestos";
-            this.btnReRepuestos.Size = new System.Drawing.Size(220, 45);
-            this.btnReRepuestos.TabIndex = 11;
-            this.btnReRepuestos.Tag = "ReRepuestos";
-            this.btnReRepuestos.Text = "    Repuestos";
-            this.btnReRepuestos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnReRepuestos, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnReRepuestos, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnReRepuestos, "");
-            this.btnReRepuestos.UseVisualStyleBackColor = false;
-            // 
-            // btnReMantenimientos
-            // 
-            this.btnReMantenimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnReMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReMantenimientos.FlatAppearance.BorderSize = 0;
-            this.btnReMantenimientos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReMantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReMantenimientos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReMantenimientos.ForeColor = System.Drawing.Color.White;
-            this.btnReMantenimientos.Image = global::ServiPlusApp.Properties.Resources.servicio_de_administracion;
-            this.btnReMantenimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReMantenimientos.Location = new System.Drawing.Point(0, 0);
-            this.btnReMantenimientos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnReMantenimientos.Name = "btnReMantenimientos";
-            this.btnReMantenimientos.Size = new System.Drawing.Size(220, 45);
-            this.btnReMantenimientos.TabIndex = 10;
-            this.btnReMantenimientos.Tag = "ReMantenimientos";
-            this.btnReMantenimientos.Text = "    Mantenimientos";
-            this.btnReMantenimientos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReMantenimientos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnReMantenimientos, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnReMantenimientos, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnReMantenimientos, "");
-            this.btnReMantenimientos.UseVisualStyleBackColor = false;
-            // 
-            // btnSeguridad
-            // 
-            this.btnSeguridad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnSeguridad.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSeguridad.FlatAppearance.BorderSize = 0;
-            this.btnSeguridad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeguridad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeguridad.ForeColor = System.Drawing.Color.White;
-            this.btnSeguridad.Image = global::ServiPlusApp.Properties.Resources.proteger;
-            this.btnSeguridad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeguridad.Location = new System.Drawing.Point(0, 541);
-            this.btnSeguridad.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnSeguridad.Name = "btnSeguridad";
-            this.btnSeguridad.Size = new System.Drawing.Size(270, 45);
-            this.btnSeguridad.TabIndex = 10;
-            this.btnSeguridad.Tag = "Seguridad";
-            this.btnSeguridad.Text = "     Seguridad";
-            this.btnSeguridad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeguridad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnSeguridad, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnSeguridad, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnSeguridad, "");
-            this.btnSeguridad.UseVisualStyleBackColor = false;
-            this.btnSeguridad.Click += new System.EventHandler(this.btnSeguridad_Click);
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Image = global::ServiPlusApp.Properties.Resources.usuarios;
-            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(220, 45);
-            this.btnUsuarios.TabIndex = 6;
-            this.btnUsuarios.Tag = "Usuarios";
-            this.btnUsuarios.Text = "    Usuarios";
-            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnUsuarios, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnUsuarios, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnUsuarios, "");
-            this.btnUsuarios.UseVisualStyleBackColor = false;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
-            // 
-            // pbUsuario
-            // 
-            this.pbUsuario.AllowFocused = false;
-            this.pbUsuario.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pbUsuario.AutoSizeHeight = true;
-            this.pbUsuario.BorderRadius = 32;
-            this.pbUsuario.Image = global::ServiPlusApp.Properties.Resources.hombre_de_traje_y_corbata__1_;
-            this.pbUsuario.IsCircle = true;
-            this.pbUsuario.Location = new System.Drawing.Point(2, 6);
-            this.pbUsuario.Name = "pbUsuario";
-            this.pbUsuario.Size = new System.Drawing.Size(64, 64);
-            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUsuario.TabIndex = 0;
-            this.pbUsuario.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.pbUsuario, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.pbUsuario, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.pbUsuario, "");
-            this.pbUsuario.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            this.pbUsuario.Click += new System.EventHandler(this.pnlUsuario_Click);
-            this.pbUsuario.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlUsuario_MouseMove);
+            this.bunifuTransition1.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.VertSlide;
+            this.bunifuTransition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
             // 
             // Operaciones
             // 
@@ -799,6 +857,7 @@ namespace ServiPlusApp.View
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlBarraTitulo);
             this.Controls.Add(this.pnlMenuVertical);
+            this.bunifuTransition1.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(680, 480);
             this.Name = "Operaciones";
@@ -814,13 +873,13 @@ namespace ServiPlusApp.View
             this.Mnseguridad.ResumeLayout(false);
             this.pnlUsuario.ResumeLayout(false);
             this.pnlUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
             this.pnlBarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -862,5 +921,6 @@ namespace ServiPlusApp.View
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Button btnVehiculos;
         private System.Windows.Forms.Panel pnlContenedor;
+        private Bunifu.UI.WinForms.BunifuTransition bunifuTransition1;
     }
 }

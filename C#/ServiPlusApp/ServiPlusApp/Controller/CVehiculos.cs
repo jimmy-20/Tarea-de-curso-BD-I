@@ -1,5 +1,6 @@
 ﻿using ServiPlusApp.Controller.Factory;
 using ServiPlusApp.Model;
+using ServiPlusApp.View.Agregar;
 using ServiPlusApp.View.Tablas;
 using System;
 using System.Collections.Generic;
@@ -37,12 +38,14 @@ namespace ServiPlusApp.Controller
 
         public void Agregar()
         {
-            throw new NotImplementedException();
+            Vehiculos vehiculos = new Vehiculos("Nuevo");
+            vehiculos.ShowDialog();
         }
 
         public void Editar()
         {
-            throw new NotImplementedException();
+            Vehiculos vehiculos = new Vehiculos("Modificar");
+            vehiculos.ShowDialog();
         }
 
         public void Estado()

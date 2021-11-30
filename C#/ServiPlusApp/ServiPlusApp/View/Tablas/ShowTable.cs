@@ -28,6 +28,8 @@ namespace ServiPlusApp.View.Tablas
         #region Mostrar Tablas
         private void TablaUsuarios_Load(object sender, EventArgs e)
         {
+            lblTableName.Text = tableName;
+
             formulario = Fabrica.FormController(this,tableName);
             formulario.Ver();
         }
@@ -37,6 +39,15 @@ namespace ServiPlusApp.View.Tablas
         #region Buscar en Tablas
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            if (txtSearch.Text.Length != 0)
+            {
+                btnLimpiarSearch.Visible = true;
+            }
+            else
+            {
+                btnLimpiarSearch.Visible = false;
+            }
+
             if (dgvTablas == null)
             {
                 return;
@@ -46,20 +57,31 @@ namespace ServiPlusApp.View.Tablas
 
         #endregion
 
-        private void bunifuButton21_Click(object sender, EventArgs e)
-        {
-            formulario.Agregar();
-        }
-
-        private void bunifuButton23_Click(object sender, EventArgs e)
-        {
-            formulario.Estado();
-        }
-
+  
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-       
+
+        private void btnLimpiarSearch_Click(object sender, EventArgs e)
+        {
+            txtSearch.Clear();
+            btnLimpiarSearch.Visible = false;
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            formulario.Agregar();
+        }
+
+        private void btnSetState_Click(object sender, EventArgs e)
+        {
+            formulario.Estado();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            formulario.Editar();
+        }
     }
 }

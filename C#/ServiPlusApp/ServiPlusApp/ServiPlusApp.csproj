@@ -207,6 +207,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Set Tables\Clientes\Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Set Tables\Clientes\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Set Tables\Mecanicos\Mecanico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Set Tables\Mecanicos\Mecanico.Designer.cs">
+      <DependentUpon>Mecanico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Set Tables\Repuestos\Repuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Set Tables\Repuestos\Repuesto.Designer.cs">
+      <DependentUpon>Repuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Set Tables\Servicios\Servicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Set Tables\Servicios\Servicio.Designer.cs">
+      <DependentUpon>Servicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Set Tables\Vehiculos\Vehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Set Tables\Vehiculos\Vehiculo.Designer.cs">
+      <DependentUpon>Vehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainViews\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +284,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Set Tables\Clientes\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Set Tables\Vehiculos\Vehiculo.resx">
+      <DependentUpon>Vehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainViews\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

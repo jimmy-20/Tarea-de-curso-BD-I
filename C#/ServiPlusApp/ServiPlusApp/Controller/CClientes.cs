@@ -1,5 +1,6 @@
 ﻿using ServiPlusApp.Controller.Factory;
 using ServiPlusApp.Model;
+using ServiPlusApp.View.Agregar.Cliente;
 using ServiPlusApp.View.Tablas;
 using System;
 using System.Collections.Generic;
@@ -24,12 +25,14 @@ namespace ServiPlusApp.Controller
 
         public void Agregar()
         {
-            System.Windows.Forms.MessageBox.Show("Hola","SIRVEE");
+            Clientes clientes = new Clientes("Nuevo");
+            clientes.ShowDialog();
         }
 
         public void Editar()
         {
-            throw new NotImplementedException();
+            Clientes clientes = new Clientes("Modificar");
+            clientes.ShowDialog();
         }
 
         public void Estado()
