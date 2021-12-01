@@ -30,7 +30,7 @@ namespace ServiPlusApp.View.Tablas
         {
             lblTableName.Text = tableName;
 
-            formulario = Fabrica.FormController(this,tableName);
+            formulario = Fabrica.FormController(this, tableName);
             formulario.Ver();
         }
 
@@ -57,7 +57,7 @@ namespace ServiPlusApp.View.Tablas
 
         #endregion
 
-  
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -83,5 +83,7 @@ namespace ServiPlusApp.View.Tablas
         {
             formulario.Editar();
         }
+
+      
     }
 }

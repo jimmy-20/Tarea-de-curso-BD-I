@@ -190,6 +190,7 @@
     <Compile Include="Controller\CVehiculos.cs" />
     <Compile Include="Controller\Factory\Fabrica.cs" />
     <Compile Include="Controller\Factory\IAcciones.cs" />
+    <Compile Include="Enums\Estados.cs" />
     <Compile Include="Model\DClientes.cs" />
     <Compile Include="Model\DMantenimientos.cs" />
     <Compile Include="Model\DMecanicos.cs" />
@@ -287,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Set Tables\Clientes\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Set Tables\Mecanicos\Mecanico.resx">
+      <DependentUpon>Mecanico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Set Tables\Vehiculos\Vehiculo.resx">
       <DependentUpon>Vehiculo.cs</DependentUpon>

@@ -164,5 +164,16 @@ namespace ServiPlusApp.View.Agregar
 
            
         }
+
+        private void lblSeleccionarCliente_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblSeleccionarCliente.Font = new Font(lblSeleccionarCliente.Font.FontFamily,12);
+        }
+
+        private void lblSeleccionarCliente_MouseLeave(object sender, EventArgs e)
+        {
+            lblSeleccionarCliente.Font = new Font(lblSeleccionarCliente.Font.FontFamily, 10);
+
+        }
     }
 }

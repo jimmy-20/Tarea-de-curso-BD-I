@@ -8,8 +8,14 @@ namespace ServiPlusApp.Enums
 {
     public enum Roles
     {
-        Admin,
-        seller,
-        Mech, 
+        CEO,
+        Colaborador,
+        Asesor,
+        Gestor,
+        Comercial,
+        Administrador,
+        Contador,
+        Seguridad,
+        
     }
 }
