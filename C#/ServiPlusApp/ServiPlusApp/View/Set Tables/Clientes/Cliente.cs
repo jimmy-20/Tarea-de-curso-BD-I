@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bunifu.UI.WinForms;
+using ServiPlusApp.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,6 +59,14 @@ namespace ServiPlusApp.View.Agregar.Cliente
                 default:
                     break;
             }
+
+            cmbEstado.Items.AddRange(Estados.Cliente);
+        }
+        private void cmbEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BunifuDropdown dropdown = (BunifuDropdown)sender;
+
+            dropdown.ForeColor = Color.Black;
         }
     }
 }

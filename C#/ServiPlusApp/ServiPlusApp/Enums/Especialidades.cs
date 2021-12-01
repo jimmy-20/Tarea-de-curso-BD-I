@@ -8,7 +8,7 @@ namespace ServiPlusApp.Enums
 {
     public class Especialidades
     {
-        public static string[] especialidades =
+        public static string[] Colaborador =
         {
             "Asesor/a",
             "Ejecutivo/a",
@@ -29,6 +29,15 @@ namespace ServiPlusApp.Enums
             "Director de Información o Informática",
             "Director de Tecnología",
             "Director de Marketing"
+        };
+
+        public static string[] Mecanico =
+        {
+            "Asesor/a",
+            "Mecánico/a",
+            "Electrico automotriz",
+            "Personal de mantenimiento",
+            "Gestor de mantenimiento",
         };
     }
 }

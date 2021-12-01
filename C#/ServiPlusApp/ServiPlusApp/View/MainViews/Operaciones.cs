@@ -600,13 +600,29 @@ namespace ServiPlusApp.View
         {
             if (pnlMenuVertical.Width == 270)
             {
-                this.Controls.Add(userControl);
+                if (!this.Controls.Contains(userControl))
+                {
+                    this.Controls.Add(userControl);
+                }
+                else
+                {
+                    this.Controls.Remove(userControl);
+                }
+
                 userControl.BringToFront();
                 userControl.Location = new Point(272, 55);
             }
             else
             {
-                this.Controls.Add(userControl);
+                if (!this.Controls.Contains(userControl))
+                {
+                    this.Controls.Add(userControl);
+                }
+                else
+                {
+                    this.Controls.Remove(userControl);
+                }
+
                 userControl.BringToFront();
                 userControl.Location = new Point(72, 55);
             }

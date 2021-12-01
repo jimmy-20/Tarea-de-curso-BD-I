@@ -1,5 +1,6 @@
 ﻿using ServiPlusApp.Controller.Factory;
 using ServiPlusApp.Model;
+using ServiPlusApp.View.Set_Tables.Mecanicos;
 using ServiPlusApp.View.Tablas;
 using System;
 using System.Collections.Generic;
@@ -26,12 +27,14 @@ namespace ServiPlusApp.Controller
 
         public void Agregar()
         {
-            throw new NotImplementedException();
+            Mecanico mecanico = new Mecanico("Nuevo");
+            mecanico.ShowDialog();
         }
 
         public void Editar()
         {
-            throw new NotImplementedException();
+            Mecanico mecanico = new Mecanico("Modificar");
+            mecanico.ShowDialog();
         }
 
         public void Estado()

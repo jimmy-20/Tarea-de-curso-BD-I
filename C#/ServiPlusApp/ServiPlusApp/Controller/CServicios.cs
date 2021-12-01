@@ -37,12 +37,12 @@ namespace ServiPlusApp.Controller
 
         public void Agregar()
         {
-            throw new NotImplementedException();
+           
         }
 
         public void Editar()
         {
-            throw new NotImplementedException();
+          
         }
 
         public void Estado()
