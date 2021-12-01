@@ -18,7 +18,7 @@ namespace ServiPlusApp.View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-             Application.Run(new Operaciones("Leonardo Antonio Duarte Rodríguez","leoduartejr","Admin","Sistemas"));
+            Application.Run(new Operaciones("Leonardo Antonio Duarte Rodríguez","leoduartejr","Admin","Sistemas"));
             //Application.Run(new TablaUsuarios());
             //Application.Run(new Login());
            // Application.Run(new SplashScreen());

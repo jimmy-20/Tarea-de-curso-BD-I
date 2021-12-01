@@ -208,34 +208,40 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\Set Tables\Clientes\Cliente.cs">
+    <Compile Include="View\SetTables\Clientes\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Set Tables\Clientes\Cliente.Designer.cs">
+    <Compile Include="View\SetTables\Clientes\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Set Tables\Mecanicos\Mecanico.cs">
+    <Compile Include="View\SetTables\Mecanicos\Mecanico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Set Tables\Mecanicos\Mecanico.Designer.cs">
+    <Compile Include="View\SetTables\Mecanicos\Mecanico.Designer.cs">
       <DependentUpon>Mecanico.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Set Tables\Repuestos\Repuesto.cs">
+    <Compile Include="View\SetTables\Repuestos\Repuesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Set Tables\Repuestos\Repuesto.Designer.cs">
+    <Compile Include="View\SetTables\Repuestos\Repuesto.Designer.cs">
       <DependentUpon>Repuesto.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Set Tables\Servicios\Servicio.cs">
+    <Compile Include="View\SetTables\Servicios\Servicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Set Tables\Servicios\Servicio.Designer.cs">
+    <Compile Include="View\SetTables\Servicios\Servicio.Designer.cs">
       <DependentUpon>Servicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Set Tables\Vehiculos\Vehiculo.cs">
+    <Compile Include="View\SetTables\Usuarios\Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Set Tables\Vehiculos\Vehiculo.Designer.cs">
+    <Compile Include="View\SetTables\Usuarios\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SetTables\Vehiculos\Vehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SetTables\Vehiculos\Vehiculo.Designer.cs">
       <DependentUpon>Vehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MainViews\Login.cs">
@@ -286,13 +292,22 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Set Tables\Clientes\Cliente.resx">
+    <EmbeddedResource Include="View\SetTables\Clientes\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Set Tables\Mecanicos\Mecanico.resx">
+    <EmbeddedResource Include="View\SetTables\Mecanicos\Mecanico.resx">
       <DependentUpon>Mecanico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Set Tables\Vehiculos\Vehiculo.resx">
+    <EmbeddedResource Include="View\SetTables\Repuestos\Repuesto.resx">
+      <DependentUpon>Repuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SetTables\Servicios\Servicio.resx">
+      <DependentUpon>Servicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SetTables\Usuarios\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SetTables\Vehiculos\Vehiculo.resx">
       <DependentUpon>Vehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainViews\Login.resx">

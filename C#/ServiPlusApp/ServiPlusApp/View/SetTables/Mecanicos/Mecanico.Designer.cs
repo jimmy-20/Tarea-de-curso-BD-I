@@ -1306,6 +1306,7 @@ namespace ServiPlusApp.View.Set_Tables.Mecanicos
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.bunifuPanel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Mecanico";
             this.Padding = new System.Windows.Forms.Padding(2, 2, 2, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
