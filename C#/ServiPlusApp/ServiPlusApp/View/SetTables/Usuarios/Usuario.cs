@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ServiPlusApp.View.SetTables.Usuario
+namespace ServiPlusApp.View.Set_Tables.Usuarios
 {
     public partial class Usuario : Form
     {

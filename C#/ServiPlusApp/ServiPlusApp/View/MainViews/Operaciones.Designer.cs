@@ -30,7 +30,7 @@ namespace ServiPlusApp.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation1 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
+            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation3 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Operaciones));
             this.pnlMenuVertical = new System.Windows.Forms.Panel();
             this.pnlMenuContenedor = new System.Windows.Forms.FlowLayoutPanel();
@@ -46,7 +46,7 @@ namespace ServiPlusApp.View
             this.btnOpMantenimientos = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.MnReportes = new System.Windows.Forms.Panel();
-            this.btnReRepuestos = new System.Windows.Forms.Button();
+            this.btnRecaudaciones = new System.Windows.Forms.Button();
             this.btnReMantenimientos = new System.Windows.Forms.Button();
             this.btnSeguridad = new System.Windows.Forms.Button();
             this.Mnseguridad = new System.Windows.Forms.Panel();
@@ -68,6 +68,10 @@ namespace ServiPlusApp.View
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.bunifuTransition1 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
+            this.btnCaRepuestos = new System.Windows.Forms.Button();
+            this.SubMnRecaudaciones = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.pnlMenuVertical.SuspendLayout();
             this.pnlMenuContenedor.SuspendLayout();
             this.MnCatalogos.SuspendLayout();
@@ -82,6 +86,7 @@ namespace ServiPlusApp.View
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
+            this.SubMnRecaudaciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenuVertical
@@ -95,7 +100,7 @@ namespace ServiPlusApp.View
             this.pnlMenuVertical.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlMenuVertical.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuVertical.Name = "pnlMenuVertical";
-            this.pnlMenuVertical.Size = new System.Drawing.Size(270, 800);
+            this.pnlMenuVertical.Size = new System.Drawing.Size(270, 903);
             this.pnlMenuVertical.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.pnlMenuVertical, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnlMenuVertical, null);
@@ -117,7 +122,7 @@ namespace ServiPlusApp.View
             this.pnlMenuContenedor.Location = new System.Drawing.Point(0, 80);
             this.pnlMenuContenedor.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.pnlMenuContenedor.Name = "pnlMenuContenedor";
-            this.pnlMenuContenedor.Size = new System.Drawing.Size(270, 720);
+            this.pnlMenuContenedor.Size = new System.Drawing.Size(270, 823);
             this.pnlMenuContenedor.TabIndex = 6;
             this.bunifuToolTip1.SetToolTip(this.pnlMenuContenedor, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnlMenuContenedor, null);
@@ -154,6 +159,7 @@ namespace ServiPlusApp.View
             // 
             // MnCatalogos
             // 
+            this.MnCatalogos.Controls.Add(this.btnCaRepuestos);
             this.MnCatalogos.Controls.Add(this.btnClientes);
             this.MnCatalogos.Controls.Add(this.btnServicios);
             this.MnCatalogos.Controls.Add(this.btnMecanicos);
@@ -163,7 +169,7 @@ namespace ServiPlusApp.View
             this.MnCatalogos.Location = new System.Drawing.Point(50, 61);
             this.MnCatalogos.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
             this.MnCatalogos.Name = "MnCatalogos";
-            this.MnCatalogos.Size = new System.Drawing.Size(220, 180);
+            this.MnCatalogos.Size = new System.Drawing.Size(220, 225);
             this.MnCatalogos.TabIndex = 8;
             this.bunifuToolTip1.SetToolTip(this.MnCatalogos, "");
             this.bunifuToolTip1.SetToolTipIcon(this.MnCatalogos, null);
@@ -289,7 +295,7 @@ namespace ServiPlusApp.View
             this.btnOperaciones.ForeColor = System.Drawing.Color.White;
             this.btnOperaciones.Image = global::ServiPlusApp.Properties.Resources.sistema_operativo__1_;
             this.btnOperaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOperaciones.Location = new System.Drawing.Point(0, 247);
+            this.btnOperaciones.Location = new System.Drawing.Point(0, 292);
             this.btnOperaciones.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnOperaciones.Name = "btnOperaciones";
             this.btnOperaciones.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -311,7 +317,7 @@ namespace ServiPlusApp.View
             this.MnOperaciones.Controls.Add(this.btnOpMantenimientos);
             this.bunifuTransition1.SetDecoration(this.MnOperaciones, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.MnOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MnOperaciones.Location = new System.Drawing.Point(50, 298);
+            this.MnOperaciones.Location = new System.Drawing.Point(50, 343);
             this.MnOperaciones.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
             this.MnOperaciones.Name = "MnOperaciones";
             this.MnOperaciones.Size = new System.Drawing.Size(220, 90);
@@ -328,18 +334,17 @@ namespace ServiPlusApp.View
             this.btnOpRepuestos.FlatAppearance.BorderSize = 0;
             this.btnOpRepuestos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnOpRepuestos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpRepuestos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpRepuestos.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpRepuestos.ForeColor = System.Drawing.Color.White;
             this.btnOpRepuestos.Image = global::ServiPlusApp.Properties.Resources.neumatico;
-            this.btnOpRepuestos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpRepuestos.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnOpRepuestos.Location = new System.Drawing.Point(0, 45);
             this.btnOpRepuestos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnOpRepuestos.Name = "btnOpRepuestos";
             this.btnOpRepuestos.Size = new System.Drawing.Size(220, 45);
             this.btnOpRepuestos.TabIndex = 8;
             this.btnOpRepuestos.Tag = "OpRepuestos";
-            this.btnOpRepuestos.Text = "    Repuestos";
-            this.btnOpRepuestos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOpRepuestos.Text = "          Asignar Repuestos";
             this.bunifuToolTip1.SetToolTip(this.btnOpRepuestos, "");
             this.bunifuToolTip1.SetToolTipIcon(this.btnOpRepuestos, null);
             this.bunifuToolTip1.SetToolTipTitle(this.btnOpRepuestos, "");
@@ -385,7 +390,7 @@ namespace ServiPlusApp.View
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Image = global::ServiPlusApp.Properties.Resources.report;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 394);
+            this.btnReportes.Location = new System.Drawing.Point(0, 439);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -403,43 +408,45 @@ namespace ServiPlusApp.View
             // 
             // MnReportes
             // 
-            this.MnReportes.Controls.Add(this.btnReRepuestos);
+            this.MnReportes.Controls.Add(this.SubMnRecaudaciones);
+            this.MnReportes.Controls.Add(this.btnRecaudaciones);
             this.MnReportes.Controls.Add(this.btnReMantenimientos);
             this.bunifuTransition1.SetDecoration(this.MnReportes, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.MnReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MnReportes.Location = new System.Drawing.Point(50, 445);
+            this.MnReportes.Location = new System.Drawing.Point(50, 490);
             this.MnReportes.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
             this.MnReportes.Name = "MnReportes";
-            this.MnReportes.Size = new System.Drawing.Size(220, 90);
+            this.MnReportes.Size = new System.Drawing.Size(220, 180);
             this.MnReportes.TabIndex = 10;
             this.bunifuToolTip1.SetToolTip(this.MnReportes, "");
             this.bunifuToolTip1.SetToolTipIcon(this.MnReportes, null);
             this.bunifuToolTip1.SetToolTipTitle(this.MnReportes, "");
             // 
-            // btnReRepuestos
+            // btnRecaudaciones
             // 
-            this.btnReRepuestos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.bunifuTransition1.SetDecoration(this.btnReRepuestos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnReRepuestos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReRepuestos.FlatAppearance.BorderSize = 0;
-            this.btnReRepuestos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReRepuestos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReRepuestos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReRepuestos.ForeColor = System.Drawing.Color.White;
-            this.btnReRepuestos.Image = global::ServiPlusApp.Properties.Resources.gestion_de_datos;
-            this.btnReRepuestos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReRepuestos.Location = new System.Drawing.Point(0, 45);
-            this.btnReRepuestos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnReRepuestos.Name = "btnReRepuestos";
-            this.btnReRepuestos.Size = new System.Drawing.Size(220, 45);
-            this.btnReRepuestos.TabIndex = 11;
-            this.btnReRepuestos.Tag = "ReRepuestos";
-            this.btnReRepuestos.Text = "    Repuestos";
-            this.btnReRepuestos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.bunifuToolTip1.SetToolTip(this.btnReRepuestos, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnReRepuestos, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnReRepuestos, "");
-            this.btnReRepuestos.UseVisualStyleBackColor = false;
+            this.btnRecaudaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnRecaudaciones, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnRecaudaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRecaudaciones.FlatAppearance.BorderSize = 0;
+            this.btnRecaudaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRecaudaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecaudaciones.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecaudaciones.ForeColor = System.Drawing.Color.White;
+            this.btnRecaudaciones.Image = global::ServiPlusApp.Properties.Resources.gestion_de_datos;
+            this.btnRecaudaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecaudaciones.Location = new System.Drawing.Point(0, 45);
+            this.btnRecaudaciones.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnRecaudaciones.Name = "btnRecaudaciones";
+            this.btnRecaudaciones.Size = new System.Drawing.Size(220, 45);
+            this.btnRecaudaciones.TabIndex = 11;
+            this.btnRecaudaciones.Tag = "Recaudaciones";
+            this.btnRecaudaciones.Text = "    Recaudaciones";
+            this.btnRecaudaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnRecaudaciones, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnRecaudaciones, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnRecaudaciones, "");
+            this.btnRecaudaciones.UseVisualStyleBackColor = false;
+            this.btnRecaudaciones.Click += new System.EventHandler(this.btnRecaudaciones_Click);
             // 
             // btnReMantenimientos
             // 
@@ -479,7 +486,7 @@ namespace ServiPlusApp.View
             this.btnSeguridad.ForeColor = System.Drawing.Color.White;
             this.btnSeguridad.Image = global::ServiPlusApp.Properties.Resources.proteger;
             this.btnSeguridad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeguridad.Location = new System.Drawing.Point(0, 541);
+            this.btnSeguridad.Location = new System.Drawing.Point(0, 676);
             this.btnSeguridad.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.btnSeguridad.Name = "btnSeguridad";
             this.btnSeguridad.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -500,7 +507,7 @@ namespace ServiPlusApp.View
             this.Mnseguridad.Controls.Add(this.btnUsuarios);
             this.bunifuTransition1.SetDecoration(this.Mnseguridad, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.Mnseguridad.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Mnseguridad.Location = new System.Drawing.Point(50, 592);
+            this.Mnseguridad.Location = new System.Drawing.Point(50, 727);
             this.Mnseguridad.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
             this.Mnseguridad.Name = "Mnseguridad";
             this.Mnseguridad.Size = new System.Drawing.Size(220, 45);
@@ -640,7 +647,7 @@ namespace ServiPlusApp.View
             this.pnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBarraTitulo.Location = new System.Drawing.Point(270, 0);
             this.pnlBarraTitulo.Name = "pnlBarraTitulo";
-            this.pnlBarraTitulo.Size = new System.Drawing.Size(1070, 50);
+            this.pnlBarraTitulo.Size = new System.Drawing.Size(1062, 50);
             this.pnlBarraTitulo.TabIndex = 1;
             this.bunifuToolTip1.SetToolTip(this.pnlBarraTitulo, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnlBarraTitulo, null);
@@ -658,7 +665,7 @@ namespace ServiPlusApp.View
             this.btnRestaurar.IconColor = System.Drawing.Color.White;
             this.btnRestaurar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnRestaurar.IconSize = 25;
-            this.btnRestaurar.Location = new System.Drawing.Point(1011, 3);
+            this.btnRestaurar.Location = new System.Drawing.Point(1003, 3);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(25, 25);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -681,7 +688,7 @@ namespace ServiPlusApp.View
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnClose.IconSize = 25;
-            this.btnClose.Location = new System.Drawing.Point(1042, 3);
+            this.btnClose.Location = new System.Drawing.Point(1034, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(25, 25);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -703,7 +710,7 @@ namespace ServiPlusApp.View
             this.btnMaximizar.IconColor = System.Drawing.Color.White;
             this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMaximizar.IconSize = 25;
-            this.btnMaximizar.Location = new System.Drawing.Point(1011, 3);
+            this.btnMaximizar.Location = new System.Drawing.Point(1003, 3);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -727,7 +734,7 @@ namespace ServiPlusApp.View
             this.btnMinimizar.IconColor = System.Drawing.Color.White;
             this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMinimizar.IconSize = 25;
-            this.btnMinimizar.Location = new System.Drawing.Point(980, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(972, 3);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(25, 35);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -818,7 +825,7 @@ namespace ServiPlusApp.View
             this.pnlContenedor.Location = new System.Drawing.Point(270, 50);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Padding = new System.Windows.Forms.Padding(2);
-            this.pnlContenedor.Size = new System.Drawing.Size(1070, 750);
+            this.pnlContenedor.Size = new System.Drawing.Size(1062, 853);
             this.pnlContenedor.TabIndex = 2;
             this.bunifuToolTip1.SetToolTip(this.pnlContenedor, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnlContenedor, null);
@@ -831,29 +838,122 @@ namespace ServiPlusApp.View
             // 
             this.bunifuTransition1.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.VertSlide;
             this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation3;
+            // 
+            // btnCaRepuestos
+            // 
+            this.btnCaRepuestos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.btnCaRepuestos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnCaRepuestos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCaRepuestos.FlatAppearance.BorderSize = 0;
+            this.btnCaRepuestos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCaRepuestos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCaRepuestos.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaRepuestos.ForeColor = System.Drawing.Color.White;
+            this.btnCaRepuestos.Image = global::ServiPlusApp.Properties.Resources.neumatico;
+            this.btnCaRepuestos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCaRepuestos.Location = new System.Drawing.Point(0, 180);
+            this.btnCaRepuestos.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.btnCaRepuestos.Name = "btnCaRepuestos";
+            this.btnCaRepuestos.Size = new System.Drawing.Size(220, 45);
+            this.btnCaRepuestos.TabIndex = 9;
+            this.btnCaRepuestos.Tag = "Repuestos";
+            this.btnCaRepuestos.Text = "    Repuestos";
+            this.btnCaRepuestos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCaRepuestos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.btnCaRepuestos, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnCaRepuestos, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnCaRepuestos, "");
+            this.btnCaRepuestos.UseVisualStyleBackColor = false;
+            this.btnCaRepuestos.Click += new System.EventHandler(this.btnCaRepuestos_Click);
+            // 
+            // SubMnRecaudaciones
+            // 
+            this.SubMnRecaudaciones.Controls.Add(this.button3);
+            this.SubMnRecaudaciones.Controls.Add(this.button4);
+            this.bunifuTransition1.SetDecoration(this.SubMnRecaudaciones, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.SubMnRecaudaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SubMnRecaudaciones.Location = new System.Drawing.Point(0, 90);
+            this.SubMnRecaudaciones.Name = "SubMnRecaudaciones";
+            this.SubMnRecaudaciones.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.SubMnRecaudaciones.Size = new System.Drawing.Size(220, 90);
+            this.SubMnRecaudaciones.TabIndex = 14;
+            this.bunifuToolTip1.SetToolTip(this.SubMnRecaudaciones, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.SubMnRecaudaciones, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.SubMnRecaudaciones, "");
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.button3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::ServiPlusApp.Properties.Resources.gestion_de_datos;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(35, 45);
+            this.button3.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(185, 45);
+            this.button3.TabIndex = 13;
+            this.button3.Tag = "ReRepuestos";
+            this.button3.Text = "    Repuestos";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.button3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.button3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.button3, "");
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.bunifuTransition1.SetDecoration(this.button4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::ServiPlusApp.Properties.Resources.servicio_de_administracion;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(35, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(185, 45);
+            this.button4.TabIndex = 12;
+            this.button4.Tag = "ReMantenimientos";
+            this.button4.Text = "    Servicios";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bunifuToolTip1.SetToolTip(this.button4, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.button4, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.button4, "");
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // Operaciones
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1340, 800);
+            this.ClientSize = new System.Drawing.Size(1332, 903);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlBarraTitulo);
             this.Controls.Add(this.pnlMenuVertical);
@@ -880,6 +980,7 @@ namespace ServiPlusApp.View
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
+            this.SubMnRecaudaciones.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -909,7 +1010,7 @@ namespace ServiPlusApp.View
         private System.Windows.Forms.Button btnOpMantenimientos;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Panel MnReportes;
-        private System.Windows.Forms.Button btnReRepuestos;
+        private System.Windows.Forms.Button btnRecaudaciones;
         private System.Windows.Forms.Button btnReMantenimientos;
         private System.Windows.Forms.Button btnSeguridad;
         private System.Windows.Forms.Panel Mnseguridad;
@@ -922,5 +1023,9 @@ namespace ServiPlusApp.View
         private System.Windows.Forms.Button btnVehiculos;
         private System.Windows.Forms.Panel pnlContenedor;
         private Bunifu.UI.WinForms.BunifuTransition bunifuTransition1;
+        private System.Windows.Forms.Button btnCaRepuestos;
+        private System.Windows.Forms.Panel SubMnRecaudaciones;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

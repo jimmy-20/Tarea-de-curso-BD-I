@@ -191,6 +191,7 @@
     <Compile Include="Controller\Factory\Fabrica.cs" />
     <Compile Include="Controller\Factory\IAcciones.cs" />
     <Compile Include="Enums\Estados.cs" />
+    <Compile Include="Enums\TiposDeMantenimientos.cs" />
     <Compile Include="Model\DClientes.cs" />
     <Compile Include="Model\DMantenimientos.cs" />
     <Compile Include="Model\DMecanicos.cs" />
