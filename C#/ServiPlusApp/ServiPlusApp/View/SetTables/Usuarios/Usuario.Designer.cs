@@ -67,7 +67,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             // Usuario
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(120)))));
             this.ClientSize = new System.Drawing.Size(900, 500);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

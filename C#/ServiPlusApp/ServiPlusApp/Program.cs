@@ -25,9 +25,9 @@ namespace ServiPlusApp.View
             //Application.Run(new SplashScreen());
             //Application.Run(new Login());
             //Application.Run(new Welcome("Massiel Fonseca", "Massiel", "ADMIN", "SISTEMAS"));
-            //Application.Run(new Operaciones("Leonardo Antonio Duarte Rodríguez", "leoduartejr", "Admin", "Sistemas"));
+            Application.Run(new Operaciones("Leonardo Antonio Duarte Rodríguez", "leoduartejr", "Admin", "Sistemas"));
          
-            Application.Run(new Repuesto());
+            //Application.Run(new Usuario());
         }
     }
 }
