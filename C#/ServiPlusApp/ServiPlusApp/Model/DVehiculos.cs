@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ServiPlusApp.Model
 {
@@ -78,6 +79,128 @@ namespace ServiPlusApp.Model
             }
 
             return DtResultado;
+        }
+
+        public static void Insertar_Vehiculo(int IdCliente, string Marca, string Modelo, int Año)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Connection.conexion);
+
+                SqlCommand comando = new SqlCommand() { 
+                Connection = conexion,
+                CommandText = "Insertar_Vehiculo",
+                CommandType = CommandType.StoredProcedure
+                };
+
+                SqlParameter ParIdCliete = new SqlParameter()
+                {
+                    ParameterName = "IdCliente",
+                    SqlDbType = SqlDbType.Int,
+                    Value = IdCliente
+                };
+
+                SqlParameter ParMarca = new SqlParameter()
+                {
+                    ParameterName = "Marca",
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    Value = Marca
+                };
+
+                SqlParameter ParModelo = new SqlParameter()
+                {
+                    ParameterName = "Modelo",
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    Value = Modelo
+                };
+
+                SqlParameter ParAño = new SqlParameter()
+                {
+                    ParameterName = "Año",
+                    SqlDbType = SqlDbType.Int,
+                    Value = Año
+                };
+
+                comando.Parameters.Add(ParIdCliete);
+                comando.Parameters.Add(ParMarca);
+                comando.Parameters.Add(ParModelo);
+                comando.Parameters.Add(ParAño);
+
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error : " + e.Message, "Insertar_Vehiculo",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void Editar_Vehiculo(int IdVehiculo,int IdCliente, string Marca, string Modelo, int Año)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Connection.conexion);
+
+                SqlCommand comando = new SqlCommand()
+                {
+                    Connection = conexion,
+                    CommandText = "Editar_Vehiculo",
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                SqlParameter ParIdVehiculo = new SqlParameter() { 
+                    ParameterName = "IdVehiculo",
+                    SqlDbType = SqlDbType.Int,
+                    Value = IdVehiculo
+                };
+
+                SqlParameter ParIdCliete = new SqlParameter()
+                {
+                    ParameterName = "IdCliente",
+                    SqlDbType = SqlDbType.Int,
+                    Value = IdCliente
+                };
+
+                SqlParameter ParMarca = new SqlParameter()
+                {
+                    ParameterName = "Marca",
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    Value = Marca
+                };
+
+                SqlParameter ParModelo = new SqlParameter()
+                {
+                    ParameterName = "Modelo",
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    Value = Modelo
+                };
+
+                SqlParameter ParAño = new SqlParameter()
+                {
+                    ParameterName = "Año",
+                    SqlDbType = SqlDbType.Int,
+                    Value = Año
+                };
+
+                comando.Parameters.Add(ParIdVehiculo);
+                comando.Parameters.Add(ParIdCliete);
+                comando.Parameters.Add(ParMarca);
+                comando.Parameters.Add(ParModelo);
+                comando.Parameters.Add(ParAño);
+
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error : " + e.Message, "Editar_Vehiculo",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
