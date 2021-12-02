@@ -1,7 +1,7 @@
 ﻿
-namespace ServiPlusApp.View.Set_Tables.Servicios
+namespace ServiPlusApp.View.Set_Tables.Repuestos
 {
-    partial class Servicio
+    partial class Repuesto
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,20 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Repuesto));
+            this.SuspendLayout();
+            // 
+            // Repuesto
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Servicio";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Repuesto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Repuesto";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
