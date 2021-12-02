@@ -20,6 +20,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
         {
             InitializeComponent();
             this.mode = mode;
+           
         }
 
         #region Mover Form
@@ -72,6 +73,21 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             pnlDatosUsuario.Visible = true;
         }
 
-       
+        private void cmbEspecialidad_Enter(object sender, EventArgs e)
+        {
+            txtEspecialidad.BorderColor = Color.FromArgb(230, 62, 109);
+        }
+
+        private void cmbEspecialidad_Leave(object sender, EventArgs e)
+        {
+            txtEspecialidad.BorderColor = Color.White;
+        }
+
+        private void cmbEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbEspecialidad.ForeColor = Color.White;
+        }
+
+      
     }
 }

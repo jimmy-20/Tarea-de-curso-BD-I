@@ -13,9 +13,11 @@ namespace ServiPlusApp.View.Set_Tables.Repuestos
 {
     public partial class Repuesto : Form
     {
-        public Repuesto()
+        string mode;
+        public Repuesto(string mode)
         {
             InitializeComponent();
+            this.mode = mode;
         }
 
         #region Mover Form
@@ -35,6 +37,28 @@ namespace ServiPlusApp.View.Set_Tables.Repuestos
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Repuesto_Load(object sender, EventArgs e)
+        {
+            switch (mode)
+            {
+                case "Nuevo":
+                    btnGuardar.Visible = true;
+                    btnModificar.Visible = false;
+                    break;
+                case "Modificar":
+                    btnGuardar.Visible = false;
+                    btnModificar.Visible = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
