@@ -118,7 +118,7 @@ namespace ServiPlusApp.Model
             try
             {
                 SqlConnection conexion = new SqlConnection(Connection.conexion);
-
+                conexion.Open();
                 SqlCommand comando = new SqlCommand()
                 {
                     CommandText = "Insertar_Servicio",
@@ -145,7 +145,7 @@ namespace ServiPlusApp.Model
                 {
                     ParameterName = "Tipo",
                     SqlDbType = SqlDbType.VarChar,
-                    Size = 50,
+                    Size = 15,
                     Value = Tipo
                 };
 
@@ -168,7 +168,7 @@ namespace ServiPlusApp.Model
             try
             {
                 SqlConnection conexion = new SqlConnection(Connection.conexion);
-
+                conexion.Open();
                 SqlCommand comando = new SqlCommand()
                 {
                     CommandText = "Editar_Servicio",
@@ -202,11 +202,11 @@ namespace ServiPlusApp.Model
                 {
                     ParameterName = "Tipo",
                     SqlDbType = SqlDbType.VarChar,
-                    Size = 50,
+                    Size = 15,
                     Value = Tipo
                 };
 
-                comando.Parameters.Add(IdServicio);
+                comando.Parameters.Add(ParIdServicio);
                 comando.Parameters.Add(ParDescripcion);
                 comando.Parameters.Add(ParPrecio);
                 comando.Parameters.Add(ParTipo);
