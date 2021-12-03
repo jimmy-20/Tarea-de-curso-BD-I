@@ -20,12 +20,14 @@ namespace ServiPlusApp.Controller.Factory
                     return new CMecanicos(Formulario);
                 case "Servicios":
                     return new CServicios(Formulario);
-                case "OpRepuestos":
+                case "Repuestos":
                     return new CRepuestos(Formulario);
                 case "Vehiculos":
                     return new CVehiculos(Formulario);
                 case "Usuarios":
                     return new CUsuarios(Formulario);
+                case "OpMantenimientos":
+                    return new CMantenimientos(Formulario);
                 default:
                     break;
             }

@@ -33,8 +33,8 @@ Create procedure Mostrar_Mecanicos
 as
 Select 
 IdMecanico as IdMecanico,
-PrimerNombre + ' ' + SegundoNombre as Nombre,
-PrimerApellido + ' ' + SegundoApellido as Apellido,
+PrimerNombre + ' ' + SegundoNombre as Nombres,
+PrimerApellido + ' ' + SegundoApellido as Apellidos,
 Especialidad as Especialidad,
 Telefono as Telefono,
 Salario as Salario,
@@ -60,7 +60,7 @@ as
 select 
 v.IdVehiculo as IdVehiculo,
 c.IdCliente as IdCliente,
-c.PrimerNombre + ' ' + c.PrimerApellido as Cliente,
+c.PrimerNombre + ' ' + c.SegundoNombre+ ' ' + c.PrimerApellido + ' ' + c.SegundoApellido  as Cliente,
 v.Marca,
 v.Modelo,
 v.Año
@@ -82,7 +82,7 @@ CREATE procedure [dbo].[Mostrar_Mantenimientos]
 as
 select 
 m.IdMantenimiento as [No Mantenimiento],
-c.PrimerNombre+' '+c.PrimerApellido as [Cliente],
+c.PrimerNombre + ' ' + c.SegundoNombre+ ' ' + c.PrimerApellido + ' ' + c.SegundoApellido  as [Cliente],
 v.Marca+', '+ v.Modelo +', '+ CONVERT(nvarchar(50),YEAR(v.Año),0) as [Vehiculo],
 s.Descripcion as Servicio,
 s.Precio as [Precio del servicio],
@@ -95,7 +95,7 @@ dr.Cantidad as [Cantidad de repuestos],
 m.Estado as [Estado del vehiculo],
 FechaIngreso as [Fecha de ingreso],
 FechaSalida as [Fecha de salida],
-me.PrimerNombre+' '+me.PrimerApellido as [Mecanico a cargo],
+me.PrimerNombre + ' ' + me.SegundoNombre+ ' ' + me.PrimerApellido + ' ' + me.SegundoApellido as [Mecanico a cargo],
 ROUND(((dr.Precio*dr.Cantidad)-(dr.Cantidad*dr.Descuento))+(s.Precio),2) as [Costo Total]
 from Mantenimientos m
 inner join Vehiculos v 
@@ -212,20 +212,20 @@ as
 
 select 
 m.IdMantenimiento as [No Mantenimiento],
-c.PrimerNombre+' '+c.PrimerApellido as [Cliente],
+c.PrimerNombre + ' ' + c.SegundoNombre+ ' ' + c.PrimerApellido + ' ' + c.SegundoApellido  as [Cliente],
 v.Marca+', '+ v.Modelo +', '+ CONVERT(nvarchar(50),YEAR(v.Año),0) as [Vehiculo],
 s.Descripcion as Servicio,
-s.Precio as [Costo del servicio],
+s.Precio as [Precio del servicio],
 s.TipoMantenimiento as [Tipo de Mantenimiento],
 r.Marca+', '+r.Modelo  as Repuesto,
-r.Descripcion [Descripcion de repuesto],
-dr.Precio as [Costo por repuesto],
+r.Descripcion [Repuesto],
+dr.Precio as [Precio del Repuesto],
 dr.Descuento as [Descuento por repuesto],
 dr.Cantidad as [Cantidad de repuestos],
 m.Estado as [Estado del vehiculo],
 FechaIngreso as [Fecha de ingreso],
 FechaSalida as [Fecha de salida],
-me.PrimerNombre+' '+me.PrimerApellido as [Mecanico a cargo],
+me.PrimerNombre + ' ' + me.SegundoNombre+ ' ' + me.PrimerApellido + ' ' + me.SegundoApellido as [Mecanico a cargo],
 ROUND(((dr.Precio*dr.Cantidad)-(dr.Cantidad*dr.Descuento))+(s.Precio),2) as [Costo Total]
 from Mantenimientos m
 inner join Vehiculos v 
@@ -242,7 +242,7 @@ inner join Detalle_Repuestos dr
 on dr.IdDetalleMantenimiento = dm.IdDetalleMantenimiento
 inner join Repuestos r 
 on r.IdRepuesto = dr.IdRepuesto
-	where (c.PrimerNombre+' '+c.PrimerApellido) like '%'+@dato + '%' 
+	where (c.PrimerNombre + ' ' + c.SegundoNombre+ ' ' + c.PrimerApellido + ' ' + c.SegundoApellido) like '%'+@dato + '%' 
 	or (v.Marca+', '+ v.Modelo +', '+ CONVERT(nvarchar(50),YEAR(v.Año),0)) like @dato + '%' 
 	or s.Descripcion like @dato + '%'
 	or s.Precio like @dato + '%' 
@@ -262,7 +262,7 @@ on r.IdRepuesto = dr.IdRepuesto
 
 USE SERVIPLUS
 GO
-
+--Procedimiento cambiar estado del cliente
 CREATE PROCEDURE Cambiar_Estado_Cliente @IdCliente int
 AS
 
@@ -280,6 +280,7 @@ UPDATE Clientes SET
 Estado = 'Habilitado'
 WHERE IdCliente = @IdCliente
 
+--Procedimiento cambiar estado de un servicio
 CREATE PROCEDURE Cambiar_Estado_Servicio @IdServicio int
 AS
 
@@ -298,6 +299,7 @@ UPDATE Servicios SET
 Estado = 'Habilitado'
 WHERE IdServicio = @IdServicio
 
+--Procedimiento cambiar estado de un mecanico
 CREATE PROCEDURE Cambiar_Estado_Mecanico @IdMecanico int
 AS
 IF exists (
@@ -314,6 +316,7 @@ UPDATE Mecanicos SET
 Estado = 'Habilitado'
 WHERE IdMecanico = @IdMecanico
 
+--Procedimiento cambiar estado de un usuario
 CREATE PROCEDURE Cambiar_Estado_Usuario @IdUsuario int
 AS
 IF exists (
@@ -331,3 +334,4 @@ Estado = 'Habilitado'
 WHERE IdUsuario = @IdUsuario
 
 	BACKUP DATABASE	SERVIPLUS TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\SERVIPLUS.bak'
+Select * from Servicios

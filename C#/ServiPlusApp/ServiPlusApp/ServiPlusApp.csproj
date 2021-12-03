@@ -184,13 +184,13 @@
     <Compile Include="Controller\CMecanicos.cs" />
     <Compile Include="Controller\CRepuestos.cs" />
     <Compile Include="Controller\CServicios.cs" />
-    <Compile Include="Controller\CUser.cs" />
     <Compile Include="Controller\CClientes.cs" />
     <Compile Include="Controller\CUsuarios.cs" />
     <Compile Include="Controller\CVehiculos.cs" />
     <Compile Include="Controller\Factory\Fabrica.cs" />
     <Compile Include="Controller\Factory\IAcciones.cs" />
     <Compile Include="Enums\Estados.cs" />
+    <Compile Include="Enums\TiposDeMantenimientos.cs" />
     <Compile Include="Model\DClientes.cs" />
     <Compile Include="Model\DMantenimientos.cs" />
     <Compile Include="Model\DMecanicos.cs" />

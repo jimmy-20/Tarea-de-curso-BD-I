@@ -32,6 +32,7 @@ namespace ServiPlusApp.View
         Boolean MnOpEstado = false;
         Boolean MnReEstado = false;
         Boolean MnSeEstado = false;
+        Boolean SubMnReEstado = false;
 
         MainDesk mainDesk = new MainDesk();
         UserMenuStrip userControl;
@@ -65,6 +66,7 @@ namespace ServiPlusApp.View
             MnOperaciones.Height = 0;
             MnReportes.Height = 0;
             Mnseguridad.Height = 0;
+            SubMnRecaudaciones.Height = 0;
 
             timer1.Enabled = true;
             timer2.Enabled = true;
@@ -161,6 +163,7 @@ namespace ServiPlusApp.View
                 MnOpEstado = false;
                 MnReEstado = false;
                 MnSeEstado = false;
+                SubMnReEstado = false;
             }
             else
             {
@@ -255,7 +258,10 @@ namespace ServiPlusApp.View
         {
             ColapsarMenu(btnReportes);
         }
-
+        private void btnRecaudaciones_Click(object sender, EventArgs e)
+        {
+            ColapsarMenu(btnRecaudaciones);
+        }
         private void btnSeguridad_Click(object sender, EventArgs e)
         {
             ColapsarMenu(btnSeguridad);
@@ -284,13 +290,13 @@ namespace ServiPlusApp.View
 
                         if (pnlMenuVertical.Width == 270)
                         {
-                            if (MnCatalogos.Height == 180)
+                            if (MnCatalogos.Height == 225)
                             {
                                 MnCatalogos.Height = 0;
                             }
                             else
                             {
-                                MnCatalogos.Height = 180;
+                                MnCatalogos.Height = 225;
                             }
                         }
                         else
@@ -361,6 +367,38 @@ namespace ServiPlusApp.View
                         }
                         break;
                     }
+                case "Recaudaciones":
+                    {
+                        if (SubMnReEstado == false)
+                        {
+                            SubMnReEstado = true;
+                        }
+                        else
+                        {
+                            SubMnReEstado = false;
+                        }
+
+                        if (pnlMenuVertical.Width == 270)
+                        {
+                            if (SubMnRecaudaciones.Height == 90)
+                            {
+                                SubMnRecaudaciones.Height = 0;
+                                MnReportes.Height = 90;
+                            }
+                            else
+                            {
+                                SubMnRecaudaciones.Height = 90;
+                                MnReportes.Height = 180;
+                            }
+                        }
+                        else
+                        {
+                            //timer4.Enabled = true;
+                            //timer2.Start();
+
+                        }
+                        break;
+                    }
                 case "Seguridad":
                     {
                         if (MnSeEstado == false)
@@ -419,6 +457,11 @@ namespace ServiPlusApp.View
         private void btnClientes_Click(object sender, EventArgs e)
         {
             openChildFormInPanel(new ShowTable(btnClientes.Tag.ToString()));
+        }
+
+        private void btnCaRepuestos_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new ShowTable(btnCaRepuestos.Tag.ToString()));
         }
 
         private void btnOpMantenimientos_Click(object sender, EventArgs e)
@@ -490,7 +533,7 @@ namespace ServiPlusApp.View
             else
             {
                 pnlMenuVertical.Width -= 10;
-                MnCatalogos.Height -= 10;
+                MnCatalogos.Height -= 12;
                 MnOperaciones.Height -= 10;
                 MnReportes.Height -= 10;
                 Mnseguridad.Height -= 10;
@@ -525,13 +568,14 @@ namespace ServiPlusApp.View
         {
             if (MnCaEstado == true)
             {
-                if (MnCatalogos.Height == 180)
+                if (MnCatalogos.Height > 225)
                 {
+                    MnCatalogos.Height = 225;
                     timer4.Stop();
                 }
                 else
                 {
-                    MnCatalogos.Height += 10;
+                    MnCatalogos.Height += 12;
                 }
             }
             else if (MnOpEstado == true)
@@ -663,6 +707,10 @@ namespace ServiPlusApp.View
                     break;
             }
         }
+
+       
+
+
 
         #endregion
 

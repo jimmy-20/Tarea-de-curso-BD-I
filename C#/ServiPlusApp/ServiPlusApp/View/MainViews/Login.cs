@@ -117,7 +117,7 @@ namespace ServiPlusApp.View
 
                 TextBoxs_Validations(username, password);
 
-                dt = CUser.Validar_Acceso(username, password);
+                dt = CUsuarios.Validar_Acceso(username, password);
 
                 if (dt != null)
                 {

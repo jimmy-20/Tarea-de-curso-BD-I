@@ -1,5 +1,6 @@
 ﻿using ServiPlusApp.Controller.Factory;
 using ServiPlusApp.Model;
+using ServiPlusApp.View.Set_Tables.Repuestos;
 using ServiPlusApp.View.Tablas;
 using System;
 using System.Collections.Generic;
@@ -27,12 +28,14 @@ namespace ServiPlusApp.Controller
 
         public void Agregar()
         {
-            throw new NotImplementedException();
+            Repuesto repuesto = new Repuesto("Nuevo");
+            repuesto.ShowDialog();
         }
 
         public void Editar()
         {
-            throw new NotImplementedException();
+            Repuesto repuesto = new Repuesto("Modificar");
+            repuesto.ShowDialog();
         }
 
         public void Estado()
