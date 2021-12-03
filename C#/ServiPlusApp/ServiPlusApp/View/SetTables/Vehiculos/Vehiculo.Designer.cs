@@ -1111,7 +1111,6 @@ namespace ServiPlusApp.View.Agregar
         private Bunifu.UI.WinForms.BunifuPanel pnlContenedor2;
         private Bunifu.UI.WinForms.BunifuPanel pnlBarraLateral;
         public RJCodeAdvance.RJControls.RJButton btnModificar;
-        private RJCodeAdvance.RJControls.RJButton btnCancelar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
         private Netsystek.Controls.NskControls.NskTextBox txtAño;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
@@ -1147,5 +1146,6 @@ namespace ServiPlusApp.View.Agregar
         public Netsystek.Controls.NskControls.NskTextBox txtNombres;
         public System.Windows.Forms.MaskedTextBox mascaratxtAño;
         public System.Windows.Forms.LinkLabel lblSeleccionarCliente;
+        public RJCodeAdvance.RJControls.RJButton btnCancelar;
     }
 }

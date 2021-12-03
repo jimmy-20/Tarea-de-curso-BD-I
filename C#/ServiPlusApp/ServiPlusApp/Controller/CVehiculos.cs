@@ -21,6 +21,7 @@ namespace ServiPlusApp.Controller
         public CVehiculos(ShowTable FrmVehiculo)
         {
             this.FrmVehiculo = FrmVehiculo;
+            this.FrmVehiculo.btnSetState.Visible = false;
         }
         public static DataTable Mostrar_Vehiculos()
         {
@@ -157,7 +158,13 @@ namespace ServiPlusApp.Controller
 
         public void Cancelar()
         {
-            
+            vehiculos.btnCancelar.Click += new EventHandler(Cerrar_Vehiculo) ;
+        }
+
+        private void Cerrar_Vehiculo(object sender, EventArgs e)
+        {
+            vehiculos.Close();
+            vehiculos = null;
         }
 
         public void Buscar(string text)

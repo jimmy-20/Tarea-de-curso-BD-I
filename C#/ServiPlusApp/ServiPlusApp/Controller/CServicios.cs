@@ -15,6 +15,7 @@ namespace ServiPlusApp.Controller
     public class CServicios : IAcciones 
     {
         private ShowTable FrmServicio;
+        private Servicio servicio;
         public CServicios(ShowTable FrmServicio)
         {
             this.FrmServicio = FrmServicio;
@@ -38,14 +39,61 @@ namespace ServiPlusApp.Controller
 
         public void Agregar()
         {
-            Servicio servicio = new Servicio("Nuevo");
+            this.servicio = new Servicio("Nuevo");
+            servicio.btnGuardar.Click += new EventHandler(Insertar_Servicio);
             servicio.ShowDialog();
+        }
+
+        private void Insertar_Servicio(object sender, EventArgs e)
+        {
+            if (SiCamposVacios() is false)
+            {
+                return;
+            }
+            string Descripcion = servicio.txtDescripcion.Texts;
+            decimal Precio = Convert.ToDecimal(servicio.txtPrecio.Texts);
+            string Tipo = servicio.cmbTipoDeMatenimiento.Text;
+
+            DServicios.Insertar_Servicio(Descripcion,Precio,Tipo);
         }
 
         public void Editar()
         {
-            Servicio servicio = new Servicio("Modificar");
+
+            if (Fabrica.SiFilaSeleccionada(FrmServicio.DgvTablas) is false)
+            {
+                return;
+            }
+            this.servicio = new Servicio("Modificar");
+
+            DataGridViewRow row = FrmServicio.DgvTablas.SelectedRows[0];
+
+            this.servicio.txtDescripcion.Texts = row.Cells[1].Value.ToString();
+            this.servicio.txtPrecio.Texts = row.Cells[2].Value.ToString() ;
+            this.servicio.cmbTipoDeMatenimiento.Text = row.Cells[3].Value.ToString();
+            servicio.btnModificar.Click += new EventHandler(Editar_Servicio);
+
             servicio.ShowDialog();
+        }
+
+        private void Editar_Servicio(object sender, EventArgs e)
+        {
+            if (SiCamposVacios() is false)
+            {
+                return;
+            }
+
+            int IdServicio = Convert.ToInt32(FrmServicio.DgvTablas.SelectedRows[0].Cells[0].Value);
+            string Descripcion = servicio.txtDescripcion.Texts;
+            decimal Precio = Convert.ToDecimal(servicio.txtPrecio.Texts);
+            string Tipo = servicio.cmbTipoDeMatenimiento.Text;
+
+            MessageBox.Show(IdServicio.ToString(), " Dato");
+            MessageBox.Show(Descripcion, "Dato");
+            MessageBox.Show(Precio.ToString(), "Dato");
+            MessageBox.Show(Tipo, "Dato");
+
+            DServicios.Editar_Servicio(IdServicio,Descripcion,Precio,Tipo);
         }
 
         public void Estado()
@@ -62,17 +110,29 @@ namespace ServiPlusApp.Controller
 
         public void Guardar()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Cancelar()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Buscar(string text)
         {
             FrmServicio.DgvTablas.DataSource = DServicios.Buscar_Servicio(text);
+        }
+
+        private bool SiCamposVacios()
+        {
+            if (servicio.txtDescripcion.Texts == "" || servicio.txtPrecio.Texts == "")
+            {
+                MessageBox.Show("Hay campos vacios","Campos Obligatorios",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            
+            return true;
         }
     }
 }

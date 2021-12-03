@@ -54,8 +54,8 @@ namespace ServiPlusApp.Model
             return DtResultado;
         }
 
-       
-        public static DataTable Crear_Usuario(string nombre,string apellido,string telefono,string especialidad,string rol,string username, string passWord)
+
+        public static DataTable Crear_Usuario(string nombre, string apellido, string telefono, string especialidad, string rol, string username, string passWord)
         {
             DataTable DtResultado = new DataTable("Crear_Usuario");
             SqlConnection sqlCon = new SqlConnection();
@@ -114,7 +114,7 @@ namespace ServiPlusApp.Model
                     ParameterName = "@username",
                     SqlDbType = SqlDbType.VarChar,
                     Size = 80,
-                    Value = username
+                    Value = especialidad
                 };
                 sqlCmd.Parameters.Add(parUsername);
 
@@ -282,10 +282,171 @@ namespace ServiPlusApp.Model
                 comando.Parameters.Add(parIdUsuario);
 
                 comando.ExecuteNonQuery();
-            }catch(Exception e)
+            } catch (Exception e)
             {
                 MessageBox.Show("Error: " + e.Message, "Error en BD",
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static DataTable Escalar_Buscar_Colaborador(int IdColaborador)
+        {
+            DataTable dt = new DataTable("Colabo");
+
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
+
+                SqlCommand comando = new SqlCommand()
+                {
+                    Connection = conexion,
+                    CommandText = "Escalar_Buscar_Colaborador",
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                SqlParameter ParIdColaborador = new SqlParameter()
+                {
+                    ParameterName = "IdColaborador",
+                    SqlDbType = SqlDbType.Int,
+                    Value = IdColaborador
+                };
+
+                comando.Parameters.Add(ParIdColaborador);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(comando);
+                adapter.Fill(dt);
+
+            } catch (Exception e)
+            {
+                dt = null;
+                MessageBox.Show("Error : " + e.Message, "Escalar_Buscar_Colaborador");
+            }
+
+            return dt;
+        }
+
+        public static DataTable Escalar_Buscar_Usuario(int IdUsuario)
+        {
+            DataTable dt = new DataTable("Colabo");
+
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
+
+                SqlCommand comando = new SqlCommand()
+                {
+                    Connection = conexion,
+                    CommandText = "Escalar_Buscar_Usuario",
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                SqlParameter ParIdUsuario = new SqlParameter()
+                {
+                    ParameterName = "IdUsuario",
+                    SqlDbType = SqlDbType.Int,
+                    Value = IdUsuario
+                };
+
+                comando.Parameters.Add(ParIdUsuario);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(comando);
+                adapter.Fill(dt);
+
+            }
+            catch (Exception e)
+            {
+                dt = null;
+                MessageBox.Show("Error : " + e.Message, "Escalar_Buscar_Usuario");
+            }
+
+            return dt;
+        }
+
+        public static void Editar_Usuario(int IdUsuario, int IdColaborador, string Nombres, string Apellidos, string Telefono,string UsernName, string Rol)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
+
+                SqlCommand comando = new SqlCommand()
+                {
+                    Connection = conexion,
+                    CommandText = "Editar_Usuario",
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                SqlParameter parIdUsuario = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.Int,
+                    ParameterName = "IdUsuario",
+                    Value = IdUsuario
+                };
+
+                SqlParameter parIdColaborador = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.Int,
+                    ParameterName = "IdColaborador",
+                    Value = IdColaborador
+                };
+
+                SqlParameter ParNombres = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    Value = Nombres,
+                    ParameterName = "Nombres"
+                };
+
+                SqlParameter ParApellidos = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    Value = Apellidos,
+                    ParameterName = "Apellidos"
+                };
+
+                SqlParameter ParTelefono = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    Value = Telefono,
+                    ParameterName = "Telefono"
+                };
+
+                SqlParameter ParUserName = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    Value = UsernName,
+                    ParameterName = "UserName"
+                };
+
+                SqlParameter ParRol = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    Value = Rol,
+                    ParameterName = "Rol"
+                };
+
+                comando.Parameters.Add(parIdUsuario);
+                comando.Parameters.Add(parIdColaborador);
+                comando.Parameters.Add(ParNombres);
+                comando.Parameters.Add(ParApellidos);
+                comando.Parameters.Add(ParTelefono);
+                comando.Parameters.Add(ParUserName);
+                comando.Parameters.Add(ParRol);
+
+                comando.ExecuteNonQuery();
+
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message, "Editar_Usuario",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }
