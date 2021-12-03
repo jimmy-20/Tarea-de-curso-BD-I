@@ -1,4 +1,6 @@
-﻿using ServiPlusApp.Model;
+﻿using ServiPlusApp.Controller.Factory;
+using ServiPlusApp.Model;
+using ServiPlusApp.View.Tablas;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,17 +10,49 @@ using System.Threading.Tasks;
 
 namespace ServiPlusApp.Controller
 {
-    public class CMantenimientos
+    public class CMantenimientos : IAcciones
     {
-        public static DataTable Mostrar_Mantenimientos()
+        ShowTable FrmMantenimiento;
+        public CMantenimientos(ShowTable Formulario)
         {
-            return DMantenimientos.Mostrar_Mantenimientos();
+            this.FrmMantenimiento = Formulario;
         }
 
-        public static DataTable Buscar_Mantenimiento(string dato)
+
+        public void Ver()
         {
-            return DMantenimientos.Buscar_Mantenimiento(dato);
+            FrmMantenimiento.DgvTablas.DataSource = DMantenimientos.Mostrar_Mantenimientos();
+          //  FrmMantenimiento.DgvTablas.Columns[0].Visible = false;
         }
 
+        public void Agregar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Editar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Estado()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Guardar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Cancelar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Buscar(string text)
+        {
+            FrmMantenimiento.DgvTablas.DataSource = DMantenimientos.Buscar_Mantenimiento(text);
+        }
     }
 }

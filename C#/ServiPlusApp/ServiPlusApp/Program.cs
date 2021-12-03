@@ -1,4 +1,7 @@
 ﻿using ServiPlusApp.View.Set_Tables.Mecanicos;
+using ServiPlusApp.View.Set_Tables.Repuestos;
+using ServiPlusApp.View.Set_Tables.Servicios;
+using ServiPlusApp.View.Set_Tables.Usuarios;
 using ServiPlusApp.View.Tablas;
 using System;
 using System.Collections.Generic;
@@ -18,13 +21,13 @@ namespace ServiPlusApp.View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-             Application.Run(new Operaciones("Leonardo Antonio Duarte Rodríguez","leoduartejr","Admin","Sistemas"));
-            //Application.Run(new TablaUsuarios());
-            //Application.Run(new Login());
-           // Application.Run(new SplashScreen());
-            //Application.Run(new Welcome("Massiel Fonseca","Massiel","ADMIN"));
 
-           // Application.Run(new Mecanico());
+            //Application.Run(new SplashScreen());
+            //Application.Run(new Login());
+            //Application.Run(new Welcome("Massiel Fonseca", "Massiel", "ADMIN", "SISTEMAS"));
+            Application.Run(new Operaciones("Leonardo Antonio Duarte Rodríguez", "leoduartejr", "Admin", "Sistemas"));
+         
+            //Application.Run(new Usuario());
         }
     }
 }

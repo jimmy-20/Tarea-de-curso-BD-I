@@ -26,7 +26,7 @@ namespace ServiPlusApp.Enums
             "Director Ejecutivo",
             "Director de Operaciones",
             "Director Financiero",
-            "Director de Información o Informática",
+            "Director de Informática",
             "Director de Tecnología",
             "Director de Marketing"
         };

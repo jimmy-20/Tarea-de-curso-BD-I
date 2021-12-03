@@ -1,5 +1,6 @@
 ﻿using ServiPlusApp.Controller.Factory;
 using ServiPlusApp.Model;
+using ServiPlusApp.View.Set_Tables.Servicios;
 using ServiPlusApp.View.Tablas;
 using System;
 using System.Collections.Generic;
@@ -37,12 +38,14 @@ namespace ServiPlusApp.Controller
 
         public void Agregar()
         {
-           
+            Servicio servicio = new Servicio("Nuevo");
+            servicio.ShowDialog();
         }
 
         public void Editar()
         {
-          
+            Servicio servicio = new Servicio("Modificar");
+            servicio.ShowDialog();
         }
 
         public void Estado()
