@@ -86,6 +86,7 @@ namespace ServiPlusApp.Model
             try
             {
                 SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
 
                 SqlCommand comando = new SqlCommand() { 
                 Connection = conexion,
@@ -143,6 +144,7 @@ namespace ServiPlusApp.Model
             try
             {
                 SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
 
                 SqlCommand comando = new SqlCommand()
                 {

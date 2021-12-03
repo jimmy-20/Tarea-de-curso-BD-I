@@ -66,6 +66,14 @@ namespace ServiPlusApp.Controller
 
             clientes = new Clientes("Modificar");
 
+            DataGridViewRow row = FrmCliente.DgvTablas.SelectedRows[0];
+
+            clientes.txtNombres.Text = row.Cells[1].Value.ToString();
+            clientes.txtApellidos.Text = row.Cells[2].Value.ToString();
+            clientes.txtTelefono.Text = row.Cells[3].Value.ToString();
+            clientes.txtDireccion.Text = row.Cells[4].Value.ToString();
+            clientes.txtCorreo.Text = row.Cells[5].Value.ToString();
+
             clientes.btnModificar.Click += new EventHandler(Editar_Cliente);
             clientes.ShowDialog();
         }

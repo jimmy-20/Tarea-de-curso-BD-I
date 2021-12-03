@@ -119,9 +119,9 @@ namespace ServiPlusApp.Controller
             vehiculos.txtCorreo.Texts = c.ItemArray[5].ToString();
 
             //Pasando datos de Vehiculo a Formulario Vehiculo
-            vehiculos.txtMarca.Texts = v.Cells[2].Value.ToString();
-            vehiculos.txtModelo.Texts = v.Cells[3].Value.ToString();
-            vehiculos.mascaratxtAño.Text = v.Cells[4].Value.ToString();
+            vehiculos.txtMarca.Texts = v.Cells[3].Value.ToString();
+            vehiculos.txtModelo.Texts = v.Cells[4].Value.ToString();
+            vehiculos.mascaratxtAño.Text = v.Cells[5].Value.ToString();
 
             vehiculos.btnModificar.Click += new EventHandler(Editar_Vehiculo);
             vehiculos.ShowDialog();
@@ -168,14 +168,14 @@ namespace ServiPlusApp.Controller
 
         private bool SiCamposVacios()
         {
-            if (vehiculos.txtNombres.Text == "" || vehiculos.txtApellidos.Text == "")
+            if (vehiculos.txtNombres.Texts.Equals("") is true || vehiculos.txtApellidos.Texts.Equals("") is true)
             {
                 MessageBox.Show("Rellene el nombre del cliente","Campos Obligatorios",
                                 MessageBoxButtons.OK, MessageBoxIcon.Question);
                 return false;
             }
 
-            if (vehiculos.txtMarca.Text == "" || vehiculos.txtModelo.Texts == "" || vehiculos.mascaratxtAño.Text == "")
+            if (vehiculos.txtMarca.Texts == "" || vehiculos.txtModelo.Texts == "" || vehiculos.mascaratxtAño.Text == "")
             {
                 MessageBox.Show("Rellene los datos del vehiculo", "Campos Obligatorios",
                                 MessageBoxButtons.OK, MessageBoxIcon.Question);

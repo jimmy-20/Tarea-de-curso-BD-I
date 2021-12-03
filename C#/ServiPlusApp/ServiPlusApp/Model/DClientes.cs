@@ -19,6 +19,7 @@ namespace ServiPlusApp.Model
             {
                 //Cargar la conexion del servidor 
                 sqlCon.ConnectionString = Connection.conexion;
+                
 
                 //Creando un objeto SQLCommand que llamara al procedimiento almacenado
                 SqlCommand sqlCmd = new SqlCommand
@@ -119,6 +120,7 @@ namespace ServiPlusApp.Model
             try
             {
                 SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
 
                 SqlCommand comando = new SqlCommand()
                 {
@@ -207,6 +209,7 @@ namespace ServiPlusApp.Model
             try
             {
                 SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
 
                 SqlCommand comando = new SqlCommand()
                 {
