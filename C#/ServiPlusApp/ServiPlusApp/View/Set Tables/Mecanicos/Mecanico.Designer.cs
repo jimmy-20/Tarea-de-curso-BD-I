@@ -404,7 +404,7 @@ namespace ServiPlusApp.View.Set_Tables.Mecanicos
             this.bunifuLabel8.Location = new System.Drawing.Point(576, 276);
             this.bunifuLabel8.Name = "bunifuLabel8";
             this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(62, 23);
+            this.bunifuLabel8.Size = new System.Drawing.Size(75, 28);
             this.bunifuLabel8.TabIndex = 21;
             this.bunifuLabel8.Text = "Estado";
             this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -419,7 +419,7 @@ namespace ServiPlusApp.View.Set_Tables.Mecanicos
             this.bunifuLabel7.Location = new System.Drawing.Point(318, 276);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(64, 23);
+            this.bunifuLabel7.Size = new System.Drawing.Size(78, 28);
             this.bunifuLabel7.TabIndex = 20;
             this.bunifuLabel7.Text = "Salario";
             this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -434,7 +434,7 @@ namespace ServiPlusApp.View.Set_Tables.Mecanicos
             this.bunifuLabel6.Location = new System.Drawing.Point(51, 275);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(117, 23);
+            this.bunifuLabel6.Size = new System.Drawing.Size(140, 28);
             this.bunifuLabel6.TabIndex = 19;
             this.bunifuLabel6.Text = "Especialidad";
             this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -449,7 +449,7 @@ namespace ServiPlusApp.View.Set_Tables.Mecanicos
             this.bunifuLabel5.Location = new System.Drawing.Point(51, 196);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(87, 23);
+            this.bunifuLabel5.Size = new System.Drawing.Size(107, 28);
             this.bunifuLabel5.TabIndex = 18;
             this.bunifuLabel5.Text = "Dirección";
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -464,7 +464,7 @@ namespace ServiPlusApp.View.Set_Tables.Mecanicos
             this.bunifuLabel4.Location = new System.Drawing.Point(381, 114);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(62, 23);
+            this.bunifuLabel4.Size = new System.Drawing.Size(77, 28);
             this.bunifuLabel4.TabIndex = 17;
             this.bunifuLabel4.Text = "Correo";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -479,7 +479,7 @@ namespace ServiPlusApp.View.Set_Tables.Mecanicos
             this.bunifuLabel3.Location = new System.Drawing.Point(51, 114);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(82, 23);
+            this.bunifuLabel3.Size = new System.Drawing.Size(98, 28);
             this.bunifuLabel3.TabIndex = 16;
             this.bunifuLabel3.Text = "Telefono";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -494,7 +494,7 @@ namespace ServiPlusApp.View.Set_Tables.Mecanicos
             this.bunifuLabel2.Location = new System.Drawing.Point(411, 26);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(86, 23);
+            this.bunifuLabel2.Size = new System.Drawing.Size(104, 28);
             this.bunifuLabel2.TabIndex = 15;
             this.bunifuLabel2.Text = "Apellidos";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -509,7 +509,7 @@ namespace ServiPlusApp.View.Set_Tables.Mecanicos
             this.bunifuLabel1.Location = new System.Drawing.Point(51, 26);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(84, 23);
+            this.bunifuLabel1.Size = new System.Drawing.Size(100, 28);
             this.bunifuLabel1.TabIndex = 14;
             this.bunifuLabel1.Text = "Nombres";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1338,19 +1338,19 @@ namespace ServiPlusApp.View.Set_Tables.Mecanicos
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
-        private Bunifu.UI.WinForms.BunifuTextBox txtSalario;
-        private Bunifu.UI.WinForms.BunifuDropdown cmbEspecialidad;
-        private Bunifu.UI.WinForms.BunifuTextBox txtTelefono;
-        private Bunifu.UI.WinForms.BunifuTextBox txtCorreo;
-        private Bunifu.UI.WinForms.BunifuTextBox txtDireccion;
-        private Bunifu.UI.WinForms.BunifuTextBox txtApellidos;
-        private Bunifu.UI.WinForms.BunifuTextBox txtNombres;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
         private System.Windows.Forms.PictureBox btnSDownalario;
         private System.Windows.Forms.PictureBox btnUpSalario;
         private Bunifu.UI.WinForms.BunifuDropdown cmbEstado;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCancelar;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnGuardar;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnModificar;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnModificar;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnGuardar;
+        public Bunifu.UI.WinForms.BunifuTextBox txtSalario;
+        public Bunifu.UI.WinForms.BunifuDropdown cmbEspecialidad;
+        public Bunifu.UI.WinForms.BunifuTextBox txtTelefono;
+        public Bunifu.UI.WinForms.BunifuTextBox txtCorreo;
+        public Bunifu.UI.WinForms.BunifuTextBox txtDireccion;
+        public Bunifu.UI.WinForms.BunifuTextBox txtApellidos;
+        public Bunifu.UI.WinForms.BunifuTextBox txtNombres;
     }
 }

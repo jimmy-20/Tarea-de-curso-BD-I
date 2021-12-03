@@ -118,6 +118,7 @@ namespace ServiPlusApp.Model
             try
             {
                 SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
 
                 SqlCommand comando = new SqlCommand()
                 {
@@ -223,11 +224,12 @@ namespace ServiPlusApp.Model
             try
             {
                 SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
 
                 SqlCommand comando = new SqlCommand()
                 {
                     Connection = conexion,
-                    CommandText = "Insertar_Mecanico",
+                    CommandText = "Editar_Mecanico",
                     CommandType = CommandType.StoredProcedure
                 };
 
@@ -289,7 +291,7 @@ namespace ServiPlusApp.Model
                 {
                     SqlDbType = SqlDbType.VarChar,
                     Size = 50,
-                    ParameterName = "Dirrecion",
+                    ParameterName = "Direccion",
                     Value = Direccion
                 };
 

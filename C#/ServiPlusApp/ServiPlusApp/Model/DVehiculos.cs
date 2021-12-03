@@ -202,5 +202,41 @@ namespace ServiPlusApp.Model
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public static DataTable Escalar_Buscar_Vehiculo(int IdVehiculo)
+        {
+            DataTable dt = new DataTable("Vehiculo");
+
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Connection.conexion);
+
+                SqlCommand comando = new SqlCommand() { 
+                Connection = conexion,
+                CommandText = "Escalar_Buscar_Vehiculo",
+                CommandType = CommandType.StoredProcedure
+                };
+
+                SqlParameter ParIdVehiculo = new SqlParameter()
+                {
+                    ParameterName = "IdVehiculo",
+                    SqlDbType = SqlDbType.Int,
+                    Value = IdVehiculo
+                };
+
+                comando.Parameters.Add(ParIdVehiculo);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(comando);
+
+                adapter.Fill(dt);
+            }catch(Exception e)
+            {
+                MessageBox.Show("Error : " + e.Message, "Escalar_Buscar_Vehiculo",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dt = null;
+            }
+
+            return dt;
+        }
     }
 }

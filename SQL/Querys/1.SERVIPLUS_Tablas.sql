@@ -10,7 +10,7 @@ IdCliente int primary key identity(1,1) not null,
 PrimerNombre varchar(50) not null,
 SegundoNombre varchar(50),
 PrimerApellido varchar(50) not null,
-SegundoApellido varchar(50) not null,
+SegundoApellido varchar(50) ,
 Telefono varchar(20) not null,
 Direccion varchar(50) not null,
 Correo varchar(50) not null,
@@ -32,7 +32,7 @@ IdServicio int primary key identity(1,1) not null,
 Descripcion varchar(50) not null,
 Precio decimal not null,
 TipoMantenimiento varchar(50) not null,
-Estado varchar(50) not null
+Estado varchar(20) not null
 )
 GO
 
@@ -42,7 +42,8 @@ Descripcion varchar(50) not null,
 Marca varchar(50) not null,
 Modelo varchar(50) not null,
 Precio decimal not null,
-Cantidad int not null
+Cantidad int not null,
+Estado varchar(20)
 )
 GO
 
@@ -77,17 +78,15 @@ IdMantenimiento int foreign key references Mantenimientos(IdMantenimiento) not n
 IdMecanico int foreign key references Mecanicos(IdMecanico),
 IdServicio int foreign key references  Servicios(IdServicio) not null,
 Precio decimal not null,
-Descuento decimal not null
+Estado varchar(20)
 )
 GO
 
 CREATE TABLE Detalle_Repuestos(
-IdDetalleRepuesto int primary key identity(1,1) not null,
 IdDetalleMantenimiento int foreign key references Detalle_Mantenimientos(IdDetalleMantenimiento) not null,
 IdRepuesto int foreign key references Repuestos(IdRepuesto),
 Cantidad int not null,
-Precio decimal not null,
-Descuento decimal not null
+Precio decimal not null
 )
 
 --Tabla de colaboradores a los cuales les pertenece un usuario
@@ -105,8 +104,8 @@ GO
 Create table Usuarios(
 IdUsuario int identity(1,1) primary key not null,
 IdColaborador int foreign key references Colaboradores(IdColaborador) not null,
-Username varchar(80) not null,
+Usuario varchar(80) not null,
 Contraseña varchar(80) not null,
 Rol varchar(80) not null,
-Estado varchar(80) not null
+Estado varchar(20) not null
 ) 
