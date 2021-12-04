@@ -125,8 +125,8 @@ namespace ServiPlusApp.View.Agregar
             this.pnlContenedor2.Controls.Add(this.txtMarca);
             this.pnlContenedor2.Controls.Add(this.bunifuButton1);
             this.pnlContenedor2.Controls.Add(this.bunifuSeparator1);
-            this.pnlContenedor2.Controls.Add(this.pnlNuevoCliente);
             this.pnlContenedor2.Controls.Add(this.pnlSeleccionarCliente);
+            this.pnlContenedor2.Controls.Add(this.pnlNuevoCliente);
             this.pnlContenedor2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor2.Location = new System.Drawing.Point(0, 35);
             this.pnlContenedor2.Name = "pnlContenedor2";

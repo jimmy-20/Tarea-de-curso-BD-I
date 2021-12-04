@@ -65,5 +65,10 @@ namespace ServiPlusApp.Controller
         {
             FrmMecanico.DgvTablas.DataSource = DMecanicos.Buscar_Mecanico(text);
         }
+
+        public static DataTable Table_Mecanicos()
+        {
+            return DMecanicos.Mostrar_Mecanicos();
+        }
     }
 }

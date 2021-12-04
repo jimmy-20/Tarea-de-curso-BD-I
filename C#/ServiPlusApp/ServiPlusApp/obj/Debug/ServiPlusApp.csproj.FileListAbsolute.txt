@@ -252,3 +252,4 @@ C:\Users\dell\Documents\Tarea-de-curso-BD-I\C#\ServiPlusApp\ServiPlusApp\obj\Deb
 C:\Users\dell\Documents\Tarea-de-curso-BD-I\C#\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.Set_Tables.Usuarios.Usuario.resources
 C:\Users\dell\Documents\Tarea-de-curso-BD-I\C#\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.Set_Tables.Servicios.Servicio.resources
 C:\Users\dell\Documents\Tarea-de-curso-BD-I\C#\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.Set_Tables.Repuestos.Repuesto.resources
+C:\Users\dell\Documents\Tarea-de-curso-BD-I\C#\ServiPlusApp\ServiPlusApp\obj\Debug\ServiPlusApp.View.Mantenimientos.Mantenimiento.resources
