@@ -112,5 +112,113 @@ namespace ServiPlusApp.Model
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public static void Insertar_Servicio(string Descripcion, decimal Precio, string Tipo)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
+                SqlCommand comando = new SqlCommand()
+                {
+                    CommandText = "Insertar_Servicio",
+                    CommandType = CommandType.StoredProcedure,
+                    Connection = conexion
+                };
+
+                SqlParameter ParDescripcion = new SqlParameter()
+                {
+                    ParameterName =  "Descripcion",
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    Value = Descripcion
+                };
+
+                SqlParameter ParPrecio = new SqlParameter()
+                {
+                    ParameterName = "Precio",
+                    SqlDbType = SqlDbType.Decimal,
+                    Value = Precio
+                };
+
+                SqlParameter ParTipo = new SqlParameter()
+                {
+                    ParameterName = "Tipo",
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 15,
+                    Value = Tipo
+                };
+
+                comando.Parameters.Add(ParDescripcion);
+                comando.Parameters.Add(ParPrecio);
+                comando.Parameters.Add(ParTipo);
+
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message, "Insertar_Servicio",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void Editar_Servicio(int IdServicio ,string Descripcion, decimal Precio, string Tipo)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
+                SqlCommand comando = new SqlCommand()
+                {
+                    CommandText = "Editar_Servicio",
+                    CommandType = CommandType.StoredProcedure,
+                    Connection = conexion
+                };
+
+                SqlParameter ParIdServicio = new SqlParameter()
+                {
+                    ParameterName = "IdServicio",
+                    SqlDbType = SqlDbType.Int,
+                    Value = IdServicio
+                };
+
+                SqlParameter ParDescripcion = new SqlParameter()
+                {
+                    ParameterName = "Descripcion",
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    Value = Descripcion
+                };
+
+                SqlParameter ParPrecio = new SqlParameter()
+                {
+                    ParameterName = "Precio",
+                    SqlDbType = SqlDbType.Decimal,
+                    Value = Precio
+                };
+
+                SqlParameter ParTipo = new SqlParameter()
+                {
+                    ParameterName = "Tipo",
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 15,
+                    Value = Tipo
+                };
+
+                comando.Parameters.Add(ParIdServicio);
+                comando.Parameters.Add(ParDescripcion);
+                comando.Parameters.Add(ParPrecio);
+                comando.Parameters.Add(ParTipo);
+
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message, "Editar_Servicio",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
