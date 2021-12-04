@@ -173,7 +173,7 @@ namespace ServiPlusApp.View.Mantenimientos
             pnlSeleccionarDatos1.Visible = true;
             pnlDatosMan1.Visible = false;
 
-            dgvDatos1.DataSource = CMecanicos.Table_Mecanicos();
+            dgvDatos1.DataSource = CMecanicos.Mostrar_Mecanicos();
 
             btnCtsEstado = false;
             btnSeEstado = false;
