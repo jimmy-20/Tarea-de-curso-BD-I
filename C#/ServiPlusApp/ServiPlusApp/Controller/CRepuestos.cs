@@ -142,5 +142,10 @@ namespace ServiPlusApp.Controller
         {
             FrmRepuesto.DgvTablas.DataSource = DRepuestos.Buscar_Repuesto(text);
         }
+
+        public static DataTable Table_Repuestos()
+        {
+            return DRepuestos.Mostrar_Repuestos();
+        }
     }
 }

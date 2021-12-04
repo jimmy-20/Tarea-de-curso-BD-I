@@ -86,7 +86,7 @@ namespace ServiPlusApp.View.Set_Tables.Repuestos
             this.lblMode.Location = new System.Drawing.Point(226, 60);
             this.lblMode.Name = "lblMode";
             this.lblMode.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblMode.Size = new System.Drawing.Size(215, 29);
+            this.lblMode.Size = new System.Drawing.Size(267, 37);
             this.lblMode.TabIndex = 23;
             this.lblMode.Text = "Registrar Repuesto";
             this.lblMode.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -239,7 +239,7 @@ namespace ServiPlusApp.View.Set_Tables.Repuestos
             this.txtPrecio.IconRight = null;
             this.txtPrecio.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPrecio.Lines = new string[0];
-            this.txtPrecio.Location = new System.Drawing.Point(80, 276);
+            this.txtPrecio.Location = new System.Drawing.Point(80, 270);
             this.txtPrecio.MaxLength = 32767;
             this.txtPrecio.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPrecio.Modified = false;
@@ -389,7 +389,7 @@ namespace ServiPlusApp.View.Set_Tables.Repuestos
             this.txtCantidad.IconRight = null;
             this.txtCantidad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCantidad.Lines = new string[0];
-            this.txtCantidad.Location = new System.Drawing.Point(361, 276);
+            this.txtCantidad.Location = new System.Drawing.Point(361, 270);
             this.txtCantidad.MaxLength = 32767;
             this.txtCantidad.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCantidad.Modified = false;
@@ -483,7 +483,7 @@ namespace ServiPlusApp.View.Set_Tables.Repuestos
             this.btnGuardar.IdleIconLeftImage = null;
             this.btnGuardar.IdleIconRightImage = null;
             this.btnGuardar.IndicateFocus = false;
-            this.btnGuardar.Location = new System.Drawing.Point(226, 398);
+            this.btnGuardar.Location = new System.Drawing.Point(226, 380);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnGuardar.OnDisabledState.BorderRadius = 1;
@@ -572,7 +572,7 @@ namespace ServiPlusApp.View.Set_Tables.Repuestos
             this.btnModificar.IdleIconLeftImage = null;
             this.btnModificar.IdleIconRightImage = null;
             this.btnModificar.IndicateFocus = false;
-            this.btnModificar.Location = new System.Drawing.Point(226, 398);
+            this.btnModificar.Location = new System.Drawing.Point(226, 380);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnModificar.OnDisabledState.BorderRadius = 1;
@@ -694,7 +694,7 @@ namespace ServiPlusApp.View.Set_Tables.Repuestos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(87)))));
-            this.ClientSize = new System.Drawing.Size(707, 449);
+            this.ClientSize = new System.Drawing.Size(707, 431);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtMarca);

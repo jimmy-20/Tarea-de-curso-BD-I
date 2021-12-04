@@ -33,6 +33,14 @@ namespace ServiPlusApp.Enums
             "Deshabilitado",
 
         };
+        //Modificarlo 
+        public static string[] Mantenimiento =
+       {
+            "Terminado",
+            "En proceso",
+            "Cancelado",
+
+        };
 
 
 

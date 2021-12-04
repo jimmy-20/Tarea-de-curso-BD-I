@@ -155,5 +155,10 @@ namespace ServiPlusApp.Controller
 
             return true;
         }
+
+        public static DataTable Mostrar_Mecanicos()
+        {
+            return DMecanicos.Mostrar_Mecanicos();
+        }
     }
 }

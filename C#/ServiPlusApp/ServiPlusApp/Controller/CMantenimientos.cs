@@ -1,5 +1,6 @@
 ﻿using ServiPlusApp.Controller.Factory;
 using ServiPlusApp.Model;
+using ServiPlusApp.View.Mantenimientos;
 using ServiPlusApp.View.Tablas;
 using System;
 using System.Collections.Generic;
@@ -27,12 +28,14 @@ namespace ServiPlusApp.Controller
 
         public void Agregar()
         {
-            throw new NotImplementedException();
+            Mantenimiento mantenimiento = new Mantenimiento("Nuevo");
+            mantenimiento.ShowDialog();
         }
 
         public void Editar()
         {
-            throw new NotImplementedException();
+            Mantenimiento mantenimiento = new Mantenimiento("Modificar");
+            mantenimiento.ShowDialog();
         }
 
         public void Estado()
