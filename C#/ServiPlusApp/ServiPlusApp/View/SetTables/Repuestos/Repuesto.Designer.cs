@@ -721,16 +721,16 @@ namespace ServiPlusApp.View.Set_Tables.Repuestos
 
         #endregion
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.UI.WinForms.BunifuTextBox txtDescripcion;
+        private Bunifu.UI.WinForms.BunifuTextBox txtCantidad;
+        private Bunifu.UI.WinForms.BunifuTextBox txtMarca;
+        private Bunifu.UI.WinForms.BunifuTextBox txtPrecio;
+        private Bunifu.UI.WinForms.BunifuTextBox txtModelo;
         private Bunifu.UI.WinForms.BunifuLabel lblMode;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnClose;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnModificar;
-        public Bunifu.UI.WinForms.BunifuTextBox txtDescripcion;
-        public Bunifu.UI.WinForms.BunifuTextBox txtCantidad;
-        public Bunifu.UI.WinForms.BunifuTextBox txtMarca;
-        public Bunifu.UI.WinForms.BunifuTextBox txtPrecio;
-        public Bunifu.UI.WinForms.BunifuTextBox txtModelo;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnGuardar;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnGuardar;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnModificar;
     }
 }
