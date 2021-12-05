@@ -17,7 +17,8 @@ namespace ServiPlusApp.View.Agregar
     public partial class Vehiculos : Form
     {
         string Mode;
-
+        public int IdCliente = 0;
+        public int IdVehiculo;
         public Vehiculos(string Mode)
         {
             InitializeComponent();

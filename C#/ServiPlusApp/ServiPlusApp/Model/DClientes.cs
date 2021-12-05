@@ -112,5 +112,190 @@ namespace ServiPlusApp.Model
                 MessageBox.Show("Error: " + e.Message, "Error interno en BD", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public static void Insertar_Cliente(string PrimerNombre, string SegundoNombre, string PrimerApellido, string SegundoApellido,
+                                            string Direccion, string Correo, string Telefono)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
+
+                SqlCommand comando = new SqlCommand()
+                {
+                    CommandText = "Insertar_Cliente",
+                    CommandType = CommandType.StoredProcedure,
+                    Connection = conexion
+                };
+
+                SqlParameter ParPrimerNombre = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "PrimerNombre",
+                    Value = PrimerNombre
+                };
+
+                SqlParameter ParSegundoNombre = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "SegundoNombre",
+                    Value = SegundoNombre
+                };
+
+                SqlParameter ParPrimerApellido = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "PrimerApellido",
+                    Value = PrimerApellido
+                };
+
+                SqlParameter ParSegundoApellido = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "SegundoApellido",
+                    Value = SegundoApellido
+                };
+
+                SqlParameter ParDireccion = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "Direccion",
+                    Value = Direccion
+                };
+
+                SqlParameter ParCorreo = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "Correo",
+                    Value = Correo
+                };
+
+                SqlParameter ParTelefono = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "Telefono",
+                    Value = Telefono
+                };
+
+                comando.Parameters.Add(ParPrimerNombre);
+                comando.Parameters.Add(ParSegundoNombre);
+                comando.Parameters.Add(ParPrimerApellido);
+                comando.Parameters.Add(ParSegundoApellido);
+                comando.Parameters.Add(ParDireccion);
+                comando.Parameters.Add(ParCorreo);
+                comando.Parameters.Add(ParTelefono);
+
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message, "Insertar_Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        public static void Editar_Cliente(int IdCliente, string PrimerNombre, string SegundoNombre, string PrimerApellido, string SegundoApellido,
+                                            string Direccion, string Correo, string Telefono)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Connection.conexion);
+                conexion.Open();
+
+                SqlCommand comando = new SqlCommand()
+                {
+                    CommandText = "Editar_Cliente",
+                    CommandType = CommandType.StoredProcedure,
+                    Connection = conexion
+                };
+
+                SqlParameter ParIdCliente = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.Int,
+                    ParameterName = "IdCliente",
+                    Value = IdCliente
+                };
+
+                SqlParameter ParPrimerNombre = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "PrimerNombre",
+                    Value = PrimerNombre
+                };
+
+                SqlParameter ParSegundoNombre = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "SegundoNombre",
+                    Value = SegundoNombre
+                };
+
+                SqlParameter ParPrimerApellido = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "PrimerApellido",
+                    Value = PrimerApellido
+                };
+
+                SqlParameter ParSegundoApellido = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "SegundoApellido",
+                    Value = SegundoApellido
+                };
+
+                SqlParameter ParDireccion = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "Direccion",
+                    Value = Direccion
+                };
+
+                SqlParameter ParCorreo = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "Correo",
+                    Value = Correo
+                };
+
+                SqlParameter ParTelefono = new SqlParameter()
+                {
+                    SqlDbType = SqlDbType.VarChar,
+                    Size = 50,
+                    ParameterName = "Telefono",
+                    Value = Telefono
+                };
+
+                comando.Parameters.Add(ParIdCliente);
+                comando.Parameters.Add(ParPrimerNombre);
+                comando.Parameters.Add(ParSegundoNombre);
+                comando.Parameters.Add(ParPrimerApellido);
+                comando.Parameters.Add(ParSegundoApellido);
+                comando.Parameters.Add(ParDireccion);
+                comando.Parameters.Add(ParCorreo);
+                comando.Parameters.Add(ParTelefono);
+
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e.Message, "Editar_Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
