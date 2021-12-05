@@ -1,0 +1,6 @@
+
+/C#/ServiPlusApp/.vs/ServiPlusApp/v16
+
+#Limpia archivos Temporales
+/C#/ServiPlusApp/ServiPlusApp/obj/Debug/
+/C#/ServiPlusApp/ServiPlusApp/bin
