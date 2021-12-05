@@ -8,6 +8,6 @@ namespace ServiPlusApp.Model
 {
     public class Connection
     {
-        public static string conexion = "Data Source=DESKTOP-ATV4JNH; Initial Catalog=SERVIPLUS; user=AdminServiPlus; password=ServiPlus2021";
+        public static string conexion = "Data Source=DESKTOP-GTLLPT8\\SQLEXPRESS; Initial Catalog=SERVIPLUS; user=AdminServiPlus; password=serviplus2021";
     }
 }

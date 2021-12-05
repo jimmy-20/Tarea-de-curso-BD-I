@@ -75,74 +75,89 @@ namespace ServiPlusApp.View.Mantenimientos
             cmbEstado.Items.AddRange(Estados.Mantenimiento);
         }
 
-        BunifuDataGridView dgv;
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
             BunifuIconButton btn = (BunifuIconButton)sender;
 
             pnlBuscador.Visible = true;
             pnlDatosMant2.Visible = false;
-            SeparadorBuscador.Visible = true;
+            SeparadorBuscador.LineColor = Color.Crimson;
 
             formulario = null;
             formulario = Fabrica.FormController(dgvBuscador, btn.Tag.ToString());
             formulario.Ver();
 
-            dgv = TablaDestino(btn.Tag.ToString());
+            TablaDestino(btn.Tag.ToString());
         }
+
         bool btnMecEstado = false;
         bool btnCtsEstado = false;
         bool btnVehEstado = false;
         bool btnSerEstado = false;
-        bool btnRepEstado = false;
 
-        private BunifuDataGridView TablaDestino(string dato)
+        private void TablaDestino(string dato)
         {
             btnMecEstado = false;
             btnCtsEstado = false;
             btnVehEstado = false;
             btnSerEstado = false;
-            btnRepEstado = false;
 
             switch (dato)
             {
                 case "Mecanicos":
+                    bunifuTransition1.Show(btnSecundarioBuscarServicios);
+
                     btnMecEstado = true;
-                    return null;
+                    break;
                 case "Clientes":
-                     btnCtsEstado = true;
-                    return null;
+                    bunifuTransition1.Show(btnSecundarioBuscarServicios);
+
+                    btnCtsEstado = true;
+                    break;
                 case "Vehiculos":
-                     btnVehEstado = true;
-                    return null;
-                case "Repuestos":
-                    btnRepEstado = true;
-                    return dgvRepuestos;
+                    bunifuTransition1.Show(btnSecundarioBuscarServicios);
+
+                    btnVehEstado = true;
+                    break;
                 case "Servicios":
-                    btnSerEstado = true;
-                    return dgvServicios;
+                    btnSecundarioBuscarServicios.Visible = false;
+                    break;
                 default:
-                    return null;
+                    break;
             }
         }
-
-       
 
         private void btnClosePanelBuscador_Click(object sender, EventArgs e)
         {
             pnlBuscador.Visible = false;
             pnlDatosMant2.Visible = true;
-            SeparadorBuscador.Visible = false;
+            SeparadorBuscador.LineColor = Color.DodgerBlue;
+
+            btnSecundarioBuscarServicios.Visible = false;
         }
 
-        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             formulario.Buscar(txtSearch.Text);
+
+            if (rbtnTodos.Checked)
+            {
+                rbtnFiltroMostrarPor_Click(rbtnTodos,null);
+            }
+            else if (rbtnHabilitados.Checked)
+            {
+                rbtnFiltroMostrarPor_Click(rbtnHabilitados, null);
+            }
+            else if (rbtnDeshabilitado.Checked)
+            {
+                rbtnFiltroMostrarPor_Click(rbtnDeshabilitado, null);
+            }
+            
         }
 
 
-        int index=0;
+        int index = 0;
         private void dgvBuscador_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             DataGridViewRow row = dgvBuscador.CurrentRow;
@@ -169,29 +184,140 @@ namespace ServiPlusApp.View.Mantenimientos
             }
             else if (btnSerEstado)
             {
-                index = dgv.Rows.Add();
+                index = dgvServicios.Rows.Add();
+
                 foreach (DataGridViewColumn column in dgvBuscador.Columns)
                 {
-                    dgv[column.Index, index].Value = dgvBuscador[column.Index, row.Index].Value;
+                    if (dgvBuscador.Columns[column.Index].Name.Equals("Estado"))
+                    {
+                        continue;
+                    }
+                    dgvServicios[column.Index, index].Value = dgvBuscador[column.Index, row.Index].Value;
                 }
-
-            }
-            else if (btnRepEstado)
-            {
-                index = dgv.Rows.Add();
-                foreach (DataGridViewColumn column in dgvBuscador.Columns)
-                {
-                    dgv[column.Index, index].Value = dgvBuscador[column.Index, row.Index].Value;
-                }
-
             }
 
             btnClosePanelBuscador_Click(null, null);
+
         }
 
         private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbEstado.ForeColor = Color.Black;
+        }
+
+        private void dgvServicios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCell celda = dgvServicios.CurrentCell;
+
+            if (celda.OwningColumn.Name == "SeQuitar")
+            {
+                dgvServicios.Rows.Remove(celda.OwningRow);
+            }
+        }
+
+        private void btnEliminarServicio_Click(object sender, EventArgs e)
+        {
+            if (dgvServicios.CurrentRow == null)
+            {
+                return;
+            }
+
+            DataGridViewRow row = dgvServicios.CurrentRow;
+
+            dgvServicios.Rows.Remove(row);
+        }
+
+        private void VaciarAsignaciones()
+        {
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
+        }
+
+        private void btnVaciarServicios_Click(object sender, EventArgs e)
+        {
+            dgvServicios.Rows.Clear();
+        }
+
+        private void btnSecundarioBuscarServicios_Click(object sender, EventArgs e)
+        {
+            btnBuscar_Click(btnBuscarServicio, null);
+        }
+
+        private void rbtnFiltroMostrarPor_Click(object sender, EventArgs e)
+        {
+            BunifuRadioButton rbtn = (BunifuRadioButton)sender;
+
+            switch (rbtn.Tag)
+            {
+                case "Todos":
+                    foreach (DataGridViewRow row in dgvBuscador.Rows)
+                    {
+                        dgvBuscador.Rows[row.Index].Visible = true;
+                    }
+                    break;
+                case "Habilitado":
+                    foreach (DataGridViewRow row in dgvBuscador.Rows)
+                    {
+                        if (dgvBuscador[dgvBuscador.ColumnCount - 1, row.Index].Value.Equals(rbtn.Tag))
+                        {
+                            dgvBuscador.Rows[row.Index].Visible = true;
+                        }
+                        else
+                        {
+                            dgvBuscador.Rows[row.Index].Visible = false;
+                        }
+                    }
+                    break;
+                case "Deshabilitado":
+                    foreach (DataGridViewRow row in dgvBuscador.Rows)
+                    {
+                        if (dgvBuscador[dgvBuscador.ColumnCount - 1, row.Index].Value.Equals(rbtn.Tag))
+                        {
+                            dgvBuscador.Rows[row.Index].Visible = true;
+                        }
+                        else
+                        {
+                            dgvBuscador.Rows[row.Index].Visible = false;
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void lblFiltroTodos_Click(object sender, EventArgs e)
+        {
+            Label lbl = (Label)sender;
+
+            rbtnTodos.Checked = false;
+            rbtnHabilitados.Checked = false;
+            rbtnDeshabilitado.Checked = false;
+
+            switch (lbl.Tag)
+            {
+                case "Todos":
+                    rbtnTodos.Checked = true;
+                    rbtnFiltroMostrarPor_Click(rbtnTodos, null);
+                    break;
+                case "Habilitado":
+                    rbtnHabilitados.Checked = true;
+                    rbtnFiltroMostrarPor_Click(rbtnTodos, null);
+                    break;
+                case "Deshabilitado":
+                    rbtnDeshabilitado.Checked = true;
+                    rbtnFiltroMostrarPor_Click(rbtnTodos, null);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

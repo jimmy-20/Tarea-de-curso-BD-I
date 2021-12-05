@@ -26,7 +26,7 @@ insert into Colaboradores(PrimerNombre,SegundoNombre,PrimerApellido,SegundoApell
 
 Declare @IdColaborador int
 set @IdColaborador = (select MAX(IdColaborador) from Colaboradores)
-insert into Usuarios(IdColaborador,Username,Contraseña,Rol,Estado) 
+insert into Usuarios(IdColaborador,Usuario,Contraseña,Rol,Estado) 
 values 
 (@IdColaborador,@username,ENCRYPTBYPASSPHRASE(@contraseña,@contraseña),@rol,'Habilitado')
 
@@ -38,15 +38,15 @@ CREATE PROCEDURE Validar_Acceso
 @contraseña varchar(50)
 
 as
-if exists (Select username from Usuarios 
+if exists (Select Usuario from Usuarios 
 			where cast(DECRYPTBYPASSPHRASE(@contraseña,Contraseña) as  varchar(100)) = @contraseña
-			and username = @usuario and Estado = 'Habilitado')
+			and Usuario = @usuario and Estado = 'Habilitado')
 			
-Select 'Acceso Exitoso' as Resultado,c.PrimerNombre+' '+c.SegundoNombre+' '+c.PrimerApellido+' '+c.SegundoApellido as Usuario, u.Username,Rol,c.Especialidad from Usuarios u
+Select 'Acceso Exitoso' as Resultado,c.PrimerNombre+' '+c.SegundoNombre+' '+c.PrimerApellido+' '+c.SegundoApellido as Usuario, u.Usuario,Rol,c.Especialidad from Usuarios u
 inner join Colaboradores c
 on c.IdColaborador = u.IdColaborador
 where cast(DECRYPTBYPASSPHRASE(@contraseña,Contraseña) as  varchar(100)) = @contraseña
-and username = @usuario and Estado = 'Habilitado'
+and Usuario = @usuario and Estado = 'Habilitado'
 
 else
 
@@ -57,7 +57,7 @@ CREATE PROCEDURE Validar_Creacion_Usuario
 @usuario varchar(50)
 
 as
-if exists (Select username from Usuarios where username = @usuario)
+if exists (Select Usuario from Usuarios where Usuario = @usuario)
 Select 'Acceso Denegado' as Resultado
 else
 Select 'Acceso Exitoso' as Resultado
@@ -67,8 +67,8 @@ CREATE procedure Buscar_Usuario
 @dato varchar(100)
 as
 Select
-c.PrimerNombre as Nombre,
-c.PrimerApellido as Apellido,
+c.PrimerNombre+' '+c.SegundoNombre as Nombres,
+c.PrimerApellido+' '+c.SegundoApellido as Apellidos,
 Especialidad,
 Telefono,
 Rol,
@@ -76,8 +76,8 @@ Estado
 from Usuarios u
 inner join Colaboradores c
 on c.IdColaborador = u.IdColaborador
-where c.PrimerNombre like @dato + '%' 
-or c.PrimerApellido like @dato + '%' 
+where c.PrimerNombre+' '+c.SegundoNombre  like  '%' +@dato + '%' 
+or c.PrimerApellido+' '+c.SegundoApellido like  '%' +@dato + '%' 
 or Especialidad like @dato + '%' 
 or Telefono like @dato + '%' 
 or Rol like @dato + '%' 

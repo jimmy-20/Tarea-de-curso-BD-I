@@ -31,6 +31,7 @@ CREATE TABLE Servicios(
 IdServicio int primary key identity(1,1) not null,
 Descripcion varchar(50) not null,
 Precio decimal not null,
+Descuento decimal not null, --descuento en inventario
 TipoMantenimiento varchar(50) not null,
 Estado varchar(20) not null
 )
@@ -42,6 +43,7 @@ Descripcion varchar(50) not null,
 Marca varchar(50) not null,
 Modelo varchar(50) not null,
 Precio decimal not null,
+Descuento decimal not null, --descuento en  inventario
 Cantidad int not null,
 Estado varchar(20)
 )
@@ -78,6 +80,7 @@ IdMantenimiento int foreign key references Mantenimientos(IdMantenimiento) not n
 IdMecanico int foreign key references Mecanicos(IdMecanico),
 IdServicio int foreign key references  Servicios(IdServicio) not null,
 Precio decimal not null,
+Descuento decimal not null, --descuento del servicio aplicado
 Estado varchar(20)
 )
 GO
@@ -86,7 +89,8 @@ CREATE TABLE Detalle_Repuestos(
 IdDetalleMantenimiento int foreign key references Detalle_Mantenimientos(IdDetalleMantenimiento) not null,
 IdRepuesto int foreign key references Repuestos(IdRepuesto),
 Cantidad int not null,
-Precio decimal not null
+Precio decimal not null,
+Descuento decimal not null -- descuento aplicado
 )
 
 --Tabla de colaboradores a los cuales les pertenece un usuario

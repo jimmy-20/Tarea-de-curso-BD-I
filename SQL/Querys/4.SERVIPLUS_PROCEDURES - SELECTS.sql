@@ -50,6 +50,7 @@ Select
 IdServicio as IdServicio,
 Descripcion as Descripcion,
 Precio as Precio,
+Descuento as Descuento,
 TipoMantenimiento as [Tipon de Mantenimiento],
 Estado as Estado
 from Servicios
@@ -86,6 +87,7 @@ c.PrimerNombre + ' ' + c.SegundoNombre+ ' ' + c.PrimerApellido + ' ' + c.Segundo
 v.Marca+', '+ v.Modelo +', '+ CONVERT(nvarchar(50),YEAR(v.Año),0) as [Vehiculo],
 s.Descripcion as Servicio,
 s.Precio as [Precio del servicio],
+dm.Descuento as [Descuento del servicio],
 s.TipoMantenimiento as [Tipo de Mantenimiento],
 r.Marca+', '+r.Modelo  as Repuesto,
 r.Descripcion [Repuesto],
@@ -96,7 +98,7 @@ m.Estado as [Estado del vehiculo],
 FechaIngreso as [Fecha de ingreso],
 FechaSalida as [Fecha de salida],
 me.PrimerNombre + ' ' + me.SegundoNombre+ ' ' + me.PrimerApellido + ' ' + me.SegundoApellido as [Mecanico a cargo],
-ROUND(((dr.Precio*dr.Cantidad)-(dr.Cantidad*dr.Descuento))+(s.Precio),2) as [Costo Total]
+ROUND(((dr.Precio*dr.Cantidad)-(dr.Cantidad*dr.Descuento))+(dm.Precio-dm.Descuento),2) as [Costo Total]
 from Mantenimientos m
 inner join Vehiculos v 
 on v.IdVehiculo = m.IdVehiculo
@@ -184,6 +186,7 @@ SELECT
 FROM
 Repuestos
 WHERE Descripcion like @dato + '%'
+	  or Descuento like @dato +'%'
       or Marca like @dato + '%'
 	  or Modelo like @dato + '%'
 
@@ -197,11 +200,13 @@ Select
 IdServicio as IdServicio,
 Descripcion as Descripcion,
 Precio as Precio,
+Descuento as Descuento,
 TipoMantenimiento as TipoMantenimiento,
 Estado as Estado
 from Servicios
 where Descripcion like @dato + '%' 
 	  or Precio like @dato + '%' 
+	  or Descuento like @dato +'%'
 	  or TipoMantenimiento like @dato + '%'
 
 --VER P.A
@@ -216,6 +221,7 @@ c.PrimerNombre + ' ' + c.SegundoNombre+ ' ' + c.PrimerApellido + ' ' + c.Segundo
 v.Marca+', '+ v.Modelo +', '+ CONVERT(nvarchar(50),YEAR(v.Año),0) as [Vehiculo],
 s.Descripcion as Servicio,
 s.Precio as [Precio del servicio],
+dm.Descuento as [Descuento del servicio],
 s.TipoMantenimiento as [Tipo de Mantenimiento],
 r.Marca+', '+r.Modelo  as Repuesto,
 r.Descripcion [Repuesto],
@@ -226,7 +232,7 @@ m.Estado as [Estado del vehiculo],
 FechaIngreso as [Fecha de ingreso],
 FechaSalida as [Fecha de salida],
 me.PrimerNombre + ' ' + me.SegundoNombre+ ' ' + me.PrimerApellido + ' ' + me.SegundoApellido as [Mecanico a cargo],
-ROUND(((dr.Precio*dr.Cantidad)-(dr.Cantidad*dr.Descuento))+(s.Precio),2) as [Costo Total]
+ROUND(((dr.Precio*dr.Cantidad)-(dr.Cantidad*dr.Descuento))+(dm.Precio-dm.Descuento),2) as [Costo Total]
 from Mantenimientos m
 inner join Vehiculos v 
 on v.IdVehiculo = m.IdVehiculo
@@ -245,7 +251,8 @@ on r.IdRepuesto = dr.IdRepuesto
 	where (c.PrimerNombre + ' ' + c.SegundoNombre+ ' ' + c.PrimerApellido + ' ' + c.SegundoApellido) like '%'+@dato + '%' 
 	or (v.Marca+', '+ v.Modelo +', '+ CONVERT(nvarchar(50),YEAR(v.Año),0)) like @dato + '%' 
 	or s.Descripcion like @dato + '%'
-	or s.Precio like @dato + '%' 
+	or dm.Precio like @dato + '%' 
+	or dm.Descuento like @dato + '%' 
 	or s.TipoMantenimiento like @dato + '%' 
 	or (r.Marca+', '+r.Modelo ) like @dato + '%' 
 	or r.Descripcion like @dato + '%' 
@@ -256,7 +263,7 @@ on r.IdRepuesto = dr.IdRepuesto
 	or FechaIngreso  like @dato + '%' 
 	or FechaSalida like @dato + '%' 
 	or (me.PrimerNombre+' '+me.PrimerApellido) like @dato + '%' 
-	or ROUND(((dr.Precio*dr.Cantidad)-(dr.Cantidad*dr.Descuento))+(s.Precio),2) like @dato + '%' 
+	or ROUND(((dr.Precio*dr.Cantidad)-(dr.Cantidad*dr.Descuento))+(dm.Precio-dm.Descuento),2) like @dato + '%' 
 
 --Procedimiento almacenado para cambiar el estado en las tablas
 

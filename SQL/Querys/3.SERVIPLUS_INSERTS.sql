@@ -22,12 +22,12 @@ Insert into Mecanicos values ('Ebner','Alexis','Ponce','Ortiz','Mantenimiento',5
 GO
 
 --- insertando datos en la tabla repuesto 
-Insert into Repuestos values ('Bandas del motor','Honda','SS101',100,3)
-Insert into Repuestos values ('Cigüeñales','KIA','QWA22',300,4)
-Insert into Repuestos values ('Pistones','Yamaha','AQW2',25,21)
-Insert into Repuestos values ('Sistema de aire acondicionado','BOSCH','SLA1',590,4)
-Insert into Repuestos values ('Bateria','ACDelco','QWS2',850,9)
-Insert into Repuestos values ('Caja de cambio','VALEO','SOCA1',50,5)
+Insert into Repuestos values ('Bandas del motor','Honda','SS101',100,0,3,'Habilitado')
+Insert into Repuestos values ('Cigüeñales','KIA','QWA22',300,0,4,'Habilitado')
+Insert into Repuestos values ('Pistones','Yamaha','AQW2',25,0,21,'Habilitado')
+Insert into Repuestos values ('Sistema de aire acondicionado','BOSCH','SLA1',590,0,4,'Habilitado')
+Insert into Repuestos values ('Bateria','ACDelco','QWS2',850,0,9,'Habilitado')
+Insert into Repuestos values ('Caja de cambio','VALEO','SOCA1',50,0,5,'Habilitado')
 
 GO
 ---insertando datos en la tabla vehículo
@@ -43,12 +43,12 @@ Insert into Vehiculos values (7,'Opel','R50','2020')
 GO
 
 ---insertando datos en la tabla servicio
-Insert into Servicios values ('Cambio de aceite',140,'ORDINARIO','Habilitado')
-Insert into Servicios values ('Cambio de Bandas del Motor',180,'EXTRAORDINARIO','Habilitado')
-Insert into Servicios values ('Mantenimiento 10000 km',1800,'ORDINARIO','Habilitado')
-Insert into Servicios values ('Mantenimiento 5000 km ',1500,'ORDINARIO','Habilitado')
-Insert into Servicios values ('Revisión del Sistema Eléctrico',400,'EXTRAORDINARIO','Habilitado')
-Insert into Servicios values ('Reparación de aire acondicionado',2000,'EXTRAORDINARIO','Habilitado')
+Insert into Servicios values ('Cambio de aceite',140,0,'ORDINARIO','Habilitado')
+Insert into Servicios values ('Cambio de Bandas del Motor',180,0,'EXTRAORDINARIO','Habilitado')
+Insert into Servicios values ('Mantenimiento 10000 km',1800,0,'ORDINARIO','Habilitado')
+Insert into Servicios values ('Mantenimiento 5000 km ',1500,0,'ORDINARIO','Habilitado')
+Insert into Servicios values ('Revisión del Sistema Eléctrico',400,0,'EXTRAORDINARIO','Habilitado')
+Insert into Servicios values ('Reparación de aire acondicionado',2000,0,'EXTRAORDINARIO','Habilitado')
 
 GO
 

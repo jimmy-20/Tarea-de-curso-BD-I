@@ -39,4 +39,5 @@ SET @TOTAL_Repuestos = (
 						WHERE IdDetalleMantenimiento = @IdDetalleMantenimiento
 						
                        )
+END
 
