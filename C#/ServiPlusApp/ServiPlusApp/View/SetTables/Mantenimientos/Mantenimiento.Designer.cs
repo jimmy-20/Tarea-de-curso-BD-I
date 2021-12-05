@@ -2656,6 +2656,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.lblFiltroTodos.TabIndex = 106;
             this.lblFiltroTodos.Tag = "Todos";
             this.lblFiltroTodos.Text = "Todos";
+            this.lblFiltroTodos.Click += new System.EventHandler(this.lblFiltro_Click);
             // 
             // lblFiltroEstado1
             // 
@@ -2669,6 +2670,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.lblFiltroEstado1.TabIndex = 105;
             this.lblFiltroEstado1.Tag = "Habilitado";
             this.lblFiltroEstado1.Text = "Habilitados";
+            this.lblFiltroEstado1.Click += new System.EventHandler(this.lblFiltro_Click);
             // 
             // lblFiltroEstado2
             // 
@@ -2682,6 +2684,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.lblFiltroEstado2.TabIndex = 104;
             this.lblFiltroEstado2.Tag = "Deshabilitado";
             this.lblFiltroEstado2.Text = "Deshabilitados";
+            this.lblFiltroEstado2.Click += new System.EventHandler(this.lblFiltro_Click);
             // 
             // label11
             // 
