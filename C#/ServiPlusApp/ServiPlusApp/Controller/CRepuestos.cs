@@ -1,4 +1,5 @@
-﻿using ServiPlusApp.Controller.Factory;
+﻿using Bunifu.UI.WinForms;
+using ServiPlusApp.Controller.Factory;
 using ServiPlusApp.Model;
 using ServiPlusApp.View.Set_Tables.Repuestos;
 using ServiPlusApp.View.Tablas;
@@ -8,124 +9,39 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ServiPlusApp.Controller
 {
     public class CRepuestos : IAcciones 
     {
-        private ShowTable FrmRepuesto;
-        private Repuesto repuesto;
-        public CRepuestos(ShowTable FrmRepuesto)
+        private BunifuDataGridView TablaRepuestos;
+
+        public CRepuestos(BunifuDataGridView TablaRepuestos)
         {
-            this.FrmRepuesto = FrmRepuesto;
+            this.TablaRepuestos = TablaRepuestos;
         }
 
         public void Ver()
         {
-            FrmRepuesto.DgvTablas.DataSource = DRepuestos.Mostrar_Repuestos();
-            FrmRepuesto.DgvTablas.Columns[0].Visible = false;
+            TablaRepuestos.DataSource = DRepuestos.Mostrar_Repuestos();
+            TablaRepuestos.Columns[0].Visible = false;
         }
 
         public void Agregar()
         {
-           repuesto = new Repuesto("Nuevo");
-            repuesto.btnGuardar.Click += new EventHandler(Insertar_Repuesto);
-            Ver();
+            Repuesto repuesto = new Repuesto("Nuevo");
             repuesto.ShowDialog();
         }
-
-        private void Insertar_Repuesto(object sender, EventArgs e)
-        {
-            if (SiCamposVacios() is false)
-                return;
-
-           
-            string Descripcion = repuesto.txtDescripcion.Text;
-            string Marca = repuesto.txtMarca.Text;
-            string Modelo = repuesto.txtModelo.Text;
-            decimal Precio = Convert.ToDecimal(repuesto.txtPrecio.Text);
-            int Cantidad = Convert.ToInt32(repuesto.txtCantidad.Text);
-          
-
-           
-
-            DRepuestos.Insertar_Repuesto(Descripcion, Marca, Modelo, Precio, Cantidad);
-
-        }
-        private bool SiCamposVacios()
-        {
-            if (repuesto.txtDescripcion.Text == "" || repuesto.txtMarca.Text == "" || repuesto.txtModelo.Text == "" || repuesto.txtPrecio.Text == "" || repuesto.txtCantidad.Text == "")
-            {
-                MessageBox.Show("No puede estar en blanco", "Campos Obligatorios",
-                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return false;
-            }
-
-            return true;
-        }
-
-       
 
         public void Editar()
         {
-            if (Fabrica.SiFilaSeleccionada(FrmRepuesto.DgvTablas) is false)
-            {
-                return;
-            }
-
-            repuesto = new Repuesto("Modificar");
-
-            DataGridViewRow row = FrmRepuesto.DgvTablas.SelectedRows[0];
-
-
-            repuesto.txtDescripcion.Text = row.Cells[1].Value.ToString();
-            repuesto.txtMarca.Text = row.Cells[2].Value.ToString();
-            repuesto.txtModelo.Text = row.Cells[3].Value.ToString();
-            repuesto.txtPrecio.Text = row.Cells[4].Value.ToString();
-            repuesto.txtCantidad.Text = row.Cells[5].Value.ToString();
-           
-
-            repuesto.btnModificar.Click += new EventHandler(Editar_Mecanico);
+            Repuesto repuesto = new Repuesto("Modificar");
             repuesto.ShowDialog();
-        }
-
-        private void Editar_Mecanico(object sender, EventArgs e)
-        {
-            if (SiCamposVacios() is false)
-            {
-                return;
-            }
-
-            
-
-            int IdRepuesto = Convert.ToInt32(FrmRepuesto.DgvTablas.SelectedRows[0].Cells[0].Value);
-            if (SiCamposVacios() is false)
-                return;
-
-
-            string Descripcion = repuesto.txtDescripcion.Text;
-            string Marca = repuesto.txtMarca.Text;
-            string Modelo = repuesto.txtModelo.Text;
-            decimal Precio = Convert.ToDecimal(repuesto.txtPrecio.Text);
-            int Cantidad = Convert.ToInt32(repuesto.txtCantidad.Text);
-
-            DRepuestos.Editar_Repuesto(IdRepuesto, Descripcion, Marca, Modelo, Precio, Cantidad);
-            Ver();
         }
 
         public void Estado()
         {
-            if (Fabrica.SiFilaSeleccionada(FrmRepuesto.DgvTablas) == false)
-            {
-                return;
-            }
-
-            DataGridViewRow row = FrmRepuesto.DgvTablas.SelectedRows[0];
-
-            int id = Convert.ToInt32(row.Cells[0].Value);
-            DRepuestos.Cambiar_Estado_Repuesto(id);
-            Ver();
+            throw new NotImplementedException();
         }
 
         public void Guardar()
@@ -140,7 +56,7 @@ namespace ServiPlusApp.Controller
 
         public void Buscar(string text)
         {
-            FrmRepuesto.DgvTablas.DataSource = DRepuestos.Buscar_Repuesto(text);
+            TablaRepuestos.DataSource = DRepuestos.Buscar_Repuesto(text);
         }
 
         public static DataTable Table_Repuestos()

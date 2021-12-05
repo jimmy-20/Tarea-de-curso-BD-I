@@ -1,4 +1,5 @@
-﻿using ServiPlusApp.Controller.Factory;
+﻿using Bunifu.UI.WinForms;
+using ServiPlusApp.Controller.Factory;
 using ServiPlusApp.Model;
 using ServiPlusApp.View.Set_Tables.Servicios;
 using ServiPlusApp.View.Tablas;
@@ -14,11 +15,10 @@ namespace ServiPlusApp.Controller
 {
     public class CServicios : IAcciones 
     {
-        private ShowTable FrmServicio;
-        private Servicio servicio;
-        public CServicios(ShowTable FrmServicio)
+        private BunifuDataGridView TablaServicios;
+        public CServicios(BunifuDataGridView TablaServicios)
         {
-            this.FrmServicio = FrmServicio;
+            this.TablaServicios = TablaServicios;
         }
 
         public static DataTable Mostrar_Servicios()
@@ -33,106 +33,47 @@ namespace ServiPlusApp.Controller
 
         public void Ver()
         {
-            FrmServicio.DgvTablas.DataSource = DServicios.Mostrar_Servicios();
-            FrmServicio.DgvTablas.Columns[0].Visible = false;
+            TablaServicios.DataSource = DServicios.Mostrar_Servicios();
+            TablaServicios.Columns[0].Visible = false;
         }
 
         public void Agregar()
         {
-            this.servicio = new Servicio("Nuevo");
-            servicio.btnGuardar.Click += new EventHandler(Insertar_Servicio);
+            Servicio servicio = new Servicio("Nuevo");
             servicio.ShowDialog();
-        }
-
-        private void Insertar_Servicio(object sender, EventArgs e)
-        {
-            if (SiCamposVacios() is false)
-            {
-                return;
-            }
-            string Descripcion = servicio.txtDescripcion.Texts;
-            decimal Precio = Convert.ToDecimal(servicio.txtPrecio.Texts);
-            string Tipo = servicio.cmbTipoDeMatenimiento.Text;
-
-            DServicios.Insertar_Servicio(Descripcion,Precio,Tipo);
         }
 
         public void Editar()
         {
-
-            if (Fabrica.SiFilaSeleccionada(FrmServicio.DgvTablas) is false)
-            {
-                return;
-            }
-            this.servicio = new Servicio("Modificar");
-
-            DataGridViewRow row = FrmServicio.DgvTablas.SelectedRows[0];
-
-            this.servicio.txtDescripcion.Texts = row.Cells[1].Value.ToString();
-            this.servicio.txtPrecio.Texts = row.Cells[2].Value.ToString() ;
-            this.servicio.cmbTipoDeMatenimiento.Text = row.Cells[3].Value.ToString();
-            servicio.btnModificar.Click += new EventHandler(Editar_Servicio);
-
+            Servicio servicio = new Servicio("Modificar");
             servicio.ShowDialog();
-        }
-
-        private void Editar_Servicio(object sender, EventArgs e)
-        {
-            if (SiCamposVacios() is false)
-            {
-                return;
-            }
-
-            int IdServicio = Convert.ToInt32(FrmServicio.DgvTablas.SelectedRows[0].Cells[0].Value);
-            string Descripcion = servicio.txtDescripcion.Texts;
-            decimal Precio = Convert.ToDecimal(servicio.txtPrecio.Texts);
-            string Tipo = servicio.cmbTipoDeMatenimiento.Text;
-
-            MessageBox.Show(IdServicio.ToString(), " Dato");
-            MessageBox.Show(Descripcion, "Dato");
-            MessageBox.Show(Precio.ToString(), "Dato");
-            MessageBox.Show(Tipo, "Dato");
-
-            DServicios.Editar_Servicio(IdServicio,Descripcion,Precio,Tipo);
         }
 
         public void Estado()
         {
-            if (Fabrica.SiFilaSeleccionada(FrmServicio.DgvTablas) == false)
+            if (Fabrica.SiFilaSeleccionada(TablaServicios) == false)
             {
                 return;
             }
 
-            int id = Convert.ToInt32(FrmServicio.DgvTablas.SelectedRows[0].Cells[0].Value);
+            int id = Convert.ToInt32(TablaServicios.SelectedRows[0].Cells[0].Value);
             DServicios.Cambiar_Estado_Servicio(id);
             Ver();
         }
 
         public void Guardar()
         {
-            
+            throw new NotImplementedException();
         }
 
         public void Cancelar()
         {
-            
+            throw new NotImplementedException();
         }
 
         public void Buscar(string text)
         {
-            FrmServicio.DgvTablas.DataSource = DServicios.Buscar_Servicio(text);
-        }
-
-        private bool SiCamposVacios()
-        {
-            if (servicio.txtDescripcion.Texts == "" || servicio.txtPrecio.Texts == "")
-            {
-                MessageBox.Show("Hay campos vacios","Campos Obligatorios",
-                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            
-            return true;
+            TablaServicios.DataSource = DServicios.Buscar_Servicio(text);
         }
     }
 }

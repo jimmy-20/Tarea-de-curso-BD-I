@@ -17,8 +17,6 @@ namespace ServiPlusApp.View.Agregar
     public partial class Vehiculos : Form
     {
         string Mode;
-        public int IdCliente = 0;
-        public int IdVehiculo;
 
         public Vehiculos(string Mode)
         {
@@ -125,7 +123,6 @@ namespace ServiPlusApp.View.Agregar
                 return;
             }
             dgvClientes.DataSource = CClientes.Buscar_Cliente(txtSearch.Text);
-            dgvClientes.Columns[0].Visible = false;
         }
 
         #endregion
@@ -136,15 +133,12 @@ namespace ServiPlusApp.View.Agregar
             DataGridViewRow dr = null;
             if (dgvClientes.SelectedRows.Count > 0)
             {
-                dr = dgvClientes.SelectedRows[0];
+                dr = dgvClientes.CurrentRow;
             }
             else
             {
                 MessageBox.Show("Debe seleccionar una fila");
             }
-
-            IdCliente = Convert.ToInt32(dr.Cells[0].Value);
-
             if (txtSearch.Text == "")
             {
                 txtNombres.Texts = dr.Cells[1].Value.ToString();
@@ -156,12 +150,12 @@ namespace ServiPlusApp.View.Agregar
             }
             else
             {
-                txtNombres.Texts = dr.Cells[1].Value.ToString();
-                txtApellidos.Texts = dr.Cells[2].Value.ToString();
-                txtTelefono.Texts = dr.Cells[3].Value.ToString();
-                txtCorreo.Texts = dr.Cells[5].Value.ToString();
-                txtDireccion.Texts = dr.Cells[4].Value.ToString();
-                txtEstado.Texts = dr.Cells[6].Value.ToString();
+                txtNombres.Texts = dr.Cells[0].Value.ToString();
+                txtApellidos.Texts = dr.Cells[1].Value.ToString();
+                txtTelefono.Texts = dr.Cells[2].Value.ToString();
+                txtCorreo.Texts = dr.Cells[4].Value.ToString();
+                txtDireccion.Texts = dr.Cells[3].Value.ToString();
+                txtEstado.Texts = dr.Cells[5].Value.ToString();
             }
          
 
