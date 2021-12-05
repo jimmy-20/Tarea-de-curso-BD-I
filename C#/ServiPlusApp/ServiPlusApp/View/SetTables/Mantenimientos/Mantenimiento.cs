@@ -233,18 +233,16 @@ namespace ServiPlusApp.View.Mantenimientos
 
         private void EliminarAsignacionDeServicio(DataGridViewRow row)
         {
-            dgvServicios.Rows.Remove(row); //Elimino la fila
+            dgvServicios.Rows.Remove(row);
 
 
-            lblCantServicios.Text = dgvServicios.RowCount.ToString(); //Actualizo el contador de servicios
+            lblCantServicios.Text = dgvServicios.RowCount.ToString();
 
             lblSubtotalServicios.Text = (Convert.ToInt32(lblSubtotalServicios.Text) - Convert.ToInt32(row.Cells[2].Value.ToString())).ToString();
            
             lblDescuentoTotalServicios.Text = (Convert.ToInt32(lblDescuentoTotalServicios.Text) - Convert.ToInt32(row.Cells[3].Value.ToString())).ToString();
            
             lblTotalServicios.Text = (Convert.ToInt32(lblSubtotalServicios.Text) - Convert.ToInt32(lblDescuentoTotalServicios.Text)).ToString();
-
-           
         }
 
         private void btnVaciarServicios_Click(object sender, EventArgs e)
@@ -283,6 +281,7 @@ namespace ServiPlusApp.View.Mantenimientos
                         }
                         else
                         {
+                            this.dgvBuscador.CurrentCell = null;
                             dgvBuscador.Rows[row.Index].Visible = false;
                         }
                     }
@@ -296,6 +295,7 @@ namespace ServiPlusApp.View.Mantenimientos
                         }
                         else
                         {
+                            this.dgvBuscador.CurrentCell = null;
                             dgvBuscador.Rows[row.Index].Visible = false;
                         }
                     }

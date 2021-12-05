@@ -2791,6 +2791,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.rbtnHabilitados.TabIndex = 3;
             this.rbtnHabilitados.Tag = "Habilitado";
             this.rbtnHabilitados.Text = null;
+            this.rbtnHabilitados.Click += new System.EventHandler(this.rbtnFiltroMostrarPor_Click);
             // 
             // rbtnDeshabilitado
             // 
@@ -2812,6 +2813,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.rbtnDeshabilitado.TabIndex = 2;
             this.rbtnDeshabilitado.Tag = "Deshabilitado";
             this.rbtnDeshabilitado.Text = null;
+            this.rbtnDeshabilitado.Click += new System.EventHandler(this.rbtnFiltroMostrarPor_Click);
             // 
             // rbtnTodos
             // 
@@ -2833,6 +2835,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.rbtnTodos.TabIndex = 0;
             this.rbtnTodos.Tag = "Todos";
             this.rbtnTodos.Text = null;
+            this.rbtnTodos.Click += new System.EventHandler(this.rbtnFiltroMostrarPor_Click);
             // 
             // bunifuSeparator3
             // 
@@ -2948,8 +2951,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnBarraSuperior);
             this.Controls.Add(this.pnlDatosMant1);
-            this.Controls.Add(this.pnlDatosMant2);
             this.Controls.Add(this.pnlBuscador);
+            this.Controls.Add(this.pnlDatosMant2);
             this.bunifuTransition1.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
