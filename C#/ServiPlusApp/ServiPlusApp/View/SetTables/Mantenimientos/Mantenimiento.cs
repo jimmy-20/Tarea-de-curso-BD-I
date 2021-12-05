@@ -122,6 +122,7 @@ namespace ServiPlusApp.View.Mantenimientos
                     break;
                 case "Servicios":
                     btnSecundarioBuscarServicios.Visible = false;
+                    btnSerEstado = true;
                     break;
                 default:
                     break;
@@ -143,7 +144,7 @@ namespace ServiPlusApp.View.Mantenimientos
 
             if (rbtnTodos.Checked)
             {
-                rbtnFiltroMostrarPor_Click(rbtnTodos,null);
+                rbtnFiltroMostrarPor_Click(rbtnTodos, null);
             }
             else if (rbtnHabilitados.Checked)
             {
@@ -153,7 +154,7 @@ namespace ServiPlusApp.View.Mantenimientos
             {
                 rbtnFiltroMostrarPor_Click(rbtnDeshabilitado, null);
             }
-            
+
         }
 
 
@@ -194,6 +195,11 @@ namespace ServiPlusApp.View.Mantenimientos
                     }
                     dgvServicios[column.Index, index].Value = dgvBuscador[column.Index, row.Index].Value;
                 }
+
+                lblCantServicios.Text = dgvServicios.RowCount.ToString(); //Actualizo el contador
+                lblSubtotalServicios.Text = (Convert.ToInt32(dgvServicios[2, dgvServicios.RowCount - 1].Value.ToString())+ Convert.ToInt32(lblSubtotalServicios.Text.ToString())).ToString();
+                lblDescuentoTotalServicios.Text = (Convert.ToInt32(dgvServicios[3, dgvServicios.RowCount - 1].Value) + Convert.ToInt32(lblDescuentoTotalServicios.Text.ToString())).ToString();
+                lblTotalServicios.Text = (Convert.ToInt32(lblSubtotalServicios.Text) - Convert.ToInt32(lblDescuentoTotalServicios.Text)).ToString();
             }
 
             btnClosePanelBuscador_Click(null, null);
@@ -211,7 +217,7 @@ namespace ServiPlusApp.View.Mantenimientos
 
             if (celda.OwningColumn.Name == "SeQuitar")
             {
-                dgvServicios.Rows.Remove(celda.OwningRow);
+                EliminarAsignacionDeServicio(celda.OwningRow);
             }
         }
 
@@ -222,27 +228,33 @@ namespace ServiPlusApp.View.Mantenimientos
                 return;
             }
 
-            DataGridViewRow row = dgvServicios.CurrentRow;
-
-            dgvServicios.Rows.Remove(row);
+            EliminarAsignacionDeServicio(dgvServicios.CurrentRow);
         }
 
-        private void VaciarAsignaciones()
+        private void EliminarAsignacionDeServicio(DataGridViewRow row)
         {
-            try
-            {
+            dgvServicios.Rows.Remove(row); //Elimino la fila
 
-            }
-            catch (Exception)
-            {
-                return;
-            }
 
+            lblCantServicios.Text = dgvServicios.RowCount.ToString(); //Actualizo el contador de servicios
+
+            lblSubtotalServicios.Text = (Convert.ToInt32(lblSubtotalServicios.Text) - Convert.ToInt32(row.Cells[2].Value.ToString())).ToString();
+           
+            lblDescuentoTotalServicios.Text = (Convert.ToInt32(lblDescuentoTotalServicios.Text) - Convert.ToInt32(row.Cells[3].Value.ToString())).ToString();
+           
+            lblTotalServicios.Text = (Convert.ToInt32(lblSubtotalServicios.Text) - Convert.ToInt32(lblDescuentoTotalServicios.Text)).ToString();
+
+           
         }
 
         private void btnVaciarServicios_Click(object sender, EventArgs e)
         {
             dgvServicios.Rows.Clear();
+
+            lblCantServicios.Text = "0";
+            lblSubtotalServicios.Text = "0";
+            lblDescuentoTotalServicios.Text = "0";
+            lblTotalServicios.Text = "0";
         }
 
         private void btnSecundarioBuscarServicios_Click(object sender, EventArgs e)

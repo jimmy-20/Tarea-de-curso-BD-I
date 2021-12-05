@@ -157,10 +157,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.TituloDtosCliente = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pnlDatosMant2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblTotalServicios = new System.Windows.Forms.Label();
+            this.lblDescuentoTotalServicios = new System.Windows.Forms.Label();
+            this.lblSubtotalServicios = new System.Windows.Forms.Label();
+            this.lblCantServicios = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -343,7 +343,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnRetornar.ForeColor = System.Drawing.Color.White;
             this.btnRetornar.Image = ((System.Drawing.Image)(resources.GetObject("btnRetornar.Image")));
             this.btnRetornar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRetornar.Location = new System.Drawing.Point(13, 375);
+            this.btnRetornar.Location = new System.Drawing.Point(13, 363);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(175, 100);
             this.btnRetornar.TabIndex = 56;
@@ -369,7 +369,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(13, 259);
+            this.btnCancelar.Location = new System.Drawing.Point(13, 247);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(175, 100);
             this.btnCancelar.TabIndex = 55;
@@ -395,7 +395,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnModificar.Location = new System.Drawing.Point(13, 143);
+            this.btnModificar.Location = new System.Drawing.Point(13, 131);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(175, 100);
             this.btnModificar.TabIndex = 54;
@@ -421,7 +421,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(13, 26);
+            this.btnGuardar.Location = new System.Drawing.Point(13, 14);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(175, 100);
             this.btnGuardar.TabIndex = 53;
@@ -2005,7 +2005,6 @@ namespace ServiPlusApp.View.Mantenimientos
             this.pnlDatosMant2.ShowBorders = true;
             this.pnlDatosMant2.Size = new System.Drawing.Size(1315, 285);
             this.pnlDatosMant2.TabIndex = 50;
-            this.pnlDatosMant2.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // bunifuPanel5
             // 
@@ -2015,10 +2014,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuPanel5.BorderColor = System.Drawing.Color.DimGray;
             this.bunifuPanel5.BorderRadius = 3;
             this.bunifuPanel5.BorderThickness = 2;
-            this.bunifuPanel5.Controls.Add(this.label19);
-            this.bunifuPanel5.Controls.Add(this.label18);
-            this.bunifuPanel5.Controls.Add(this.label17);
-            this.bunifuPanel5.Controls.Add(this.label16);
+            this.bunifuPanel5.Controls.Add(this.lblTotalServicios);
+            this.bunifuPanel5.Controls.Add(this.lblDescuentoTotalServicios);
+            this.bunifuPanel5.Controls.Add(this.lblSubtotalServicios);
+            this.bunifuPanel5.Controls.Add(this.lblCantServicios);
             this.bunifuPanel5.Controls.Add(this.label15);
             this.bunifuPanel5.Controls.Add(this.label14);
             this.bunifuPanel5.Controls.Add(this.label13);
@@ -2030,53 +2029,53 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuPanel5.Size = new System.Drawing.Size(347, 197);
             this.bunifuPanel5.TabIndex = 108;
             // 
-            // label19
+            // lblTotalServicios
             // 
-            this.label19.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label19.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.label19.Location = new System.Drawing.Point(251, 156);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(22, 23);
-            this.label19.TabIndex = 7;
-            this.label19.Text = "0";
+            this.lblTotalServicios.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblTotalServicios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.lblTotalServicios.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
+            this.lblTotalServicios.Location = new System.Drawing.Point(251, 156);
+            this.lblTotalServicios.Name = "lblTotalServicios";
+            this.lblTotalServicios.Size = new System.Drawing.Size(22, 23);
+            this.lblTotalServicios.TabIndex = 7;
+            this.lblTotalServicios.Text = "0";
             // 
-            // label18
+            // lblDescuentoTotalServicios
             // 
-            this.label18.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label18.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.label18.Location = new System.Drawing.Point(251, 114);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(22, 23);
-            this.label18.TabIndex = 6;
-            this.label18.Text = "0";
+            this.lblDescuentoTotalServicios.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblDescuentoTotalServicios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.lblDescuentoTotalServicios.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescuentoTotalServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
+            this.lblDescuentoTotalServicios.Location = new System.Drawing.Point(251, 114);
+            this.lblDescuentoTotalServicios.Name = "lblDescuentoTotalServicios";
+            this.lblDescuentoTotalServicios.Size = new System.Drawing.Size(22, 23);
+            this.lblDescuentoTotalServicios.TabIndex = 6;
+            this.lblDescuentoTotalServicios.Text = "0";
             // 
-            // label17
+            // lblSubtotalServicios
             // 
-            this.label17.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label17.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.label17.Location = new System.Drawing.Point(251, 64);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(22, 23);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "0";
+            this.lblSubtotalServicios.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblSubtotalServicios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.lblSubtotalServicios.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtotalServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
+            this.lblSubtotalServicios.Location = new System.Drawing.Point(251, 64);
+            this.lblSubtotalServicios.Name = "lblSubtotalServicios";
+            this.lblSubtotalServicios.Size = new System.Drawing.Size(22, 23);
+            this.lblSubtotalServicios.TabIndex = 5;
+            this.lblSubtotalServicios.Text = "0";
             // 
-            // label16
+            // lblCantServicios
             // 
-            this.label16.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label16.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.label16.Location = new System.Drawing.Point(251, 19);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(22, 23);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "0";
+            this.lblCantServicios.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblCantServicios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.lblCantServicios.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
+            this.lblCantServicios.Location = new System.Drawing.Point(251, 19);
+            this.lblCantServicios.Name = "lblCantServicios";
+            this.lblCantServicios.Size = new System.Drawing.Size(22, 23);
+            this.lblCantServicios.TabIndex = 4;
+            this.lblCantServicios.Text = "0";
             // 
             // label15
             // 
@@ -2307,7 +2306,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.dgvServicios.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvServicios.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvServicios.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvServicios.Location = new System.Drawing.Point(11, 49);
+            this.dgvServicios.Location = new System.Drawing.Point(38, 49);
             this.dgvServicios.Name = "dgvServicios";
             this.dgvServicios.RowHeadersVisible = false;
             this.dgvServicios.RowHeadersWidth = 51;
@@ -2949,8 +2948,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnBarraSuperior);
             this.Controls.Add(this.pnlDatosMant1);
-            this.Controls.Add(this.pnlBuscador);
             this.Controls.Add(this.pnlDatosMant2);
+            this.Controls.Add(this.pnlBuscador);
             this.bunifuTransition1.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -3054,10 +3053,10 @@ namespace ServiPlusApp.View.Mantenimientos
         private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton btnVaciarServicios;
         private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton btnBuscarServicio;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator7;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblTotalServicios;
+        private System.Windows.Forms.Label lblDescuentoTotalServicios;
+        private System.Windows.Forms.Label lblSubtotalServicios;
+        private System.Windows.Forms.Label lblCantServicios;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnSecundarioBuscarServicios;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdServicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeDescripcion;
