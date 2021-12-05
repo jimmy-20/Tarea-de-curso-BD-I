@@ -14,15 +14,13 @@ namespace ServiPlusApp.View.Tablas
 {
     public partial class ShowTable : Form
     {
-        String tableName;
-        public DataGridView DgvTablas { get; set; }
+        public string tableName { get; set; }
+   
         private IAcciones formulario;
 
-        public ShowTable(string TableName)
+        public ShowTable()
         {
             InitializeComponent();
-            this.tableName = TableName;
-            DgvTablas = dgvTablas;
         }
 
         #region Mostrar Tablas
@@ -30,7 +28,15 @@ namespace ServiPlusApp.View.Tablas
         {
             lblTableName.Text = tableName;
 
-            formulario = Fabrica.FormController(this, tableName);
+            formulario = Fabrica.FormController(this.dgvTablas, tableName);
+            formulario.Ver();
+        }
+
+        public void LoadForm(string tableName)
+        {
+            lblTableName.Text = tableName;
+
+            formulario = Fabrica.FormController(this.dgvTablas, tableName);
             formulario.Ver();
         }
 

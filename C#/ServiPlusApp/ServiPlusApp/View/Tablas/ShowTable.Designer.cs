@@ -113,7 +113,7 @@ namespace ServiPlusApp.View.Tablas
             this.lblTableName.ForeColor = System.Drawing.Color.White;
             this.lblTableName.Location = new System.Drawing.Point(28, 5);
             this.lblTableName.Name = "lblTableName";
-            this.lblTableName.Size = new System.Drawing.Size(108, 32);
+            this.lblTableName.Size = new System.Drawing.Size(90, 28);
             this.lblTableName.TabIndex = 0;
             this.lblTableName.Text = "Usuarios";
             this.lblTableName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -591,6 +591,7 @@ namespace ServiPlusApp.View.Tablas
             // dgvTablas
             // 
             this.dgvTablas.AllowCustomTheming = false;
+            this.dgvTablas.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(191)))), ((int)(((byte)(244)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvTablas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -693,14 +694,14 @@ namespace ServiPlusApp.View.Tablas
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Label lblTableName;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnNuevo;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEditar;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnSetState;
         private Bunifu.UI.WinForms.BunifuTextBox txtSearch;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton24;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvTablas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnLimpiarSearch;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnNuevo;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEditar;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnSetState;
     }
 }

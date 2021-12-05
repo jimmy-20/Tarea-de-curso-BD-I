@@ -56,6 +56,13 @@ namespace ServiPlusApp.View.Agregar
             this.txtMarca = new Netsystek.Controls.NskControls.NskTextBox();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.pnlSeleccionarCliente = new Bunifu.UI.WinForms.BunifuPanel();
+            this.dgvClientes = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLimpiarSearch = new System.Windows.Forms.PictureBox();
+            this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnVolver = new System.Windows.Forms.PictureBox();
             this.pnlNuevoCliente = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -70,26 +77,19 @@ namespace ServiPlusApp.View.Agregar
             this.txtApellidos = new Netsystek.Controls.NskControls.NskTextBox();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtNombres = new Netsystek.Controls.NskControls.NskTextBox();
-            this.pnlSeleccionarCliente = new Bunifu.UI.WinForms.BunifuPanel();
-            this.dgvClientes = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLimpiarSearch = new System.Windows.Forms.PictureBox();
-            this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnVolver = new System.Windows.Forms.PictureBox();
             this.pnlBarraSuperior = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new FontAwesome.Sharp.IconPictureBox();
             this.pnlContenedor.SuspendLayout();
             this.pnlContenedor2.SuspendLayout();
             this.pnlBarraLateral.SuspendLayout();
-            this.pnlNuevoCliente.SuspendLayout();
             this.pnlSeleccionarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLimpiarSearch)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
+            this.pnlNuevoCliente.SuspendLayout();
             this.pnlBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -125,8 +125,8 @@ namespace ServiPlusApp.View.Agregar
             this.pnlContenedor2.Controls.Add(this.txtMarca);
             this.pnlContenedor2.Controls.Add(this.bunifuButton1);
             this.pnlContenedor2.Controls.Add(this.bunifuSeparator1);
-            this.pnlContenedor2.Controls.Add(this.pnlSeleccionarCliente);
             this.pnlContenedor2.Controls.Add(this.pnlNuevoCliente);
+            this.pnlContenedor2.Controls.Add(this.pnlSeleccionarCliente);
             this.pnlContenedor2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor2.Location = new System.Drawing.Point(0, 35);
             this.pnlContenedor2.Name = "pnlContenedor2";
@@ -146,7 +146,7 @@ namespace ServiPlusApp.View.Agregar
             this.mascaratxtAño.Name = "mascaratxtAño";
             this.mascaratxtAño.PromptChar = '-';
             this.mascaratxtAño.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mascaratxtAño.Size = new System.Drawing.Size(290, 30);
+            this.mascaratxtAño.Size = new System.Drawing.Size(290, 25);
             this.mascaratxtAño.TabIndex = 4;
             this.mascaratxtAño.Text = "1999";
             this.mascaratxtAño.ValidatingType = typeof(System.DateTime);
@@ -339,7 +339,7 @@ namespace ServiPlusApp.View.Agregar
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Padding = new System.Windows.Forms.Padding(7);
             this.txtModelo.PasswordChar = false;
-            this.txtModelo.Size = new System.Drawing.Size(233, 45);
+            this.txtModelo.Size = new System.Drawing.Size(233, 39);
             this.txtModelo.TabIndex = 3;
             this.txtModelo.Texts = "";
             this.txtModelo.UnderlinedStyle = true;
@@ -360,7 +360,7 @@ namespace ServiPlusApp.View.Agregar
             this.txtAño.Name = "txtAño";
             this.txtAño.Padding = new System.Windows.Forms.Padding(7);
             this.txtAño.PasswordChar = false;
-            this.txtAño.Size = new System.Drawing.Size(296, 45);
+            this.txtAño.Size = new System.Drawing.Size(296, 39);
             this.txtAño.TabIndex = 4;
             this.txtAño.Texts = "";
             this.txtAño.UnderlinedStyle = true;
@@ -377,7 +377,7 @@ namespace ServiPlusApp.View.Agregar
             this.bunifuLabel10.Location = new System.Drawing.Point(41, 671);
             this.bunifuLabel10.Name = "bunifuLabel10";
             this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel10.Size = new System.Drawing.Size(47, 32);
+            this.bunifuLabel10.Size = new System.Drawing.Size(38, 28);
             this.bunifuLabel10.TabIndex = 44;
             this.bunifuLabel10.Text = "Año";
             this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -393,7 +393,7 @@ namespace ServiPlusApp.View.Agregar
             this.bunifuLabel11.Location = new System.Drawing.Point(395, 603);
             this.bunifuLabel11.Name = "bunifuLabel11";
             this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel11.Size = new System.Drawing.Size(88, 32);
+            this.bunifuLabel11.Size = new System.Drawing.Size(72, 28);
             this.bunifuLabel11.TabIndex = 43;
             this.bunifuLabel11.Text = "Modelo";
             this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -409,7 +409,7 @@ namespace ServiPlusApp.View.Agregar
             this.bunifuLabel12.Location = new System.Drawing.Point(41, 599);
             this.bunifuLabel12.Name = "bunifuLabel12";
             this.bunifuLabel12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel12.Size = new System.Drawing.Size(70, 32);
+            this.bunifuLabel12.Size = new System.Drawing.Size(59, 28);
             this.bunifuLabel12.TabIndex = 42;
             this.bunifuLabel12.Text = "Marca";
             this.bunifuLabel12.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -428,7 +428,7 @@ namespace ServiPlusApp.View.Agregar
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Padding = new System.Windows.Forms.Padding(7);
             this.txtMarca.PasswordChar = false;
-            this.txtMarca.Size = new System.Drawing.Size(261, 45);
+            this.txtMarca.Size = new System.Drawing.Size(261, 39);
             this.txtMarca.TabIndex = 2;
             this.txtMarca.Texts = "";
             this.txtMarca.UnderlinedStyle = true;
@@ -540,273 +540,11 @@ namespace ServiPlusApp.View.Agregar
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(2, 497);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(846, 25);
             this.bunifuSeparator1.TabIndex = 7;
-            // 
-            // pnlNuevoCliente
-            // 
-            this.pnlNuevoCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
-            this.pnlNuevoCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlNuevoCliente.BackgroundImage")));
-            this.pnlNuevoCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlNuevoCliente.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
-            this.pnlNuevoCliente.BorderRadius = 0;
-            this.pnlNuevoCliente.BorderThickness = 0;
-            this.pnlNuevoCliente.Controls.Add(this.bunifuLabel8);
-            this.pnlNuevoCliente.Controls.Add(this.bunifuLabel7);
-            this.pnlNuevoCliente.Controls.Add(this.bunifuLabel5);
-            this.pnlNuevoCliente.Controls.Add(this.bunifuLabel2);
-            this.pnlNuevoCliente.Controls.Add(this.bunifuLabel1);
-            this.pnlNuevoCliente.Controls.Add(this.txtEstado);
-            this.pnlNuevoCliente.Controls.Add(this.txtDireccion);
-            this.pnlNuevoCliente.Controls.Add(this.lblSeleccionarCliente);
-            this.pnlNuevoCliente.Controls.Add(this.txtCorreo);
-            this.pnlNuevoCliente.Controls.Add(this.txtTelefono);
-            this.pnlNuevoCliente.Controls.Add(this.txtApellidos);
-            this.pnlNuevoCliente.Controls.Add(this.bunifuLabel6);
-            this.pnlNuevoCliente.Controls.Add(this.txtNombres);
-            this.pnlNuevoCliente.Location = new System.Drawing.Point(5, 51);
-            this.pnlNuevoCliente.Name = "pnlNuevoCliente";
-            this.pnlNuevoCliente.ShowBorders = true;
-            this.pnlNuevoCliente.Size = new System.Drawing.Size(839, 448);
-            this.pnlNuevoCliente.TabIndex = 1;
-            // 
-            // bunifuLabel8
-            // 
-            this.bunifuLabel8.AllowParentOverrides = false;
-            this.bunifuLabel8.AutoEllipsis = false;
-            this.bunifuLabel8.CursorType = null;
-            this.bunifuLabel8.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel8.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel8.Location = new System.Drawing.Point(36, 334);
-            this.bunifuLabel8.Name = "bunifuLabel8";
-            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(76, 32);
-            this.bunifuLabel8.TabIndex = 34;
-            this.bunifuLabel8.Text = "Estado";
-            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel7
-            // 
-            this.bunifuLabel7.AllowParentOverrides = false;
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.CursorType = null;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel7.Location = new System.Drawing.Point(36, 261);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(108, 32);
-            this.bunifuLabel7.TabIndex = 33;
-            this.bunifuLabel7.Text = "Dirección";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel5
-            // 
-            this.bunifuLabel5.AllowParentOverrides = false;
-            this.bunifuLabel5.AutoEllipsis = false;
-            this.bunifuLabel5.CursorType = null;
-            this.bunifuLabel5.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel5.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel5.Location = new System.Drawing.Point(36, 182);
-            this.bunifuLabel5.Name = "bunifuLabel5";
-            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(101, 32);
-            this.bunifuLabel5.TabIndex = 27;
-            this.bunifuLabel5.Text = "Telefono";
-            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel2.Location = new System.Drawing.Point(36, 114);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(107, 32);
-            this.bunifuLabel2.TabIndex = 26;
-            this.bunifuLabel2.Text = "Apellidos";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(36, 37);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(104, 32);
-            this.bunifuLabel1.TabIndex = 24;
-            this.bunifuLabel1.Text = "Nombres";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
-            this.txtEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(62)))), ((int)(((byte)(109)))));
-            this.txtEstado.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtEstado.BorderSize = 4;
-            this.txtEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtEstado.Location = new System.Drawing.Point(132, 327);
-            this.txtEstado.Multiline = false;
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Padding = new System.Windows.Forms.Padding(7);
-            this.txtEstado.PasswordChar = false;
-            this.txtEstado.Size = new System.Drawing.Size(244, 45);
-            this.txtEstado.TabIndex = 6;
-            this.txtEstado.Texts = "Habilitado";
-            this.txtEstado.UnderlinedStyle = true;
-            this.txtEstado.Enter += new System.EventHandler(this.Txt_Enter);
-            this.txtEstado.Leave += new System.EventHandler(this.Txt_Leave);
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
-            this.txtDireccion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(62)))), ((int)(((byte)(109)))));
-            this.txtDireccion.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtDireccion.BorderSize = 4;
-            this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtDireccion.Location = new System.Drawing.Point(132, 254);
-            this.txtDireccion.Multiline = false;
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Padding = new System.Windows.Forms.Padding(7);
-            this.txtDireccion.PasswordChar = false;
-            this.txtDireccion.Size = new System.Drawing.Size(572, 45);
-            this.txtDireccion.TabIndex = 5;
-            this.txtDireccion.Texts = "";
-            this.txtDireccion.UnderlinedStyle = true;
-            this.txtDireccion.Enter += new System.EventHandler(this.Txt_Enter);
-            this.txtDireccion.Leave += new System.EventHandler(this.Txt_Leave);
-            // 
-            // lblSeleccionarCliente
-            // 
-            this.lblSeleccionarCliente.ActiveLinkColor = System.Drawing.Color.Purple;
-            this.lblSeleccionarCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSeleccionarCliente.AutoSize = true;
-            this.lblSeleccionarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
-            this.lblSeleccionarCliente.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeleccionarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
-            this.lblSeleccionarCliente.LinkColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblSeleccionarCliente.Location = new System.Drawing.Point(344, 421);
-            this.lblSeleccionarCliente.Name = "lblSeleccionarCliente";
-            this.lblSeleccionarCliente.Size = new System.Drawing.Size(207, 28);
-            this.lblSeleccionarCliente.TabIndex = 7;
-            this.lblSeleccionarCliente.TabStop = true;
-            this.lblSeleccionarCliente.Text = "¿Cliente Existente?";
-            this.lblSeleccionarCliente.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblSeleccionarCliente_LinkClicked);
-            this.lblSeleccionarCliente.MouseLeave += new System.EventHandler(this.lblSeleccionarCliente_MouseLeave);
-            this.lblSeleccionarCliente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblSeleccionarCliente_MouseMove);
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
-            this.txtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(62)))), ((int)(((byte)(109)))));
-            this.txtCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtCorreo.BorderSize = 4;
-            this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtCorreo.Location = new System.Drawing.Point(460, 175);
-            this.txtCorreo.Multiline = false;
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Padding = new System.Windows.Forms.Padding(7);
-            this.txtCorreo.PasswordChar = false;
-            this.txtCorreo.Size = new System.Drawing.Size(244, 45);
-            this.txtCorreo.TabIndex = 4;
-            this.txtCorreo.Texts = "";
-            this.txtCorreo.UnderlinedStyle = true;
-            this.txtCorreo.Enter += new System.EventHandler(this.Txt_Enter);
-            this.txtCorreo.Leave += new System.EventHandler(this.Txt_Leave);
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
-            this.txtTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(62)))), ((int)(((byte)(109)))));
-            this.txtTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtTelefono.BorderSize = 4;
-            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtTelefono.Location = new System.Drawing.Point(132, 175);
-            this.txtTelefono.Multiline = false;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTelefono.PasswordChar = false;
-            this.txtTelefono.Size = new System.Drawing.Size(230, 45);
-            this.txtTelefono.TabIndex = 3;
-            this.txtTelefono.Texts = "";
-            this.txtTelefono.UnderlinedStyle = true;
-            this.txtTelefono.Enter += new System.EventHandler(this.Txt_Enter);
-            this.txtTelefono.Leave += new System.EventHandler(this.Txt_Leave);
-            // 
-            // txtApellidos
-            // 
-            this.txtApellidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
-            this.txtApellidos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(62)))), ((int)(((byte)(109)))));
-            this.txtApellidos.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtApellidos.BorderSize = 4;
-            this.txtApellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidos.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtApellidos.Location = new System.Drawing.Point(132, 107);
-            this.txtApellidos.Multiline = false;
-            this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Padding = new System.Windows.Forms.Padding(7);
-            this.txtApellidos.PasswordChar = false;
-            this.txtApellidos.Size = new System.Drawing.Size(572, 45);
-            this.txtApellidos.TabIndex = 2;
-            this.txtApellidos.Texts = "";
-            this.txtApellidos.UnderlinedStyle = true;
-            this.txtApellidos.Enter += new System.EventHandler(this.Txt_Enter);
-            this.txtApellidos.Leave += new System.EventHandler(this.Txt_Leave);
-            // 
-            // bunifuLabel6
-            // 
-            this.bunifuLabel6.AllowParentOverrides = false;
-            this.bunifuLabel6.AutoEllipsis = false;
-            this.bunifuLabel6.CursorType = null;
-            this.bunifuLabel6.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel6.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel6.Location = new System.Drawing.Point(390, 182);
-            this.bunifuLabel6.Name = "bunifuLabel6";
-            this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(76, 32);
-            this.bunifuLabel6.TabIndex = 31;
-            this.bunifuLabel6.Text = "Correo";
-            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // txtNombres
-            // 
-            this.txtNombres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
-            this.txtNombres.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(62)))), ((int)(((byte)(109)))));
-            this.txtNombres.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtNombres.BorderSize = 4;
-            this.txtNombres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtNombres.Location = new System.Drawing.Point(132, 30);
-            this.txtNombres.Multiline = false;
-            this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Padding = new System.Windows.Forms.Padding(7);
-            this.txtNombres.PasswordChar = false;
-            this.txtNombres.Size = new System.Drawing.Size(572, 45);
-            this.txtNombres.TabIndex = 1;
-            this.txtNombres.Texts = "";
-            this.txtNombres.UnderlinedStyle = true;
-            this.txtNombres.Enter += new System.EventHandler(this.Txt_Enter);
-            this.txtNombres.Leave += new System.EventHandler(this.Txt_Leave);
             // 
             // pnlSeleccionarCliente
             // 
@@ -1022,6 +760,268 @@ namespace ServiPlusApp.View.Agregar
             this.btnVolver.TabStop = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // pnlNuevoCliente
+            // 
+            this.pnlNuevoCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
+            this.pnlNuevoCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlNuevoCliente.BackgroundImage")));
+            this.pnlNuevoCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlNuevoCliente.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
+            this.pnlNuevoCliente.BorderRadius = 0;
+            this.pnlNuevoCliente.BorderThickness = 0;
+            this.pnlNuevoCliente.Controls.Add(this.bunifuLabel8);
+            this.pnlNuevoCliente.Controls.Add(this.bunifuLabel7);
+            this.pnlNuevoCliente.Controls.Add(this.bunifuLabel5);
+            this.pnlNuevoCliente.Controls.Add(this.bunifuLabel2);
+            this.pnlNuevoCliente.Controls.Add(this.bunifuLabel1);
+            this.pnlNuevoCliente.Controls.Add(this.txtEstado);
+            this.pnlNuevoCliente.Controls.Add(this.txtDireccion);
+            this.pnlNuevoCliente.Controls.Add(this.lblSeleccionarCliente);
+            this.pnlNuevoCliente.Controls.Add(this.txtCorreo);
+            this.pnlNuevoCliente.Controls.Add(this.txtTelefono);
+            this.pnlNuevoCliente.Controls.Add(this.txtApellidos);
+            this.pnlNuevoCliente.Controls.Add(this.bunifuLabel6);
+            this.pnlNuevoCliente.Controls.Add(this.txtNombres);
+            this.pnlNuevoCliente.Location = new System.Drawing.Point(5, 51);
+            this.pnlNuevoCliente.Name = "pnlNuevoCliente";
+            this.pnlNuevoCliente.ShowBorders = true;
+            this.pnlNuevoCliente.Size = new System.Drawing.Size(839, 448);
+            this.pnlNuevoCliente.TabIndex = 1;
+            // 
+            // bunifuLabel8
+            // 
+            this.bunifuLabel8.AllowParentOverrides = false;
+            this.bunifuLabel8.AutoEllipsis = false;
+            this.bunifuLabel8.CursorType = null;
+            this.bunifuLabel8.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel8.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel8.Location = new System.Drawing.Point(36, 334);
+            this.bunifuLabel8.Name = "bunifuLabel8";
+            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel8.Size = new System.Drawing.Size(64, 28);
+            this.bunifuLabel8.TabIndex = 34;
+            this.bunifuLabel8.Text = "Estado";
+            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel7
+            // 
+            this.bunifuLabel7.AllowParentOverrides = false;
+            this.bunifuLabel7.AutoEllipsis = false;
+            this.bunifuLabel7.CursorType = null;
+            this.bunifuLabel7.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel7.Location = new System.Drawing.Point(36, 261);
+            this.bunifuLabel7.Name = "bunifuLabel7";
+            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel7.Size = new System.Drawing.Size(88, 28);
+            this.bunifuLabel7.TabIndex = 33;
+            this.bunifuLabel7.Text = "Dirección";
+            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel5
+            // 
+            this.bunifuLabel5.AllowParentOverrides = false;
+            this.bunifuLabel5.AutoEllipsis = false;
+            this.bunifuLabel5.CursorType = null;
+            this.bunifuLabel5.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel5.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel5.Location = new System.Drawing.Point(36, 182);
+            this.bunifuLabel5.Name = "bunifuLabel5";
+            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel5.Size = new System.Drawing.Size(82, 28);
+            this.bunifuLabel5.TabIndex = 27;
+            this.bunifuLabel5.Text = "Telefono";
+            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel2.Location = new System.Drawing.Point(36, 114);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(87, 28);
+            this.bunifuLabel2.TabIndex = 26;
+            this.bunifuLabel2.Text = "Apellidos";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel1.Location = new System.Drawing.Point(36, 37);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(87, 28);
+            this.bunifuLabel1.TabIndex = 24;
+            this.bunifuLabel1.Text = "Nombres";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
+            this.txtEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(62)))), ((int)(((byte)(109)))));
+            this.txtEstado.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtEstado.BorderSize = 4;
+            this.txtEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtEstado.Location = new System.Drawing.Point(132, 327);
+            this.txtEstado.Multiline = false;
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Padding = new System.Windows.Forms.Padding(7);
+            this.txtEstado.PasswordChar = false;
+            this.txtEstado.Size = new System.Drawing.Size(244, 39);
+            this.txtEstado.TabIndex = 6;
+            this.txtEstado.Texts = "Habilitado";
+            this.txtEstado.UnderlinedStyle = true;
+            this.txtEstado.Enter += new System.EventHandler(this.Txt_Enter);
+            this.txtEstado.Leave += new System.EventHandler(this.Txt_Leave);
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
+            this.txtDireccion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(62)))), ((int)(((byte)(109)))));
+            this.txtDireccion.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtDireccion.BorderSize = 4;
+            this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtDireccion.Location = new System.Drawing.Point(132, 254);
+            this.txtDireccion.Multiline = false;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Padding = new System.Windows.Forms.Padding(7);
+            this.txtDireccion.PasswordChar = false;
+            this.txtDireccion.Size = new System.Drawing.Size(572, 39);
+            this.txtDireccion.TabIndex = 5;
+            this.txtDireccion.Texts = "";
+            this.txtDireccion.UnderlinedStyle = true;
+            this.txtDireccion.Enter += new System.EventHandler(this.Txt_Enter);
+            this.txtDireccion.Leave += new System.EventHandler(this.Txt_Leave);
+            // 
+            // lblSeleccionarCliente
+            // 
+            this.lblSeleccionarCliente.ActiveLinkColor = System.Drawing.Color.Purple;
+            this.lblSeleccionarCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSeleccionarCliente.AutoSize = true;
+            this.lblSeleccionarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
+            this.lblSeleccionarCliente.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeleccionarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(100)))), ((int)(((byte)(180)))));
+            this.lblSeleccionarCliente.LinkColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSeleccionarCliente.Location = new System.Drawing.Point(344, 421);
+            this.lblSeleccionarCliente.Name = "lblSeleccionarCliente";
+            this.lblSeleccionarCliente.Size = new System.Drawing.Size(168, 24);
+            this.lblSeleccionarCliente.TabIndex = 7;
+            this.lblSeleccionarCliente.TabStop = true;
+            this.lblSeleccionarCliente.Text = "¿Cliente Existente?";
+            this.lblSeleccionarCliente.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblSeleccionarCliente_LinkClicked);
+            this.lblSeleccionarCliente.MouseLeave += new System.EventHandler(this.lblSeleccionarCliente_MouseLeave);
+            this.lblSeleccionarCliente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblSeleccionarCliente_MouseMove);
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
+            this.txtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(62)))), ((int)(((byte)(109)))));
+            this.txtCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtCorreo.BorderSize = 4;
+            this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtCorreo.Location = new System.Drawing.Point(460, 175);
+            this.txtCorreo.Multiline = false;
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Padding = new System.Windows.Forms.Padding(7);
+            this.txtCorreo.PasswordChar = false;
+            this.txtCorreo.Size = new System.Drawing.Size(244, 39);
+            this.txtCorreo.TabIndex = 4;
+            this.txtCorreo.Texts = "";
+            this.txtCorreo.UnderlinedStyle = true;
+            this.txtCorreo.Enter += new System.EventHandler(this.Txt_Enter);
+            this.txtCorreo.Leave += new System.EventHandler(this.Txt_Leave);
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
+            this.txtTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(62)))), ((int)(((byte)(109)))));
+            this.txtTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtTelefono.BorderSize = 4;
+            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtTelefono.Location = new System.Drawing.Point(132, 175);
+            this.txtTelefono.Multiline = false;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTelefono.PasswordChar = false;
+            this.txtTelefono.Size = new System.Drawing.Size(230, 39);
+            this.txtTelefono.TabIndex = 3;
+            this.txtTelefono.Texts = "";
+            this.txtTelefono.UnderlinedStyle = true;
+            this.txtTelefono.Enter += new System.EventHandler(this.Txt_Enter);
+            this.txtTelefono.Leave += new System.EventHandler(this.Txt_Leave);
+            // 
+            // txtApellidos
+            // 
+            this.txtApellidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
+            this.txtApellidos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(62)))), ((int)(((byte)(109)))));
+            this.txtApellidos.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtApellidos.BorderSize = 4;
+            this.txtApellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtApellidos.Location = new System.Drawing.Point(132, 107);
+            this.txtApellidos.Multiline = false;
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Padding = new System.Windows.Forms.Padding(7);
+            this.txtApellidos.PasswordChar = false;
+            this.txtApellidos.Size = new System.Drawing.Size(572, 39);
+            this.txtApellidos.TabIndex = 2;
+            this.txtApellidos.Texts = "";
+            this.txtApellidos.UnderlinedStyle = true;
+            this.txtApellidos.Enter += new System.EventHandler(this.Txt_Enter);
+            this.txtApellidos.Leave += new System.EventHandler(this.Txt_Leave);
+            // 
+            // bunifuLabel6
+            // 
+            this.bunifuLabel6.AllowParentOverrides = false;
+            this.bunifuLabel6.AutoEllipsis = false;
+            this.bunifuLabel6.CursorType = null;
+            this.bunifuLabel6.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel6.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel6.Location = new System.Drawing.Point(390, 182);
+            this.bunifuLabel6.Name = "bunifuLabel6";
+            this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel6.Size = new System.Drawing.Size(64, 28);
+            this.bunifuLabel6.TabIndex = 31;
+            this.bunifuLabel6.Text = "Correo";
+            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // txtNombres
+            // 
+            this.txtNombres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
+            this.txtNombres.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(62)))), ((int)(((byte)(109)))));
+            this.txtNombres.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtNombres.BorderSize = 4;
+            this.txtNombres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtNombres.Location = new System.Drawing.Point(132, 30);
+            this.txtNombres.Multiline = false;
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Padding = new System.Windows.Forms.Padding(7);
+            this.txtNombres.PasswordChar = false;
+            this.txtNombres.Size = new System.Drawing.Size(572, 39);
+            this.txtNombres.TabIndex = 1;
+            this.txtNombres.Texts = "";
+            this.txtNombres.UnderlinedStyle = true;
+            this.txtNombres.Enter += new System.EventHandler(this.Txt_Enter);
+            this.txtNombres.Leave += new System.EventHandler(this.Txt_Leave);
+            // 
             // pnlBarraSuperior
             // 
             this.pnlBarraSuperior.BackColor = System.Drawing.Color.Transparent;
@@ -1090,14 +1090,14 @@ namespace ServiPlusApp.View.Agregar
             this.pnlContenedor2.ResumeLayout(false);
             this.pnlContenedor2.PerformLayout();
             this.pnlBarraLateral.ResumeLayout(false);
-            this.pnlNuevoCliente.ResumeLayout(false);
-            this.pnlNuevoCliente.PerformLayout();
             this.pnlSeleccionarCliente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnLimpiarSearch)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
+            this.pnlNuevoCliente.ResumeLayout(false);
+            this.pnlNuevoCliente.PerformLayout();
             this.pnlBarraSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
@@ -1110,21 +1110,31 @@ namespace ServiPlusApp.View.Agregar
         private System.Windows.Forms.Panel pnlContenedor;
         private Bunifu.UI.WinForms.BunifuPanel pnlContenedor2;
         private Bunifu.UI.WinForms.BunifuPanel pnlBarraLateral;
-        public RJCodeAdvance.RJControls.RJButton btnModificar;
+        private RJCodeAdvance.RJControls.RJButton btnModificar;
+        private RJCodeAdvance.RJControls.RJButton btnCancelar;
+        private RJCodeAdvance.RJControls.RJButton btnGuardar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
+        private Netsystek.Controls.NskControls.NskTextBox txtModelo;
         private Netsystek.Controls.NskControls.NskTextBox txtAño;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel12;
+        private Netsystek.Controls.NskControls.NskTextBox txtMarca;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private Bunifu.UI.WinForms.BunifuPanel pnlNuevoCliente;
         private Netsystek.Controls.NskControls.NskTextBox txtEstado;
+        private Netsystek.Controls.NskControls.NskTextBox txtDireccion;
+        private System.Windows.Forms.LinkLabel lblSeleccionarCliente;
+        private Netsystek.Controls.NskControls.NskTextBox txtCorreo;
+        private Netsystek.Controls.NskControls.NskTextBox txtTelefono;
+        private Netsystek.Controls.NskControls.NskTextBox txtApellidos;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Netsystek.Controls.NskControls.NskTextBox txtNombres;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuGradientPanel pnlBarraSuperior;
         private System.Windows.Forms.PictureBox btnClose;
@@ -1135,17 +1145,7 @@ namespace ServiPlusApp.View.Agregar
         private Bunifu.UI.WinForms.BunifuTextBox txtSearch;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox btnVolver;
+        private System.Windows.Forms.MaskedTextBox mascaratxtAño;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvClientes;
-        public RJCodeAdvance.RJControls.RJButton btnGuardar;
-        public Netsystek.Controls.NskControls.NskTextBox txtModelo;
-        public Netsystek.Controls.NskControls.NskTextBox txtMarca;
-        public Netsystek.Controls.NskControls.NskTextBox txtDireccion;
-        public Netsystek.Controls.NskControls.NskTextBox txtCorreo;
-        public Netsystek.Controls.NskControls.NskTextBox txtTelefono;
-        public Netsystek.Controls.NskControls.NskTextBox txtApellidos;
-        public Netsystek.Controls.NskControls.NskTextBox txtNombres;
-        public System.Windows.Forms.MaskedTextBox mascaratxtAño;
-        public System.Windows.Forms.LinkLabel lblSeleccionarCliente;
-        public RJCodeAdvance.RJControls.RJButton btnCancelar;
     }
 }

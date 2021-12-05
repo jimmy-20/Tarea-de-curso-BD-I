@@ -75,12 +75,6 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
 
         private void txtPrecio__TextChanged(object sender, EventArgs e)
         {
-            if (txtPrecio.Texts is null || txtPrecio.Texts == "")
-            {
-                spnPrecio.Value = 0;
-                return;
-            }
-
             spnPrecio.Value = Convert.ToDecimal(txtPrecio.Texts);
         }
 
