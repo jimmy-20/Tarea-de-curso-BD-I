@@ -115,7 +115,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.txtNombres.PasswordChar = false;
             this.txtNombres.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtNombres.PlaceholderText = "Nombres";
-            this.txtNombres.Size = new System.Drawing.Size(405, 39);
+            this.txtNombres.Size = new System.Drawing.Size(405, 45);
             this.txtNombres.TabIndex = 1;
             this.txtNombres.Texts = "";
             this.txtNombres.UnderlinedStyle = true;
@@ -137,7 +137,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.txtApellidos.PasswordChar = false;
             this.txtApellidos.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtApellidos.PlaceholderText = "Apellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(405, 39);
+            this.txtApellidos.Size = new System.Drawing.Size(405, 45);
             this.txtApellidos.TabIndex = 2;
             this.txtApellidos.Texts = "";
             this.txtApellidos.UnderlinedStyle = true;
@@ -159,7 +159,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.txtTelefono.PasswordChar = false;
             this.txtTelefono.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTelefono.PlaceholderText = "0000-0000";
-            this.txtTelefono.Size = new System.Drawing.Size(245, 39);
+            this.txtTelefono.Size = new System.Drawing.Size(245, 45);
             this.txtTelefono.TabIndex = 6;
             this.txtTelefono.Texts = "";
             this.txtTelefono.UnderlinedStyle = true;
@@ -182,7 +182,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.txtEspecialidad.PasswordChar = false;
             this.txtEspecialidad.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtEspecialidad.PlaceholderText = "";
-            this.txtEspecialidad.Size = new System.Drawing.Size(280, 39);
+            this.txtEspecialidad.Size = new System.Drawing.Size(280, 45);
             this.txtEspecialidad.TabIndex = 3;
             this.txtEspecialidad.Texts = "";
             this.txtEspecialidad.UnderlinedStyle = true;
@@ -194,7 +194,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(57, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 29);
+            this.label1.Size = new System.Drawing.Size(121, 35);
             this.label1.TabIndex = 10;
             this.label1.Text = "NOMBRES";
             // 
@@ -205,7 +205,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(47, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 29);
+            this.label2.Size = new System.Drawing.Size(129, 35);
             this.label2.TabIndex = 11;
             this.label2.Text = "APELLIDOS";
             // 
@@ -216,7 +216,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(49, 245);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 29);
+            this.label3.Size = new System.Drawing.Size(119, 35);
             this.label3.TabIndex = 12;
             this.label3.Text = "TELEFONO";
             // 
@@ -227,7 +227,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(12, 179);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 29);
+            this.label4.Size = new System.Drawing.Size(168, 35);
             this.label4.TabIndex = 12;
             this.label4.Text = "ESPECIALIDAD";
             // 
@@ -681,7 +681,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(60)))), ((int)(((byte)(252)))));
             this.label5.Location = new System.Drawing.Point(61, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 29);
+            this.label5.Size = new System.Drawing.Size(132, 35);
             this.label5.TabIndex = 10;
             this.label5.Text = "USERNAME";
             // 
@@ -702,7 +702,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.txtUsername.PasswordChar = false;
             this.txtUsername.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUsername.PlaceholderText = "Username";
-            this.txtUsername.Size = new System.Drawing.Size(370, 39);
+            this.txtUsername.Size = new System.Drawing.Size(370, 45);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.Texts = "";
             this.txtUsername.UnderlinedStyle = true;
@@ -714,7 +714,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(60)))), ((int)(((byte)(252)))));
             this.label6.Location = new System.Drawing.Point(121, 179);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 29);
+            this.label6.Size = new System.Drawing.Size(56, 35);
             this.label6.TabIndex = 12;
             this.label6.Text = "ROL";
             // 
@@ -735,7 +735,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.txtContraseña.PasswordChar = false;
             this.txtContraseña.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtContraseña.PlaceholderText = "Contraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(370, 39);
+            this.txtContraseña.Size = new System.Drawing.Size(370, 45);
             this.txtContraseña.TabIndex = 2;
             this.txtContraseña.Texts = "";
             this.txtContraseña.UnderlinedStyle = true;
@@ -747,7 +747,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(60)))), ((int)(((byte)(252)))));
             this.label7.Location = new System.Drawing.Point(82, 245);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 29);
+            this.label7.Size = new System.Drawing.Size(97, 35);
             this.label7.TabIndex = 12;
             this.label7.Text = "ESTADO";
             // 
@@ -769,7 +769,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.txtEstado.PasswordChar = false;
             this.txtEstado.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtEstado.PlaceholderText = "";
-            this.txtEstado.Size = new System.Drawing.Size(245, 39);
+            this.txtEstado.Size = new System.Drawing.Size(245, 45);
             this.txtEstado.TabIndex = 4;
             this.txtEstado.Texts = "";
             this.txtEstado.UnderlinedStyle = true;
@@ -781,7 +781,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(60)))), ((int)(((byte)(252)))));
             this.label8.Location = new System.Drawing.Point(35, 115);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 29);
+            this.label8.Size = new System.Drawing.Size(158, 35);
             this.label8.TabIndex = 11;
             this.label8.Text = "CONTRASEÑA";
             // 
@@ -803,7 +803,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.txtRol.PasswordChar = false;
             this.txtRol.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtRol.PlaceholderText = "";
-            this.txtRol.Size = new System.Drawing.Size(245, 39);
+            this.txtRol.Size = new System.Drawing.Size(245, 45);
             this.txtRol.TabIndex = 3;
             this.txtRol.Texts = "";
             this.txtRol.UnderlinedStyle = true;
@@ -905,7 +905,7 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
             this.lblMode.ForeColor = System.Drawing.Color.Silver;
             this.lblMode.Location = new System.Drawing.Point(60, 66);
             this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(317, 35);
+            this.lblMode.Size = new System.Drawing.Size(375, 43);
             this.lblMode.TabIndex = 18;
             this.lblMode.Text = "Registrar Usuario";
             // 
@@ -939,32 +939,32 @@ namespace ServiPlusApp.View.Set_Tables.Usuarios
         #endregion
 
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private System.Windows.Forms.PictureBox btnClose;
-        private RJCodeAdvance.RJControls.RJTextBox txtNombres;
-        private RJCodeAdvance.RJControls.RJTextBox txtApellidos;
-        private RJCodeAdvance.RJControls.RJTextBox txtTelefono;
-        private RJCodeAdvance.RJControls.RJTextBox txtEspecialidad;
+        public System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pnlDatosUsuario;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnContinuar;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnContinuar;
         private System.Windows.Forms.Panel pnlUsuario;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnRegresar;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnGuardar;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnRegresar;
         private System.Windows.Forms.Label label5;
-        private RJCodeAdvance.RJControls.RJTextBox txtUsername;
         private System.Windows.Forms.Label label6;
-        private RJCodeAdvance.RJControls.RJTextBox txtContraseña;
         private System.Windows.Forms.Label label7;
-        private RJCodeAdvance.RJControls.RJTextBox txtEstado;
+        public RJCodeAdvance.RJControls.RJTextBox txtEstado;
         private System.Windows.Forms.Label label8;
-        private RJCodeAdvance.RJControls.RJTextBox txtRol;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnModificar;
+        public RJCodeAdvance.RJControls.RJTextBox txtRol;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnModificar;
         private System.Windows.Forms.Label lblMode;
-        private Bunifu.UI.WinForms.BunifuDropdown cmbEstado;
-        private Bunifu.UI.WinForms.BunifuDropdown cmbRol;
-        private Bunifu.UI.WinForms.BunifuDropdown cmbEspecialidad;
+        public Bunifu.UI.WinForms.BunifuDropdown cmbEspecialidad;
+        public RJCodeAdvance.RJControls.RJTextBox txtNombres;
+        public RJCodeAdvance.RJControls.RJTextBox txtApellidos;
+        public RJCodeAdvance.RJControls.RJTextBox txtTelefono;
+        public RJCodeAdvance.RJControls.RJTextBox txtEspecialidad;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnGuardar;
+        public RJCodeAdvance.RJControls.RJTextBox txtUsername;
+        public RJCodeAdvance.RJControls.RJTextBox txtContraseña;
+        public Bunifu.UI.WinForms.BunifuDropdown cmbEstado;
+        public Bunifu.UI.WinForms.BunifuDropdown cmbRol;
     }
 }

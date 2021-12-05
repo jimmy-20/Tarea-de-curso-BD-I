@@ -30,8 +30,8 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Servicio));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.txtDescripcion = new RJCodeAdvance.RJControls.RJTextBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -76,7 +76,7 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.txtDescripcion.PasswordChar = false;
             this.txtDescripcion.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtDescripcion.PlaceholderText = "";
-            this.txtDescripcion.Size = new System.Drawing.Size(539, 36);
+            this.txtDescripcion.Size = new System.Drawing.Size(539, 40);
             this.txtDescripcion.TabIndex = 3;
             this.txtDescripcion.Texts = "Descripción";
             this.txtDescripcion.UnderlinedStyle = true;
@@ -186,7 +186,7 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.txtPrecio.PasswordChar = false;
             this.txtPrecio.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPrecio.PlaceholderText = "";
-            this.txtPrecio.Size = new System.Drawing.Size(250, 36);
+            this.txtPrecio.Size = new System.Drawing.Size(250, 40);
             this.txtPrecio.TabIndex = 4;
             this.txtPrecio.Texts = "Precio";
             this.txtPrecio.UnderlinedStyle = true;
@@ -210,7 +210,7 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.txtTipoDeMantenimiento.PasswordChar = false;
             this.txtTipoDeMantenimiento.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTipoDeMantenimiento.PlaceholderText = "";
-            this.txtTipoDeMantenimiento.Size = new System.Drawing.Size(250, 35);
+            this.txtTipoDeMantenimiento.Size = new System.Drawing.Size(250, 39);
             this.txtTipoDeMantenimiento.TabIndex = 5;
             this.txtTipoDeMantenimiento.Texts = "";
             this.txtTipoDeMantenimiento.UnderlinedStyle = true;
@@ -232,7 +232,7 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.txtEstado.PasswordChar = false;
             this.txtEstado.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtEstado.PlaceholderText = "";
-            this.txtEstado.Size = new System.Drawing.Size(250, 35);
+            this.txtEstado.Size = new System.Drawing.Size(250, 39);
             this.txtEstado.TabIndex = 6;
             this.txtEstado.Texts = "";
             this.txtEstado.UnderlinedStyle = true;
@@ -302,11 +302,11 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.btnGuardar.ColorContrastOnClick = 45;
             this.btnGuardar.ColorContrastOnHover = 45;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnGuardar.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnGuardar.CustomizableEdges = borderEdges1;
             this.btnGuardar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnGuardar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnGuardar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -405,7 +405,7 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             0,
             0});
             this.spnPrecio.Name = "spnPrecio";
-            this.spnPrecio.Size = new System.Drawing.Size(16, 24);
+            this.spnPrecio.Size = new System.Drawing.Size(16, 29);
             this.spnPrecio.TabIndex = 11;
             this.spnPrecio.ThousandsSeparator = true;
             this.spnPrecio.ValueChanged += new System.EventHandler(this.spnPrecio_ValueChanged);
@@ -431,11 +431,11 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.btnModificar.ColorContrastOnClick = 45;
             this.btnModificar.ColorContrastOnHover = 45;
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnModificar.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnModificar.CustomizableEdges = borderEdges2;
             this.btnModificar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnModificar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnModificar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -584,23 +584,22 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
         }
 
         #endregion
-
-        private RJCodeAdvance.RJControls.RJTextBox txtDescripcion;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private RJCodeAdvance.RJControls.RJTextBox txtPrecio;
         private RJCodeAdvance.RJControls.RJTextBox txtTipoDeMantenimiento;
         private RJCodeAdvance.RJControls.RJTextBox txtEstado;
-        private Bunifu.UI.WinForms.BunifuDropdown cmbTipoDeMatenimiento;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnGuardar;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private System.Windows.Forms.NumericUpDown spnPrecio;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnModificar;
-        private Bunifu.UI.WinForms.BunifuDropdown cmbEstado;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnModificar;
+        public Bunifu.UI.WinForms.BunifuDropdown cmbEstado;
+        public RJCodeAdvance.RJControls.RJTextBox txtDescripcion;
+        public RJCodeAdvance.RJControls.RJTextBox txtPrecio;
+        public Bunifu.UI.WinForms.BunifuDropdown cmbTipoDeMatenimiento;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnGuardar;
     }
 }

@@ -16,15 +16,14 @@ namespace ServiPlusApp.View
 {
     public partial class Operaciones : Form
     {
-
-        //Thread th;
-        //Point frmPosition;
-        //Boolean mouseAction;
-
         string username;
         string fullname;
         string rol;
         string especialidad;
+
+        //Thread th;
+        //Point frmPosition;
+        //Boolean mouseAction;
 
         private int borderSize = 3;
         private Size formSize;
@@ -36,9 +35,9 @@ namespace ServiPlusApp.View
         Boolean SubMnReEstado = false;
 
         MainDesk mainDesk = new MainDesk();
-        ShowTable showTable;
         UserMenuStrip userControl;
         Form activeForm = null;
+        //UserControl activeController = null;
 
         public Operaciones(string fullname, string username, string rol, string especialidad)
         {
@@ -53,6 +52,9 @@ namespace ServiPlusApp.View
 
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
+
+            //lblUsername.Text = username;
+            // lblRol.Text = rol;
         }
 
         private void Operaciones_Load(object sender, EventArgs e)
@@ -439,93 +441,65 @@ namespace ServiPlusApp.View
 
         private void btnVehiculos_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(btnVehiculos.Tag.ToString());
+            openChildFormInPanel(new ShowTable(btnVehiculos.Tag.ToString()));
         }
 
         private void btnMecanicos_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(btnMecanicos.Tag.ToString());
+            openChildFormInPanel(new ShowTable(btnMecanicos.Tag.ToString()));
         }
 
         private void btnServicios_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(btnServicios.Tag.ToString());
+            openChildFormInPanel(new ShowTable(btnServicios.Tag.ToString()));
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(btnClientes.Tag.ToString());
+            openChildFormInPanel(new ShowTable(btnClientes.Tag.ToString()));
         }
 
         private void btnCaRepuestos_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(btnCaRepuestos.Tag.ToString());
+            openChildFormInPanel(new ShowTable(btnCaRepuestos.Tag.ToString()));
         }
 
         private void btnOpMantenimientos_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(btnOpMantenimientos.Tag.ToString());
+            openChildFormInPanel(new ShowTable(btnOpMantenimientos.Tag.ToString()));
         }
 
         private void btnOpRepuestos_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(btnOpRepuestos.Tag.ToString());
+            openChildFormInPanel(new ShowTable(btnOpRepuestos.Tag.ToString()));
         }
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(btnUsuarios.Tag.ToString());
+            openChildFormInPanel(new ShowTable(btnUsuarios.Tag.ToString()));
         }
 
-        private void openChildFormInPanel(string FormName)
+        private void openChildFormInPanel(Form childForm)
         {
             if (this.Contains(userControl))
             {
                 this.Controls.Remove(userControl);
             }
 
-            if (showTable == null)
+            if (activeForm != null)
             {
-                showTable = new ShowTable
-                {
-                    tableName = FormName,
-
-                    TopLevel = false,
-                    FormBorderStyle = FormBorderStyle.None,
-                    Dock = DockStyle.Fill
-                };
-                
-                pnlContenedor.Controls.Add(showTable);
-                pnlContenedor.Tag = showTable;
-
-                showTable.BringToFront();
-                showTable.Show();
-
-            }
-            else
-            {
-                showTable.LoadForm(FormName);
+                activeForm.Close();
             }
 
+            activeForm = childForm;
 
-           
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlContenedor.Controls.Add(childForm);
+            pnlContenedor.Tag = childForm;
 
-            //--------------------------------------------------------------------------
-
-            //if (activeForm != null)
-            //{
-            //    activeForm.Close();
-            //}
-
-            //activeForm = childForm;
-
-            //childForm.TopLevel = false;
-            //childForm.FormBorderStyle = FormBorderStyle.None;
-            //childForm.Dock = DockStyle.Fill;
-            //pnlContenedor.Controls.Add(childForm);
-            //pnlContenedor.Tag = childForm;
-
-            //childForm.BringToFront();
-            //childForm.Show();
+            childForm.BringToFront();
+            childForm.Show();
         }
 
         private void openUserControlInPanel(UserControl control)

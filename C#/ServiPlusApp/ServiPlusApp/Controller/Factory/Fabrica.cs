@@ -1,5 +1,4 @@
-﻿using Bunifu.UI.WinForms;
-using ServiPlusApp.View.Tablas;
+﻿using ServiPlusApp.View.Tablas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,24 +10,24 @@ namespace ServiPlusApp.Controller.Factory
 {
     class Fabrica
     {
-        public static IAcciones FormController(BunifuDataGridView DgvTabla ,string formulario)
+        public static IAcciones FormController(ShowTable Formulario ,string formulario)
         {
             switch (formulario)
             {
                 case "Clientes":
-                    return new CClientes(DgvTabla);
+                    return new CClientes(Formulario);
                 case "Mecanicos":
-                    return new CMecanicos(DgvTabla);
+                    return new CMecanicos(Formulario);
                 case "Servicios":
-                    return new CServicios(DgvTabla);
+                    return new CServicios(Formulario);
                 case "Repuestos":
-                    return new CRepuestos(DgvTabla);
+                    return new CRepuestos(Formulario);
                 case "Vehiculos":
-                    return new CVehiculos(DgvTabla);
+                    return new CVehiculos(Formulario);
                 case "Usuarios":
-                    return new CUsuarios(DgvTabla);
+                    return new CUsuarios(Formulario);
                 case "OpMantenimientos":
-                    return new CMantenimientos(DgvTabla);
+                    return new CMantenimientos(Formulario);
                 default:
                     break;
             }

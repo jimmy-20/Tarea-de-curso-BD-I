@@ -1,5 +1,4 @@
-﻿using Bunifu.UI.WinForms;
-using ServiPlusApp.Controller.Factory;
+﻿using ServiPlusApp.Controller.Factory;
 using ServiPlusApp.Model;
 using ServiPlusApp.View.Mantenimientos;
 using ServiPlusApp.View.Tablas;
@@ -14,17 +13,17 @@ namespace ServiPlusApp.Controller
 {
     public class CMantenimientos : IAcciones
     {
-       BunifuDataGridView TablaMantenimientos;
-        public CMantenimientos(BunifuDataGridView TablaMantenimientos)
+        ShowTable FrmMantenimiento;
+        public CMantenimientos(ShowTable Formulario)
         {
-            this.TablaMantenimientos = TablaMantenimientos;
+            this.FrmMantenimiento = Formulario;
         }
 
 
         public void Ver()
         {
-            TablaMantenimientos.DataSource = DMantenimientos.Mostrar_Mantenimientos();
-            TablaMantenimientos.Columns[0].Visible = false;
+            FrmMantenimiento.DgvTablas.DataSource = DMantenimientos.Mostrar_Mantenimientos();
+          //  FrmMantenimiento.DgvTablas.Columns[0].Visible = false;
         }
 
         public void Agregar()
@@ -56,7 +55,7 @@ namespace ServiPlusApp.Controller
 
         public void Buscar(string text)
         {
-            TablaMantenimientos.DataSource = DMantenimientos.Buscar_Mantenimiento(text);
+            FrmMantenimiento.DgvTablas.DataSource = DMantenimientos.Buscar_Mantenimiento(text);
         }
     }
 }
