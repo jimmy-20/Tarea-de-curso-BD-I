@@ -16,6 +16,7 @@ namespace ServiPlusApp.Enums
         Administrador,
         Contador,
         Mecanico,
+        Cajero,
         Seguridad,
         
     }
