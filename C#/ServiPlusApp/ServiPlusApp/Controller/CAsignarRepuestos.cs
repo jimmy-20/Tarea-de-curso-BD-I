@@ -65,5 +65,10 @@ namespace ServiPlusApp.Controller
         {
             return DAsignarRepuestos.Mostrar_Servicios_Repuestos(IdDetMantenimiento);
         }
+
+        public static DataTable Asignar_Repuesto(int IdDetMantenimiento, int IdServicio, int cantidad)
+        {
+            return DAsignarRepuestos.Asignar_Repuesto(IdDetMantenimiento,IdServicio,cantidad);
+        }
     }
 }
