@@ -109,11 +109,12 @@ namespace ServiPlusApp.View.SetTables.Mantenimientos.Historial
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.DoubleEdgeFaded;
             this.bunifuSeparator1.LineThickness = 3;
             this.bunifuSeparator1.Location = new System.Drawing.Point(189, 0);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
             this.bunifuSeparator1.Size = new System.Drawing.Size(17, 434);
             this.bunifuSeparator1.TabIndex = 0;
+            this.bunifuSeparator1.Click += new System.EventHandler(this.bunifuSeparator1_Click);
             // 
             // btnTabServicios
             // 
@@ -491,7 +492,7 @@ namespace ServiPlusApp.View.SetTables.Mantenimientos.Historial
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(33, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 28);
+            this.label1.Size = new System.Drawing.Size(120, 34);
             this.label1.TabIndex = 4;
             this.label1.Text = "Historial";
             // 

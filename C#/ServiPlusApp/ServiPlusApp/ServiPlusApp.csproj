@@ -180,6 +180,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CHistorial.cs" />
     <Compile Include="Controller\CMantenimientos.cs" />
     <Compile Include="Controller\CMecanicos.cs" />
     <Compile Include="Controller\CRepuestos.cs" />

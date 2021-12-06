@@ -1,4 +1,5 @@
 ﻿using Bunifu.UI.WinForms.BunifuButton;
+using ServiPlusApp.Controller;
 using ServiPlusApp.Controller.Factory;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,8 @@ namespace ServiPlusApp.View.SetTables.Mantenimientos.Historial
         private void Historial_Load(object sender, EventArgs e)
         {
             btnTabServicios_Click(null,null);
+
+            dgvHistorial.DataSource = CHistorial.Historial_Mantenimientos(IdVehiculo);
         }
 
         #region Mover Form
@@ -60,6 +63,8 @@ namespace ServiPlusApp.View.SetTables.Mantenimientos.Historial
             btnTabRepuestos.Size = new Size(182, 45);
             btnTabServicios.Size = new Size(184, 47);
             //Aqui debes poner en practica el metodo que te haga el PA para buscar esos servicios por el idVehiculo
+
+            
         }
         private void btnTabRepuestos_MouseMove(object sender, MouseEventArgs e)
         {
@@ -97,8 +102,12 @@ namespace ServiPlusApp.View.SetTables.Mantenimientos.Historial
 
 
 
+
         #endregion
 
-       
+        private void bunifuSeparator1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
