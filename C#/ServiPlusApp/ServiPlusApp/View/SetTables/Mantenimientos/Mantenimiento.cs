@@ -4,6 +4,7 @@ using Bunifu.UI.WinForms.BunifuButton;
 using ServiPlusApp.Controller;
 using ServiPlusApp.Controller.Factory;
 using ServiPlusApp.Enums;
+using ServiPlusApp.View.SetTables.Mantenimientos.Historial;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace ServiPlusApp.View.Mantenimientos
         string mode;
 
         private IAcciones formulario;
-
+        int IdVehiculo;
         public Mantenimiento(string mode)
         {
             InitializeComponent();
@@ -43,18 +44,9 @@ namespace ServiPlusApp.View.Mantenimientos
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        #endregion
+        #endregion 
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-        }
-
+        #region Eventos del Formularios
         private void Mantenimiento_Load(object sender, EventArgs e)
         {
 
@@ -75,7 +67,20 @@ namespace ServiPlusApp.View.Mantenimientos
             cmbEstado.Items.AddRange(Estados.Mantenimiento);
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        #endregion
+
+
+        #region Eventos de los botones Buscar
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             BunifuIconButton btn = (BunifuIconButton)sender;
@@ -129,6 +134,15 @@ namespace ServiPlusApp.View.Mantenimientos
             }
         }
 
+        private void btnSecundarioBuscarServicios_Click(object sender, EventArgs e)
+        {
+            btnBuscar_Click(btnBuscarServicio, null);
+        }
+
+        #endregion
+
+
+        #region Eventos Panel Buscador
         private void btnClosePanelBuscador_Click(object sender, EventArgs e)
         {
             pnlBuscador.Visible = false;
@@ -157,108 +171,7 @@ namespace ServiPlusApp.View.Mantenimientos
 
         }
 
-
-        int index = 0;
-        private void dgvBuscador_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            DataGridViewRow row = dgvBuscador.CurrentRow;
-
-            if (btnCtsEstado)
-            {
-                txtIdCliente.Text = row.Cells[0].Value.ToString();
-                txtFullnameCliente.Text = row.Cells[1].Value.ToString() + " " + row.Cells[2].Value.ToString();
-                txtTelefCliente.Text = row.Cells[3].Value.ToString();
-                txtDireccionCliente.Text = row.Cells[4].Value.ToString();
-
-
-            }
-            else if (btnMecEstado)
-            {
-                txtIdMecanico.Text = row.Cells[0].Value.ToString();
-                txtMecanicoFullname.Text = row.Cells[1].Value.ToString() + " " + row.Cells[2].Value.ToString();
-            }
-            else if (btnVehEstado)
-            {
-                txtMarcaVehiculo.Text = row.Cells[3].Value.ToString();
-                txtModeloVehiculo.Text = row.Cells[4].Value.ToString();
-                txtAñoVehiculo.Text = row.Cells[5].Value.ToString();
-            }
-            else if (btnSerEstado)
-            {
-                index = dgvServicios.Rows.Add();
-
-                foreach (DataGridViewColumn column in dgvBuscador.Columns)
-                {
-                    if (dgvBuscador.Columns[column.Index].Name.Equals("Estado"))
-                    {
-                        continue;
-                    }
-                    dgvServicios[column.Index, index].Value = dgvBuscador[column.Index, row.Index].Value;
-                }
-
-                lblCantServicios.Text = dgvServicios.RowCount.ToString(); //Actualizo el contador
-                lblSubtotalServicios.Text = (Convert.ToInt32(dgvServicios[2, dgvServicios.RowCount - 1].Value.ToString())+ Convert.ToInt32(lblSubtotalServicios.Text.ToString())).ToString();
-                lblDescuentoTotalServicios.Text = (Convert.ToInt32(dgvServicios[3, dgvServicios.RowCount - 1].Value) + Convert.ToInt32(lblDescuentoTotalServicios.Text.ToString())).ToString();
-                lblTotalServicios.Text = (Convert.ToInt32(lblSubtotalServicios.Text) - Convert.ToInt32(lblDescuentoTotalServicios.Text)).ToString();
-            }
-
-            btnClosePanelBuscador_Click(null, null);
-
-        }
-
-        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cmbEstado.ForeColor = Color.Black;
-        }
-
-        private void dgvServicios_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewCell celda = dgvServicios.CurrentCell;
-
-            if (celda.OwningColumn.Name == "SeQuitar")
-            {
-                EliminarAsignacionDeServicio(celda.OwningRow);
-            }
-        }
-
-        private void btnEliminarServicio_Click(object sender, EventArgs e)
-        {
-            if (dgvServicios.CurrentRow == null)
-            {
-                return;
-            }
-
-            EliminarAsignacionDeServicio(dgvServicios.CurrentRow);
-        }
-
-        private void EliminarAsignacionDeServicio(DataGridViewRow row)
-        {
-            dgvServicios.Rows.Remove(row);
-
-
-            lblCantServicios.Text = dgvServicios.RowCount.ToString();
-
-            lblSubtotalServicios.Text = (Convert.ToInt32(lblSubtotalServicios.Text) - Convert.ToInt32(row.Cells[2].Value.ToString())).ToString();
-           
-            lblDescuentoTotalServicios.Text = (Convert.ToInt32(lblDescuentoTotalServicios.Text) - Convert.ToInt32(row.Cells[3].Value.ToString())).ToString();
-           
-            lblTotalServicios.Text = (Convert.ToInt32(lblSubtotalServicios.Text) - Convert.ToInt32(lblDescuentoTotalServicios.Text)).ToString();
-        }
-
-        private void btnVaciarServicios_Click(object sender, EventArgs e)
-        {
-            dgvServicios.Rows.Clear();
-
-            lblCantServicios.Text = "0";
-            lblSubtotalServicios.Text = "0";
-            lblDescuentoTotalServicios.Text = "0";
-            lblTotalServicios.Text = "0";
-        }
-
-        private void btnSecundarioBuscarServicios_Click(object sender, EventArgs e)
-        {
-            btnBuscar_Click(btnBuscarServicio, null);
-        }
+        #region Filtro del Panel Buscador
 
         private void rbtnFiltroMostrarPor_Click(object sender, EventArgs e)
         {
@@ -305,7 +218,7 @@ namespace ServiPlusApp.View.Mantenimientos
             }
         }
 
-        private void lblFiltroTodos_Click(object sender, EventArgs e)
+        private void lblFiltro_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
 
@@ -330,6 +243,129 @@ namespace ServiPlusApp.View.Mantenimientos
                 default:
                     break;
             }
+        }
+
+        #endregion
+
+        int index = 0;
+        private void dgvBuscador_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow row = dgvBuscador.CurrentRow;
+
+            if (btnCtsEstado)
+            {
+                txtIdCliente.Text = row.Cells[0].Value.ToString();
+                txtFullnameCliente.Text = row.Cells[1].Value.ToString() + " " + row.Cells[2].Value.ToString();
+                txtTelefCliente.Text = row.Cells[3].Value.ToString();
+                txtDireccionCliente.Text = row.Cells[4].Value.ToString();
+
+
+            }
+            else if (btnMecEstado)
+            {
+                txtIdMecanico.Text = row.Cells[0].Value.ToString();
+                txtMecanicoFullname.Text = row.Cells[1].Value.ToString() + " " + row.Cells[2].Value.ToString();
+            }
+            else if (btnVehEstado)
+            {
+                IdVehiculo = Convert.ToInt32(row.Cells[2].Value.ToString()); //Aqui se mantiene actualizado el id del vehiculo
+                txtMarcaVehiculo.Text = row.Cells[3].Value.ToString();
+                txtModeloVehiculo.Text = row.Cells[4].Value.ToString();
+                txtAñoVehiculo.Text = row.Cells[5].Value.ToString();
+            }
+            else if (btnSerEstado)
+            {
+                index = dgvServicios.Rows.Add();
+
+                foreach (DataGridViewColumn column in dgvBuscador.Columns)
+                {
+                    if (dgvBuscador.Columns[column.Index].Name.Equals("Estado"))
+                    {
+                        continue;
+                    }
+                    dgvServicios[column.Index, index].Value = dgvBuscador[column.Index, row.Index].Value;
+                }
+
+                lblCantServicios.Text = dgvServicios.RowCount.ToString(); //Actualizo el contador
+                lblSubtotalServicios.Text = (Convert.ToInt32(dgvServicios[2, dgvServicios.RowCount - 1].Value.ToString()) + Convert.ToInt32(lblSubtotalServicios.Text.ToString())).ToString();
+                lblDescuentoTotalServicios.Text = (Convert.ToInt32(dgvServicios[3, dgvServicios.RowCount - 1].Value) + Convert.ToInt32(lblDescuentoTotalServicios.Text.ToString())).ToString();
+                lblTotalServicios.Text = (Convert.ToInt32(lblSubtotalServicios.Text) - Convert.ToInt32(lblDescuentoTotalServicios.Text)).ToString();
+            }
+
+            btnClosePanelBuscador_Click(null, null);
+
+        }
+
+
+        #endregion
+
+
+        #region Eventos del panel Servicios
+
+        private void dgvServicios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCell celda = dgvServicios.CurrentCell;
+
+            if (celda.OwningColumn.Name == "SeQuitar")
+            {
+                EliminarAsignacionDeServicio(celda.OwningRow);
+            }
+        }
+
+        private void btnEliminarServicio_Click(object sender, EventArgs e)
+        {
+            if (dgvServicios.CurrentRow == null)
+            {
+                return;
+            }
+
+            EliminarAsignacionDeServicio(dgvServicios.CurrentRow);
+        }
+
+        private void EliminarAsignacionDeServicio(DataGridViewRow row)
+        {
+            dgvServicios.Rows.Remove(row);
+
+
+            lblCantServicios.Text = dgvServicios.RowCount.ToString();
+
+            lblSubtotalServicios.Text = (Convert.ToInt32(lblSubtotalServicios.Text) - Convert.ToInt32(row.Cells[2].Value.ToString())).ToString();
+
+            lblDescuentoTotalServicios.Text = (Convert.ToInt32(lblDescuentoTotalServicios.Text) - Convert.ToInt32(row.Cells[3].Value.ToString())).ToString();
+
+            lblTotalServicios.Text = (Convert.ToInt32(lblSubtotalServicios.Text) - Convert.ToInt32(lblDescuentoTotalServicios.Text)).ToString();
+        }
+
+        private void btnVaciarServicios_Click(object sender, EventArgs e)
+        {
+            dgvServicios.Rows.Clear();
+
+            lblCantServicios.Text = "0";
+            lblSubtotalServicios.Text = "0";
+            lblDescuentoTotalServicios.Text = "0";
+            lblTotalServicios.Text = "0";
+        }
+
+
+        #endregion
+
+        #region Mantenimiento
+
+        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbEstado.ForeColor = Color.Black;
+        }
+
+
+        #endregion
+
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            //Aqui debes validar que haya un vehiculo agregado, es decir,
+            //que ya se haya agregado un vehiculo o seleccionado uno,
+            //en otras palabras que los paneles de vehiculo este lleno
+            Historial historial = new Historial(1);
+            historial.ShowDialog();
         }
     }
 }
