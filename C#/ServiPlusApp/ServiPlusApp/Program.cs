@@ -3,6 +3,7 @@ using ServiPlusApp.View.Set_Tables.Mecanicos;
 using ServiPlusApp.View.Set_Tables.Repuestos;
 using ServiPlusApp.View.Set_Tables.Servicios;
 using ServiPlusApp.View.Set_Tables.Usuarios;
+using ServiPlusApp.View.SetTables.Mantenimientos.Historial;
 using ServiPlusApp.View.Tablas;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ namespace ServiPlusApp.View
             //Application.Run(new Welcome("Massiel Fonseca", "Massiel", "ADMIN", "SISTEMAS"));
            Application.Run(new Operaciones("Leonardo Antonio Duarte Rodríguez", "leoduartejr", "Admin", "Sistemas"));
          
-            //Application.Run(new Mantenimiento("Nuevo"));
+            //Application.Run(new Historial());
         }
     }
 }

@@ -4,6 +4,7 @@ using Bunifu.UI.WinForms.BunifuButton;
 using ServiPlusApp.Controller;
 using ServiPlusApp.Controller.Factory;
 using ServiPlusApp.Enums;
+using ServiPlusApp.View.SetTables.Mantenimientos.Historial;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace ServiPlusApp.View.Mantenimientos
         string mode;
 
         private IAcciones formulario;
-
+        int IdVehiculo;
         public Mantenimiento(string mode)
         {
             InitializeComponent();
@@ -267,6 +268,7 @@ namespace ServiPlusApp.View.Mantenimientos
             }
             else if (btnVehEstado)
             {
+                IdVehiculo = Convert.ToInt32(row.Cells[2].Value.ToString()); //Aqui se mantiene actualizado el id del vehiculo
                 txtMarcaVehiculo.Text = row.Cells[3].Value.ToString();
                 txtModeloVehiculo.Text = row.Cells[4].Value.ToString();
                 txtAñoVehiculo.Text = row.Cells[5].Value.ToString();
@@ -354,8 +356,16 @@ namespace ServiPlusApp.View.Mantenimientos
             cmbEstado.ForeColor = Color.Black;
         }
 
+
         #endregion
 
-
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            //Aqui debes validar que haya un vehiculo agregado, es decir,
+            //que ya se haya agregado un vehiculo o seleccionado uno,
+            //en otras palabras que los paneles de vehiculo este lleno
+            Historial historial = new Historial(1);
+            historial.ShowDialog();
+        }
     }
 }
