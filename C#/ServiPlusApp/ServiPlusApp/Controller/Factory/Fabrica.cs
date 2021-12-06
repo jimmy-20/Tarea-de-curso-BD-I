@@ -29,6 +29,8 @@ namespace ServiPlusApp.Controller.Factory
                     return new CUsuarios(DgvTabla);
                 case "OpMantenimientos":
                     return new CMantenimientos(DgvTabla);
+                case "OpRepuestos":
+                    return new CAsignarRepuestos(DgvTabla);
                 default:
                     break;
             }
