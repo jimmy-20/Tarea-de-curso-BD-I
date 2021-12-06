@@ -181,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\CAsignarRepuestos.cs" />
+    <Compile Include="Controller\CHistorial.cs" />
     <Compile Include="Controller\CMantenimientos.cs" />
     <Compile Include="Controller\CMecanicos.cs" />
     <Compile Include="Controller\CRepuestos.cs" />
@@ -222,23 +223,23 @@
     <Compile Include="View\SetTables\Mantenimientos\AsignarRepuestos\Repuesto.Designer.cs">
       <DependentUpon>Repuesto.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\SetTables\Mantenimientos\Historial\Historial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\SetTables\Mantenimientos\Historial\Historial.Designer.cs">
-      <DependentUpon>Historial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\SetTables\Mantenimientos\Mantenimiento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\SetTables\Mantenimientos\Mantenimiento.Designer.cs">
-      <DependentUpon>Mantenimiento.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\SetTables\Clientes\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\SetTables\Clientes\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SetTables\Mantenimientos\Historial\Historial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SetTables\Mantenimientos\Historial\Historial.designer.cs">
+      <DependentUpon>Historial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SetTables\Mantenimientos\Mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SetTables\Mantenimientos\Mantenimiento.designer.cs">
+      <DependentUpon>Mantenimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="View\SetTables\Mecanicos\Mecanico.cs">
       <SubType>Form</SubType>
@@ -324,14 +325,14 @@
     <EmbeddedResource Include="View\SetTables\Mantenimientos\AsignarRepuestos\Repuesto.resx">
       <DependentUpon>Repuesto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\SetTables\Clientes\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\SetTables\Mantenimientos\Historial\Historial.resx">
       <DependentUpon>Historial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\SetTables\Mantenimientos\Mantenimiento.resx">
       <DependentUpon>Mantenimiento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\SetTables\Clientes\Cliente.resx">
-      <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\SetTables\Mecanicos\Mecanico.resx">
       <DependentUpon>Mecanico.cs</DependentUpon>

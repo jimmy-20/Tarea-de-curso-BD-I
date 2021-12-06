@@ -163,5 +163,62 @@ namespace ServiPlusApp.Model
 
             return DtResultado;
         }
+
+        public static DataTable Asignar_Repuesto(int IdDetMantenimiento,int IdServicio,int cantidad)
+        {
+            DataTable DtResultado = new DataTable("Asignar_Respuesto");
+
+            SqlConnection sqlCon = new SqlConnection();
+
+            try
+            {
+                //Cargar la conexion del servidor 
+                sqlCon.ConnectionString = Connection.conexion;
+
+                //Creando un objeto SQLCommand que llamara al procedimiento almacenado
+                SqlCommand sqlCmd = new SqlCommand
+                {
+                    Connection = sqlCon,
+                    CommandText = "Asignar_Respuesto",
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                SqlParameter parIdDetalleMantenimiento = new SqlParameter()
+                {
+                    ParameterName = "@IdDetalleMantenimiento",
+                    SqlDbType = SqlDbType.Int,
+                    Value = IdDetMantenimiento
+
+                };
+                SqlParameter parIdServicio = new SqlParameter()
+                {
+                    ParameterName = "@IdServicio",
+                    SqlDbType = SqlDbType.Int,
+                    Value = IdServicio
+
+                };
+                SqlParameter parCantidad = new SqlParameter()
+                {
+                    ParameterName = "@cantidad",
+                    SqlDbType = SqlDbType.Int,
+                    Value = cantidad
+
+                };
+
+                sqlCmd.Parameters.Add(parIdDetalleMantenimiento);
+                sqlCmd.Parameters.Add(parIdServicio);
+                sqlCmd.Parameters.Add(parCantidad);
+
+                SqlDataAdapter sqlDat = new SqlDataAdapter(sqlCmd);
+                sqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception)
+            {
+                DtResultado = null;
+            }
+
+            return DtResultado;
+        }
     }
 }

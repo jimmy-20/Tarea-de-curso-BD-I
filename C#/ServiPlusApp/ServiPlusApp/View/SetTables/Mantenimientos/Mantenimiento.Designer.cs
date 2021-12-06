@@ -40,7 +40,6 @@ namespace ServiPlusApp.View.Mantenimientos
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -100,9 +99,9 @@ namespace ServiPlusApp.View.Mantenimientos
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -126,7 +125,6 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnSecundarioBuscarServicios = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.SeparadorBuscador = new Bunifu.UI.WinForms.BunifuSeparator();
             this.btnBuscarMecanico = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
-            this.btnBuscarCliente = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.btnBuscarVehiculo = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.label5 = new System.Windows.Forms.Label();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
@@ -176,7 +174,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.pnlDatosMant2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblTotalServicios = new System.Windows.Forms.Label();
-            this.lblDescuentoTotalServicios = new System.Windows.Forms.Label();
+            this.lblIVA = new System.Windows.Forms.Label();
             this.lblSubtotalServicios = new System.Windows.Forms.Label();
             this.lblCantServicios = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -247,10 +245,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuPanel2.Controls.Add(this.btnModificar);
             this.bunifuPanel2.Controls.Add(this.btnGuardar);
             this.bunifuTransition1.SetDecoration(this.bunifuPanel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuPanel2.Location = new System.Drawing.Point(1333, 56);
+            this.bunifuPanel2.Location = new System.Drawing.Point(1600, 67);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(194, 688);
+            this.bunifuPanel2.Size = new System.Drawing.Size(233, 826);
             this.bunifuPanel2.TabIndex = 93;
             // 
             // bunifuSeparator7
@@ -265,10 +264,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuSeparator7.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Dash;
             this.bunifuSeparator7.LineThickness = 3;
             this.bunifuSeparator7.Location = new System.Drawing.Point(0, 0);
-            this.bunifuSeparator7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator7.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuSeparator7.Name = "bunifuSeparator7";
             this.bunifuSeparator7.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator7.Size = new System.Drawing.Size(10, 688);
+            this.bunifuSeparator7.Size = new System.Drawing.Size(12, 826);
             this.bunifuSeparator7.TabIndex = 112;
             // 
             // bunifuTextBox2
@@ -300,7 +299,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTextBox2.IconRight = null;
             this.bunifuTextBox2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox2.Lines = new string[0];
-            this.bunifuTextBox2.Location = new System.Drawing.Point(-209, 413);
+            this.bunifuTextBox2.Location = new System.Drawing.Point(-251, 496);
+            this.bunifuTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBox2.MaxLength = 32767;
             this.bunifuTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox2.Modified = false;
@@ -326,7 +326,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox2.OnIdleState = stateProperties4;
-            this.bunifuTextBox2.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBox2.PasswordChar = '\0';
             this.bunifuTextBox2.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox2.PlaceholderText = "FullName";
@@ -336,7 +336,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTextBox2.SelectionLength = 0;
             this.bunifuTextBox2.SelectionStart = 0;
             this.bunifuTextBox2.ShortcutsEnabled = true;
-            this.bunifuTextBox2.Size = new System.Drawing.Size(178, 45);
+            this.bunifuTextBox2.Size = new System.Drawing.Size(214, 54);
             this.bunifuTextBox2.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox2.TabIndex = 102;
             this.bunifuTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -364,9 +364,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnHistorial.ForeColor = System.Drawing.Color.White;
             this.btnHistorial.Image = ((System.Drawing.Image)(resources.GetObject("btnHistorial.Image")));
             this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHistorial.Location = new System.Drawing.Point(13, 363);
+            this.btnHistorial.Location = new System.Drawing.Point(16, 436);
+            this.btnHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(175, 100);
+            this.btnHistorial.Size = new System.Drawing.Size(210, 120);
             this.btnHistorial.TabIndex = 56;
             this.btnHistorial.Text = "Historial";
             this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -391,9 +392,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(13, 247);
+            this.btnCancelar.Location = new System.Drawing.Point(16, 296);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(175, 100);
+            this.btnCancelar.Size = new System.Drawing.Size(210, 120);
             this.btnCancelar.TabIndex = 55;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -417,9 +419,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnModificar.Location = new System.Drawing.Point(13, 131);
+            this.btnModificar.Location = new System.Drawing.Point(16, 157);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(175, 100);
+            this.btnModificar.Size = new System.Drawing.Size(210, 120);
             this.btnModificar.TabIndex = 54;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -443,9 +446,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(13, 14);
+            this.btnGuardar.Location = new System.Drawing.Point(16, 17);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(175, 100);
+            this.btnGuardar.Size = new System.Drawing.Size(210, 120);
             this.btnGuardar.TabIndex = 53;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -458,9 +462,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.btnMinimizar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(1461, 12);
+            this.btnMinimizar.Location = new System.Drawing.Point(1753, 14);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.btnMinimizar.Size = new System.Drawing.Size(30, 30);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMinimizar.TabIndex = 3;
             this.btnMinimizar.TabStop = false;
@@ -472,9 +477,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.btnClose, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1492, 12);
+            this.btnClose.Location = new System.Drawing.Point(1790, 14);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 25);
+            this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnClose.TabIndex = 2;
             this.btnClose.TabStop = false;
@@ -530,6 +536,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnBarraSuperior.IdleIconRightImage = null;
             this.btnBarraSuperior.IndicateFocus = false;
             this.btnBarraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.btnBarraSuperior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBarraSuperior.Name = "btnBarraSuperior";
             this.btnBarraSuperior.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnBarraSuperior.OnDisabledState.BorderRadius = 1;
@@ -563,7 +570,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnBarraSuperior.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnBarraSuperior.OnPressedState.IconLeftImage = null;
             this.btnBarraSuperior.OnPressedState.IconRightImage = null;
-            this.btnBarraSuperior.Size = new System.Drawing.Size(1529, 50);
+            this.btnBarraSuperior.Size = new System.Drawing.Size(1835, 60);
             this.btnBarraSuperior.TabIndex = 2;
             this.btnBarraSuperior.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBarraSuperior.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -583,7 +590,6 @@ namespace ServiPlusApp.View.Mantenimientos
             this.pnlDatosMant1.Controls.Add(this.btnSecundarioBuscarServicios);
             this.pnlDatosMant1.Controls.Add(this.SeparadorBuscador);
             this.pnlDatosMant1.Controls.Add(this.btnBuscarMecanico);
-            this.pnlDatosMant1.Controls.Add(this.btnBuscarCliente);
             this.pnlDatosMant1.Controls.Add(this.btnBuscarVehiculo);
             this.pnlDatosMant1.Controls.Add(this.label5);
             this.pnlDatosMant1.Controls.Add(this.bunifuSeparator2);
@@ -614,10 +620,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.pnlDatosMant1.Controls.Add(this.txtIdCliente);
             this.pnlDatosMant1.Controls.Add(this.TituloDtosCliente);
             this.bunifuTransition1.SetDecoration(this.pnlDatosMant1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pnlDatosMant1.Location = new System.Drawing.Point(12, 56);
+            this.pnlDatosMant1.Location = new System.Drawing.Point(14, 67);
+            this.pnlDatosMant1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlDatosMant1.Name = "pnlDatosMant1";
             this.pnlDatosMant1.ShowBorders = true;
-            this.pnlDatosMant1.Size = new System.Drawing.Size(1315, 400);
+            this.pnlDatosMant1.Size = new System.Drawing.Size(1578, 480);
             this.pnlDatosMant1.TabIndex = 40;
             // 
             // btnSecundarioBuscarServicios
@@ -668,7 +675,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnSecundarioBuscarServicios.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnSecundarioBuscarServicios.IdleIconLeftImage")));
             this.btnSecundarioBuscarServicios.IdleIconRightImage = null;
             this.btnSecundarioBuscarServicios.IndicateFocus = false;
-            this.btnSecundarioBuscarServicios.Location = new System.Drawing.Point(1056, 341);
+            this.btnSecundarioBuscarServicios.Location = new System.Drawing.Point(1267, 409);
+            this.btnSecundarioBuscarServicios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSecundarioBuscarServicios.Name = "btnSecundarioBuscarServicios";
             this.btnSecundarioBuscarServicios.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSecundarioBuscarServicios.OnDisabledState.BorderRadius = 30;
@@ -702,7 +710,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnSecundarioBuscarServicios.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnSecundarioBuscarServicios.OnPressedState.IconLeftImage = null;
             this.btnSecundarioBuscarServicios.OnPressedState.IconRightImage = null;
-            this.btnSecundarioBuscarServicios.Size = new System.Drawing.Size(234, 42);
+            this.btnSecundarioBuscarServicios.Size = new System.Drawing.Size(281, 50);
             this.btnSecundarioBuscarServicios.TabIndex = 111;
             this.btnSecundarioBuscarServicios.Tag = "Servicios";
             this.btnSecundarioBuscarServicios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -724,11 +732,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.SeparadorBuscador.LineColor = System.Drawing.Color.DodgerBlue;
             this.SeparadorBuscador.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.DoubleEdgeFaded;
             this.SeparadorBuscador.LineThickness = 2;
-            this.SeparadorBuscador.Location = new System.Drawing.Point(0, 390);
-            this.SeparadorBuscador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeparadorBuscador.Location = new System.Drawing.Point(0, 468);
+            this.SeparadorBuscador.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.SeparadorBuscador.Name = "SeparadorBuscador";
             this.SeparadorBuscador.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.SeparadorBuscador.Size = new System.Drawing.Size(1315, 10);
+            this.SeparadorBuscador.Size = new System.Drawing.Size(1578, 12);
             this.SeparadorBuscador.TabIndex = 110;
             // 
             // btnBuscarMecanico
@@ -755,49 +763,16 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnBuscarMecanico.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnBuscarMecanico.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarMecanico.Image")));
             this.btnBuscarMecanico.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.btnBuscarMecanico.Location = new System.Drawing.Point(1205, 190);
+            this.btnBuscarMecanico.Location = new System.Drawing.Point(1446, 228);
+            this.btnBuscarMecanico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarMecanico.Name = "btnBuscarMecanico";
             this.btnBuscarMecanico.RoundBorders = true;
             this.btnBuscarMecanico.ShowBorders = true;
-            this.btnBuscarMecanico.Size = new System.Drawing.Size(45, 45);
+            this.btnBuscarMecanico.Size = new System.Drawing.Size(54, 54);
             this.btnBuscarMecanico.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.btnBuscarMecanico.TabIndex = 101;
             this.btnBuscarMecanico.Tag = "Mecanicos";
             this.btnBuscarMecanico.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.AllowAnimations = true;
-            this.btnBuscarCliente.AllowBorderColorChanges = true;
-            this.btnBuscarCliente.AllowMouseEffects = true;
-            this.btnBuscarCliente.AnimationSpeed = 200;
-            this.btnBuscarCliente.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscarCliente.BackgroundColor = System.Drawing.Color.DodgerBlue;
-            this.btnBuscarCliente.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnBuscarCliente.BorderRadius = 1;
-            this.btnBuscarCliente.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
-            this.btnBuscarCliente.BorderThickness = 1;
-            this.btnBuscarCliente.ColorContrastOnClick = 30;
-            this.btnBuscarCliente.ColorContrastOnHover = 30;
-            this.btnBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnBuscarCliente.CustomizableEdges = borderEdges4;
-            this.bunifuTransition1.SetDecoration(this.btnBuscarCliente, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnBuscarCliente.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCliente.Image")));
-            this.btnBuscarCliente.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.btnBuscarCliente.Location = new System.Drawing.Point(516, 65);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.RoundBorders = false;
-            this.btnBuscarCliente.ShowBorders = true;
-            this.btnBuscarCliente.Size = new System.Drawing.Size(45, 45);
-            this.btnBuscarCliente.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
-            this.btnBuscarCliente.TabIndex = 100;
-            this.btnBuscarCliente.Tag = "Clientes";
-            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnBuscarVehiculo
             // 
@@ -814,20 +789,21 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnBuscarVehiculo.ColorContrastOnClick = 30;
             this.btnBuscarVehiculo.ColorContrastOnHover = 30;
             this.btnBuscarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnBuscarVehiculo.CustomizableEdges = borderEdges5;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnBuscarVehiculo.CustomizableEdges = borderEdges4;
             this.bunifuTransition1.SetDecoration(this.btnBuscarVehiculo, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnBuscarVehiculo.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnBuscarVehiculo.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarVehiculo.Image")));
             this.btnBuscarVehiculo.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.btnBuscarVehiculo.Location = new System.Drawing.Point(516, 314);
+            this.btnBuscarVehiculo.Location = new System.Drawing.Point(619, 377);
+            this.btnBuscarVehiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarVehiculo.Name = "btnBuscarVehiculo";
             this.btnBuscarVehiculo.RoundBorders = true;
             this.btnBuscarVehiculo.ShowBorders = true;
-            this.btnBuscarVehiculo.Size = new System.Drawing.Size(45, 45);
+            this.btnBuscarVehiculo.Size = new System.Drawing.Size(54, 54);
             this.btnBuscarVehiculo.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.btnBuscarVehiculo.TabIndex = 99;
             this.btnBuscarVehiculo.Tag = "Vehiculos";
@@ -838,9 +814,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.label5.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label5.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(722, 210);
+            this.label5.Location = new System.Drawing.Point(866, 252);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 20);
+            this.label5.Size = new System.Drawing.Size(121, 25);
             this.label5.TabIndex = 98;
             this.label5.Text = "Mecanico:";
             // 
@@ -854,11 +831,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuSeparator2.LineColor = System.Drawing.Color.DimGray;
             this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.DoubleEdgeFaded;
             this.bunifuSeparator2.LineThickness = 2;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(664, 9);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(797, 11);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator2.Size = new System.Drawing.Size(16, 374);
+            this.bunifuSeparator2.Size = new System.Drawing.Size(19, 449);
             this.bunifuSeparator2.TabIndex = 97;
             // 
             // label4
@@ -866,9 +843,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.label4.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label4.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 140);
+            this.label4.Location = new System.Drawing.Point(34, 168);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 20);
+            this.label4.Size = new System.Drawing.Size(108, 25);
             this.label4.TabIndex = 96;
             this.label4.Text = "Telefono:";
             // 
@@ -901,7 +879,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtTelefCliente.IconRight = null;
             this.txtTelefCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefCliente.Lines = new string[0];
-            this.txtTelefCliente.Location = new System.Drawing.Point(124, 123);
+            this.txtTelefCliente.Location = new System.Drawing.Point(149, 148);
+            this.txtTelefCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefCliente.MaxLength = 32767;
             this.txtTelefCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefCliente.Modified = false;
@@ -927,7 +906,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtTelefCliente.OnIdleState = stateProperties8;
-            this.txtTelefCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.txtTelefCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefCliente.PasswordChar = '\0';
             this.txtTelefCliente.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtTelefCliente.PlaceholderText = "Telefono";
@@ -937,7 +916,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtTelefCliente.SelectionLength = 0;
             this.txtTelefCliente.SelectionStart = 0;
             this.txtTelefCliente.ShortcutsEnabled = true;
-            this.txtTelefCliente.Size = new System.Drawing.Size(300, 45);
+            this.txtTelefCliente.Size = new System.Drawing.Size(360, 54);
             this.txtTelefCliente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtTelefCliente.TabIndex = 95;
             this.txtTelefCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -977,7 +956,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtFullnameCliente.IconRight = null;
             this.txtFullnameCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFullnameCliente.Lines = new string[0];
-            this.txtFullnameCliente.Location = new System.Drawing.Point(210, 65);
+            this.txtFullnameCliente.Location = new System.Drawing.Point(252, 78);
+            this.txtFullnameCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFullnameCliente.MaxLength = 32767;
             this.txtFullnameCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtFullnameCliente.Modified = false;
@@ -1003,7 +983,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtFullnameCliente.OnIdleState = stateProperties12;
-            this.txtFullnameCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.txtFullnameCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFullnameCliente.PasswordChar = '\0';
             this.txtFullnameCliente.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtFullnameCliente.PlaceholderText = "FullName";
@@ -1013,7 +993,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtFullnameCliente.SelectionLength = 0;
             this.txtFullnameCliente.SelectionStart = 0;
             this.txtFullnameCliente.ShortcutsEnabled = true;
-            this.txtFullnameCliente.Size = new System.Drawing.Size(300, 45);
+            this.txtFullnameCliente.Size = new System.Drawing.Size(360, 54);
             this.txtFullnameCliente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtFullnameCliente.TabIndex = 94;
             this.txtFullnameCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1053,7 +1033,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtIdMecanico.IconRight = null;
             this.txtIdMecanico.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIdMecanico.Lines = new string[0];
-            this.txtIdMecanico.Location = new System.Drawing.Point(828, 189);
+            this.txtIdMecanico.Location = new System.Drawing.Point(994, 227);
+            this.txtIdMecanico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdMecanico.MaxLength = 32767;
             this.txtIdMecanico.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtIdMecanico.Modified = false;
@@ -1079,7 +1060,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtIdMecanico.OnIdleState = stateProperties16;
-            this.txtIdMecanico.Padding = new System.Windows.Forms.Padding(3);
+            this.txtIdMecanico.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdMecanico.PasswordChar = '\0';
             this.txtIdMecanico.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtIdMecanico.PlaceholderText = "ID";
@@ -1089,7 +1070,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtIdMecanico.SelectionLength = 0;
             this.txtIdMecanico.SelectionStart = 0;
             this.txtIdMecanico.ShortcutsEnabled = true;
-            this.txtIdMecanico.Size = new System.Drawing.Size(80, 50);
+            this.txtIdMecanico.Size = new System.Drawing.Size(96, 60);
             this.txtIdMecanico.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtIdMecanico.TabIndex = 93;
             this.txtIdMecanico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1129,7 +1110,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtMecanicoFullname.IconRight = null;
             this.txtMecanicoFullname.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMecanicoFullname.Lines = new string[0];
-            this.txtMecanicoFullname.Location = new System.Drawing.Point(914, 189);
+            this.txtMecanicoFullname.Location = new System.Drawing.Point(1097, 227);
+            this.txtMecanicoFullname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMecanicoFullname.MaxLength = 32767;
             this.txtMecanicoFullname.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMecanicoFullname.Modified = false;
@@ -1155,7 +1137,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtMecanicoFullname.OnIdleState = stateProperties20;
-            this.txtMecanicoFullname.Padding = new System.Windows.Forms.Padding(3);
+            this.txtMecanicoFullname.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMecanicoFullname.PasswordChar = '\0';
             this.txtMecanicoFullname.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtMecanicoFullname.PlaceholderText = "FullName";
@@ -1165,7 +1147,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtMecanicoFullname.SelectionLength = 0;
             this.txtMecanicoFullname.SelectionStart = 0;
             this.txtMecanicoFullname.ShortcutsEnabled = true;
-            this.txtMecanicoFullname.Size = new System.Drawing.Size(280, 50);
+            this.txtMecanicoFullname.Size = new System.Drawing.Size(336, 60);
             this.txtMecanicoFullname.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtMecanicoFullname.TabIndex = 92;
             this.txtMecanicoFullname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1206,7 +1188,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtDtosMant.IconRight = null;
             this.txtDtosMant.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDtosMant.Lines = new string[0];
-            this.txtDtosMant.Location = new System.Drawing.Point(687, 3);
+            this.txtDtosMant.Location = new System.Drawing.Point(824, 4);
+            this.txtDtosMant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDtosMant.MaxLength = 32767;
             this.txtDtosMant.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDtosMant.Modified = false;
@@ -1232,7 +1215,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties24.ForeColor = System.Drawing.Color.Empty;
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtDtosMant.OnIdleState = stateProperties24;
-            this.txtDtosMant.Padding = new System.Windows.Forms.Padding(3);
+            this.txtDtosMant.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDtosMant.PasswordChar = '\0';
             this.txtDtosMant.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtDtosMant.PlaceholderText = "Datos del Mantenimiento";
@@ -1242,7 +1225,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtDtosMant.SelectionLength = 0;
             this.txtDtosMant.SelectionStart = 0;
             this.txtDtosMant.ShortcutsEnabled = true;
-            this.txtDtosMant.Size = new System.Drawing.Size(603, 40);
+            this.txtDtosMant.Size = new System.Drawing.Size(724, 48);
             this.txtDtosMant.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.txtDtosMant.TabIndex = 91;
             this.txtDtosMant.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1263,11 +1246,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuSeparator1.LineColor = System.Drawing.Color.Gray;
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator1.LineThickness = 2;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(1068, 63);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(1282, 76);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(16, 94);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(19, 113);
             this.bunifuSeparator1.TabIndex = 90;
             // 
             // label3
@@ -1275,9 +1258,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.label3.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label3.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1092, 65);
+            this.label3.Location = new System.Drawing.Point(1310, 78);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 40);
+            this.label3.Size = new System.Drawing.Size(153, 46);
             this.label3.TabIndex = 89;
             this.label3.Text = "Estado del \r\nMantenimiento";
             // 
@@ -1286,9 +1270,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.label2.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(915, 65);
+            this.label2.Location = new System.Drawing.Point(1098, 78);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 40);
+            this.label2.Size = new System.Drawing.Size(98, 46);
             this.label2.TabIndex = 88;
             this.label2.Text = "Fecha \r\nde Salida";
             // 
@@ -1297,9 +1282,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.label1.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(722, 65);
+            this.label1.Location = new System.Drawing.Point(866, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 40);
+            this.label1.Size = new System.Drawing.Size(115, 46);
             this.label1.TabIndex = 87;
             this.label1.Text = "Fecha \r\nde Ingreso";
             // 
@@ -1307,9 +1293,10 @@ namespace ServiPlusApp.View.Mantenimientos
             // 
             this.bunifuTransition1.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(872, 116);
+            this.pictureBox1.Location = new System.Drawing.Point(1046, 139);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 25);
+            this.pictureBox1.Size = new System.Drawing.Size(43, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 85;
             this.pictureBox1.TabStop = false;
@@ -1352,9 +1339,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.cmbEstado.ItemHighLightColor = System.Drawing.Color.MediumOrchid;
             this.cmbEstado.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbEstado.ItemTopMargin = 3;
-            this.cmbEstado.Location = new System.Drawing.Point(1091, 112);
+            this.cmbEstado.Location = new System.Drawing.Point(1309, 134);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(194, 30);
+            this.cmbEstado.Size = new System.Drawing.Size(232, 30);
             this.cmbEstado.TabIndex = 83;
             this.cmbEstado.Text = "Estado";
             this.cmbEstado.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -1384,10 +1372,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.dpFechaDeSalida.IconColor = System.Drawing.Color.Red;
             this.dpFechaDeSalida.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dpFechaDeSalida.LeftTextMargin = 5;
-            this.dpFechaDeSalida.Location = new System.Drawing.Point(914, 112);
+            this.dpFechaDeSalida.Location = new System.Drawing.Point(1097, 134);
+            this.dpFechaDeSalida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dpFechaDeSalida.MinimumSize = new System.Drawing.Size(4, 32);
             this.dpFechaDeSalida.Name = "dpFechaDeSalida";
-            this.dpFechaDeSalida.Size = new System.Drawing.Size(145, 32);
+            this.dpFechaDeSalida.Size = new System.Drawing.Size(173, 33);
             this.dpFechaDeSalida.TabIndex = 82;
             this.dpFechaDeSalida.Value = new System.DateTime(2021, 12, 2, 20, 39, 0, 0);
             // 
@@ -1414,10 +1403,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.dpFechaDeIngreso.IconColor = System.Drawing.Color.DarkGreen;
             this.dpFechaDeIngreso.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dpFechaDeIngreso.LeftTextMargin = 5;
-            this.dpFechaDeIngreso.Location = new System.Drawing.Point(721, 112);
+            this.dpFechaDeIngreso.Location = new System.Drawing.Point(865, 134);
+            this.dpFechaDeIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dpFechaDeIngreso.MinimumSize = new System.Drawing.Size(4, 32);
             this.dpFechaDeIngreso.Name = "dpFechaDeIngreso";
-            this.dpFechaDeIngreso.Size = new System.Drawing.Size(145, 32);
+            this.dpFechaDeIngreso.Size = new System.Drawing.Size(173, 33);
             this.dpFechaDeIngreso.TabIndex = 81;
             this.dpFechaDeIngreso.Value = new System.DateTime(2021, 12, 2, 20, 39, 0, 0);
             // 
@@ -1450,7 +1440,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtEstado.IconRight = null;
             this.txtEstado.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEstado.Lines = new string[0];
-            this.txtEstado.Location = new System.Drawing.Point(1091, 110);
+            this.txtEstado.Location = new System.Drawing.Point(1309, 132);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEstado.MaxLength = 32767;
             this.txtEstado.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEstado.Modified = false;
@@ -1476,7 +1467,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties28.ForeColor = System.Drawing.Color.Empty;
             stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtEstado.OnIdleState = stateProperties28;
-            this.txtEstado.Padding = new System.Windows.Forms.Padding(3);
+            this.txtEstado.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEstado.PasswordChar = '\0';
             this.txtEstado.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtEstado.PlaceholderText = "Marca";
@@ -1486,7 +1477,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtEstado.SelectionLength = 0;
             this.txtEstado.SelectionStart = 0;
             this.txtEstado.ShortcutsEnabled = true;
-            this.txtEstado.Size = new System.Drawing.Size(194, 40);
+            this.txtEstado.Size = new System.Drawing.Size(233, 48);
             this.txtEstado.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.txtEstado.TabIndex = 86;
             this.txtEstado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1502,9 +1493,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.label10.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label10.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(41, 82);
+            this.label10.Location = new System.Drawing.Point(49, 98);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 20);
+            this.label10.Size = new System.Drawing.Size(93, 25);
             this.label10.TabIndex = 80;
             this.label10.Text = "Cliente:";
             // 
@@ -1513,9 +1505,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.label9.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label9.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(19, 190);
+            this.label9.Location = new System.Drawing.Point(23, 228);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 20);
+            this.label9.Size = new System.Drawing.Size(120, 25);
             this.label9.TabIndex = 79;
             this.label9.Text = "Dirección:";
             // 
@@ -1524,9 +1517,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.label8.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label8.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(355, 292);
+            this.label8.Location = new System.Drawing.Point(426, 350);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 20);
+            this.label8.Size = new System.Drawing.Size(59, 25);
             this.label8.TabIndex = 78;
             this.label8.Text = "Año:";
             // 
@@ -1535,9 +1529,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.label7.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label7.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(189, 292);
+            this.label7.Location = new System.Drawing.Point(227, 350);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 20);
+            this.label7.Size = new System.Drawing.Size(97, 25);
             this.label7.TabIndex = 77;
             this.label7.Text = "Modelo:";
             // 
@@ -1546,9 +1541,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.label6.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label6.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(24, 292);
+            this.label6.Location = new System.Drawing.Point(29, 350);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 20);
+            this.label6.Size = new System.Drawing.Size(86, 25);
             this.label6.TabIndex = 76;
             this.label6.Text = "Marca:";
             // 
@@ -1581,7 +1577,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtAñoVehiculo.IconRight = null;
             this.txtAñoVehiculo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAñoVehiculo.Lines = new string[0];
-            this.txtAñoVehiculo.Location = new System.Drawing.Point(354, 314);
+            this.txtAñoVehiculo.Location = new System.Drawing.Point(425, 377);
+            this.txtAñoVehiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAñoVehiculo.MaxLength = 32767;
             this.txtAñoVehiculo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAñoVehiculo.Modified = false;
@@ -1607,7 +1604,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties32.ForeColor = System.Drawing.Color.Empty;
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtAñoVehiculo.OnIdleState = stateProperties32;
-            this.txtAñoVehiculo.Padding = new System.Windows.Forms.Padding(3);
+            this.txtAñoVehiculo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAñoVehiculo.PasswordChar = '\0';
             this.txtAñoVehiculo.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtAñoVehiculo.PlaceholderText = "Año";
@@ -1617,7 +1614,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtAñoVehiculo.SelectionLength = 0;
             this.txtAñoVehiculo.SelectionStart = 0;
             this.txtAñoVehiculo.ShortcutsEnabled = true;
-            this.txtAñoVehiculo.Size = new System.Drawing.Size(150, 45);
+            this.txtAñoVehiculo.Size = new System.Drawing.Size(180, 54);
             this.txtAñoVehiculo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAñoVehiculo.TabIndex = 71;
             this.txtAñoVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1657,7 +1654,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtModeloVehiculo.IconRight = null;
             this.txtModeloVehiculo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtModeloVehiculo.Lines = new string[0];
-            this.txtModeloVehiculo.Location = new System.Drawing.Point(188, 314);
+            this.txtModeloVehiculo.Location = new System.Drawing.Point(226, 377);
+            this.txtModeloVehiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModeloVehiculo.MaxLength = 32767;
             this.txtModeloVehiculo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtModeloVehiculo.Modified = false;
@@ -1683,7 +1681,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties36.ForeColor = System.Drawing.Color.Empty;
             stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtModeloVehiculo.OnIdleState = stateProperties36;
-            this.txtModeloVehiculo.Padding = new System.Windows.Forms.Padding(3);
+            this.txtModeloVehiculo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModeloVehiculo.PasswordChar = '\0';
             this.txtModeloVehiculo.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtModeloVehiculo.PlaceholderText = "Modelo";
@@ -1693,7 +1691,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtModeloVehiculo.SelectionLength = 0;
             this.txtModeloVehiculo.SelectionStart = 0;
             this.txtModeloVehiculo.ShortcutsEnabled = true;
-            this.txtModeloVehiculo.Size = new System.Drawing.Size(160, 45);
+            this.txtModeloVehiculo.Size = new System.Drawing.Size(192, 54);
             this.txtModeloVehiculo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtModeloVehiculo.TabIndex = 70;
             this.txtModeloVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1733,7 +1731,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtMarcaVehiculo.IconRight = null;
             this.txtMarcaVehiculo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMarcaVehiculo.Lines = new string[0];
-            this.txtMarcaVehiculo.Location = new System.Drawing.Point(23, 314);
+            this.txtMarcaVehiculo.Location = new System.Drawing.Point(28, 377);
+            this.txtMarcaVehiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMarcaVehiculo.MaxLength = 32767;
             this.txtMarcaVehiculo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMarcaVehiculo.Modified = false;
@@ -1759,7 +1758,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties40.ForeColor = System.Drawing.Color.Empty;
             stateProperties40.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtMarcaVehiculo.OnIdleState = stateProperties40;
-            this.txtMarcaVehiculo.Padding = new System.Windows.Forms.Padding(3);
+            this.txtMarcaVehiculo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMarcaVehiculo.PasswordChar = '\0';
             this.txtMarcaVehiculo.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtMarcaVehiculo.PlaceholderText = "Marca";
@@ -1769,7 +1768,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtMarcaVehiculo.SelectionLength = 0;
             this.txtMarcaVehiculo.SelectionStart = 0;
             this.txtMarcaVehiculo.ShortcutsEnabled = true;
-            this.txtMarcaVehiculo.Size = new System.Drawing.Size(160, 45);
+            this.txtMarcaVehiculo.Size = new System.Drawing.Size(192, 54);
             this.txtMarcaVehiculo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtMarcaVehiculo.TabIndex = 69;
             this.txtMarcaVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1809,7 +1808,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtDireccionCliente.IconRight = null;
             this.txtDireccionCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDireccionCliente.Lines = new string[0];
-            this.txtDireccionCliente.Location = new System.Drawing.Point(124, 181);
+            this.txtDireccionCliente.Location = new System.Drawing.Point(149, 217);
+            this.txtDireccionCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDireccionCliente.MaxLength = 32767;
             this.txtDireccionCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDireccionCliente.Modified = false;
@@ -1835,7 +1835,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties44.ForeColor = System.Drawing.Color.Empty;
             stateProperties44.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtDireccionCliente.OnIdleState = stateProperties44;
-            this.txtDireccionCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.txtDireccionCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDireccionCliente.PasswordChar = '\0';
             this.txtDireccionCliente.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtDireccionCliente.PlaceholderText = "Direccion";
@@ -1845,7 +1845,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtDireccionCliente.SelectionLength = 0;
             this.txtDireccionCliente.SelectionStart = 0;
             this.txtDireccionCliente.ShortcutsEnabled = true;
-            this.txtDireccionCliente.Size = new System.Drawing.Size(386, 90);
+            this.txtDireccionCliente.Size = new System.Drawing.Size(463, 108);
             this.txtDireccionCliente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDireccionCliente.TabIndex = 67;
             this.txtDireccionCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1885,7 +1885,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtIdCliente.IconRight = null;
             this.txtIdCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIdCliente.Lines = new string[0];
-            this.txtIdCliente.Location = new System.Drawing.Point(124, 65);
+            this.txtIdCliente.Location = new System.Drawing.Point(149, 78);
+            this.txtIdCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdCliente.MaxLength = 32767;
             this.txtIdCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtIdCliente.Modified = false;
@@ -1911,7 +1912,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties48.ForeColor = System.Drawing.Color.Empty;
             stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtIdCliente.OnIdleState = stateProperties48;
-            this.txtIdCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.txtIdCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdCliente.PasswordChar = '\0';
             this.txtIdCliente.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtIdCliente.PlaceholderText = "ID";
@@ -1921,7 +1922,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtIdCliente.SelectionLength = 0;
             this.txtIdCliente.SelectionStart = 0;
             this.txtIdCliente.ShortcutsEnabled = true;
-            this.txtIdCliente.Size = new System.Drawing.Size(80, 45);
+            this.txtIdCliente.Size = new System.Drawing.Size(96, 54);
             this.txtIdCliente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtIdCliente.TabIndex = 65;
             this.txtIdCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1962,7 +1963,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.TituloDtosCliente.IconRight = null;
             this.TituloDtosCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.TituloDtosCliente.Lines = new string[0];
-            this.TituloDtosCliente.Location = new System.Drawing.Point(3, 3);
+            this.TituloDtosCliente.Location = new System.Drawing.Point(4, 4);
+            this.TituloDtosCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TituloDtosCliente.MaxLength = 32767;
             this.TituloDtosCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.TituloDtosCliente.Modified = false;
@@ -1988,7 +1990,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties52.ForeColor = System.Drawing.Color.Empty;
             stateProperties52.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.TituloDtosCliente.OnIdleState = stateProperties52;
-            this.TituloDtosCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.TituloDtosCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TituloDtosCliente.PasswordChar = '\0';
             this.TituloDtosCliente.PlaceholderForeColor = System.Drawing.Color.Black;
             this.TituloDtosCliente.PlaceholderText = "Datos del Cliente";
@@ -1998,7 +2000,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.TituloDtosCliente.SelectionLength = 0;
             this.TituloDtosCliente.SelectionStart = 0;
             this.TituloDtosCliente.ShortcutsEnabled = true;
-            this.TituloDtosCliente.Size = new System.Drawing.Size(654, 40);
+            this.TituloDtosCliente.Size = new System.Drawing.Size(785, 48);
             this.TituloDtosCliente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.TituloDtosCliente.TabIndex = 62;
             this.TituloDtosCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -2025,10 +2027,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.pnlBuscador.Controls.Add(this.bunifuSeparator3);
             this.pnlBuscador.Controls.Add(this.dgvBuscador);
             this.bunifuTransition1.SetDecoration(this.pnlBuscador, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pnlBuscador.Location = new System.Drawing.Point(12, 462);
+            this.pnlBuscador.Location = new System.Drawing.Point(14, 554);
+            this.pnlBuscador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlBuscador.Name = "pnlBuscador";
             this.pnlBuscador.ShowBorders = true;
-            this.pnlBuscador.Size = new System.Drawing.Size(1315, 285);
+            this.pnlBuscador.Size = new System.Drawing.Size(1578, 342);
             this.pnlBuscador.TabIndex = 107;
             this.pnlBuscador.Visible = false;
             this.pnlBuscador.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -2062,7 +2065,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtSearch.IconRight = null;
             this.txtSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(286, 5);
+            this.txtSearch.Location = new System.Drawing.Point(343, 6);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.MaxLength = 32767;
             this.txtSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSearch.Modified = false;
@@ -2088,7 +2092,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties56.ForeColor = System.Drawing.Color.Empty;
             stateProperties56.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtSearch.OnIdleState = stateProperties56;
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtSearch.PlaceholderText = "Search";
@@ -2098,7 +2102,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.txtSearch.SelectionLength = 0;
             this.txtSearch.SelectionStart = 0;
             this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(934, 44);
+            this.txtSearch.Size = new System.Drawing.Size(1121, 53);
             this.txtSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSearch.TabIndex = 107;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -2120,10 +2124,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuPanel3.BorderThickness = 1;
             this.bunifuPanel3.Controls.Add(this.btnClosePanelBuscador);
             this.bunifuTransition1.SetDecoration(this.bunifuPanel3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuPanel3.Location = new System.Drawing.Point(1226, 5);
+            this.bunifuPanel3.Location = new System.Drawing.Point(1471, 6);
+            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(86, 274);
+            this.bunifuPanel3.Size = new System.Drawing.Size(103, 329);
             this.bunifuPanel3.TabIndex = 106;
             // 
             // btnClosePanelBuscador
@@ -2132,9 +2137,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnClosePanelBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.btnClosePanelBuscador, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnClosePanelBuscador.Image = ((System.Drawing.Image)(resources.GetObject("btnClosePanelBuscador.Image")));
-            this.btnClosePanelBuscador.Location = new System.Drawing.Point(48, 3);
+            this.btnClosePanelBuscador.Location = new System.Drawing.Point(58, 4);
+            this.btnClosePanelBuscador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClosePanelBuscador.Name = "btnClosePanelBuscador";
-            this.btnClosePanelBuscador.Size = new System.Drawing.Size(35, 35);
+            this.btnClosePanelBuscador.Size = new System.Drawing.Size(42, 42);
             this.btnClosePanelBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnClosePanelBuscador.TabIndex = 108;
             this.btnClosePanelBuscador.TabStop = false;
@@ -2150,11 +2156,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(76)))), ((int)(((byte)(183)))));
             this.bunifuSeparator5.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator5.LineThickness = 2;
-            this.bunifuSeparator5.Location = new System.Drawing.Point(250, 37);
-            this.bunifuSeparator5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator5.Location = new System.Drawing.Point(300, 44);
+            this.bunifuSeparator5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuSeparator5.Name = "bunifuSeparator5";
             this.bunifuSeparator5.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator5.Size = new System.Drawing.Size(10, 223);
+            this.bunifuSeparator5.Size = new System.Drawing.Size(12, 268);
             this.bunifuSeparator5.TabIndex = 105;
             // 
             // bunifuSeparator4
@@ -2167,11 +2173,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuSeparator4.LineColor = System.Drawing.Color.Blue;
             this.bunifuSeparator4.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.DoubleEdgeFaded;
             this.bunifuSeparator4.LineThickness = 2;
-            this.bunifuSeparator4.Location = new System.Drawing.Point(242, 68);
-            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator4.Location = new System.Drawing.Point(290, 82);
+            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuSeparator4.Name = "bunifuSeparator4";
             this.bunifuSeparator4.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator4.Size = new System.Drawing.Size(12, 176);
+            this.bunifuSeparator4.Size = new System.Drawing.Size(14, 211);
             this.bunifuSeparator4.TabIndex = 104;
             // 
             // bunifuPanel1
@@ -2191,10 +2197,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuPanel1.Controls.Add(this.rbtnDeshabilitado);
             this.bunifuPanel1.Controls.Add(this.rbtnTodos);
             this.bunifuTransition1.SetDecoration(this.bunifuPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuPanel1.Location = new System.Drawing.Point(8, 3);
+            this.bunifuPanel1.Location = new System.Drawing.Point(10, 4);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(212, 276);
+            this.bunifuPanel1.Size = new System.Drawing.Size(254, 331);
             this.bunifuPanel1.TabIndex = 103;
             // 
             // lblFiltroTodos
@@ -2203,9 +2210,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.lblFiltroTodos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.lblFiltroTodos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.lblFiltroTodos.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltroTodos.Location = new System.Drawing.Point(46, 70);
+            this.lblFiltroTodos.Location = new System.Drawing.Point(55, 84);
+            this.lblFiltroTodos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFiltroTodos.Name = "lblFiltroTodos";
-            this.lblFiltroTodos.Size = new System.Drawing.Size(68, 25);
+            this.lblFiltroTodos.Size = new System.Drawing.Size(78, 30);
             this.lblFiltroTodos.TabIndex = 106;
             this.lblFiltroTodos.Tag = "Todos";
             this.lblFiltroTodos.Text = "Todos";
@@ -2217,9 +2225,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.lblFiltroEstado1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.lblFiltroEstado1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.lblFiltroEstado1.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltroEstado1.Location = new System.Drawing.Point(46, 110);
+            this.lblFiltroEstado1.Location = new System.Drawing.Point(55, 132);
+            this.lblFiltroEstado1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFiltroEstado1.Name = "lblFiltroEstado1";
-            this.lblFiltroEstado1.Size = new System.Drawing.Size(114, 25);
+            this.lblFiltroEstado1.Size = new System.Drawing.Size(132, 30);
             this.lblFiltroEstado1.TabIndex = 105;
             this.lblFiltroEstado1.Tag = "Habilitado";
             this.lblFiltroEstado1.Text = "Habilitados";
@@ -2231,9 +2240,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.lblFiltroEstado2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.lblFiltroEstado2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.lblFiltroEstado2.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltroEstado2.Location = new System.Drawing.Point(46, 150);
+            this.lblFiltroEstado2.Location = new System.Drawing.Point(55, 180);
+            this.lblFiltroEstado2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFiltroEstado2.Name = "lblFiltroEstado2";
-            this.lblFiltroEstado2.Size = new System.Drawing.Size(144, 25);
+            this.lblFiltroEstado2.Size = new System.Drawing.Size(166, 30);
             this.lblFiltroEstado2.TabIndex = 104;
             this.lblFiltroEstado2.Tag = "Deshabilitado";
             this.lblFiltroEstado2.Text = "Deshabilitados";
@@ -2244,9 +2254,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.label11.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label11.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(14, 18);
+            this.label11.Location = new System.Drawing.Point(17, 22);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(116, 27);
+            this.label11.Size = new System.Drawing.Size(137, 32);
             this.label11.TabIndex = 103;
             this.label11.Text = "Mostrar:";
             // 
@@ -2280,7 +2291,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTextBox3.IconRight = null;
             this.bunifuTextBox3.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox3.Lines = new string[0];
-            this.bunifuTextBox3.Location = new System.Drawing.Point(10, 2);
+            this.bunifuTextBox3.Location = new System.Drawing.Point(12, 2);
+            this.bunifuTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBox3.MaxLength = 32767;
             this.bunifuTextBox3.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox3.Modified = false;
@@ -2306,7 +2318,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties60.ForeColor = System.Drawing.Color.Empty;
             stateProperties60.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox3.OnIdleState = stateProperties60;
-            this.bunifuTextBox3.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBox3.PasswordChar = '\0';
             this.bunifuTextBox3.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox3.PlaceholderText = "";
@@ -2316,7 +2328,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTextBox3.SelectionLength = 0;
             this.bunifuTextBox3.SelectionStart = 0;
             this.bunifuTextBox3.ShortcutsEnabled = true;
-            this.bunifuTextBox3.Size = new System.Drawing.Size(187, 51);
+            this.bunifuTextBox3.Size = new System.Drawing.Size(224, 61);
             this.bunifuTextBox3.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.bunifuTextBox3.TabIndex = 102;
             this.bunifuTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -2336,14 +2348,15 @@ namespace ServiPlusApp.View.Mantenimientos
             this.rbtnHabilitados.Checked = false;
             this.rbtnHabilitados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.rbtnHabilitados, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.rbtnHabilitados.Location = new System.Drawing.Point(19, 114);
+            this.rbtnHabilitados.Location = new System.Drawing.Point(23, 137);
+            this.rbtnHabilitados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnHabilitados.Name = "rbtnHabilitados";
             this.rbtnHabilitados.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(6)))), ((int)(((byte)(128)))));
             this.rbtnHabilitados.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(1)))), ((int)(((byte)(140)))));
             this.rbtnHabilitados.OutlineColorUnchecked = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(112)))));
             this.rbtnHabilitados.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(112)))));
             this.rbtnHabilitados.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.rbtnHabilitados.Size = new System.Drawing.Size(21, 21);
+            this.rbtnHabilitados.Size = new System.Drawing.Size(25, 25);
             this.rbtnHabilitados.TabIndex = 3;
             this.rbtnHabilitados.Tag = "Habilitado";
             this.rbtnHabilitados.Text = null;
@@ -2358,14 +2371,15 @@ namespace ServiPlusApp.View.Mantenimientos
             this.rbtnDeshabilitado.Checked = false;
             this.rbtnDeshabilitado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.rbtnDeshabilitado, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.rbtnDeshabilitado.Location = new System.Drawing.Point(19, 154);
+            this.rbtnDeshabilitado.Location = new System.Drawing.Point(23, 185);
+            this.rbtnDeshabilitado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnDeshabilitado.Name = "rbtnDeshabilitado";
             this.rbtnDeshabilitado.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(6)))), ((int)(((byte)(128)))));
             this.rbtnDeshabilitado.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(1)))), ((int)(((byte)(140)))));
             this.rbtnDeshabilitado.OutlineColorUnchecked = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(112)))));
             this.rbtnDeshabilitado.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(112)))));
             this.rbtnDeshabilitado.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.rbtnDeshabilitado.Size = new System.Drawing.Size(21, 21);
+            this.rbtnDeshabilitado.Size = new System.Drawing.Size(25, 25);
             this.rbtnDeshabilitado.TabIndex = 2;
             this.rbtnDeshabilitado.Tag = "Deshabilitado";
             this.rbtnDeshabilitado.Text = null;
@@ -2380,14 +2394,15 @@ namespace ServiPlusApp.View.Mantenimientos
             this.rbtnTodos.Checked = true;
             this.rbtnTodos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.rbtnTodos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.rbtnTodos.Location = new System.Drawing.Point(19, 74);
+            this.rbtnTodos.Location = new System.Drawing.Point(23, 89);
+            this.rbtnTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnTodos.Name = "rbtnTodos";
             this.rbtnTodos.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(6)))), ((int)(((byte)(128)))));
             this.rbtnTodos.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(1)))), ((int)(((byte)(140)))));
             this.rbtnTodos.OutlineColorUnchecked = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(112)))));
             this.rbtnTodos.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(0)))), ((int)(((byte)(112)))));
             this.rbtnTodos.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.rbtnTodos.Size = new System.Drawing.Size(21, 21);
+            this.rbtnTodos.Size = new System.Drawing.Size(25, 25);
             this.rbtnTodos.TabIndex = 0;
             this.rbtnTodos.Tag = "Todos";
             this.rbtnTodos.Text = null;
@@ -2403,11 +2418,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(76)))), ((int)(((byte)(183)))));
             this.bunifuSeparator3.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator3.LineThickness = 2;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(235, 37);
-            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(282, 44);
+            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator3.Size = new System.Drawing.Size(12, 223);
+            this.bunifuSeparator3.Size = new System.Drawing.Size(14, 268);
             this.bunifuSeparator3.TabIndex = 102;
             // 
             // dgvBuscador
@@ -2464,14 +2479,15 @@ namespace ServiPlusApp.View.Mantenimientos
             this.dgvBuscador.HeaderBackColor = System.Drawing.Color.Crimson;
             this.dgvBuscador.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvBuscador.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvBuscador.Location = new System.Drawing.Point(286, 55);
+            this.dgvBuscador.Location = new System.Drawing.Point(343, 66);
+            this.dgvBuscador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvBuscador.Name = "dgvBuscador";
             this.dgvBuscador.ReadOnly = true;
             this.dgvBuscador.RowHeadersVisible = false;
             this.dgvBuscador.RowHeadersWidth = 51;
             this.dgvBuscador.RowTemplate.Height = 40;
             this.dgvBuscador.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBuscador.Size = new System.Drawing.Size(954, 220);
+            this.dgvBuscador.Size = new System.Drawing.Size(1145, 264);
             this.dgvBuscador.TabIndex = 0;
             this.dgvBuscador.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Crimson;
             this.dgvBuscador.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBuscador_CellMouseDoubleClick);
@@ -2489,10 +2505,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.pnlDatosMant2.Controls.Add(this.dgvServicios);
             this.pnlDatosMant2.Controls.Add(this.bunifuTextBox23);
             this.bunifuTransition1.SetDecoration(this.pnlDatosMant2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pnlDatosMant2.Location = new System.Drawing.Point(12, 462);
+            this.pnlDatosMant2.Location = new System.Drawing.Point(14, 554);
+            this.pnlDatosMant2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlDatosMant2.Name = "pnlDatosMant2";
             this.pnlDatosMant2.ShowBorders = true;
-            this.pnlDatosMant2.Size = new System.Drawing.Size(1315, 285);
+            this.pnlDatosMant2.Size = new System.Drawing.Size(1578, 342);
             this.pnlDatosMant2.TabIndex = 50;
             // 
             // bunifuPanel5
@@ -2504,7 +2521,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuPanel5.BorderRadius = 3;
             this.bunifuPanel5.BorderThickness = 2;
             this.bunifuPanel5.Controls.Add(this.lblTotalServicios);
-            this.bunifuPanel5.Controls.Add(this.lblDescuentoTotalServicios);
+            this.bunifuPanel5.Controls.Add(this.lblIVA);
             this.bunifuPanel5.Controls.Add(this.lblSubtotalServicios);
             this.bunifuPanel5.Controls.Add(this.lblCantServicios);
             this.bunifuPanel5.Controls.Add(this.label15);
@@ -2512,10 +2529,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuPanel5.Controls.Add(this.label13);
             this.bunifuPanel5.Controls.Add(this.label12);
             this.bunifuTransition1.SetDecoration(this.bunifuPanel5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuPanel5.Location = new System.Drawing.Point(905, 82);
+            this.bunifuPanel5.Location = new System.Drawing.Point(1086, 98);
+            this.bunifuPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel5.Name = "bunifuPanel5";
             this.bunifuPanel5.ShowBorders = true;
-            this.bunifuPanel5.Size = new System.Drawing.Size(347, 197);
+            this.bunifuPanel5.Size = new System.Drawing.Size(416, 236);
             this.bunifuPanel5.TabIndex = 108;
             // 
             // lblTotalServicios
@@ -2524,23 +2542,25 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTransition1.SetDecoration(this.lblTotalServicios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.lblTotalServicios.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.lblTotalServicios.Location = new System.Drawing.Point(251, 156);
+            this.lblTotalServicios.Location = new System.Drawing.Point(301, 187);
+            this.lblTotalServicios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalServicios.Name = "lblTotalServicios";
-            this.lblTotalServicios.Size = new System.Drawing.Size(22, 23);
+            this.lblTotalServicios.Size = new System.Drawing.Size(26, 28);
             this.lblTotalServicios.TabIndex = 7;
             this.lblTotalServicios.Text = "0";
             // 
-            // lblDescuentoTotalServicios
+            // lblIVA
             // 
-            this.lblDescuentoTotalServicios.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lblDescuentoTotalServicios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.lblDescuentoTotalServicios.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescuentoTotalServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.lblDescuentoTotalServicios.Location = new System.Drawing.Point(251, 114);
-            this.lblDescuentoTotalServicios.Name = "lblDescuentoTotalServicios";
-            this.lblDescuentoTotalServicios.Size = new System.Drawing.Size(22, 23);
-            this.lblDescuentoTotalServicios.TabIndex = 6;
-            this.lblDescuentoTotalServicios.Text = "0";
+            this.lblIVA.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblIVA, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.lblIVA.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIVA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
+            this.lblIVA.Location = new System.Drawing.Point(301, 137);
+            this.lblIVA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIVA.Name = "lblIVA";
+            this.lblIVA.Size = new System.Drawing.Size(26, 28);
+            this.lblIVA.TabIndex = 6;
+            this.lblIVA.Text = "0";
             // 
             // lblSubtotalServicios
             // 
@@ -2548,9 +2568,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTransition1.SetDecoration(this.lblSubtotalServicios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.lblSubtotalServicios.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtotalServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.lblSubtotalServicios.Location = new System.Drawing.Point(251, 64);
+            this.lblSubtotalServicios.Location = new System.Drawing.Point(301, 77);
+            this.lblSubtotalServicios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSubtotalServicios.Name = "lblSubtotalServicios";
-            this.lblSubtotalServicios.Size = new System.Drawing.Size(22, 23);
+            this.lblSubtotalServicios.Size = new System.Drawing.Size(26, 28);
             this.lblSubtotalServicios.TabIndex = 5;
             this.lblSubtotalServicios.Text = "0";
             // 
@@ -2560,9 +2581,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTransition1.SetDecoration(this.lblCantServicios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.lblCantServicios.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.lblCantServicios.Location = new System.Drawing.Point(251, 19);
+            this.lblCantServicios.Location = new System.Drawing.Point(301, 23);
+            this.lblCantServicios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantServicios.Name = "lblCantServicios";
-            this.lblCantServicios.Size = new System.Drawing.Size(22, 23);
+            this.lblCantServicios.Size = new System.Drawing.Size(26, 28);
             this.lblCantServicios.TabIndex = 4;
             this.lblCantServicios.Text = "0";
             // 
@@ -2572,9 +2594,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTransition1.SetDecoration(this.label15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label15.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(25, 155);
+            this.label15.Location = new System.Drawing.Point(30, 186);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(60, 21);
+            this.label15.Size = new System.Drawing.Size(69, 25);
             this.label15.TabIndex = 3;
             this.label15.Text = "Total:";
             // 
@@ -2584,9 +2607,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTransition1.SetDecoration(this.label14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label14.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(25, 113);
+            this.label14.Location = new System.Drawing.Point(30, 136);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(154, 21);
+            this.label14.Size = new System.Drawing.Size(177, 25);
             this.label14.TabIndex = 2;
             this.label14.Text = "Descuento total:";
             // 
@@ -2596,9 +2620,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTransition1.SetDecoration(this.label13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label13.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(25, 67);
+            this.label13.Location = new System.Drawing.Point(30, 80);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 21);
+            this.label13.Size = new System.Drawing.Size(107, 25);
             this.label13.TabIndex = 1;
             this.label13.Text = "SubTotal:";
             // 
@@ -2608,9 +2633,10 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTransition1.SetDecoration(this.label12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label12.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(25, 22);
+            this.label12.Location = new System.Drawing.Point(30, 26);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(211, 21);
+            this.label12.Size = new System.Drawing.Size(244, 25);
             this.label12.TabIndex = 0;
             this.label12.Text = "Cantidad de Servicios:";
             // 
@@ -2626,10 +2652,11 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuPanel4.Controls.Add(this.btnBuscarServicio);
             this.bunifuPanel4.Controls.Add(this.btnEliminarServicio);
             this.bunifuTransition1.SetDecoration(this.bunifuPanel4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuPanel4.Location = new System.Drawing.Point(905, 25);
+            this.bunifuPanel4.Location = new System.Drawing.Point(1086, 30);
+            this.bunifuPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
-            this.bunifuPanel4.Size = new System.Drawing.Size(179, 55);
+            this.bunifuPanel4.Size = new System.Drawing.Size(215, 66);
             this.bunifuPanel4.TabIndex = 107;
             // 
             // btnVaciarServicios
@@ -2647,20 +2674,21 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnVaciarServicios.ColorContrastOnClick = 30;
             this.btnVaciarServicios.ColorContrastOnHover = 30;
             this.btnVaciarServicios.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btnVaciarServicios.CustomizableEdges = borderEdges6;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnVaciarServicios.CustomizableEdges = borderEdges5;
             this.bunifuTransition1.SetDecoration(this.btnVaciarServicios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnVaciarServicios.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnVaciarServicios.Image = ((System.Drawing.Image)(resources.GetObject("btnVaciarServicios.Image")));
             this.btnVaciarServicios.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.btnVaciarServicios.Location = new System.Drawing.Point(126, 2);
+            this.btnVaciarServicios.Location = new System.Drawing.Point(151, 2);
+            this.btnVaciarServicios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVaciarServicios.Name = "btnVaciarServicios";
             this.btnVaciarServicios.RoundBorders = false;
             this.btnVaciarServicios.ShowBorders = true;
-            this.btnVaciarServicios.Size = new System.Drawing.Size(50, 50);
+            this.btnVaciarServicios.Size = new System.Drawing.Size(60, 60);
             this.btnVaciarServicios.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
             this.btnVaciarServicios.TabIndex = 108;
             this.btnVaciarServicios.Tag = "Servicios";
@@ -2681,20 +2709,21 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnBuscarServicio.ColorContrastOnClick = 30;
             this.btnBuscarServicio.ColorContrastOnHover = 30;
             this.btnBuscarServicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btnBuscarServicio.CustomizableEdges = borderEdges7;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnBuscarServicio.CustomizableEdges = borderEdges6;
             this.bunifuTransition1.SetDecoration(this.btnBuscarServicio, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnBuscarServicio.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnBuscarServicio.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarServicio.Image")));
             this.btnBuscarServicio.ImageMargin = new System.Windows.Forms.Padding(0);
             this.btnBuscarServicio.Location = new System.Drawing.Point(2, 2);
+            this.btnBuscarServicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarServicio.Name = "btnBuscarServicio";
             this.btnBuscarServicio.RoundBorders = false;
             this.btnBuscarServicio.ShowBorders = true;
-            this.btnBuscarServicio.Size = new System.Drawing.Size(50, 50);
+            this.btnBuscarServicio.Size = new System.Drawing.Size(60, 60);
             this.btnBuscarServicio.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
             this.btnBuscarServicio.TabIndex = 107;
             this.btnBuscarServicio.Tag = "Servicios";
@@ -2715,20 +2744,21 @@ namespace ServiPlusApp.View.Mantenimientos
             this.btnEliminarServicio.ColorContrastOnClick = 30;
             this.btnEliminarServicio.ColorContrastOnHover = 30;
             this.btnEliminarServicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.btnEliminarServicio.CustomizableEdges = borderEdges8;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btnEliminarServicio.CustomizableEdges = borderEdges7;
             this.bunifuTransition1.SetDecoration(this.btnEliminarServicio, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnEliminarServicio.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnEliminarServicio.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarServicio.Image")));
             this.btnEliminarServicio.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.btnEliminarServicio.Location = new System.Drawing.Point(65, 2);
+            this.btnEliminarServicio.Location = new System.Drawing.Point(78, 2);
+            this.btnEliminarServicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminarServicio.Name = "btnEliminarServicio";
             this.btnEliminarServicio.RoundBorders = false;
             this.btnEliminarServicio.ShowBorders = true;
-            this.btnEliminarServicio.Size = new System.Drawing.Size(50, 50);
+            this.btnEliminarServicio.Size = new System.Drawing.Size(60, 60);
             this.btnEliminarServicio.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
             this.btnEliminarServicio.TabIndex = 106;
             this.btnEliminarServicio.Tag = "Servicios";
@@ -2795,13 +2825,14 @@ namespace ServiPlusApp.View.Mantenimientos
             this.dgvServicios.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvServicios.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvServicios.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvServicios.Location = new System.Drawing.Point(38, 49);
+            this.dgvServicios.Location = new System.Drawing.Point(46, 59);
+            this.dgvServicios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvServicios.Name = "dgvServicios";
             this.dgvServicios.RowHeadersVisible = false;
             this.dgvServicios.RowHeadersWidth = 51;
             this.dgvServicios.RowTemplate.Height = 40;
             this.dgvServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvServicios.Size = new System.Drawing.Size(790, 226);
+            this.dgvServicios.Size = new System.Drawing.Size(948, 271);
             this.dgvServicios.TabIndex = 105;
             this.dgvServicios.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvServicios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServicios_CellClick);
@@ -2898,7 +2929,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTextBox23.IconRight = null;
             this.bunifuTextBox23.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox23.Lines = new string[0];
-            this.bunifuTextBox23.Location = new System.Drawing.Point(3, 3);
+            this.bunifuTextBox23.Location = new System.Drawing.Point(4, 4);
+            this.bunifuTextBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBox23.MaxLength = 32767;
             this.bunifuTextBox23.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox23.Modified = false;
@@ -2924,7 +2956,7 @@ namespace ServiPlusApp.View.Mantenimientos
             stateProperties64.ForeColor = System.Drawing.Color.Empty;
             stateProperties64.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox23.OnIdleState = stateProperties64;
-            this.bunifuTextBox23.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBox23.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBox23.PasswordChar = '\0';
             this.bunifuTextBox23.PlaceholderForeColor = System.Drawing.Color.Black;
             this.bunifuTextBox23.PlaceholderText = "Asignar Servicios";
@@ -2934,7 +2966,7 @@ namespace ServiPlusApp.View.Mantenimientos
             this.bunifuTextBox23.SelectionLength = 0;
             this.bunifuTextBox23.SelectionStart = 0;
             this.bunifuTextBox23.ShortcutsEnabled = true;
-            this.bunifuTextBox23.Size = new System.Drawing.Size(651, 40);
+            this.bunifuTextBox23.Size = new System.Drawing.Size(781, 48);
             this.bunifuTextBox23.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.bunifuTextBox23.TabIndex = 62;
             this.bunifuTextBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -2947,19 +2979,20 @@ namespace ServiPlusApp.View.Mantenimientos
             // 
             // Mantenimiento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1529, 750);
+            this.ClientSize = new System.Drawing.Size(1835, 900);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnBarraSuperior);
             this.Controls.Add(this.pnlDatosMant1);
-            this.Controls.Add(this.pnlDatosMant2);
             this.Controls.Add(this.pnlBuscador);
+            this.Controls.Add(this.pnlDatosMant2);
             this.bunifuTransition1.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Mantenimiento";
             this.Opacity = 0.99D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -2992,19 +3025,12 @@ namespace ServiPlusApp.View.Mantenimientos
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnClose;
         private Bunifu.UI.WinForms.BunifuTextBox TituloDtosCliente;
-        private Bunifu.UI.WinForms.BunifuTextBox txtIdCliente;
-        private Bunifu.UI.WinForms.BunifuTextBox txtDireccionCliente;
-        private Bunifu.UI.WinForms.BunifuTextBox txtMarcaVehiculo;
-        private Bunifu.UI.WinForms.BunifuTextBox txtModeloVehiculo;
-        private Bunifu.UI.WinForms.BunifuTextBox txtAñoVehiculo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private Bunifu.UI.WinForms.BunifuTextBox txtEstado;
-        private Bunifu.UI.WinForms.BunifuDatePicker dpFechaDeIngreso;
-        private Bunifu.UI.WinForms.BunifuDatePicker dpFechaDeSalida;
         private Bunifu.UI.WinForms.BunifuDropdown cmbEstado;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
@@ -3012,26 +3038,16 @@ namespace ServiPlusApp.View.Mantenimientos
         private System.Windows.Forms.Label label3;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuTextBox txtDtosMant;
-        private Bunifu.UI.WinForms.BunifuTextBox txtMecanicoFullname;
-        private Bunifu.UI.WinForms.BunifuTextBox txtIdMecanico;
-        private Bunifu.UI.WinForms.BunifuTextBox txtFullnameCliente;
-        private Bunifu.UI.WinForms.BunifuTextBox txtTelefCliente;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         private System.Windows.Forms.Label label5;
         private Bunifu.UI.WinForms.BunifuPanel pnlDatosMant1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton btnBuscarMecanico;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton btnBuscarCliente;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton btnBuscarVehiculo;
         private Bunifu.UI.WinForms.BunifuPanel pnlDatosMant2;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox23;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
-        private Netsystek.Controls.NskControls.NskButton btnHistorial;
-        private Netsystek.Controls.NskControls.NskButton btnCancelar;
-        private Netsystek.Controls.NskControls.NskButton btnModificar;
-        private Netsystek.Controls.NskControls.NskButton btnGuardar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton btnEliminarServicio;
-        private Bunifu.UI.WinForms.BunifuDataGridView dgvServicios;
+        public Bunifu.UI.WinForms.BunifuDataGridView dgvServicios;
         private Bunifu.UI.WinForms.BunifuPanel pnlBuscador;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvBuscador;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox2;
@@ -3061,7 +3077,7 @@ namespace ServiPlusApp.View.Mantenimientos
         private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton btnBuscarServicio;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator7;
         private System.Windows.Forms.Label lblTotalServicios;
-        private System.Windows.Forms.Label lblDescuentoTotalServicios;
+        private System.Windows.Forms.Label lblIVA;
         private System.Windows.Forms.Label lblSubtotalServicios;
         private System.Windows.Forms.Label lblCantServicios;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnSecundarioBuscarServicios;
@@ -3072,5 +3088,21 @@ namespace ServiPlusApp.View.Mantenimientos
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoDeMant;
         private System.Windows.Forms.DataGridViewImageColumn SeQuitar;
         private Bunifu.UI.WinForms.BunifuTransition bunifuTransition1;
+        public Bunifu.UI.WinForms.BunifuTextBox txtIdCliente;
+        public Bunifu.UI.WinForms.BunifuTextBox txtDireccionCliente;
+        public Bunifu.UI.WinForms.BunifuTextBox txtMarcaVehiculo;
+        public Bunifu.UI.WinForms.BunifuTextBox txtModeloVehiculo;
+        public Bunifu.UI.WinForms.BunifuTextBox txtAñoVehiculo;
+        public Bunifu.UI.WinForms.BunifuDatePicker dpFechaDeIngreso;
+        public Bunifu.UI.WinForms.BunifuDatePicker dpFechaDeSalida;
+        public Bunifu.UI.WinForms.BunifuTextBox txtMecanicoFullname;
+        public Bunifu.UI.WinForms.BunifuTextBox txtIdMecanico;
+        public Bunifu.UI.WinForms.BunifuTextBox txtFullnameCliente;
+        public Bunifu.UI.WinForms.BunifuTextBox txtTelefCliente;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton btnBuscarVehiculo;
+        public Netsystek.Controls.NskControls.NskButton btnHistorial;
+        public Netsystek.Controls.NskControls.NskButton btnCancelar;
+        public Netsystek.Controls.NskControls.NskButton btnModificar;
+        public Netsystek.Controls.NskControls.NskButton btnGuardar;
     }
 }

@@ -29,12 +29,27 @@ namespace ServiPlusApp.View.Tablas
             lblTableName.Text = tableName;
 
             formulario = Fabrica.FormController(this.dgvTablas, tableName);
+
+            
             formulario.Ver();
         }
 
         public void LoadForm(string tableName)
         {
             lblTableName.Text = tableName;
+
+            switch (tableName)
+            {
+                case "Mecanicos":
+                    btnSetState.Visible = false;
+                    break;
+                case "OpMantenimientos":
+                    btnSetState.Visible = false;
+                    break;
+                default:
+                    btnSetState.Visible = true;
+                    break;
+            }
 
             formulario = Fabrica.FormController(this.dgvTablas, tableName);
             formulario.Ver();

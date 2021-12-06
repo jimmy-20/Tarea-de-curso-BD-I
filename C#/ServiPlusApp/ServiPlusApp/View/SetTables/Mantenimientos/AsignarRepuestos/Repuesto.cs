@@ -55,6 +55,7 @@ namespace ServiPlusApp.View.SetTables.Asignar
 
             dgvServiciosAsignados.DataSource = CAsignarRepuestos.Mostrar_Mantenimientos_Servicios(1);
 
+
             dgvMantenimientos_SelectionChanged(null, null);
            
         }
@@ -105,5 +106,9 @@ namespace ServiPlusApp.View.SetTables.Asignar
 
         }
 
+        private void btnAsignar_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

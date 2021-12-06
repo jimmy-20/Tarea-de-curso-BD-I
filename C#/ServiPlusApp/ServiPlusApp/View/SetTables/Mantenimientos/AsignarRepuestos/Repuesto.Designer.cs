@@ -156,7 +156,7 @@ namespace ServiPlusApp.View.SetTables.Asignar
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(17, 64);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(314, 23);
+            this.label10.Size = new System.Drawing.Size(376, 27);
             this.label10.TabIndex = 148;
             this.label10.Text = "Historial de Mantenimientos";
             // 
@@ -296,7 +296,7 @@ namespace ServiPlusApp.View.SetTables.Asignar
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(26, 306);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(217, 25);
+            this.label8.Size = new System.Drawing.Size(259, 28);
             this.label8.TabIndex = 150;
             this.label8.Text = "Servicios Asignados";
             // 
@@ -465,6 +465,7 @@ namespace ServiPlusApp.View.SetTables.Asignar
             this.btnAsignar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAsignar.TextColor = System.Drawing.Color.White;
             this.btnAsignar.UseVisualStyleBackColor = false;
+            this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
             // btnBuscar
             // 
@@ -526,7 +527,7 @@ namespace ServiPlusApp.View.SetTables.Asignar
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.RightEdgeFaded;
             this.bunifuSeparator1.LineThickness = 2;
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
             this.bunifuSeparator1.Size = new System.Drawing.Size(17, 283);
@@ -540,7 +541,7 @@ namespace ServiPlusApp.View.SetTables.Asignar
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label6.Location = new System.Drawing.Point(46, 213);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 23);
+            this.label6.Size = new System.Drawing.Size(119, 27);
             this.label6.TabIndex = 165;
             this.label6.Text = "Cantidad:";
             // 
@@ -628,7 +629,7 @@ namespace ServiPlusApp.View.SetTables.Asignar
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.Location = new System.Drawing.Point(30, 165);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 23);
+            this.label5.Size = new System.Drawing.Size(135, 27);
             this.label5.TabIndex = 163;
             this.label5.Text = "Descuento:";
             // 
@@ -640,7 +641,7 @@ namespace ServiPlusApp.View.SetTables.Asignar
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Location = new System.Drawing.Point(72, 119);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 23);
+            this.label4.Size = new System.Drawing.Size(90, 27);
             this.label4.TabIndex = 162;
             this.label4.Text = "Precio:";
             // 
@@ -652,7 +653,7 @@ namespace ServiPlusApp.View.SetTables.Asignar
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(329, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 23);
+            this.label3.Size = new System.Drawing.Size(103, 27);
             this.label3.TabIndex = 161;
             this.label3.Text = "Modelo:";
             // 
@@ -664,7 +665,7 @@ namespace ServiPlusApp.View.SetTables.Asignar
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(72, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 23);
+            this.label2.Size = new System.Drawing.Size(91, 27);
             this.label2.TabIndex = 160;
             this.label2.Text = "Marca:";
             // 
@@ -676,7 +677,7 @@ namespace ServiPlusApp.View.SetTables.Asignar
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(19, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 23);
+            this.label1.Size = new System.Drawing.Size(151, 27);
             this.label1.TabIndex = 159;
             this.label1.Text = "Descripción:";
             // 
@@ -1073,7 +1074,7 @@ namespace ServiPlusApp.View.SetTables.Asignar
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(26, 530);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(228, 25);
+            this.label7.Size = new System.Drawing.Size(274, 28);
             this.label7.TabIndex = 163;
             this.label7.Text = "Repuestos Asignados";
             // 

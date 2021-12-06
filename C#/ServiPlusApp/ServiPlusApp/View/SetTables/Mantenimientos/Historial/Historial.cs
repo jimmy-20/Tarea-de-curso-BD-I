@@ -1,4 +1,5 @@
 ﻿using Bunifu.UI.WinForms.BunifuButton;
+using ServiPlusApp.Controller;
 using ServiPlusApp.Controller.Factory;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace ServiPlusApp.View.SetTables.Mantenimientos.Historial
 {
     public partial class Historial : Form
     {
+        int IdDetalleMantenimiento;
+        int IdMantenimiento;
         int IdVehiculo; //este es el id del vehiculo al cual quieres ver todos sus repuestos y servicios
         public Historial(int IdVehiculo)
         {
@@ -29,7 +32,17 @@ namespace ServiPlusApp.View.SetTables.Mantenimientos.Historial
 
         private void Historial_Load(object sender, EventArgs e)
         {
-            btnTabServicios_Click(null,null);
+            DataTable dt = CHistorial.Historial_Header(IdVehiculo);
+
+            lblCliente.Text += dt.Rows[0].ItemArray[0].ToString();
+            lblMarca.Text += dt.Rows[0].ItemArray[1].ToString();
+            lblModelo.Text += dt.Rows[0].ItemArray[2].ToString();
+            lblAño.Text += dt.Rows[0].ItemArray[3].ToString();
+
+
+            btnTabRepuestos.Size = new Size(182, 45);
+            btnTabServicios.Size = new Size(184, 47);
+            dgvHistorial.DataSource = CHistorial.Historial_Mantenimientos(IdVehiculo);
         }
 
         #region Mover Form
@@ -49,17 +62,38 @@ namespace ServiPlusApp.View.SetTables.Mantenimientos.Historial
         #region Eventos btnCambio de Historial
         private void btnTabRepuestos_Click(object sender, EventArgs e)
         {
+            this.btnTabServicios.Enabled=false;
             btnTabRepuestos.Size = new Size(184, 47);
             btnTabServicios.Size = new Size(182, 45);
             //Aqui debes poner en practica el metodo que te haga el PA para buscar esos repuestos por el idVehiculo
 
+       
+            if (Fabrica.SiFilaSeleccionada(dgvHistorial) is false)
+            {
+                return;
+            }
+
+            IdDetalleMantenimiento = Convert.ToInt32(dgvHistorial.CurrentRow.Cells[0].Value);
+            dgvHistorial.DataSource = CHistorial.Historial_Mantenimiento_Repuestos(IdDetalleMantenimiento);
+
+            this.btnTabRepuestos.Enabled = false;
         }
 
         private void btnTabServicios_Click(object sender, EventArgs e)
         {
-            btnTabRepuestos.Size = new Size(182, 45);
-            btnTabServicios.Size = new Size(184, 47);
+            this.btnTabRepuestos.Enabled = true;
+            this.btnTabServicios.Enabled = false;
             //Aqui debes poner en practica el metodo que te haga el PA para buscar esos servicios por el idVehiculo
+            
+
+            if (Fabrica.SiFilaSeleccionada(dgvHistorial) is false)
+            {
+                return;
+            }
+
+            this.IdMantenimiento = Convert.ToInt32(dgvHistorial.CurrentRow.Cells[0].Value);
+            dgvHistorial.DataSource = CHistorial.Historial_Mantenimientos_Servicios(IdMantenimiento);
+            
         }
         private void btnTabRepuestos_MouseMove(object sender, MouseEventArgs e)
         {
@@ -97,8 +131,18 @@ namespace ServiPlusApp.View.SetTables.Mantenimientos.Historial
 
 
 
+
         #endregion
 
-       
+        private void bunifuSeparator1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMantenimientos_Click(object sender, EventArgs e)
+        {
+            dgvHistorial.DataSource = CHistorial.Historial_Mantenimientos(IdVehiculo);
+            this.btnTabServicios.Enabled = true;
+        }
     }
 }
