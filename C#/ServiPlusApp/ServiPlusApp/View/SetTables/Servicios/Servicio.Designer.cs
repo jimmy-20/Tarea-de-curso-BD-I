@@ -32,7 +32,14 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Servicio));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            this.txtDescripcion = new RJCodeAdvance.RJControls.RJTextBox();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -40,7 +47,6 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
-            this.txtPrecio = new RJCodeAdvance.RJControls.RJTextBox();
             this.txtTipoDeMantenimiento = new RJCodeAdvance.RJControls.RJTextBox();
             this.txtEstado = new RJCodeAdvance.RJControls.RJTextBox();
             this.cmbTipoDeMatenimiento = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -49,6 +55,8 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.spnPrecio = new System.Windows.Forms.NumericUpDown();
             this.btnModificar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.cmbEstado = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.txtDescripcion = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -58,28 +66,6 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnPrecio)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.Black;
-            this.txtDescripcion.BorderColor = System.Drawing.Color.White;
-            this.txtDescripcion.BorderFocusColor = System.Drawing.Color.DarkMagenta;
-            this.txtDescripcion.BorderRadius = 0;
-            this.txtDescripcion.BorderSize = 2;
-            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDescripcion.Location = new System.Drawing.Point(78, 149);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDescripcion.Multiline = false;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtDescripcion.PasswordChar = false;
-            this.txtDescripcion.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtDescripcion.PlaceholderText = "";
-            this.txtDescripcion.Size = new System.Drawing.Size(539, 40);
-            this.txtDescripcion.TabIndex = 3;
-            this.txtDescripcion.Texts = "Descripción";
-            this.txtDescripcion.UnderlinedStyle = true;
             // 
             // bunifuPanel1
             // 
@@ -169,40 +155,16 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.btnClose.TabIndex = 0;
             this.btnClose.TabStop = false;
             // 
-            // txtPrecio
-            // 
-            this.txtPrecio.BackColor = System.Drawing.Color.Black;
-            this.txtPrecio.BorderColor = System.Drawing.Color.White;
-            this.txtPrecio.BorderFocusColor = System.Drawing.Color.DarkMagenta;
-            this.txtPrecio.BorderRadius = 0;
-            this.txtPrecio.BorderSize = 2;
-            this.txtPrecio.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPrecio.Location = new System.Drawing.Point(78, 352);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrecio.Multiline = false;
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPrecio.PasswordChar = false;
-            this.txtPrecio.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPrecio.PlaceholderText = "";
-            this.txtPrecio.Size = new System.Drawing.Size(250, 40);
-            this.txtPrecio.TabIndex = 4;
-            this.txtPrecio.Texts = "Precio";
-            this.txtPrecio.UnderlinedStyle = true;
-            this.txtPrecio._TextChanged += new System.EventHandler(this.txtPrecio__TextChanged);
-            this.txtPrecio.Enter += new System.EventHandler(this.txtPrecio_Enter);
-            // 
             // txtTipoDeMantenimiento
             // 
             this.txtTipoDeMantenimiento.BackColor = System.Drawing.Color.Black;
             this.txtTipoDeMantenimiento.BorderColor = System.Drawing.Color.White;
             this.txtTipoDeMantenimiento.BorderFocusColor = System.Drawing.Color.DarkMagenta;
             this.txtTipoDeMantenimiento.BorderRadius = 0;
-            this.txtTipoDeMantenimiento.BorderSize = 2;
+            this.txtTipoDeMantenimiento.BorderSize = 4;
             this.txtTipoDeMantenimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTipoDeMantenimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTipoDeMantenimiento.Location = new System.Drawing.Point(78, 255);
+            this.txtTipoDeMantenimiento.Location = new System.Drawing.Point(78, 251);
             this.txtTipoDeMantenimiento.Margin = new System.Windows.Forms.Padding(4);
             this.txtTipoDeMantenimiento.Multiline = false;
             this.txtTipoDeMantenimiento.Name = "txtTipoDeMantenimiento";
@@ -210,7 +172,7 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.txtTipoDeMantenimiento.PasswordChar = false;
             this.txtTipoDeMantenimiento.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTipoDeMantenimiento.PlaceholderText = "";
-            this.txtTipoDeMantenimiento.Size = new System.Drawing.Size(250, 39);
+            this.txtTipoDeMantenimiento.Size = new System.Drawing.Size(250, 35);
             this.txtTipoDeMantenimiento.TabIndex = 5;
             this.txtTipoDeMantenimiento.Texts = "";
             this.txtTipoDeMantenimiento.UnderlinedStyle = true;
@@ -221,10 +183,10 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.txtEstado.BorderColor = System.Drawing.Color.White;
             this.txtEstado.BorderFocusColor = System.Drawing.Color.DarkMagenta;
             this.txtEstado.BorderRadius = 0;
-            this.txtEstado.BorderSize = 2;
+            this.txtEstado.BorderSize = 4;
             this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEstado.Location = new System.Drawing.Point(367, 255);
+            this.txtEstado.Location = new System.Drawing.Point(367, 251);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstado.Multiline = false;
             this.txtEstado.Name = "txtEstado";
@@ -232,7 +194,7 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.txtEstado.PasswordChar = false;
             this.txtEstado.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtEstado.PlaceholderText = "";
-            this.txtEstado.Size = new System.Drawing.Size(250, 39);
+            this.txtEstado.Size = new System.Drawing.Size(250, 35);
             this.txtEstado.TabIndex = 6;
             this.txtEstado.Texts = "";
             this.txtEstado.UnderlinedStyle = true;
@@ -273,7 +235,7 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.cmbTipoDeMatenimiento.ItemHighLightColor = System.Drawing.Color.MediumOrchid;
             this.cmbTipoDeMatenimiento.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbTipoDeMatenimiento.ItemTopMargin = 3;
-            this.cmbTipoDeMatenimiento.Location = new System.Drawing.Point(78, 254);
+            this.cmbTipoDeMatenimiento.Location = new System.Drawing.Point(78, 250);
             this.cmbTipoDeMatenimiento.Name = "cmbTipoDeMatenimiento";
             this.cmbTipoDeMatenimiento.Size = new System.Drawing.Size(250, 30);
             this.cmbTipoDeMatenimiento.TabIndex = 7;
@@ -398,14 +360,14 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.spnPrecio.DecimalPlaces = 2;
             this.spnPrecio.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spnPrecio.ForeColor = System.Drawing.Color.Black;
-            this.spnPrecio.Location = new System.Drawing.Point(312, 359);
+            this.spnPrecio.Location = new System.Drawing.Point(305, 346);
             this.spnPrecio.Maximum = new decimal(new int[] {
             99999999,
             0,
             0,
             0});
             this.spnPrecio.Name = "spnPrecio";
-            this.spnPrecio.Size = new System.Drawing.Size(16, 29);
+            this.spnPrecio.Size = new System.Drawing.Size(16, 24);
             this.spnPrecio.TabIndex = 11;
             this.spnPrecio.ThousandsSeparator = true;
             this.spnPrecio.ValueChanged += new System.EventHandler(this.spnPrecio_ValueChanged);
@@ -539,7 +501,7 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.cmbEstado.ItemHighLightColor = System.Drawing.Color.MediumOrchid;
             this.cmbEstado.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbEstado.ItemTopMargin = 3;
-            this.cmbEstado.Location = new System.Drawing.Point(367, 254);
+            this.cmbEstado.Location = new System.Drawing.Point(367, 250);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(250, 30);
             this.cmbEstado.TabIndex = 15;
@@ -549,22 +511,174 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
             this.cmbEstado.Enter += new System.EventHandler(this.cmbEstado_Enter);
             this.cmbEstado.Leave += new System.EventHandler(this.cmbEstado_Leave);
             // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.AcceptsReturn = false;
+            this.txtDescripcion.AcceptsTab = false;
+            this.txtDescripcion.AnimationSpeed = 200;
+            this.txtDescripcion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtDescripcion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtDescripcion.AutoSizeHeight = true;
+            this.txtDescripcion.BackColor = System.Drawing.Color.Black;
+            this.txtDescripcion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtDescripcion.BackgroundImage")));
+            this.txtDescripcion.BorderColorActive = System.Drawing.Color.DarkMagenta;
+            this.txtDescripcion.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtDescripcion.BorderColorHover = System.Drawing.Color.Magenta;
+            this.txtDescripcion.BorderColorIdle = System.Drawing.Color.White;
+            this.txtDescripcion.BorderRadius = 1;
+            this.txtDescripcion.BorderThickness = 3;
+            this.txtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescripcion.DefaultFont = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.txtDescripcion.DefaultText = "";
+            this.txtDescripcion.FillColor = System.Drawing.Color.Black;
+            this.txtDescripcion.ForeColor = System.Drawing.Color.White;
+            this.txtDescripcion.HideSelection = true;
+            this.txtDescripcion.IconLeft = null;
+            this.txtDescripcion.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescripcion.IconPadding = 10;
+            this.txtDescripcion.IconRight = null;
+            this.txtDescripcion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescripcion.Lines = new string[0];
+            this.txtDescripcion.Location = new System.Drawing.Point(78, 154);
+            this.txtDescripcion.MaxLength = 32767;
+            this.txtDescripcion.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtDescripcion.Modified = false;
+            this.txtDescripcion.Multiline = false;
+            this.txtDescripcion.Name = "txtDescripcion";
+            stateProperties1.BorderColor = System.Drawing.Color.DarkMagenta;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDescripcion.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtDescripcion.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.Magenta;
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDescripcion.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.White;
+            stateProperties4.FillColor = System.Drawing.Color.Black;
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDescripcion.OnIdleState = stateProperties4;
+            this.txtDescripcion.Padding = new System.Windows.Forms.Padding(3);
+            this.txtDescripcion.PasswordChar = '\0';
+            this.txtDescripcion.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtDescripcion.PlaceholderText = "Descripcion";
+            this.txtDescripcion.ReadOnly = false;
+            this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDescripcion.SelectedText = "";
+            this.txtDescripcion.SelectionLength = 0;
+            this.txtDescripcion.SelectionStart = 0;
+            this.txtDescripcion.ShortcutsEnabled = true;
+            this.txtDescripcion.Size = new System.Drawing.Size(539, 45);
+            this.txtDescripcion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
+            this.txtDescripcion.TabIndex = 16;
+            this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDescripcion.TextMarginBottom = 0;
+            this.txtDescripcion.TextMarginLeft = 3;
+            this.txtDescripcion.TextMarginTop = 1;
+            this.txtDescripcion.TextPlaceholder = "Descripcion";
+            this.txtDescripcion.UseSystemPasswordChar = false;
+            this.txtDescripcion.WordWrap = true;
+            // 
+            // bunifuTextBox1
+            // 
+            this.bunifuTextBox1.AcceptsReturn = false;
+            this.bunifuTextBox1.AcceptsTab = false;
+            this.bunifuTextBox1.AnimationSpeed = 200;
+            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.bunifuTextBox1.AutoSizeHeight = true;
+            this.bunifuTextBox1.BackColor = System.Drawing.Color.Black;
+            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
+            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.DarkMagenta;
+            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.Magenta;
+            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.White;
+            this.bunifuTextBox1.BorderRadius = 1;
+            this.bunifuTextBox1.BorderThickness = 3;
+            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.bunifuTextBox1.DefaultText = "";
+            this.bunifuTextBox1.FillColor = System.Drawing.Color.Black;
+            this.bunifuTextBox1.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextBox1.HideSelection = true;
+            this.bunifuTextBox1.IconLeft = null;
+            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBox1.IconPadding = 10;
+            this.bunifuTextBox1.IconRight = null;
+            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBox1.Lines = new string[0];
+            this.bunifuTextBox1.Location = new System.Drawing.Point(78, 336);
+            this.bunifuTextBox1.MaxLength = 32767;
+            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bunifuTextBox1.Modified = false;
+            this.bunifuTextBox1.Multiline = false;
+            this.bunifuTextBox1.Name = "bunifuTextBox1";
+            stateProperties5.BorderColor = System.Drawing.Color.DarkMagenta;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox1.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuTextBox1.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.Magenta;
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox1.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.White;
+            stateProperties8.FillColor = System.Drawing.Color.Black;
+            stateProperties8.ForeColor = System.Drawing.Color.White;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox1.OnIdleState = stateProperties8;
+            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBox1.PasswordChar = '\0';
+            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.bunifuTextBox1.PlaceholderText = "Precio";
+            this.bunifuTextBox1.ReadOnly = false;
+            this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.bunifuTextBox1.SelectedText = "";
+            this.bunifuTextBox1.SelectionLength = 0;
+            this.bunifuTextBox1.SelectionStart = 0;
+            this.bunifuTextBox1.ShortcutsEnabled = true;
+            this.bunifuTextBox1.Size = new System.Drawing.Size(250, 45);
+            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
+            this.bunifuTextBox1.TabIndex = 17;
+            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBox1.TextMarginBottom = 0;
+            this.bunifuTextBox1.TextMarginLeft = 3;
+            this.bunifuTextBox1.TextMarginTop = 1;
+            this.bunifuTextBox1.TextPlaceholder = "Precio";
+            this.bunifuTextBox1.UseSystemPasswordChar = false;
+            this.bunifuTextBox1.WordWrap = true;
+            // 
             // Servicio
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(700, 500);
-            this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.spnPrecio);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.cmbTipoDeMatenimiento);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtTipoDeMantenimiento);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.bunifuTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Servicio";
             this.Opacity = 0.95D;
@@ -596,10 +710,10 @@ namespace ServiPlusApp.View.Set_Tables.Servicios
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private System.Windows.Forms.NumericUpDown spnPrecio;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnModificar;
-        public RJCodeAdvance.RJControls.RJTextBox txtDescripcion;
-        public RJCodeAdvance.RJControls.RJTextBox txtPrecio;
         public Bunifu.UI.WinForms.BunifuDropdown cmbTipoDeMatenimiento;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnGuardar;
         public Bunifu.UI.WinForms.BunifuDropdown cmbEstado;
+        private Bunifu.UI.WinForms.BunifuTextBox txtDescripcion;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
     }
 }
