@@ -30,8 +30,16 @@ namespace ServiPlusApp.View.SetTables.Mantenimientos.Historial
 
         private void Historial_Load(object sender, EventArgs e)
         {
-            btnTabServicios_Click(null,null);
+            DataTable dt = CHistorial.Historial_Header(IdVehiculo);
 
+            lblCliente.Text += dt.Rows[0].ItemArray[0].ToString();
+            lblMarca.Text += dt.Rows[0].ItemArray[1].ToString();
+            lblModelo.Text += dt.Rows[0].ItemArray[2].ToString();
+            lblAño.Text += dt.Rows[0].ItemArray[3].ToString();
+
+
+            btnTabRepuestos.Size = new Size(182, 45);
+            btnTabServicios.Size = new Size(184, 47);
             dgvHistorial.DataSource = CHistorial.Historial_Mantenimientos(IdVehiculo);
         }
 
@@ -56,14 +64,29 @@ namespace ServiPlusApp.View.SetTables.Mantenimientos.Historial
             btnTabServicios.Size = new Size(182, 45);
             //Aqui debes poner en practica el metodo que te haga el PA para buscar esos repuestos por el idVehiculo
 
+            int IdDetalleMantenimiento;
+            if (Fabrica.SiFilaSeleccionada(dgvHistorial) is false)
+            {
+                return;
+            }
+
+            IdDetalleMantenimiento = Convert.ToInt32(dgvHistorial.CurrentRow.Cells[0].Value);
+            dgvHistorial.DataSource = CHistorial.Historial_Mantenimiento_Repuestos(IdDetalleMantenimiento);
         }
 
         private void btnTabServicios_Click(object sender, EventArgs e)
         {
-            btnTabRepuestos.Size = new Size(182, 45);
-            btnTabServicios.Size = new Size(184, 47);
+            
             //Aqui debes poner en practica el metodo que te haga el PA para buscar esos servicios por el idVehiculo
+            int IdMantenimiento;
 
+            if (Fabrica.SiFilaSeleccionada(dgvHistorial) is false)
+            {
+                return;
+            }
+
+            IdMantenimiento = Convert.ToInt32(dgvHistorial.CurrentRow.Cells[0].Value);
+            dgvHistorial.DataSource = CHistorial.Historial_Mantenimientos_Servicios(IdMantenimiento);
             
         }
         private void btnTabRepuestos_MouseMove(object sender, MouseEventArgs e)
@@ -108,6 +131,11 @@ namespace ServiPlusApp.View.SetTables.Mantenimientos.Historial
         private void bunifuSeparator1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnMantenimientos_Click(object sender, EventArgs e)
+        {
+            dgvHistorial.DataSource = CHistorial.Historial_Mantenimientos(IdVehiculo);
         }
     }
 }
