@@ -1,4 +1,5 @@
-﻿using ServiPlusApp.View.SubViews;
+﻿using ServiPlusApp.View.SetTables.Asignar;
+using ServiPlusApp.View.SubViews;
 using ServiPlusApp.View.Tablas;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace ServiPlusApp.View
     public partial class Operaciones : Form
     {
 
-        //Thread th;
+        Thread th;
         //Point frmPosition;
         //Boolean mouseAction;
 
@@ -469,7 +470,20 @@ namespace ServiPlusApp.View
 
         private void btnOpRepuestos_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(btnOpRepuestos.Tag.ToString());
+            th = new Thread(OpenAsginarRepuestos);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+
+            if (this.pnlContenedor.Contains(showTable))
+            {
+                showTable.Close();
+            }
+
+        }
+        private void OpenAsginarRepuestos()
+        {
+            Repuesto repuesto = new Repuesto();
+            repuesto.ShowDialog();
         }
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
@@ -483,7 +497,8 @@ namespace ServiPlusApp.View
                 this.Controls.Remove(userControl);
             }
 
-            if (showTable == null)
+
+            if (!this.pnlContenedor.Contains(showTable))
             {
                 showTable = new ShowTable
                 {
@@ -493,21 +508,20 @@ namespace ServiPlusApp.View
                     FormBorderStyle = FormBorderStyle.None,
                     Dock = DockStyle.Fill
                 };
-                
+
+
+
                 pnlContenedor.Controls.Add(showTable);
                 pnlContenedor.Tag = showTable;
 
                 showTable.BringToFront();
                 showTable.Show();
-
+               
             }
             else
             {
                 showTable.LoadForm(FormName);
             }
-
-
-           
 
             //--------------------------------------------------------------------------
 
@@ -734,7 +748,7 @@ namespace ServiPlusApp.View
             }
         }
 
-       
+
 
 
 

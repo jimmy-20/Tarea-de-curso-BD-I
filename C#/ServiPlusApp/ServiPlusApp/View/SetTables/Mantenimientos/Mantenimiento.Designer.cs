@@ -2955,8 +2955,8 @@ namespace ServiPlusApp.View.Mantenimientos
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnBarraSuperior);
             this.Controls.Add(this.pnlDatosMant1);
-            this.Controls.Add(this.pnlBuscador);
             this.Controls.Add(this.pnlDatosMant2);
+            this.Controls.Add(this.pnlBuscador);
             this.bunifuTransition1.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
